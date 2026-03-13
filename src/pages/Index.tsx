@@ -152,7 +152,7 @@ const Index = () => {
             className="grid lg:grid-cols-2 gap-16 items-center"
           >
             <div>
-              <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Why Choose Us</motion.p>
+              <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-primary-foreground/70 mb-3">Why Choose Us</motion.p>
               <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-800 mb-6">Quality Electrical Work, Guaranteed</motion.h2>
               <motion.p variants={fadeUp} custom={2} className="text-primary-foreground/70 mb-8 leading-relaxed">
                 We take pride in every job, big or small. Our team of qualified electricians 
