@@ -36,8 +36,8 @@ const HeroSection = () => (
           <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700 text-base">
             <Link to="/contact">Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-heading font-600 text-base">
-            <Link to="/about">Why Choose Us</Link>
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-heading font-600 text-base">
+              <Link to="/about">Why Choose Us</Link>
           </Button>
         </motion.div>
       </motion.div>
