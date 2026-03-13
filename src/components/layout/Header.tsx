@@ -35,7 +35,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-3">
           <div className="flex flex-col">
             <span className="font-heading text-xl font-800 tracking-tight leading-none">GREENHILLS</span>
-            <span className="font-heading text-xs font-600 tracking-[0.25em] text-accent">ELECTRIC</span>
+            <span className="font-heading text-xs font-600 tracking-[0.25em] text-primary-foreground/70">ELECTRIC</span>
           </div>
         </Link>
 
