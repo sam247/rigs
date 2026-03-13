@@ -54,8 +54,8 @@ export default {
         greenhills: {
           dark: "hsl(var(--greenhills-dark))",
           light: "hsl(var(--greenhills-light))",
-          gold: "hsl(var(--greenhills-gold))",
-          copper: "hsl(var(--greenhills-copper))",
+          blue: "hsl(var(--greenhills-blue))",
+          navy: "hsl(var(--greenhills-navy))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
