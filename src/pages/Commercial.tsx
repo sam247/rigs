@@ -37,21 +37,19 @@ const Commercial = () => (
 
     <section className="py-20 md:py-28">
       <div className="container">
-        <div className="grid gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((s, i) => (
             <motion.div key={s.title} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
-              <Card className="border-2 border-border hover:border-primary/20 transition-all duration-300">
-                <CardContent className="p-8 flex gap-6 items-start">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <s.icon className="h-7 w-7 text-primary" />
+              <Card className="h-full border-2 border-border hover:border-primary/20 transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <s.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="font-heading font-700 text-xl mb-2">{s.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
-                    <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
-                      Request a Quote <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
+                  <h3 className="font-heading font-700 text-lg mb-2">{s.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.desc}</p>
+                  <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
+                    Request a Quote <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </CardContent>
               </Card>
             </motion.div>
