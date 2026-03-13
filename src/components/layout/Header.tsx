@@ -35,7 +35,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-3">
           <div className="flex flex-col">
             <span className="font-heading text-xl font-800 tracking-tight leading-none">GREENHILLS</span>
-            <span className="font-heading text-xs font-600 tracking-[0.25em] text-accent">ELECTRIC</span>
+            <span className="font-heading text-xs font-600 tracking-[0.25em] text-primary-foreground/70">ELECTRIC</span>
           </div>
         </Link>
 
@@ -46,7 +46,7 @@ const Header = () => {
               key={link.path}
               to={link.path}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-primary-foreground/10 ${
-                location.pathname === link.path ? "bg-primary-foreground/15 text-accent" : ""
+                location.pathname === link.path ? "bg-primary-foreground/15 text-primary-foreground" : ""
               }`}
             >
               {link.label}
@@ -55,7 +55,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button asChild variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-700 hidden sm:inline-flex">
+          <Button asChild variant="default" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700 hidden sm:inline-flex">
             <Link to="/contact">Get a Free Quote</Link>
           </Button>
           <button
@@ -78,13 +78,13 @@ const Header = () => {
                 to={link.path}
                 onClick={() => setMobileOpen(false)}
                 className={`px-4 py-3 rounded-md text-sm font-medium transition-colors hover:bg-primary-foreground/10 ${
-                  location.pathname === link.path ? "bg-primary-foreground/15 text-accent" : ""
+                  location.pathname === link.path ? "bg-primary-foreground/15 text-primary-foreground" : ""
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-            <Button asChild variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-700 mt-2 sm:hidden">
+            <Button asChild variant="default" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700 mt-2 sm:hidden">
               <Link to="/contact" onClick={() => setMobileOpen(false)}>Get a Free Quote</Link>
             </Button>
           </div>
