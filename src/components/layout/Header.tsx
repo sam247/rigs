@@ -46,7 +46,7 @@ const Header = () => {
               key={link.path}
               to={link.path}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-primary-foreground/10 ${
-                location.pathname === link.path ? "bg-primary-foreground/15 text-accent" : ""
+                location.pathname === link.path ? "bg-primary-foreground/15 text-primary-foreground" : ""
               }`}
             >
               {link.label}
