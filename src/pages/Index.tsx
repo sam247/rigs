@@ -182,7 +182,7 @@ const Index = () => {
                   { num: "5★", label: "Customer Rating" },
                 ].map((stat) => (
                   <div key={stat.label}>
-                    <div className="text-3xl md:text-4xl font-heading font-800 text-accent mb-1">{stat.num}</div>
+                    <div className="text-3xl md:text-4xl font-heading font-800 text-primary-foreground mb-1">{stat.num}</div>
                     <div className="text-sm text-primary-foreground/60 font-medium">{stat.label}</div>
                   </div>
                 ))}
