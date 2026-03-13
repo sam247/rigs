@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="mb-4">
               <span className="font-heading text-xl font-800 tracking-tight">GREENHILLS</span>
               <br />
-              <span className="font-heading text-xs font-600 tracking-[0.25em] text-accent">ELECTRIC</span>
+              <span className="font-heading text-xs font-600 tracking-[0.25em] text-primary-foreground/70">ELECTRIC</span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Professional electrical contractors with over 60 years of combined experience. 
