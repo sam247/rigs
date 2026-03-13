@@ -167,7 +167,7 @@ const Index = () => {
                   "Comprehensive warranty on all work",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-primary-foreground/80 mt-0.5 shrink-0" />
                     <span className="text-primary-foreground/90">{item}</span>
                   </li>
                 ))}
