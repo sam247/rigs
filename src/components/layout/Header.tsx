@@ -84,7 +84,7 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Button asChild variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-700 mt-2 sm:hidden">
+            <Button asChild variant="default" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700 mt-2 sm:hidden">
               <Link to="/contact" onClick={() => setMobileOpen(false)}>Get a Free Quote</Link>
             </Button>
           </div>
