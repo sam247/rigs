@@ -31,7 +31,7 @@ const CTASection = () => (
           <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700 text-base">
             <Link to="/contact">Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-heading font-600 text-base">
+          <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-heading font-600 text-base">
             <a href="tel:01442264125"><Phone className="mr-2 h-5 w-5" /> 01442 264125</a>
           </Button>
         </motion.div>
