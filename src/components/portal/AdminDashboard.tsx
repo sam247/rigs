@@ -2,15 +2,20 @@ import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
-import { LogOut, Plus, Users, FolderOpen, FileText, DollarSign } from "lucide-react";
+import { LogOut, Plus, Users, FolderOpen, FileText, PoundSterling } from "lucide-react";
+import StatsBar from "./admin/StatsBar";
+import InvoicesTab from "./admin/InvoicesTab";
+import CustomersTab from "./admin/CustomersTab";
+import ProjectDetail from "./admin/ProjectDetail";
 
 type ProjectStatus = "quote_sent" | "booked" | "in_progress" | "on_hold" | "complete" | "awaiting_payment";
 
@@ -32,6 +37,22 @@ interface Profile {
   id: string;
   full_name: string | null;
   email: string | null;
+  phone: string | null;
+  address: string | null;
+  company_name: string | null;
+}
+
+interface Invoice {
+  id: string;
+  invoice_number: string;
+  amount: number;
+  status: "draft" | "sent" | "paid" | "overdue" | "cancelled";
+  due_date: string | null;
+  paid_date: string | null;
+  description: string | null;
+  customer_id: string | null;
+  project_id: string | null;
+  created_at: string;
 }
 
 const KANBAN_COLUMNS: { status: ProjectStatus; label: string; color: string }[] = [
@@ -47,18 +68,25 @@ const AdminDashboard = () => {
   const { signOut } = useAuth();
   const [projects, setProjects] = useState<Project[]>([]);
   const [customers, setCustomers] = useState<Profile[]>([]);
+  const [invoices, setInvoices] = useState<Invoice[]>([]);
+  const [unreadMessages, setUnreadMessages] = useState(0);
   const [loading, setLoading] = useState(true);
   const [showNewProject, setShowNewProject] = useState(false);
   const [newProject, setNewProject] = useState({ title: "", description: "", customer_id: "", address: "", quote_amount: "" });
   const [activeTab, setActiveTab] = useState<"kanban" | "customers" | "invoices">("kanban");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const fetchData = async () => {
-    const [projectsRes, customersRes] = await Promise.all([
+    const [projectsRes, customersRes, invoicesRes, messagesRes] = await Promise.all([
       supabase.from("projects").select("*").order("created_at", { ascending: false }),
       supabase.from("profiles").select("*"),
+      supabase.from("invoices").select("*").order("created_at", { ascending: false }),
+      supabase.from("messages").select("id", { count: "exact" }).eq("is_read", false),
     ]);
     if (projectsRes.data) setProjects(projectsRes.data as Project[]);
     if (customersRes.data) setCustomers(customersRes.data as Profile[]);
+    if (invoicesRes.data) setInvoices(invoicesRes.data as Invoice[]);
+    setUnreadMessages(messagesRes.count || 0);
     setLoading(false);
   };
 
@@ -97,6 +125,33 @@ const AdminDashboard = () => {
     return customer?.full_name || customer?.email || "Unknown";
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-muted">
+        <header className="bg-background border-b border-border sticky top-0 z-50">
+          <div className="container flex items-center justify-between py-3">
+            <Skeleton className="h-6 w-40" />
+            <div className="flex gap-2"><Skeleton className="h-8 w-24" /><Skeleton className="h-8 w-24" /><Skeleton className="h-8 w-24" /></div>
+          </div>
+        </header>
+        <div className="container py-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            {[1,2,3,4].map(i => <Skeleton key={i} className="h-24 rounded-lg" />)}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[1,2,3,4,5,6].map(i => (
+              <div key={i} className="space-y-2">
+                <Skeleton className="h-6 w-20" />
+                <Skeleton className="h-32 rounded-lg" />
+                <Skeleton className="h-24 rounded-lg" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-muted">
       {/* Admin header */}
@@ -108,24 +163,27 @@ const AdminDashboard = () => {
               <span className="text-xs font-semibold tracking-[0.15em] text-muted-foreground ml-2">ADMIN</span>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             <Button variant="ghost" size="sm" onClick={() => setActiveTab("kanban")} className={activeTab === "kanban" ? "bg-muted" : ""}>
-              <FolderOpen className="h-4 w-4 mr-1" /> Projects
+              <FolderOpen className="h-4 w-4 sm:mr-1" /> <span className="hidden sm:inline">Projects</span>
             </Button>
             <Button variant="ghost" size="sm" onClick={() => setActiveTab("customers")} className={activeTab === "customers" ? "bg-muted" : ""}>
-              <Users className="h-4 w-4 mr-1" /> Customers
+              <Users className="h-4 w-4 sm:mr-1" /> <span className="hidden sm:inline">Customers</span>
             </Button>
             <Button variant="ghost" size="sm" onClick={() => setActiveTab("invoices")} className={activeTab === "invoices" ? "bg-muted" : ""}>
-              <FileText className="h-4 w-4 mr-1" /> Invoices
+              <FileText className="h-4 w-4 sm:mr-1" /> <span className="hidden sm:inline">Invoices</span>
             </Button>
             <Button variant="outline" size="sm" onClick={signOut}>
-              <LogOut className="h-4 w-4 mr-1" /> Sign Out
+              <LogOut className="h-4 w-4 sm:mr-1" /> <span className="hidden sm:inline">Sign Out</span>
             </Button>
           </div>
         </div>
       </header>
 
       <div className="container py-6">
+        {/* Stats bar - always visible */}
+        <StatsBar projects={projects} invoices={invoices} unreadMessages={unreadMessages} />
+
         {activeTab === "kanban" && (
           <>
             <div className="flex items-center justify-between mb-6">
@@ -182,17 +240,26 @@ const AdminDashboard = () => {
                   </div>
                   <div className="space-y-2 min-h-[200px]">
                     {projects.filter(p => p.status === col.status).map(project => (
-                      <Card key={project.id} className="cursor-pointer hover:shadow-md transition-shadow">
+                      <Card
+                        key={project.id}
+                        className="cursor-pointer hover:shadow-md transition-shadow"
+                        onClick={() => setSelectedProject(project)}
+                      >
                         <CardContent className="p-3">
                           <h3 className="font-heading font-semibold text-sm mb-1">{project.title}</h3>
                           <p className="text-xs text-muted-foreground mb-2">{getCustomerName(project.customer_id)}</p>
                           {project.quote_amount && (
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mb-2">
-                              <DollarSign className="h-3 w-3" /> £{project.quote_amount.toLocaleString()}
+                              <PoundSterling className="h-3 w-3" /> £{project.quote_amount.toLocaleString("en-GB")}
                             </div>
                           )}
-                          <Select value={project.status} onValueChange={(v) => moveProject(project.id, v as ProjectStatus)}>
-                            <SelectTrigger className="h-7 text-xs">
+                          <Select
+                            value={project.status}
+                            onValueChange={(v) => {
+                              moveProject(project.id, v as ProjectStatus);
+                            }}
+                          >
+                            <SelectTrigger className="h-7 text-xs" onClick={(e) => e.stopPropagation()}>
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
@@ -212,34 +279,22 @@ const AdminDashboard = () => {
         )}
 
         {activeTab === "customers" && (
-          <>
-            <h1 className="text-2xl font-heading font-bold text-foreground mb-6">Customers</h1>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {customers.map(c => (
-                <Card key={c.id}>
-                  <CardHeader>
-                    <CardTitle className="text-lg font-heading">{c.full_name || "No name"}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">{c.email}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {projects.filter(p => p.customer_id === c.id).length} project(s)
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-              {customers.length === 0 && <p className="text-muted-foreground col-span-3">No customers yet.</p>}
-            </div>
-          </>
+          <CustomersTab customers={customers} projects={projects} invoices={invoices} />
         )}
 
         {activeTab === "invoices" && (
-          <>
-            <h1 className="text-2xl font-heading font-bold text-foreground mb-6">Invoices</h1>
-            <p className="text-muted-foreground">Invoice management coming soon.</p>
-          </>
+          <InvoicesTab invoices={invoices} customers={customers} projects={projects} onRefresh={fetchData} />
         )}
       </div>
+
+      {/* Project Detail Slide-Out */}
+      <ProjectDetail
+        project={selectedProject}
+        customers={customers}
+        open={!!selectedProject}
+        onOpenChange={(open) => { if (!open) setSelectedProject(null); }}
+        onRefresh={fetchData}
+      />
     </div>
   );
 };
