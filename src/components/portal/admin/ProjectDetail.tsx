@@ -128,7 +128,7 @@ const ProjectDetail = ({ project, customers, open, onOpenChange, onRefresh }: Pr
 
   // Build timeline from messages + invoices + project creation
   const timeline: TimelineEvent[] = [
-    { id: "created", type: "created", timestamp: project.created_at, data: { title: project.title } },
+    { id: "created", type: "created" as const, timestamp: project.created_at, data: { title: project.title } },
     ...messages.map(m => ({ id: m.id, type: "message" as const, timestamp: m.created_at, data: m })),
     ...invoices.map(i => ({ id: i.id, type: "invoice" as const, timestamp: i.created_at, data: i })),
   ].sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
