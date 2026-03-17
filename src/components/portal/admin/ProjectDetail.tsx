@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,9 +9,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { toast } from "sonner";
 import { format } from "date-fns";
-import { MapPin, Calendar, PoundSterling, FileText, MessageSquare, Save } from "lucide-react";
+import { MapPin, Calendar, PoundSterling, FileText, MessageSquare, Save, Send, Clock, Receipt, CircleDot } from "lucide-react";
 
 type ProjectStatus = "quote_sent" | "booked" | "in_progress" | "on_hold" | "complete" | "awaiting_payment";
 
@@ -41,6 +43,7 @@ interface Profile {
   id: string;
   full_name: string | null;
   email: string | null;
+  avatar_url?: string | null;
 }
 
 interface ProjectDetailProps {
@@ -65,13 +68,25 @@ interface Invoice {
   amount: number;
   status: string;
   due_date: string | null;
+  created_at: string;
+}
+
+interface TimelineEvent {
+  id: string;
+  type: "message" | "invoice" | "created";
+  timestamp: string;
+  data: any;
 }
 
 const ProjectDetail = ({ project, customers, open, onOpenChange, onRefresh }: ProjectDetailProps) => {
+  const { user } = useAuth();
   const [editing, setEditing] = useState(false);
   const [form, setForm] = useState({ description: "", address: "", notes: "", quote_amount: "", start_date: "", end_date: "", status: "" as ProjectStatus });
   const [messages, setMessages] = useState<Message[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
+  const [newMessage, setNewMessage] = useState("");
+  const [sending, setSending] = useState(false);
+  const timelineEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (project) {
@@ -84,21 +99,39 @@ const ProjectDetail = ({ project, customers, open, onOpenChange, onRefresh }: Pr
         end_date: project.end_date || "",
         status: project.status,
       });
-      // Fetch related data
+      setEditing(false);
+      setNewMessage("");
       supabase.from("messages").select("*").eq("project_id", project.id).order("created_at", { ascending: true })
         .then(({ data }) => setMessages(data || []));
-      supabase.from("invoices").select("id, invoice_number, amount, status, due_date").eq("project_id", project.id)
+      supabase.from("invoices").select("id, invoice_number, amount, status, due_date, created_at").eq("project_id", project.id)
         .then(({ data }) => setInvoices(data || []));
     }
   }, [project]);
 
+  useEffect(() => {
+    timelineEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   if (!project) return null;
 
-  const customerName = (() => {
-    if (!project.customer_id) return "Unassigned";
-    const c = customers.find(c => c.id === project.customer_id);
-    return c?.full_name || c?.email || "Unknown";
+  const customer = (() => {
+    if (!project.customer_id) return null;
+    return customers.find(c => c.id === project.customer_id) || null;
   })();
+  const customerName = customer?.full_name || customer?.email || "Unassigned";
+
+  const getInitials = (name: string | null, email: string | null) => {
+    if (name) return name.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2);
+    if (email) return email[0].toUpperCase();
+    return "?";
+  };
+
+  // Build timeline from messages + invoices + project creation
+  const timeline: TimelineEvent[] = [
+    { id: "created", type: "created", timestamp: project.created_at, data: { title: project.title } },
+    ...messages.map(m => ({ id: m.id, type: "message" as const, timestamp: m.created_at, data: m })),
+    ...invoices.map(i => ({ id: i.id, type: "invoice" as const, timestamp: i.created_at, data: i })),
+  ].sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
 
   const handleSave = async () => {
     const { error } = await supabase.from("projects").update({
@@ -119,17 +152,45 @@ const ProjectDetail = ({ project, customers, open, onOpenChange, onRefresh }: Pr
     }
   };
 
+  const handleSendMessage = async () => {
+    if (!newMessage.trim() || !user) return;
+    setSending(true);
+    const { error } = await supabase.from("messages").insert({
+      content: newMessage.trim(),
+      project_id: project.id,
+      sender_id: user.id,
+    });
+    if (error) {
+      toast.error(error.message);
+    } else {
+      setNewMessage("");
+      // Refresh messages
+      const { data } = await supabase.from("messages").select("*").eq("project_id", project.id).order("created_at", { ascending: true });
+      setMessages(data || []);
+    }
+    setSending(false);
+  };
+
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent className="w-full sm:max-w-[540px] overflow-y-auto">
-        <SheetHeader className="pb-4">
-          <SheetTitle className="font-heading text-xl">{project.title}</SheetTitle>
-          <p className="text-sm text-muted-foreground">{customerName}</p>
-        </SheetHeader>
+      <SheetContent className="w-full sm:max-w-[560px] overflow-y-auto p-0">
+        {/* Header */}
+        <div className="p-6 pb-4 border-b border-border">
+          <SheetHeader className="pb-0">
+            <SheetTitle className="font-heading text-xl">{project.title}</SheetTitle>
+          </SheetHeader>
+          <div className="flex items-center gap-2 mt-2">
+            <Avatar className="h-6 w-6">
+              {customer?.avatar_url && <AvatarImage src={customer.avatar_url} alt={customerName} />}
+              <AvatarFallback className="text-[10px] bg-muted text-muted-foreground">
+                {getInitials(customer?.full_name || null, customer?.email || null)}
+              </AvatarFallback>
+            </Avatar>
+            <span className="text-sm text-muted-foreground">{customerName}</span>
+          </div>
 
-        <div className="space-y-6">
           {/* Status & Quick Info */}
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 mt-3">
             {editing ? (
               <Select value={form.status} onValueChange={v => setForm(f => ({ ...f, status: v as ProjectStatus }))}>
                 <SelectTrigger className="w-[160px] h-8 text-xs"><SelectValue /></SelectTrigger>
@@ -153,8 +214,10 @@ const ProjectDetail = ({ project, customers, open, onOpenChange, onRefresh }: Pr
               </span>
             )}
           </div>
+        </div>
 
-          {/* Editable Fields */}
+        <div className="p-6 space-y-6">
+          {/* Editable Details */}
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-heading font-semibold">Details</h3>
@@ -188,53 +251,92 @@ const ProjectDetail = ({ project, customers, open, onOpenChange, onRefresh }: Pr
 
           <Separator />
 
-          {/* Invoices */}
+          {/* Activity Timeline */}
           <div>
-            <h3 className="text-sm font-heading font-semibold flex items-center gap-1 mb-3">
-              <FileText className="h-4 w-4" /> Invoices ({invoices.length})
+            <h3 className="text-sm font-heading font-semibold flex items-center gap-1 mb-4">
+              <Clock className="h-4 w-4" /> Activity Timeline
             </h3>
-            {invoices.length === 0 ? (
-              <p className="text-xs text-muted-foreground italic">No invoices for this project.</p>
-            ) : (
-              <div className="space-y-2">
-                {invoices.map(inv => (
-                  <div key={inv.id} className="flex items-center justify-between p-2 rounded-md bg-muted/50 text-sm">
-                    <div>
-                      <span className="font-mono text-xs">{inv.invoice_number}</span>
-                      <span className="ml-2 font-semibold">£{inv.amount.toLocaleString("en-GB", { minimumFractionDigits: 2 })}</span>
-                    </div>
-                    <Badge variant="outline" className="text-xs capitalize">{inv.status}</Badge>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-3 top-0 bottom-0 w-px bg-border" />
 
-          <Separator />
-
-          {/* Messages */}
-          <div>
-            <h3 className="text-sm font-heading font-semibold flex items-center gap-1 mb-3">
-              <MessageSquare className="h-4 w-4" /> Messages ({messages.length})
-            </h3>
-            {messages.length === 0 ? (
-              <p className="text-xs text-muted-foreground italic">No messages yet.</p>
-            ) : (
-              <div className="space-y-2 max-h-[300px] overflow-y-auto">
-                {messages.map(msg => {
-                  const isAdmin = msg.sender_id !== project.customer_id;
-                  return (
-                    <div key={msg.id} className={`p-2 rounded-lg text-xs ${isAdmin ? "bg-primary/10 ml-4" : "bg-muted mr-4"}`}>
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="font-semibold">{isAdmin ? "Greenhills" : customerName}</span>
-                        <span className="text-muted-foreground">{format(new Date(msg.created_at), "dd MMM HH:mm")}</span>
+              <div className="space-y-4">
+                {timeline.map(event => {
+                  if (event.type === "created") {
+                    return (
+                      <div key={event.id} className="flex gap-3 relative">
+                        <div className="w-6 h-6 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center shrink-0 z-10">
+                          <CircleDot className="h-3 w-3 text-primary" />
+                        </div>
+                        <div className="pt-0.5">
+                          <p className="text-xs font-medium text-foreground">Project created</p>
+                          <p className="text-[10px] text-muted-foreground">{format(new Date(event.timestamp), "dd MMM yyyy, HH:mm")}</p>
+                        </div>
                       </div>
-                      <p>{msg.content}</p>
-                    </div>
-                  );
+                    );
+                  }
+
+                  if (event.type === "invoice") {
+                    const inv = event.data as Invoice;
+                    return (
+                      <div key={event.id} className="flex gap-3 relative">
+                        <div className="w-6 h-6 rounded-full bg-accent border-2 border-accent-foreground/20 flex items-center justify-center shrink-0 z-10">
+                          <Receipt className="h-3 w-3 text-accent-foreground" />
+                        </div>
+                        <div className="pt-0.5 flex-1">
+                          <div className="flex items-center justify-between">
+                            <p className="text-xs font-medium text-foreground">
+                              Invoice <span className="font-mono">{inv.invoice_number}</span> — £{inv.amount.toLocaleString("en-GB", { minimumFractionDigits: 2 })}
+                            </p>
+                            <Badge variant="outline" className="text-[10px] capitalize h-5">{inv.status}</Badge>
+                          </div>
+                          <p className="text-[10px] text-muted-foreground">{format(new Date(event.timestamp), "dd MMM yyyy, HH:mm")}</p>
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  if (event.type === "message") {
+                    const msg = event.data as Message;
+                    const isAdmin = msg.sender_id !== project.customer_id;
+                    const sender = isAdmin ? "Greenhills" : customerName;
+                    return (
+                      <div key={event.id} className="flex gap-3 relative">
+                        <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 z-10 ${
+                          isAdmin ? "bg-primary text-primary-foreground" : "bg-muted border-2 border-border"
+                        }`}>
+                          <MessageSquare className="h-3 w-3" />
+                        </div>
+                        <div className="pt-0.5 flex-1">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-xs font-semibold text-foreground">{sender}</span>
+                            <span className="text-[10px] text-muted-foreground">{format(new Date(event.timestamp), "dd MMM, HH:mm")}</span>
+                          </div>
+                          <p className={`text-xs p-2 rounded-lg ${isAdmin ? "bg-primary/10" : "bg-muted"}`}>{msg.content}</p>
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  return null;
                 })}
+                <div ref={timelineEndRef} />
               </div>
-            )}
+            </div>
+
+            {/* Admin Reply Box */}
+            <div className="mt-4 flex gap-2">
+              <Input
+                placeholder="Send a message..."
+                value={newMessage}
+                onChange={e => setNewMessage(e.target.value)}
+                onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleSendMessage(); } }}
+                className="text-sm"
+              />
+              <Button size="sm" onClick={handleSendMessage} disabled={!newMessage.trim() || sending}>
+                <Send className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </SheetContent>
