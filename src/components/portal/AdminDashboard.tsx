@@ -10,8 +10,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { toast } from "sonner";
 import { LogOut, Plus, Users, FolderOpen, FileText, PoundSterling } from "lucide-react";
+import { DragDropContext, Droppable, Draggable, type DropResult } from "@hello-pangea/dnd";
 import StatsBar from "./admin/StatsBar";
 import InvoicesTab from "./admin/InvoicesTab";
 import CustomersTab from "./admin/CustomersTab";
@@ -40,6 +42,7 @@ interface Profile {
   phone: string | null;
   address: string | null;
   company_name: string | null;
+  avatar_url: string | null;
 }
 
 interface Invoice {
@@ -119,10 +122,34 @@ const AdminDashboard = () => {
     }
   };
 
+  const getCustomer = (customerId: string | null) => {
+    if (!customerId) return null;
+    return customers.find(c => c.id === customerId) || null;
+  };
+
   const getCustomerName = (customerId: string | null) => {
-    if (!customerId) return "Unassigned";
-    const customer = customers.find(c => c.id === customerId);
-    return customer?.full_name || customer?.email || "Unknown";
+    const customer = getCustomer(customerId);
+    if (!customer) return "Unassigned";
+    return customer.full_name || customer.email || "Unknown";
+  };
+
+  const getInitials = (name: string | null, email: string | null) => {
+    if (name) {
+      return name.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2);
+    }
+    if (email) return email[0].toUpperCase();
+    return "?";
+  };
+
+  const onDragEnd = (result: DropResult) => {
+    const { draggableId, destination } = result;
+    if (!destination) return;
+    const newStatus = destination.droppableId as ProjectStatus;
+    const project = projects.find(p => p.id === draggableId);
+    if (!project || project.status === newStatus) return;
+    // Optimistic update
+    setProjects(prev => prev.map(p => p.id === draggableId ? { ...p, status: newStatus } : p));
+    moveProject(draggableId, newStatus);
   };
 
   if (loading) {
@@ -228,53 +255,76 @@ const AdminDashboard = () => {
               </Dialog>
             </div>
 
-            {/* Kanban Board */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
-              {KANBAN_COLUMNS.map(col => (
-                <div key={col.status} className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <Badge variant="outline" className={`${col.color} font-heading text-xs`}>{col.label}</Badge>
-                    <span className="text-xs text-muted-foreground font-medium">
-                      {projects.filter(p => p.status === col.status).length}
-                    </span>
-                  </div>
-                  <div className="space-y-2 min-h-[200px]">
-                    {projects.filter(p => p.status === col.status).map(project => (
-                      <Card
-                        key={project.id}
-                        className="cursor-pointer hover:shadow-md transition-shadow"
-                        onClick={() => setSelectedProject(project)}
-                      >
-                        <CardContent className="p-3">
-                          <h3 className="font-heading font-semibold text-sm mb-1">{project.title}</h3>
-                          <p className="text-xs text-muted-foreground mb-2">{getCustomerName(project.customer_id)}</p>
-                          {project.quote_amount && (
-                            <div className="flex items-center gap-1 text-xs text-muted-foreground mb-2">
-                              <PoundSterling className="h-3 w-3" /> £{project.quote_amount.toLocaleString("en-GB")}
-                            </div>
-                          )}
-                          <Select
-                            value={project.status}
-                            onValueChange={(v) => {
-                              moveProject(project.id, v as ProjectStatus);
-                            }}
+            {/* Kanban Board with Drag & Drop */}
+            <DragDropContext onDragEnd={onDragEnd}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+                {KANBAN_COLUMNS.map(col => {
+                  const columnProjects = projects.filter(p => p.status === col.status);
+                  return (
+                    <div key={col.status} className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <Badge variant="outline" className={`${col.color} font-heading text-xs`}>{col.label}</Badge>
+                        <span className="text-xs text-muted-foreground font-medium">{columnProjects.length}</span>
+                      </div>
+                      <Droppable droppableId={col.status}>
+                        {(provided, snapshot) => (
+                          <div
+                            ref={provided.innerRef}
+                            {...provided.droppableProps}
+                            className={`space-y-2 min-h-[200px] rounded-lg p-1 transition-colors ${
+                              snapshot.isDraggingOver ? "bg-primary/10 ring-2 ring-primary/20" : ""
+                            }`}
                           >
-                            <SelectTrigger className="h-7 text-xs" onClick={(e) => e.stopPropagation()}>
-                              <SelectValue />
-                            </SelectTrigger>
-                            <SelectContent>
-                              {KANBAN_COLUMNS.map(c => (
-                                <SelectItem key={c.status} value={c.status} className="text-xs">{c.label}</SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+                            {columnProjects.map((project, index) => {
+                              const customer = getCustomer(project.customer_id);
+                              return (
+                                <Draggable key={project.id} draggableId={project.id} index={index}>
+                                  {(provided, snapshot) => (
+                                    <div
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                      onClick={() => setSelectedProject(project)}
+                                    >
+                                      <Card className={`cursor-pointer transition-all ${
+                                        snapshot.isDragging
+                                          ? "shadow-lg rotate-2 ring-2 ring-primary/30"
+                                          : "hover:shadow-md"
+                                      }`}>
+                                        <CardContent className="p-3">
+                                          <h3 className="font-heading font-semibold text-sm mb-2">{project.title}</h3>
+                                          <div className="flex items-center gap-2 mb-2">
+                                            <Avatar className="h-5 w-5">
+                                              {customer?.avatar_url && <AvatarImage src={customer.avatar_url} alt={customer.full_name || ""} />}
+                                              <AvatarFallback className="text-[9px] bg-muted text-muted-foreground">
+                                                {getInitials(customer?.full_name || null, customer?.email || null)}
+                                              </AvatarFallback>
+                                            </Avatar>
+                                            <span className="text-xs text-muted-foreground truncate">
+                                              {getCustomerName(project.customer_id)}
+                                            </span>
+                                          </div>
+                                          {project.quote_amount && (
+                                            <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                                              <PoundSterling className="h-3 w-3" /> £{project.quote_amount.toLocaleString("en-GB")}
+                                            </div>
+                                          )}
+                                        </CardContent>
+                                      </Card>
+                                    </div>
+                                  )}
+                                </Draggable>
+                              );
+                            })}
+                            {provided.placeholder}
+                          </div>
+                        )}
+                      </Droppable>
+                    </div>
+                  );
+                })}
+              </div>
+            </DragDropContext>
           </>
         )}
 

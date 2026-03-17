@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, Phone, MapPin, FolderOpen } from "lucide-react";
 
 interface Profile {
@@ -9,6 +10,7 @@ interface Profile {
   phone: string | null;
   address: string | null;
   company_name: string | null;
+  avatar_url: string | null;
 }
 
 interface Project {
@@ -30,6 +32,12 @@ interface CustomersTabProps {
   invoices: Invoice[];
 }
 
+const getInitials = (name: string | null, email: string | null) => {
+  if (name) return name.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2);
+  if (email) return email[0].toUpperCase();
+  return "?";
+};
+
 const CustomersTab = ({ customers, projects, invoices }: CustomersTabProps) => {
   const getCustomerStats = (customerId: string) => {
     const customerProjects = projects.filter(p => p.customer_id === customerId);
@@ -37,8 +45,7 @@ const CustomersTab = ({ customers, projects, invoices }: CustomersTabProps) => {
     const totalSpend = customerInvoices.filter(i => i.status === "paid").reduce((s, i) => s + i.amount, 0);
     const activeCount = customerProjects.filter(p => ["in_progress", "booked"].includes(p.status)).length;
     const completeCount = customerProjects.filter(p => p.status === "complete").length;
-    const pipelineValue = customerProjects.reduce((s, p) => s + (p.quote_amount || 0), 0);
-    return { totalProjects: customerProjects.length, activeCount, completeCount, totalSpend, pipelineValue };
+    return { totalProjects: customerProjects.length, activeCount, completeCount, totalSpend };
   };
 
   return (
@@ -53,18 +60,23 @@ const CustomersTab = ({ customers, projects, invoices }: CustomersTabProps) => {
           return (
             <Card key={c.id} className="hover:shadow-md transition-shadow">
               <CardHeader className="pb-3">
-                <div className="flex items-start justify-between">
-                  <div>
+                <div className="flex items-start gap-3">
+                  <Avatar className="h-10 w-10">
+                    {c.avatar_url && <AvatarImage src={c.avatar_url} alt={c.full_name || ""} />}
+                    <AvatarFallback className="text-sm bg-primary/10 text-primary font-semibold">
+                      {getInitials(c.full_name, c.email)}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1 min-w-0">
                     <CardTitle className="text-base font-heading">{c.full_name || "No name"}</CardTitle>
                     {c.company_name && <p className="text-xs text-muted-foreground mt-0.5">{c.company_name}</p>}
                   </div>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs shrink-0">
                     <FolderOpen className="h-3 w-3 mr-1" /> {stats.totalProjects}
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent className="space-y-3">
-                {/* Contact details */}
                 <div className="space-y-1">
                   {c.email && (
                     <p className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -83,7 +95,6 @@ const CustomersTab = ({ customers, projects, invoices }: CustomersTabProps) => {
                   )}
                 </div>
 
-                {/* Stats */}
                 <div className="grid grid-cols-3 gap-2 pt-2 border-t border-border">
                   <div className="text-center">
                     <p className="text-lg font-bold font-heading text-foreground">{stats.activeCount}</p>
