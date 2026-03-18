@@ -12,7 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Skeleton } from "@/components/ui/skeleton";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { toast } from "sonner";
-import { LogOut, Plus, Users, FolderOpen, FileText, PoundSterling } from "lucide-react";
+import { LogOut, Plus, Users, FolderOpen, FileText, PoundSterling, Download } from "lucide-react";
 import { DragDropContext, Droppable, Draggable, type DropResult } from "@hello-pangea/dnd";
 import StatsBar from "./admin/StatsBar";
 import InvoicesTab from "./admin/InvoicesTab";
@@ -66,6 +66,17 @@ const KANBAN_COLUMNS: { status: ProjectStatus; label: string; color: string }[] 
   { status: "complete", label: "Complete", color: "bg-green-100 text-green-800 border-green-200" },
   { status: "awaiting_payment", label: "Awaiting Payment", color: "bg-red-100 text-red-800 border-red-200" },
 ];
+
+const downloadCSV = (filename: string, headers: string[], rows: string[][]) => {
+  const csv = [headers.join(","), ...rows.map(r => r.map(c => `"${(c || "").replace(/"/g, '""')}"`).join(","))].join("\n");
+  const blob = new Blob([csv], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+};
 
 const AdminDashboard = () => {
   const { signOut } = useAuth();
@@ -134,9 +145,7 @@ const AdminDashboard = () => {
   };
 
   const getInitials = (name: string | null, email: string | null) => {
-    if (name) {
-      return name.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2);
-    }
+    if (name) return name.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2);
     if (email) return email[0].toUpperCase();
     return "?";
   };
@@ -147,9 +156,23 @@ const AdminDashboard = () => {
     const newStatus = destination.droppableId as ProjectStatus;
     const project = projects.find(p => p.id === draggableId);
     if (!project || project.status === newStatus) return;
-    // Optimistic update
     setProjects(prev => prev.map(p => p.id === draggableId ? { ...p, status: newStatus } : p));
     moveProject(draggableId, newStatus);
+  };
+
+  const exportProjects = () => {
+    const headers = ["Title", "Status", "Customer", "Address", "Quote (£)", "Start Date", "End Date"];
+    const rows = projects.map(p => [
+      p.title,
+      KANBAN_COLUMNS.find(c => c.status === p.status)?.label || p.status,
+      getCustomerName(p.customer_id),
+      p.address || "",
+      p.quote_amount?.toFixed(2) || "",
+      p.start_date || "",
+      p.end_date || "",
+    ]);
+    downloadCSV("projects.csv", headers, rows);
+    toast.success("Projects exported");
   };
 
   if (loading) {
@@ -180,7 +203,7 @@ const AdminDashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-muted">
+    <div className="min-h-screen bg-muted flex flex-col">
       {/* Admin header */}
       <header className="bg-background border-b border-border sticky top-0 z-50">
         <div className="container flex items-center justify-between py-3">
@@ -207,55 +230,58 @@ const AdminDashboard = () => {
         </div>
       </header>
 
-      <div className="container py-6">
-        {/* Stats bar - always visible */}
+      <div className="container py-6 flex-1">
         <StatsBar projects={projects} invoices={invoices} unreadMessages={unreadMessages} />
 
         {activeTab === "kanban" && (
           <>
             <div className="flex items-center justify-between mb-6">
               <h1 className="text-2xl font-heading font-bold text-foreground">Project Board</h1>
-              <Dialog open={showNewProject} onOpenChange={setShowNewProject}>
-                <DialogTrigger asChild>
-                  <Button className="font-heading font-bold"><Plus className="h-4 w-4 mr-1" /> New Project</Button>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader><DialogTitle className="font-heading">Create New Project</DialogTitle></DialogHeader>
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <Label>Title</Label>
-                      <Input value={newProject.title} onChange={e => setNewProject(p => ({ ...p, title: e.target.value }))} placeholder="Project title" />
+              <div className="flex items-center gap-2">
+                <Button variant="outline" size="sm" onClick={exportProjects}>
+                  <Download className="h-4 w-4 mr-1" /> Export CSV
+                </Button>
+                <Dialog open={showNewProject} onOpenChange={setShowNewProject}>
+                  <DialogTrigger asChild>
+                    <Button className="font-heading font-bold"><Plus className="h-4 w-4 mr-1" /> New Project</Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader><DialogTitle className="font-heading">Create New Project</DialogTitle></DialogHeader>
+                    <div className="space-y-4">
+                      <div className="space-y-2">
+                        <Label>Title</Label>
+                        <Input value={newProject.title} onChange={e => setNewProject(p => ({ ...p, title: e.target.value }))} placeholder="Project title" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label>Description</Label>
+                        <Textarea value={newProject.description} onChange={e => setNewProject(p => ({ ...p, description: e.target.value }))} placeholder="Project details..." />
+                      </div>
+                      <div className="space-y-2">
+                        <Label>Customer</Label>
+                        <Select value={newProject.customer_id} onValueChange={v => setNewProject(p => ({ ...p, customer_id: v }))}>
+                          <SelectTrigger><SelectValue placeholder="Select customer" /></SelectTrigger>
+                          <SelectContent>
+                            {customers.map(c => (
+                              <SelectItem key={c.id} value={c.id}>{c.full_name || c.email}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div className="space-y-2">
+                        <Label>Address</Label>
+                        <Input value={newProject.address} onChange={e => setNewProject(p => ({ ...p, address: e.target.value }))} placeholder="Site address" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label>Quote Amount (£)</Label>
+                        <Input type="number" value={newProject.quote_amount} onChange={e => setNewProject(p => ({ ...p, quote_amount: e.target.value }))} placeholder="0.00" />
+                      </div>
+                      <Button onClick={handleCreateProject} className="w-full font-heading font-bold" disabled={!newProject.title}>Create Project</Button>
                     </div>
-                    <div className="space-y-2">
-                      <Label>Description</Label>
-                      <Textarea value={newProject.description} onChange={e => setNewProject(p => ({ ...p, description: e.target.value }))} placeholder="Project details..." />
-                    </div>
-                    <div className="space-y-2">
-                      <Label>Customer</Label>
-                      <Select value={newProject.customer_id} onValueChange={v => setNewProject(p => ({ ...p, customer_id: v }))}>
-                        <SelectTrigger><SelectValue placeholder="Select customer" /></SelectTrigger>
-                        <SelectContent>
-                          {customers.map(c => (
-                            <SelectItem key={c.id} value={c.id}>{c.full_name || c.email}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div className="space-y-2">
-                      <Label>Address</Label>
-                      <Input value={newProject.address} onChange={e => setNewProject(p => ({ ...p, address: e.target.value }))} placeholder="Site address" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label>Quote Amount (£)</Label>
-                      <Input type="number" value={newProject.quote_amount} onChange={e => setNewProject(p => ({ ...p, quote_amount: e.target.value }))} placeholder="0.00" />
-                    </div>
-                    <Button onClick={handleCreateProject} className="w-full font-heading font-bold" disabled={!newProject.title}>Create Project</Button>
-                  </div>
-                </DialogContent>
-              </Dialog>
+                  </DialogContent>
+                </Dialog>
+              </div>
             </div>
 
-            {/* Kanban Board with Drag & Drop */}
             <DragDropContext onDragEnd={onDragEnd}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
                 {KANBAN_COLUMNS.map(col => {
@@ -337,7 +363,18 @@ const AdminDashboard = () => {
         )}
       </div>
 
-      {/* Project Detail Slide-Out */}
+      {/* SaaS Footer */}
+      <footer className="border-t border-border bg-background mt-auto">
+        <div className="container flex items-center justify-between py-3 text-xs text-muted-foreground">
+          <span>&copy; {new Date().getFullYear()} Greenhills Electric · Admin v1.0</span>
+          <div className="flex items-center gap-4">
+            <a href="/privacy" className="hover:text-foreground transition-colors">Privacy</a>
+            <a href="/contact" className="hover:text-foreground transition-colors">Help</a>
+            <span>Powered by Greenhills</span>
+          </div>
+        </div>
+      </footer>
+
       <ProjectDetail
         project={selectedProject}
         customers={customers}
