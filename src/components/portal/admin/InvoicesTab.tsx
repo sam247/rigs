@@ -94,7 +94,7 @@ const InvoicesTab = ({ invoices, customers, projects, onRefresh }: InvoicesTabPr
   };
 
   const updateStatus = async (invoiceId: string, newStatus: InvoiceStatus) => {
-    const updateData: Record<string, unknown> = { status: newStatus };
+    const updateData: { status: InvoiceStatus; paid_date?: string } = { status: newStatus };
     if (newStatus === "paid") updateData.paid_date = new Date().toISOString().split("T")[0];
     const { error } = await supabase.from("invoices").update(updateData).eq("id", invoiceId);
     if (error) {

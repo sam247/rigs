@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Plug, Lightbulb, BatteryCharging, ShieldAlert, Building2, Home } from "lucide-react";
+import { ArrowRight, Plug, Lightbulb, BatteryCharging, ShieldAlert, Home, Search } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,44 +18,44 @@ const projects = [
   {
     icon: Plug,
     title: "Full House Rewire",
-    location: "Watford, Hertfordshire",
-    type: "Domestic",
-    desc: "Complete rewire of a 3-bed semi including new consumer unit, smoke alarms and all certification.",
+    location: "Tring, Hertfordshire",
+    type: "Rewire",
+    desc: "Complete rewire of a 3-bed semi including new consumer unit, smoke alarms and full certification.",
   },
   {
-    icon: Building2,
-    title: "Office Fit-Out Electrics",
-    location: "St Albans, Hertfordshire",
-    type: "Commercial",
-    desc: "Full electrical installation for 12-workstation office space with server room and data cabling.",
+    icon: Lightbulb,
+    title: "Kitchen Lighting Refit",
+    location: "Berkhamsted, Hertfordshire",
+    type: "Lighting",
+    desc: "Recessed LED downlights, under-cabinet strip lighting and dimmer controls in a brand new kitchen extension.",
   },
   {
     icon: BatteryCharging,
     title: "EV Charger Installation",
     location: "Hemel Hempstead, Hertfordshire",
-    type: "Domestic",
-    desc: "7kW EV charger with dedicated circuit. Installed in under a day with OZEV grant applied.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Warehouse LED Upgrade",
-    location: "Berkhamsted, Hertfordshire",
-    type: "Commercial",
-    desc: "Replaced fluorescent fittings with LED panels across 500sqm warehouse. 60% energy saving.",
-  },
-  {
-    icon: ShieldAlert,
-    title: "Fire Alarm System",
-    location: "Berkhamsted, Hertfordshire",
-    type: "Commercial",
-    desc: "Design and install of 24-zone addressable fire alarm system for a 3-storey office building.",
+    type: "EV Charger",
+    desc: "7kW home EV charger fitted on a dedicated circuit. Tidy install, completed in under a day.",
   },
   {
     icon: Home,
-    title: "Smart Home Pre-Wire",
-    location: "Hemel Hempstead, Hertfordshire",
-    type: "Domestic",
-    desc: "Pre-wiring for smart lighting, motorised blinds, multi-room audio and CCTV in a new build.",
+    title: "Consumer Unit Upgrade",
+    location: "Wendover, Buckinghamshire",
+    type: "Consumer Unit",
+    desc: "Old fuse box swapped for a new 18th Edition dual-RCD consumer unit with full periodic test.",
+  },
+  {
+    icon: ShieldAlert,
+    title: "Outdoor Security Lighting",
+    location: "Tring, Hertfordshire",
+    type: "Security",
+    desc: "PIR-controlled LED security floodlights to the rear and side of a detached property.",
+  },
+  {
+    icon: Search,
+    title: "Fault Finding & Repair",
+    location: "Aylesbury, Buckinghamshire",
+    type: "Fault Finding",
+    desc: "Diagnosed and repaired an intermittent ring main fault tripping the upstairs RCD.",
   },
 ];
 
@@ -71,8 +71,7 @@ const ProjectsShowcase = () => (
         <motion.p variants={fadeUp} custom={0} className="text-xs md:text-sm font-heading font-600 uppercase tracking-wider text-primary mb-2 md:mb-3">Recent Projects</motion.p>
         <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-4xl font-heading font-800 mb-3 md:mb-4">Work We're Proud Of</motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-          From quick EV charger installs to large-scale commercial fit-outs, here's a snapshot
-          of the electrical work we've recently completed.
+          A snapshot of recent domestic electrical work completed across Tring, Hertfordshire and the surrounding villages.
         </motion.p>
       </motion.div>
 

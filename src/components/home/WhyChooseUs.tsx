@@ -21,18 +21,18 @@ const WhyChooseUs = () => (
       >
         <div>
           <motion.p variants={fadeUp} custom={0} className="text-xs md:text-sm font-heading font-600 uppercase tracking-wider text-primary-foreground/70 mb-2 md:mb-3">Why Choose Us</motion.p>
-          <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-4xl font-heading font-800 mb-4 md:mb-6">Electrical Work Done Right, First Time</motion.h2>
+          <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-4xl font-heading font-800 mb-4 md:mb-6">Local Electricians You Can Trust</motion.h2>
           <motion.p variants={fadeUp} custom={2} className="text-sm md:text-base text-primary-foreground/70 mb-6 md:mb-8 leading-relaxed">
-            Looking for an electrician you can trust? We take pride in every job — whether it's
-            wiring a new kitchen or fitting out an entire office building.
+            RIGS Electrical is a Tring-based, family-run team. We take pride in clean, careful, fully
+            certified work — whether it's a single light fitting or a complete rewire.
           </motion.p>
           <motion.ul variants={fadeUp} custom={3} className="space-y-3 md:space-y-4">
             {[
-              "NICEIC approved and Part P registered",
+              "NICEIC registered and C&G qualified",
               "Full certification on every job",
-              "Transparent pricing with no hidden costs",
-              "Clean, professional and punctual team",
-              "Comprehensive warranty on all work",
+              "Transparent pricing — no hidden costs",
+              "Tidy, punctual and respectful of your home",
+              "Fully insured for your peace of mind",
             ].map((item) => (
               <li key={item} className="flex items-start gap-2.5 md:gap-3">
                 <CheckCircle2 className="h-4 w-4 md:h-5 md:w-5 text-primary-foreground/80 mt-0.5 shrink-0" />
@@ -44,9 +44,9 @@ const WhyChooseUs = () => (
         <motion.div variants={fadeUp} custom={2} className="bg-primary-foreground/5 rounded-2xl p-6 md:p-10 border border-primary-foreground/10">
           <div className="grid grid-cols-2 gap-6 md:gap-8 text-center">
             {[
-              { num: "60+", label: "Years Experience" },
-              { num: "2000+", label: "Jobs Completed" },
-              { num: "100%", label: "Part P Compliant" },
+              { num: "30+", label: "Years Experience" },
+              { num: "1000+", label: "Jobs Completed" },
+              { num: "100%", label: "Fully Certified" },
               { num: "5★", label: "Customer Rating" },
             ].map((stat) => (
               <div key={stat.label}>

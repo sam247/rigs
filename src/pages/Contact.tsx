@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,9 +15,10 @@ const fadeUp = {
 };
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "Call us for a free quote", href: "#" },
-  { icon: Mail, label: "Email", value: "info@greenhillselectric.co.uk", href: "mailto:info@greenhillselectric.co.uk" },
-  { icon: MapPin, label: "Location", value: "Serving London & South East" },
+  { icon: Phone, label: "Phone", value: "07989 205468", href: "tel:+447989205468" },
+  { icon: Mail, label: "Email", value: "rigselectrical@icloud.com", href: "mailto:rigselectrical@icloud.com" },
+  { icon: Instagram, label: "Instagram", value: "@rigselectrical", href: "https://www.instagram.com/rigselectrical" },
+  { icon: MapPin, label: "Location", value: "Tring, Hertfordshire & surrounding areas" },
   { icon: Clock, label: "Hours", value: "Mon–Fri: 8am–6pm, Sat: 9am–1pm" },
 ];
 
@@ -29,7 +30,7 @@ const Contact = () => {
     e.preventDefault();
     setSubmitting(true);
     setTimeout(() => {
-      toast({ title: "Message sent!", description: "We'll get back to you as soon as possible." });
+      toast({ title: "Callback requested!", description: "We'll be in touch as soon as possible." });
       setSubmitting(false);
       (e.target as HTMLFormElement).reset();
     }, 1000);
@@ -41,9 +42,10 @@ const Contact = () => {
         <div className="container">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Contact Us</motion.p>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">Get in Touch</motion.h1>
+            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">Request a Callback</motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80">
-              Ready to discuss your project? Contact us for a free, no-obligation quote.
+              Tell us about your project and we'll call you back the same day with friendly,
+              honest advice and a no-obligation quote.
             </motion.p>
           </motion.div>
         </div>
@@ -82,7 +84,7 @@ const Contact = () => {
                 </div>
                 <Button type="submit" size="lg" disabled={submitting} className="font-heading font-700 w-full sm:w-auto">
                   <Send className="mr-2 h-4 w-4" />
-                  {submitting ? "Sending…" : "Send Message"}
+                  {submitting ? "Sending…" : "Request Callback"}
                 </Button>
               </motion.form>
             </motion.div>
@@ -100,7 +102,7 @@ const Contact = () => {
                       <div>
                         <p className="font-heading font-700 text-sm">{c.label}</p>
                         {c.href ? (
-                          <a href={c.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">{c.value}</a>
+                          <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined} className="text-sm text-muted-foreground hover:text-primary transition-colors break-all">{c.value}</a>
                         ) : (
                           <p className="text-sm text-muted-foreground">{c.value}</p>
                         )}

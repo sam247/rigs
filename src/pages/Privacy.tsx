@@ -11,7 +11,7 @@ const Privacy = () => (
       <div className="container max-w-3xl prose prose-sm">
         <h2 className="font-heading font-700 text-xl mb-4">Introduction</h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          Greenhills Electric is committed to protecting your personal data. This privacy policy explains how we collect, 
+          RIGS Electrical is committed to protecting your personal data. This privacy policy explains how we collect,
           use and safeguard your information when you use our website and services.
         </p>
 
@@ -34,8 +34,8 @@ const Privacy = () => (
 
         <h2 className="font-heading font-700 text-xl mb-4">Your Rights</h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          You have the right to access, correct or delete your personal data. Contact us at 
-          info@greenhillselectric.co.uk to exercise these rights.
+          You have the right to access, correct or delete your personal data. Contact us at
+          rigselectrical@icloud.com to exercise these rights.
         </p>
 
         <h2 className="font-heading font-700 text-xl mb-4">Cookies</h2>
@@ -45,7 +45,7 @@ const Privacy = () => (
 
         <h2 className="font-heading font-700 text-xl mb-4">Contact</h2>
         <p className="text-muted-foreground leading-relaxed">
-          For any privacy-related queries, please email info@greenhillselectric.co.uk.
+          For any privacy-related queries, please email rigselectrical@icloud.com.
         </p>
       </div>
     </section>

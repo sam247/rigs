@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import rigsLogo from "@/assets/rigs-logo.svg";
 
 const navLinks = [
   { label: "About", path: "/about" },
-  { label: "Commercial", path: "/commercial" },
-  { label: "Domestic", path: "/domestic" },
+  { label: "Services", path: "/domestic" },
   { label: "Gallery", path: "/gallery" },
   { label: "Testimonials", path: "/testimonials" },
 ];
@@ -20,22 +20,19 @@ const Header = () => {
       {/* Top bar */}
       <div className="border-b border-border bg-muted">
         <div className="container flex items-center justify-between py-1.5 md:py-2 text-xs md:text-sm">
-          <a href="tel:01442264125" className="flex items-center gap-1.5 md:gap-2 font-medium text-foreground hover:text-primary transition-colors">
+          <a href="tel:+447989205468" className="flex items-center gap-1.5 md:gap-2 font-medium text-foreground hover:text-primary transition-colors">
             <Phone className="h-3.5 w-3.5 md:h-4 md:w-4" />
-            <span className="hidden xs:inline">Call us today</span> <span>01442 264125</span>
+            <span className="hidden xs:inline">Call us today</span> <span>07989 205468</span>
           </a>
-          <span className="hidden lg:inline text-muted-foreground">NICEIC Approved • Part P Registered • 60+ Years Experience</span>
-          <span className="lg:hidden text-[10px] text-muted-foreground">NICEIC Approved • Part P Registered</span>
+          <span className="hidden lg:inline text-muted-foreground">NICEIC Registered • C&G Qualified • 30+ Years Experience</span>
+          <span className="lg:hidden text-[10px] text-muted-foreground">NICEIC Registered • C&G Qualified</span>
         </div>
       </div>
 
       {/* Main nav */}
       <div className="container flex items-center justify-between py-3 md:py-4">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="flex flex-col">
-            <span className="font-heading text-lg md:text-xl font-800 tracking-tight leading-none text-foreground">GREENHILLS</span>
-            <span className="font-heading text-[10px] md:text-xs font-600 tracking-[0.25em] text-muted-foreground">ELECTRIC</span>
-          </div>
+        <Link to="/" aria-label="RIGS Electrical home" className="flex items-center">
+          <img src={rigsLogo} alt="RIGS Electrical" className="h-9 md:h-11 w-auto" />
         </Link>
 
         {/* Desktop nav */}
@@ -55,7 +52,7 @@ const Header = () => {
 
         <div className="flex items-center gap-2 md:gap-3">
           <Button asChild className="font-heading font-700 hidden sm:inline-flex" size="sm">
-            <Link to="/contact">Get a Free Quote</Link>
+            <Link to="/contact">Request a Callback</Link>
           </Button>
           <button
             className="lg:hidden p-2 hover:bg-muted rounded-md transition-colors"
@@ -84,7 +81,7 @@ const Header = () => {
               </Link>
             ))}
             <Button asChild className="font-heading font-700 mt-2 sm:hidden">
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get a Free Quote</Link>
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>Request a Callback</Link>
             </Button>
           </div>
         </nav>
