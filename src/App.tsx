@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,7 +7,6 @@ import { AuthProvider } from "@/hooks/useAuth";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Commercial from "./pages/Commercial";
 import Domestic from "./pages/Domestic";
 import Gallery from "./pages/Gallery";
 import Testimonials from "./pages/Testimonials";
@@ -32,8 +31,10 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
-            <Route path="/commercial" element={<Commercial />} />
+            {/* Legacy /commercial route now redirects to the unified domestic services page */}
+            <Route path="/commercial" element={<Navigate to="/domestic" replace />} />
             <Route path="/domestic" element={<Domestic />} />
+            <Route path="/services" element={<Navigate to="/domestic" replace />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<Contact />} />

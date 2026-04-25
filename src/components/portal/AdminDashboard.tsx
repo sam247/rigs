@@ -209,7 +209,7 @@ const AdminDashboard = () => {
         <div className="container flex items-center justify-between py-3">
           <div className="flex items-center gap-4">
             <div>
-              <span className="font-heading text-lg font-extrabold text-foreground">GREENHILLS</span>
+              <span className="font-heading text-lg font-extrabold text-foreground">RIGS</span>
               <span className="text-xs font-semibold tracking-[0.15em] text-muted-foreground ml-2">ADMIN</span>
             </div>
           </div>

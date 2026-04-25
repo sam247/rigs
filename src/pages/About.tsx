@@ -8,13 +8,13 @@ const fadeUp = {
 };
 
 const values = [
-  { icon: ShieldCheck, title: "Safety First", desc: "Every job is completed to the highest safety standards, fully certified and compliant." },
-  { icon: Users, title: "Customer Focused", desc: "We treat every customer's property with respect and communicate clearly throughout." },
-  { icon: Award, title: "Quality Workmanship", desc: "Our experienced team deliver exceptional results that stand the test of time." },
-  { icon: Clock, title: "Reliable & Punctual", desc: "We arrive on time, work efficiently and leave your property clean and tidy." },
+  { icon: ShieldCheck, title: "Safety First", desc: "Every job is completed to the highest safety standards, fully certified and compliant with BS 7671." },
+  { icon: Users, title: "Customer Focused", desc: "We treat your home with respect, communicate clearly and tidy up properly when we're done." },
+  { icon: Award, title: "Quality Workmanship", desc: "Three decades of hands-on domestic electrical experience — from a single socket to a full rewire." },
+  { icon: Clock, title: "Reliable & Punctual", desc: "We turn up when we say we will, work efficiently and stick to our quotes." },
 ];
 
-const accreditations = ["NICEIC Approved Contractor", "Part P Registered", "Trustmark Registered", "ECA Member", "City & Guilds Qualified", "18th Edition BS 7671"];
+const accreditations = ["NICEIC Registered", "C&G Qualified", "18th Edition BS 7671", "Fully Insured", "Part P Compliant", "30+ Years Experience"];
 
 const About = () => (
   <Layout>
@@ -23,12 +23,12 @@ const About = () => (
         <motion.div initial="hidden" animate="visible" className="max-w-3xl">
           <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">About Us</motion.p>
           <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">
-            Over 60 Years of Electrical Excellence
+            Tring's Local Domestic Electricians
           </motion.h1>
           <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed">
-            Greenhills Electric is a family-run electrical contracting business with over 60 years of combined experience. 
-            We provide professional, reliable and fully certified electrical services to commercial and domestic customers 
-            across London and the South East.
+            RIGS Electrical is a Tring-based, family-run electrical contractor with over 30 years of
+            domestic electrical experience. We provide professional, reliable and fully certified
+            electrical services to homeowners across Tring, Hertfordshire and the surrounding villages.
           </motion.p>
         </motion.div>
       </div>
@@ -41,17 +41,18 @@ const About = () => (
             <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-6">Our Story</motion.h2>
             <motion.div variants={fadeUp} custom={1} className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Founded with a commitment to delivering the highest standard of electrical work, 
-                Greenhills Electric has grown from a small local business into a trusted name in the industry.
+                RIGS Electrical was founded with a simple goal: deliver the highest standard of
+                domestic electrical work to homeowners in Tring and the wider Hertfordshire area —
+                with no fuss, no surprises and no shortcuts.
               </p>
               <p>
-                Our team of fully qualified electricians bring decades of hands-on experience to every project. 
-                Whether it's a full commercial installation or a simple domestic repair, we approach every job 
-                with the same dedication to quality and safety.
+                Our qualified electricians bring over three decades of hands-on experience to every
+                project. Whether it's a simple lighting tweak or a full rewire, we approach every
+                job with the same care, planning and respect for your home.
               </p>
               <p>
-                We're proud to be NICEIC approved and Part P registered, giving our customers complete peace 
-                of mind that all work meets the highest industry standards.
+                We're NICEIC registered and C&G qualified, so you can be confident that every job
+                meets the latest 18th Edition BS 7671 standards and is fully certified.
               </p>
             </motion.div>
           </motion.div>

@@ -13,15 +13,15 @@ const fadeUp = {
 };
 
 const googleReviews = [
-  { name: "Sarah M.", text: "Greenhills rewired our entire house. Professional, clean and on time. Couldn't ask for more.", rating: 5 },
-  { name: "James T.", text: "Fantastic work on our office fit-out. The team were knowledgeable and the finish was perfect.", rating: 5 },
-  { name: "Linda P.", text: "Had an EV charger installed. Quick, tidy and explained everything clearly. Highly recommend.", rating: 5 },
+  { name: "Sarah M.", text: "RIGS rewired our entire house in Tring. Professional, clean and on time. Couldn't ask for more.", rating: 5 },
+  { name: "James T.", text: "Quick response, great pricing and lovely lads. Sorted out our consumer unit and added new sockets. Highly recommend.", rating: 5 },
+  { name: "Linda P.", text: "Had an EV charger installed. Fast, tidy and explained everything clearly. Top job.", rating: 5 },
 ];
 
 const trustpilotReviews = [
-  { name: "Mark D.", text: "Used Greenhills for our landlord EICR certificate. Fast, professional and great value. Will use again.", rating: 5 },
-  { name: "Emma W.", text: "They fitted a new consumer unit and smoke alarms. Very neat work, fully certified. Excellent service.", rating: 5 },
-  { name: "Paul R.", text: "Commercial fire alarm installation done on time and on budget. Highly competent team throughout.", rating: 5 },
+  { name: "Mark D.", text: "Used RIGS for our landlord EICR certificate. Fast, professional and great value. Will use again.", rating: 5 },
+  { name: "Emma W.", text: "Fitted a new consumer unit and smoke alarms across the house. Very neat work and full certification provided.", rating: 5 },
+  { name: "Paul R.", text: "Fault finding job at short notice — sorted within an hour. Friendly, knowledgeable and fairly priced.", rating: 5 },
 ];
 
 interface ReviewBlockProps {
@@ -114,7 +114,7 @@ const ReviewsSection = () => (
         className="text-center mb-8 md:mb-16"
       >
         <motion.p variants={fadeUp} custom={0} className="text-xs md:text-sm font-heading font-600 uppercase tracking-wider text-primary mb-2 md:mb-3">Reviews</motion.p>
-        <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-4xl font-heading font-800 mb-3 md:mb-4">Trusted by Homeowners & Businesses</motion.h2>
+        <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-4xl font-heading font-800 mb-3 md:mb-4">Trusted by Homeowners Across Hertfordshire</motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
           Don't just take our word for it. See what our customers say on Google and Trustpilot.
         </motion.p>
@@ -124,9 +124,9 @@ const ReviewsSection = () => (
         <ReviewBlock
           title="Google Reviews"
           score="5.0"
-          count="48"
+          count="42"
           linkText="Leave a Review"
-          linkHref="https://g.page/r/greenhills-electric/review"
+          linkHref="https://g.page/r/rigs-electrical/review"
           reviews={googleReviews}
           source="Google Review"
           accentClass="bg-primary/10 text-primary"
@@ -135,9 +135,9 @@ const ReviewsSection = () => (
         <ReviewBlock
           title="Trustpilot"
           score="4.9"
-          count="34"
+          count="28"
           linkText="View on Trustpilot"
-          linkHref="https://www.trustpilot.com/review/greenhillselectric.co.uk"
+          linkHref="https://www.trustpilot.com/review/rigselectrical.co.uk"
           reviews={trustpilotReviews}
           source="Trustpilot Review"
           accentClass="bg-[hsl(156,100%,35%)]/10 text-[hsl(156,100%,35%)]"

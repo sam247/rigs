@@ -1,6 +1,6 @@
 import { ShieldCheck } from "lucide-react";
 
-const badges = ["NICEIC Approved", "Part P Registered", "Trustmark", "ECA Member", "60+ Years Experience"];
+const badges = ["NICEIC Registered", "C&G Qualified", "Fully Insured", "Tring & Hertfordshire", "30+ Years Experience"];
 
 const TrustBadges = () => (
   <section className="bg-secondary border-b border-border">

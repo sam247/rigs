@@ -1,6 +1,20 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Home, ZapOff, Plug, CarFront, Cpu, FileCheck, ArrowRight } from "lucide-react";
+import {
+  Home,
+  ZapOff,
+  Plug,
+  CarFront,
+  Cpu,
+  FileCheck,
+  Lightbulb,
+  ShieldCheck,
+  Search,
+  Flame,
+  Bell,
+  Sun,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
@@ -11,12 +25,18 @@ const fadeUp = {
 };
 
 const services = [
-  { icon: ZapOff, title: "Full & Partial Rewires", desc: "Complete house rewires and partial rewires for older properties. Bringing your home's electrics up to current standards safely." },
-  { icon: Home, title: "Consumer Unit Upgrades", desc: "Replace outdated fuse boxes with modern consumer units featuring RCD protection. Essential for home safety." },
-  { icon: Plug, title: "Extensions & Additions", desc: "Electrical installations for home extensions, loft conversions, kitchens and bathrooms. Full design and installation service." },
-  { icon: CarFront, title: "EV Charger Installation", desc: "Home electric vehicle charging point installation. OZEV grant approved installers. All major charger brands supported." },
+  { icon: ZapOff, title: "Full & Partial Rewires", desc: "Complete house rewires and partial rewires for older properties — bringing your home's electrics up to current 18th Edition standards." },
+  { icon: Home, title: "Consumer Unit Upgrades", desc: "Replace outdated fuse boxes with modern dual-RCD consumer units. Essential for home safety and insurance compliance." },
+  { icon: Lightbulb, title: "Lighting Installations", desc: "Indoor lighting design — LED downlights, pendants, dimmers, smart lighting and full lighting refits for any room." },
+  { icon: Sun, title: "Outdoor & Security Lighting", desc: "Garden lighting, PIR-controlled security floodlights and pathway lighting for safety, style and peace of mind." },
+  { icon: Bell, title: "Alarm & Smoke Systems", desc: "Mains-wired smoke alarms, home alarm systems and emergency lighting installation, testing and maintenance." },
+  { icon: Flame, title: "Electric Showers & Heaters", desc: "Supply, installation and replacement of electric showers, storage heaters and central heating wiring systems." },
+  { icon: Search, title: "Fault Finding", desc: "Diagnosing tripping circuits, faulty wiring and intermittent issues quickly and methodically — minimal disruption." },
+  { icon: Plug, title: "Sockets & Extensions", desc: "Additional sockets, USB outlets and electrical work for kitchen extensions, loft conversions and bathroom upgrades." },
+  { icon: CarFront, title: "EV Charger Installation", desc: "Home electric vehicle charging point installation. All major charger brands supported, dedicated circuits as standard." },
   { icon: Cpu, title: "Smart Home Wiring", desc: "Future-proof your home with smart lighting, automated systems and structured wiring for modern living." },
-  { icon: FileCheck, title: "Landlord Certificates (EICR)", desc: "Electrical Installation Condition Reports for rental properties. Legal requirement for all landlords. Fast turnaround." },
+  { icon: FileCheck, title: "Landlord Certificates (EICR)", desc: "Electrical Installation Condition Reports for rental properties. A legal requirement for all landlords — fast turnaround." },
+  { icon: ShieldCheck, title: "Periodic Testing", desc: "Routine electrical testing for owner-occupied homes to confirm everything is safe, compliant and properly certified." },
 ];
 
 const Domestic = () => (
@@ -24,13 +44,13 @@ const Domestic = () => (
     <section className="bg-primary text-primary-foreground py-20 md:py-28">
       <div className="container">
         <motion.div initial="hidden" animate="visible" className="max-w-3xl">
-          <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Domestic Services</motion.p>
+          <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Our Services</motion.p>
           <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">
-            Expert Electricians for Your Home
+            Domestic Electrical Services in Tring
           </motion.h1>
           <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed">
-            Safe, certified electrical work for your home. From simple repairs to full rewires, 
-            we're the domestic electricians you can rely on.
+            Safe, certified electrical work for your home. From simple repairs to full rewires —
+            RIGS Electrical is the local Tring electrician you can rely on.
           </motion.p>
         </motion.div>
       </div>
@@ -61,10 +81,10 @@ const Domestic = () => (
 
     <section className="py-20 bg-secondary text-center">
       <div className="container">
-        <h2 className="text-3xl font-heading font-800 mb-4">Need a Home Electrician?</h2>
-        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Contact us for friendly, professional advice and a free quote.</p>
+        <h2 className="text-3xl font-heading font-800 mb-4">Need a Home Electrician in Tring?</h2>
+        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Get in touch for friendly, professional advice and a free quote — same-day callbacks.</p>
         <Button asChild size="lg" className="font-heading font-700">
-          <Link to="/contact">Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
+          <Link to="/contact">Request a Callback <ArrowRight className="ml-2 h-5 w-5" /></Link>
         </Button>
       </div>
     </section>

@@ -51,11 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        greenhills: {
-          dark: "hsl(var(--greenhills-dark))",
-          light: "hsl(var(--greenhills-light))",
-          blue: "hsl(var(--greenhills-blue))",
-          navy: "hsl(var(--greenhills-navy))",
+        rigs: {
+          dark: "hsl(var(--rigs-dark))",
+          light: "hsl(var(--rigs-light))",
+          teal: "hsl(var(--rigs-teal))",
+          navy: "hsl(var(--rigs-navy))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
