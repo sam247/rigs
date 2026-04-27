@@ -38,6 +38,11 @@ const services = [
     title: "Fault Finding & Repairs",
     desc: "Tracing and fixing faulty wiring, tripping circuits and emergency electrical issues — fast and methodical.",
   },
+  {
+    icon: CarFront,
+    title: "EV Charger Installation",
+    desc: "Home electric vehicle charger installation on a dedicated circuit — all major brands supported.",
+  },
 ];
 
 const ServicesSection = () => (
