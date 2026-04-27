@@ -39,7 +39,7 @@ const WhatsAppWidget = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#1ebe5a] text-white font-heading font-700 text-sm py-2.5 rounded-lg transition-colors"
+              className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90 text-primary-foreground font-heading font-700 text-sm py-2.5 rounded-lg transition-colors"
             >
               <WhatsAppIcon className="h-4 w-4" />
               Start chat
@@ -52,10 +52,10 @@ const WhatsAppWidget = () => {
       <button
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? "Close WhatsApp chat" : "Open WhatsApp chat"}
-        className="group relative h-14 w-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white shadow-xl flex items-center justify-center transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
+        className="group relative h-14 w-14 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-xl flex items-center justify-center transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/30"
       >
         {!open && (
-          <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-ping" />
+          <span className="absolute inset-0 rounded-full bg-primary opacity-60 animate-ping" />
         )}
         <span className="relative">
           {open ? <X className="h-6 w-6" /> : <WhatsAppIcon className="h-7 w-7" />}
