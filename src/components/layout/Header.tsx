@@ -24,7 +24,7 @@ const Header = () => {
             <Phone className="h-3.5 w-3.5 md:h-4 md:w-4" />
             <span className="hidden xs:inline">Call us today</span> <span>07989 205468</span>
           </a>
-          <span className="hidden lg:inline text-muted-foreground">NICEIC Registered • C&G Qualified • 30+ Years Experience</span>
+          <span className="hidden lg:inline text-muted-foreground">NICEIC Registered • C&G Qualified • Fully Insured</span>
           <span className="lg:hidden text-[10px] text-muted-foreground">NICEIC Registered • C&G Qualified</span>
         </div>
       </div>

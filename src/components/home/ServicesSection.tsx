@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Plug, Lightbulb, ShieldCheck, Zap, Search, ArrowRight } from "lucide-react";
+import { Plug, Lightbulb, ShieldCheck, Zap, Search, CarFront, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const fadeUp = {
@@ -37,6 +37,11 @@ const services = [
     icon: Search,
     title: "Fault Finding & Repairs",
     desc: "Tracing and fixing faulty wiring, tripping circuits and emergency electrical issues — fast and methodical.",
+  },
+  {
+    icon: CarFront,
+    title: "EV Charger Installation",
+    desc: "Home electric vehicle charger installation on a dedicated circuit — all major brands supported.",
   },
 ];
 

@@ -14,7 +14,7 @@ const values = [
   { icon: Clock, title: "Reliable & Punctual", desc: "We turn up when we say we will, work efficiently and stick to our quotes." },
 ];
 
-const accreditations = ["NICEIC Registered", "C&G Qualified", "18th Edition BS 7671", "Fully Insured", "Part P Compliant", "30+ Years Experience"];
+const accreditations = ["NICEIC Registered", "C&G Qualified", "18th Edition BS 7671", "Fully Insured", "Part P Compliant"];
 
 const About = () => (
   <Layout>
@@ -26,8 +26,8 @@ const About = () => (
             Tring's Local Domestic Electricians
           </motion.h1>
           <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed">
-            RIGS Electrical is a Tring-based, family-run electrical contractor with over 30 years of
-            domestic electrical experience. We provide professional, reliable and fully certified
+            RIGS Electrical is a Tring-based, family-run electrical contractor specialising in
+            domestic work. We provide professional, reliable and fully certified
             electrical services to homeowners across Tring, Hertfordshire and the surrounding villages.
           </motion.p>
         </motion.div>
