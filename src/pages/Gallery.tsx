@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
+import Seo from "@/components/Seo";
 import outsideLighting from "@/assets/gallery-outside-lighting.jpg";
 import domesticLighting from "@/assets/gallery-domestic-lighting.jpg";
 import ledLighting from "@/assets/gallery-led-lighting.jpg";
@@ -47,6 +48,11 @@ const projects = [
 const Gallery = () => {
   return (
     <Layout>
+      <Seo
+        title="Project Gallery | RIGS Electrical Tring"
+        description="See recent electrical work by RIGS Electrical — lighting, rewires, sockets and outdoor installations across Tring and Hertfordshire."
+        path="/gallery"
+      />
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">

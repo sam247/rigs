@@ -1,7 +1,13 @@
 import Layout from "@/components/layout/Layout";
+import Seo from "@/components/Seo";
 
 const Privacy = () => (
   <Layout>
+    <Seo
+      title="Privacy Policy | RIGS Electrical"
+      description="How RIGS Electrical collects, uses and safeguards your personal data when you use our website and electrical services."
+      path="/privacy"
+    />
     <section className="bg-primary text-primary-foreground py-16">
       <div className="container">
         <h1 className="text-3xl md:text-4xl font-heading font-800">Privacy Policy</h1>
