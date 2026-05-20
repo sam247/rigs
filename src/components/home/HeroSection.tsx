@@ -29,7 +29,7 @@ const HeroSection = () => (
           <span className="text-primary-foreground/90"> Local Electrician.</span>
         </motion.h1>
         <motion.p variants={fadeUp} custom={2} className="text-base md:text-xl text-primary-foreground/80 mb-6 md:mb-8 max-w-lg leading-relaxed">
-          From rewires and consumer units to lighting, EV chargers and fault finding —
+          From rewires and consumer units to lighting, kitchen & bathroom electrics and fault finding —
           RIGS Electrical delivers safe, certified domestic work across Tring and Hertfordshire.
         </motion.p>
         <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">

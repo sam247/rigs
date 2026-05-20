@@ -81,7 +81,7 @@ const Contact = () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="service" className="font-heading font-600">Service Required</Label>
-                    <Input id="service" placeholder="e.g. Rewire, EV Charger" />
+                    <Input id="service" placeholder="e.g. Rewire, Kitchen Electrics" />
                   </div>
                 </div>
                 <div className="space-y-2">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Plug, Lightbulb, BatteryCharging, ShieldAlert, Home, Search } from "lucide-react";
+import { ArrowRight, Plug, Lightbulb, Bath, Home, ShieldAlert, Search } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -30,11 +30,11 @@ const projects = [
     desc: "Recessed LED downlights, under-cabinet strip lighting and dimmer controls in a brand new kitchen extension.",
   },
   {
-    icon: BatteryCharging,
-    title: "EV Charger Installation",
+    icon: Bath,
+    title: "Kitchen & Bathroom Refit",
     location: "Hemel Hempstead, Hertfordshire",
-    type: "EV Charger",
-    desc: "7kW home EV charger fitted on a dedicated circuit. Tidy install, completed in under a day.",
+    type: "Kitchen & Bathroom",
+    desc: "New cooker circuit, extractor fan, heated towel rail and LED mirror wiring in a full kitchen and bathroom renovation.",
   },
   {
     icon: Home,

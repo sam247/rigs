@@ -4,7 +4,7 @@ import {
   Home,
   ZapOff,
   Plug,
-  CarFront,
+  Bath,
   Cpu,
   FileCheck,
   Lightbulb,
@@ -34,7 +34,7 @@ const services = [
   { icon: Flame, title: "Electric Showers & Heaters", desc: "Supply, installation and replacement of electric showers, storage heaters and central heating wiring systems." },
   { icon: Search, title: "Fault Finding", desc: "Diagnosing tripping circuits, faulty wiring and intermittent issues quickly and methodically — minimal disruption." },
   { icon: Plug, title: "Sockets & Extensions", desc: "Additional sockets, USB outlets and electrical work for kitchen extensions, loft conversions and bathroom upgrades." },
-  { icon: CarFront, title: "EV Charger Installation", desc: "Home electric vehicle charging point installation. All major charger brands supported, dedicated circuits as standard." },
+  { icon: Bath, title: "Kitchen & Bathroom Electrics", desc: "Extractor fans, heated towel rails, cooker circuits, shaver sockets and underfloor heating for kitchens and bathrooms." },
   { icon: Cpu, title: "Smart Home Wiring", desc: "Future-proof your home with smart lighting, automated systems and structured wiring for modern living." },
   { icon: FileCheck, title: "Landlord Certificates (EICR)", desc: "Electrical Installation Condition Reports for rental properties. A legal requirement for all landlords — fast turnaround." },
   { icon: ShieldCheck, title: "Periodic Testing", desc: "Routine electrical testing for owner-occupied homes to confirm everything is safe, compliant and properly certified." },
@@ -44,7 +44,7 @@ const Domestic = () => (
   <Layout>
     <Seo
       title="Domestic Electrical Services in Tring | RIGS Electrical"
-      description="Rewires, consumer units, EV chargers, lighting, fault finding and EICR certificates from your local Tring domestic electricians."
+      description="Rewires, consumer units, kitchen & bathroom electrics, lighting, fault finding and EICR certificates from your local Tring domestic electricians."
       path="/domestic"
     />
     <section className="bg-primary text-primary-foreground py-20 md:py-28">

@@ -12,7 +12,7 @@ const Index = () => {
     <Layout>
       <Seo
         title="RIGS Electrical | Trusted Tring Electrician | Hertfordshire"
-        description="NICEIC registered Tring electricians for rewires, EV chargers, fault finding and more across Hertfordshire. Request a callback today."
+        description="NICEIC registered Tring electricians for rewires, kitchen & bathroom electrics, fault finding and more across Hertfordshire. Request a callback today."
         path="/"
       />
       <HeroSection />
