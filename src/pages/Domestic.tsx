@@ -18,6 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
+import Seo from "@/components/Seo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -41,6 +42,11 @@ const services = [
 
 const Domestic = () => (
   <Layout>
+    <Seo
+      title="Domestic Electrical Services in Tring | RIGS Electrical"
+      description="Rewires, consumer units, EV chargers, lighting, fault finding and EICR certificates from your local Tring domestic electricians."
+      path="/domestic"
+    />
     <section className="bg-primary text-primary-foreground py-20 md:py-28">
       <div className="container">
         <motion.div initial="hidden" animate="visible" className="max-w-3xl">

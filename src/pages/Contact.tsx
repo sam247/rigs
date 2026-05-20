@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/layout/Layout";
+import Seo from "@/components/Seo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -38,6 +39,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Seo
+        title="Contact RIGS Electrical | Request a Callback"
+        description="Get in touch with RIGS Electrical in Tring. Call 07989 205468 or request a same-day callback for a free, no-obligation quote."
+        path="/contact"
+      />
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">

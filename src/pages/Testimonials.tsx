@@ -4,6 +4,7 @@ import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
+import Seo from "@/components/Seo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -38,6 +39,11 @@ const Testimonials = () => {
 
   return (
     <Layout>
+      <Seo
+        title="Customer Reviews | RIGS Electrical Tring"
+        description="Read 5-star reviews from RIGS Electrical customers across Tring and Hertfordshire — rewires, EV chargers, lighting and fault finding."
+        path="/testimonials"
+      />
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
