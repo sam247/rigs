@@ -11,12 +11,12 @@ const fadeUp = {
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }),
 };
 
-type FilterType = "all" | "rewire" | "lighting" | "ev" | "fault" | "other";
+type FilterType = "all" | "rewire" | "lighting" | "fault" | "other";
 
 const reviews = [
   { name: "Sarah Mitchell", text: "RIGS rewired our entire Victorian property in Tring. The team were professional, clean and incredibly thorough. They explained every step and the certification was provided immediately. Couldn't recommend them more highly.", rating: 5, type: "rewire" as const, service: "Full Rewire" },
   { name: "James Thompson", text: "Replaced our old fuse board with a modern consumer unit. Quick, tidy and fully certified. Top-notch service from start to finish.", rating: 5, type: "other" as const, service: "Consumer Unit" },
-  { name: "Linda Patel", text: "Had a 7kW EV charger installed at home. Quick, tidy and they handled all the paperwork. Really impressed with the whole process.", rating: 5, type: "ev" as const, service: "EV Charger" },
+  { name: "Linda Patel", text: "Had the kitchen and bathroom completely rewired — new cooker circuit, extractor fan and heated towel rail. Immaculately tidy and everything tested and certified.", rating: 5, type: "other" as const, service: "Kitchen & Bathroom Electrics" },
   { name: "David Chen", text: "Diagnosed a tripping RCD in under an hour after another sparky had given up. Friendly, knowledgeable and really fairly priced.", rating: 5, type: "fault" as const, service: "Fault Finding" },
   { name: "Emma Watson", text: "Full kitchen lighting refit — LED downlights, dimmers and under-cupboard strips. Beautiful finish, no mess and bang on quote.", rating: 5, type: "lighting" as const, service: "Lighting" },
   { name: "Mark Richards", text: "PIR security floodlights front and back. Job done in a morning, neat cabling and a proper test certificate. Brilliant.", rating: 5, type: "lighting" as const, service: "Outdoor Lighting" },
@@ -28,7 +28,6 @@ const filterLabels: Record<FilterType, string> = {
   all: "All Reviews",
   rewire: "Rewires",
   lighting: "Lighting",
-  ev: "EV Chargers",
   fault: "Fault Finding",
   other: "Other",
 };
@@ -41,7 +40,7 @@ const Testimonials = () => {
     <Layout>
       <Seo
         title="Customer Reviews | RIGS Electrical Tring"
-        description="Read 5-star reviews from RIGS Electrical customers across Tring and Hertfordshire — rewires, EV chargers, lighting and fault finding."
+        description="Read 5-star reviews from RIGS Electrical customers across Tring and Hertfordshire — rewires, kitchen & bathroom electrics, lighting and fault finding."
         path="/testimonials"
       />
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
