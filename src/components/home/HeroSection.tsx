@@ -25,12 +25,12 @@ const HeroSection = () => (
           NICEIC Registered • C&G Qualified
         </motion.div>
         <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-6xl font-heading font-800 leading-[1.1] mb-4 md:mb-6">
-          Tring's Trusted
-          <span className="text-primary-foreground/90"> Local Electrician.</span>
+          Local Tring
+          <span className="text-primary-foreground/90"> Electrician.</span>
         </motion.h1>
         <motion.p variants={fadeUp} custom={2} className="text-base md:text-xl text-primary-foreground/80 mb-6 md:mb-8 max-w-lg leading-relaxed">
-          From rewires and consumer units to lighting, kitchen & bathroom electrics and fault finding —
-          RIGS Electrical delivers safe, certified domestic work across Tring and Hertfordshire.
+          Professional, reliable, friendly electricians available 24/7 for all domestic projects
+          in Tring and the surrounding areas. Hertfordshire and Buckinghamshire.
         </motion.p>
         <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700 text-base w-full sm:w-auto">
