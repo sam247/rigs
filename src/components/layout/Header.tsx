@@ -20,10 +20,9 @@ const Header = () => {
       {/* Top bar */}
       <div className="border-b border-border bg-muted">
         <div className="container flex items-center justify-between py-1.5 md:py-2 text-xs md:text-sm">
-          <a href="tel:+447989205468" className="flex items-center gap-1.5 md:gap-2 font-medium text-foreground hover:text-primary transition-colors">
-            <Phone className="h-3.5 w-3.5 md:h-4 md:w-4" />
-            <span className="hidden xs:inline">Call us today</span> <span>07989 205468</span>
-          </a>
+          <span className="font-medium text-foreground">
+            Electricians in Hertfordshire, Buckinghamshire and Surrounding Areas
+          </span>
           <span className="hidden lg:inline text-muted-foreground">NICEIC Registered • C&G Qualified • Fully Insured</span>
           <span className="lg:hidden text-[10px] text-muted-foreground">NICEIC Registered • C&G Qualified</span>
         </div>
@@ -51,6 +50,9 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
+          <Button asChild variant="secondary" className="font-heading font-700 hidden sm:inline-flex bg-primary/10 text-primary hover:bg-primary/20" size="sm">
+            <a href="tel:+447989205468"><Phone className="mr-1.5 h-4 w-4" /> Call Now</a>
+          </Button>
           <Button asChild className="font-heading font-700 hidden sm:inline-flex" size="sm">
             <Link to="/contact">Get a Quote</Link>
           </Button>
