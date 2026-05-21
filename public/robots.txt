@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://rigs.lovable.app/sitemap.xml
+Sitemap: https://rigselectrical.co.uk/sitemap.xml
