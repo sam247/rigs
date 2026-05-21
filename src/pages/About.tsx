@@ -11,7 +11,7 @@ const fadeUp = {
 const values = [
   { icon: ShieldCheck, title: "Safety First", desc: "Every job is completed to the highest safety standards, fully certified and compliant with BS 7671." },
   { icon: Users, title: "Customer Focused", desc: "We treat your home with respect, communicate clearly and tidy up properly when we're done." },
-  { icon: Award, title: "Quality Workmanship", desc: "Three decades of hands-on domestic electrical experience — from a single socket to a full rewire." },
+  { icon: Award, title: "Quality Workmanship", desc: "Years of hands-on domestic electrical experience — from a single socket to a full rewire." },
   { icon: Clock, title: "Reliable & Punctual", desc: "We turn up when we say we will, work efficiently and stick to our quotes." },
 ];
 
