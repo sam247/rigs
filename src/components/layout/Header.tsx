@@ -20,11 +20,13 @@ const Header = () => {
       {/* Top bar */}
       <div className="border-b border-border bg-muted">
         <div className="container flex items-center justify-between py-1.5 md:py-2 text-xs md:text-sm">
-          <span className="font-medium text-foreground">
+          <span className="font-medium text-foreground lg:hidden">
+            NICEIC Registered • Available 24/7
+          </span>
+          <span className="hidden lg:inline font-medium text-foreground">
             Electricians in Hertfordshire, Buckinghamshire and Surrounding Areas
           </span>
           <span className="hidden lg:inline text-muted-foreground">NICEIC Registered • C&G Qualified • Fully Insured</span>
-          <span className="lg:hidden text-[10px] text-muted-foreground">NICEIC Registered • C&G Qualified</span>
         </div>
       </div>
 
@@ -50,7 +52,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <Button asChild variant="secondary" className="font-heading font-700 hidden sm:inline-flex bg-primary/10 text-primary hover:bg-primary/20" size="sm">
+          <Button asChild variant="secondary" className="font-heading font-700 bg-primary/10 text-primary hover:bg-primary/20" size="sm">
             <a href="tel:+447989205468"><Phone className="mr-1.5 h-4 w-4" /> Call Now</a>
           </Button>
           <Button asChild className="font-heading font-700 hidden sm:inline-flex" size="sm">
@@ -84,6 +86,9 @@ const Header = () => {
             ))}
             <Button asChild className="font-heading font-700 mt-2 sm:hidden">
               <Link to="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
+            </Button>
+            <Button asChild variant="secondary" className="font-heading font-700 bg-primary/10 text-primary hover:bg-primary/20 sm:hidden">
+              <a href="tel:+447989205468" onClick={() => setMobileOpen(false)}><Phone className="mr-1.5 h-4 w-4" /> Call Now</a>
             </Button>
           </div>
         </nav>
