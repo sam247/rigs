@@ -29,7 +29,7 @@ const About = () => (
         <motion.div initial="hidden" animate="visible" className="max-w-3xl">
           <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">About Us</motion.p>
           <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">
-            Tring's Local Domestic Electricians
+            Tring's Local Domestic Electrician
           </motion.h1>
           <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed">
             RIGS Electrical is a Tring-based, family-run electrical contractor specialising

@@ -52,7 +52,7 @@ const Header = () => {
 
         <div className="flex items-center gap-2 md:gap-3">
           <Button asChild className="font-heading font-700 hidden sm:inline-flex" size="sm">
-            <Link to="/contact">Request a Callback</Link>
+            <Link to="/contact">Get a Quote</Link>
           </Button>
           <button
             className="lg:hidden p-2 hover:bg-muted rounded-md transition-colors"
@@ -81,7 +81,7 @@ const Header = () => {
               </Link>
             ))}
             <Button asChild className="font-heading font-700 mt-2 sm:hidden">
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>Request a Callback</Link>
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
             </Button>
           </div>
         </nav>
