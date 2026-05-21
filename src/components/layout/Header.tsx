@@ -52,7 +52,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <Button asChild variant="secondary" className="font-heading font-700 hidden sm:inline-flex bg-primary/10 text-primary hover:bg-primary/20" size="sm">
+          <Button asChild variant="secondary" className="font-heading font-700 bg-primary/10 text-primary hover:bg-primary/20" size="sm">
             <a href="tel:+447989205468"><Phone className="mr-1.5 h-4 w-4" /> Call Now</a>
           </Button>
           <Button asChild className="font-heading font-700 hidden sm:inline-flex" size="sm">
@@ -86,6 +86,9 @@ const Header = () => {
             ))}
             <Button asChild className="font-heading font-700 mt-2 sm:hidden">
               <Link to="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
+            </Button>
+            <Button asChild variant="secondary" className="font-heading font-700 bg-primary/10 text-primary hover:bg-primary/20 sm:hidden">
+              <a href="tel:+447989205468" onClick={() => setMobileOpen(false)}><Phone className="mr-1.5 h-4 w-4" /> Call Now</a>
             </Button>
           </div>
         </nav>
