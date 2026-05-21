@@ -27,14 +27,30 @@ const Contact = () => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    if (fd.get("_gotcha")) return; // honeypot
     setSubmitting(true);
-    setTimeout(() => {
+    try {
+      const res = await fetch("https://formbold.com/s/9BaZ2", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: fd,
+      });
+      if (!res.ok) throw new Error("Request failed");
       toast({ title: "Callback requested!", description: "We'll be in touch as soon as possible." });
+      form.reset();
+    } catch {
+      toast({
+        title: "Couldn't send message",
+        description: "Please try again or call 07989 205468.",
+        variant: "destructive",
+      });
+    } finally {
       setSubmitting(false);
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+    }
   };
 
   return (
