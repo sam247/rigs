@@ -11,25 +11,59 @@ const fadeUp = {
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }),
 };
 
-type FilterType = "all" | "rewire" | "lighting" | "fault" | "other";
+type FilterType = "all" | "lighting" | "fault" | "installations" | "sockets";
 
 const reviews = [
-  { name: "Sarah Mitchell", text: "RIGS rewired our entire Victorian property in Tring. The team were professional, clean and incredibly thorough. They explained every step and the certification was provided immediately. Couldn't recommend them more highly.", rating: 5, type: "rewire" as const, service: "Full Rewire" },
-  { name: "James Thompson", text: "Replaced our old fuse board with a modern consumer unit. Quick, tidy and fully certified. Top-notch service from start to finish.", rating: 5, type: "other" as const, service: "Consumer Unit" },
-  { name: "Linda Patel", text: "Had the kitchen and bathroom completely rewired — new cooker circuit, extractor fan and heated towel rail. Immaculately tidy and everything tested and certified.", rating: 5, type: "other" as const, service: "Kitchen & Bathroom Electrics" },
-  { name: "David Chen", text: "Diagnosed a tripping RCD in under an hour after another sparky had given up. Friendly, knowledgeable and really fairly priced.", rating: 5, type: "fault" as const, service: "Fault Finding" },
-  { name: "Emma Watson", text: "Full kitchen lighting refit — LED downlights, dimmers and under-cupboard strips. Beautiful finish, no mess and bang on quote.", rating: 5, type: "lighting" as const, service: "Lighting" },
-  { name: "Mark Richards", text: "PIR security floodlights front and back. Job done in a morning, neat cabling and a proper test certificate. Brilliant.", rating: 5, type: "lighting" as const, service: "Outdoor Lighting" },
-  { name: "Catherine Ellis", text: "Smart lighting installation with dimmers and scene controls throughout the house. They took the time to understand exactly what we wanted and delivered beyond expectations.", rating: 5, type: "lighting" as const, service: "Smart Lighting" },
-  { name: "Robert King", text: "Regular EICR testing for our rental portfolio. Always reliable, reports are clear and any remedials are done quickly and fairly priced. A landlord's dream electrician.", rating: 5, type: "other" as const, service: "EICR" },
+  {
+    name: "Verified Customer, WD3",
+    text: "Rob has undertaken electrical work (fault finding, maintenance, new installation inside and outside the house) for me for a number of years. His work is of a very high standard and his quotations are clear and easy to understand. He's respectful of my home, clears up and leaves the working environment clean and tidy and is completely trustworthy.",
+    rating: 5,
+    type: "fault" as const,
+    service: "Electrician — Fault Finding & Installation",
+  },
+  {
+    name: "Verified Customer, HP6",
+    text: "Just as well I called Rob at RIGS. Was fortunate to benefit from a cancellation so attended within a day. Arrived promptly as promised. Both jobs required a level of skill above mine and some parts. All work carried out quickly and with good advice to avoid future failures. Overall? Simply excellent service.",
+    rating: 5,
+    type: "lighting" as const,
+    service: "LED Lighting Repair",
+  },
+  {
+    name: "Verified Customer, HP21",
+    text: "High quality work. Neat and tidy. Thank you Rob.",
+    rating: 5,
+    type: "lighting" as const,
+    service: "Under-Cupboard LED Lighting",
+  },
+  {
+    name: "Verified Customer, HP23",
+    text: "Rob has done a number of jobs for us over the last three years, including electrics for a bathroom and an en-suite, also running external cabling and wiring a garden building with power and lighting, and external lighting round the house. He is very professional and meticulous, and very resourceful in providing solutions and ideas. He works well with other trades, and leaves the place exceptionally clean and tidy at the end of the day.",
+    rating: 5,
+    type: "installations" as const,
+    service: "Various Electrical Installations",
+  },
+  {
+    name: "Verified Customer, HP4",
+    text: "I have used Rob for several electrical problems both small and large. Rob is professional, knowledgeable, polite, goes the extra mile and doesn't leave a mess! I have always been very happy with his service and would recommend him.",
+    rating: 5,
+    type: "fault" as const,
+    service: "Electrician",
+  },
+  {
+    name: "Verified Customer, WD3",
+    text: "Rob is excellent, he's very quick, extremely tidy and went the extra mile when we discovered we had some problems in the fuse box. We really enjoy having him in the house and I highly recommend him.",
+    rating: 5,
+    type: "sockets" as const,
+    service: "Electric Sockets",
+  },
 ];
 
 const filterLabels: Record<FilterType, string> = {
   all: "All Reviews",
-  rewire: "Rewires",
   lighting: "Lighting",
   fault: "Fault Finding",
-  other: "Other",
+  installations: "Installations",
+  sockets: "Sockets",
 };
 
 const Testimonials = () => {
@@ -49,7 +83,25 @@ const Testimonials = () => {
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Testimonials</motion.p>
             <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">What Our Customers Say</motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80">
-              Don't just take our word for it — read what homeowners across Tring and Hertfordshire have to say about our work.
+              Don't just take our word for it — verified reviews from homeowners across Tring,
+              Hertfordshire, Buckinghamshire and Bedfordshire. See all reviews on{" "}
+              <a
+                href="https://www.checkatrade.com/trades/rigselectrical"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-accent"
+              >
+                Checkatrade
+              </a>{" "}
+              or{" "}
+              <a
+                href="https://share.google/XUn0fl3yeiuCGd4Nr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-accent"
+              >
+                Google
+              </a>.
             </motion.p>
           </motion.div>
         </div>

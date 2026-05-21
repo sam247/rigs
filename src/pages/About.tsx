@@ -11,7 +11,7 @@ const fadeUp = {
 const values = [
   { icon: ShieldCheck, title: "Safety First", desc: "Every job is completed to the highest safety standards, fully certified and compliant with BS 7671." },
   { icon: Users, title: "Customer Focused", desc: "We treat your home with respect, communicate clearly and tidy up properly when we're done." },
-  { icon: Award, title: "Quality Workmanship", desc: "Three decades of hands-on domestic electrical experience — from a single socket to a full rewire." },
+  { icon: Award, title: "Quality Workmanship", desc: "Years of hands-on domestic electrical experience — from a single socket to a full rewire." },
   { icon: Clock, title: "Reliable & Punctual", desc: "We turn up when we say we will, work efficiently and stick to our quotes." },
 ];
 
@@ -21,7 +21,7 @@ const About = () => (
   <Layout>
     <Seo
       title="About RIGS Electrical | NICEIC Tring Electricians"
-      description="Three decades of domestic electrical experience in Tring & Hertfordshire. NICEIC registered, C&G qualified, fully insured. Meet the team."
+      description="Family-run NICEIC registered domestic electricians based in Tring, covering Hertfordshire, Buckinghamshire and Bedfordshire. Meet the team."
       path="/about"
     />
     <section className="bg-primary text-primary-foreground py-20 md:py-28">
@@ -32,9 +32,10 @@ const About = () => (
             Tring's Local Domestic Electricians
           </motion.h1>
           <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed">
-            RIGS Electrical is a Tring-based, family-run electrical contractor specialising in
-            domestic work. We provide professional, reliable and fully certified
-            electrical services to homeowners across Tring, Hertfordshire and the surrounding villages.
+            RIGS Electrical is a Tring-based, family-run electrical contractor specialising
+            in domestic work. We provide professional, reliable and fully certified electrical
+            services to homeowners across Tring and the surrounding villages, covering
+            Hertfordshire, Buckinghamshire and Bedfordshire.
           </motion.p>
         </motion.div>
       </div>
@@ -48,11 +49,11 @@ const About = () => (
             <motion.div variants={fadeUp} custom={1} className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 RIGS Electrical was founded with a simple goal: deliver the highest standard of
-                domestic electrical work to homeowners in Tring and the wider Hertfordshire area —
+                domestic electrical work to homeowners in Tring and the wider area —
                 with no fuss, no surprises and no shortcuts.
               </p>
               <p>
-                Our qualified electricians bring over three decades of hands-on experience to every
+                Our qualified electricians bring years of hands-on experience to every
                 project. Whether it's a simple lighting tweak or a full rewire, we approach every
                 job with the same care, planning and respect for your home.
               </p>
