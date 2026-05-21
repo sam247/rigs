@@ -21,7 +21,7 @@ const About = () => (
   <Layout>
     <Seo
       title="About RIGS Electrical | NICEIC Tring Electricians"
-      description="Three decades of domestic electrical experience in Tring & Hertfordshire. NICEIC registered, C&G qualified, fully insured. Meet the team."
+      description="Family-run NICEIC registered domestic electricians based in Tring, covering Hertfordshire, Buckinghamshire and Bedfordshire. Meet the team."
       path="/about"
     />
     <section className="bg-primary text-primary-foreground py-20 md:py-28">
