@@ -6,7 +6,6 @@ import {
   Plug,
   Bath,
   Cpu,
-  FileCheck,
   Lightbulb,
   ShieldCheck,
   Search,
