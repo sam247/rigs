@@ -49,11 +49,11 @@ const About = () => (
             <motion.div variants={fadeUp} custom={1} className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 RIGS Electrical was founded with a simple goal: deliver the highest standard of
-                domestic electrical work to homeowners in Tring and the wider Hertfordshire area —
+                domestic electrical work to homeowners in Tring and the wider area —
                 with no fuss, no surprises and no shortcuts.
               </p>
               <p>
-                Our qualified electricians bring over three decades of hands-on experience to every
+                Our qualified electricians bring years of hands-on experience to every
                 project. Whether it's a simple lighting tweak or a full rewire, we approach every
                 job with the same care, planning and respect for your home.
               </p>
