@@ -51,7 +51,7 @@ const CTASection = () => (
 
           <motion.div variants={fadeUp} custom={4} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Button asChild size="lg" className="font-heading font-700 text-base w-full sm:w-auto">
-              <Link to="/contact">Request a Callback <ArrowRight className="ml-2 h-5 w-5" /></Link>
+              <Link to="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-heading font-600 text-base w-full sm:w-auto">
               <a href="tel:+447989205468"><Phone className="mr-2 h-5 w-5" /> Call now</a>

@@ -88,7 +88,7 @@ const Domestic = () => (
         <h2 className="text-3xl font-heading font-800 mb-4">Need a Home Electrician in Tring?</h2>
         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Get in touch for friendly, professional advice and a free quote — same-day callbacks.</p>
         <Button asChild size="lg" className="font-heading font-700">
-          <Link to="/contact">Request a Callback <ArrowRight className="ml-2 h-5 w-5" /></Link>
+          <Link to="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
         </Button>
       </div>
     </section>

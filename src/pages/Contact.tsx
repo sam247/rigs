@@ -40,7 +40,7 @@ const Contact = () => {
         body: fd,
       });
       if (!res.ok) throw new Error("Request failed");
-      toast({ title: "Callback requested!", description: "We'll be in touch as soon as possible." });
+      toast({ title: "Quote requested!", description: "We'll be in touch as soon as possible." });
       form.reset();
     } catch {
       toast({
@@ -56,15 +56,15 @@ const Contact = () => {
   return (
     <Layout>
       <Seo
-        title="Contact RIGS Electrical | Request a Callback"
-        description="Get in touch with RIGS Electrical in Tring. Call 07989 205468 or request a same-day callback for a free, no-obligation quote."
+        title="Contact RIGS Electrical | Get a Quote"
+        description="Get in touch with RIGS Electrical in Tring. Call 07989 205468 or request a free, no-obligation quote today."
         path="/contact"
       />
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Contact Us</motion.p>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">Request a Callback</motion.h1>
+            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">Get a Quote</motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80">
               Tell us about your project and we'll call you back the same day with friendly,
               honest advice and a no-obligation quote.
@@ -107,7 +107,7 @@ const Contact = () => {
                 </div>
                 <Button type="submit" size="lg" disabled={submitting} className="font-heading font-700 w-full sm:w-auto">
                   <Send className="mr-2 h-4 w-4" />
-                  {submitting ? "Sending…" : "Request Callback"}
+                  {submitting ? "Sending…" : "Get a Quote"}
                 </Button>
               </motion.form>
             </motion.div>
