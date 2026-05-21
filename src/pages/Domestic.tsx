@@ -36,7 +36,7 @@ const services = [
   { icon: Plug, title: "Sockets & Extensions", desc: "Additional sockets, USB outlets and electrical work for kitchen extensions, loft conversions and bathroom upgrades." },
   { icon: Bath, title: "Kitchen & Bathroom Electrics", desc: "Extractor fans, heated towel rails, cooker circuits, shaver sockets and underfloor heating for kitchens and bathrooms." },
   { icon: Cpu, title: "Smart Home Wiring", desc: "Future-proof your home with smart lighting, automated systems and structured wiring for modern living." },
-  { icon: FileCheck, title: "Landlord Certificates (EICR)", desc: "Electrical Installation Condition Reports for rental properties. A legal requirement for all landlords — fast turnaround." },
+  
   { icon: ShieldCheck, title: "Periodic Testing", desc: "Routine electrical testing for owner-occupied homes to confirm everything is safe, compliant and properly certified." },
 ];
 
