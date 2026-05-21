@@ -83,7 +83,25 @@ const Testimonials = () => {
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Testimonials</motion.p>
             <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">What Our Customers Say</motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80">
-              Don't just take our word for it — read what homeowners across Tring and Hertfordshire have to say about our work.
+              Don't just take our word for it — verified reviews from homeowners across Tring,
+              Hertfordshire, Buckinghamshire and Bedfordshire. See all reviews on{" "}
+              <a
+                href="https://www.checkatrade.com/trades/rigselectrical"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-accent"
+              >
+                Checkatrade
+              </a>{" "}
+              or{" "}
+              <a
+                href="https://share.google/XUn0fl3yeiuCGd4Nr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-accent"
+              >
+                Google
+              </a>.
             </motion.p>
           </motion.div>
         </div>
