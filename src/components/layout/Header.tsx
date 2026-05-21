@@ -20,11 +20,13 @@ const Header = () => {
       {/* Top bar */}
       <div className="border-b border-border bg-muted">
         <div className="container flex items-center justify-between py-1.5 md:py-2 text-xs md:text-sm">
-          <span className="font-medium text-foreground">
+          <span className="font-medium text-foreground lg:hidden">
+            NICEIC Registered • Available 24/7
+          </span>
+          <span className="hidden lg:inline font-medium text-foreground">
             Electricians in Hertfordshire, Buckinghamshire and Surrounding Areas
           </span>
           <span className="hidden lg:inline text-muted-foreground">NICEIC Registered • C&G Qualified • Fully Insured</span>
-          <span className="lg:hidden text-[10px] text-muted-foreground">NICEIC Registered • C&G Qualified</span>
         </div>
       </div>
 
