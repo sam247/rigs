@@ -80,29 +80,30 @@ const Contact = () => {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:col-span-3">
               <motion.h2 variants={fadeUp} custom={0} className="text-2xl font-heading font-800 mb-6">Send Us a Message</motion.h2>
               <motion.form variants={fadeUp} custom={1} onSubmit={handleSubmit} className="space-y-5">
+                <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="font-heading font-600">Full Name</Label>
-                    <Input id="name" placeholder="Your name" required />
+                    <Input id="name" name="name" placeholder="Your name" required />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email" className="font-heading font-600">Email</Label>
-                    <Input id="email" type="email" placeholder="you@email.com" required />
+                    <Input id="email" name="email" type="email" placeholder="you@email.com" required />
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="font-heading font-600">Phone</Label>
-                    <Input id="phone" placeholder="Your phone number" />
+                    <Input id="phone" name="phone" placeholder="Your phone number" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="service" className="font-heading font-600">Service Required</Label>
-                    <Input id="service" placeholder="e.g. Rewire, Kitchen Electrics" />
+                    <Input id="service" name="service" placeholder="e.g. Rewire, Kitchen Electrics" />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message" className="font-heading font-600">Message</Label>
-                  <Textarea id="message" placeholder="Tell us about your project…" rows={5} required />
+                  <Textarea id="message" name="message" placeholder="Tell us about your project…" rows={5} required />
                 </div>
                 <Button type="submit" size="lg" disabled={submitting} className="font-heading font-700 w-full sm:w-auto">
                   <Send className="mr-2 h-4 w-4" />
