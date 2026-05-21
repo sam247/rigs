@@ -42,7 +42,7 @@ const Domestic = () => (
   <Layout>
     <Seo
       title="Domestic Electrical Services in Tring | RIGS Electrical"
-      description="Rewires, consumer units, kitchen & bathroom electrics, lighting, fault finding and EICR certificates from your local Tring domestic electricians."
+      description="Rewires, consumer units, kitchen & bathroom electrics, lighting, fault finding and smart home wiring from your local Tring domestic electricians."
       path="/domestic"
     />
     <section className="bg-primary text-primary-foreground py-20 md:py-28">
