@@ -1,6 +1,3 @@
-import type { LucideIcon } from "lucide-react";
-import { Home, Search, ShieldCheck, ZapOff } from "lucide-react";
-
 export type LocationPageConfig = {
   slug: string;
   name: string;
@@ -17,7 +14,6 @@ export type LocationPageConfig = {
     nearby: string[];
   };
   faq: { q: string; a: string }[];
-  relatedServices: { title: string; desc: string; href: string; icon: LucideIcon }[];
 };
 
 export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
@@ -108,32 +104,6 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       {
         q: "Do I need an EICR for a domestic property?",
         a: "If you want a clear picture of your home’s electrical safety (or you’re buying/selling), an EICR is a great way to identify issues early and plan upgrades.",
-      },
-    ],
-    relatedServices: [
-      {
-        title: "Emergency Electrician",
-        desc: "Urgent faults, power outages and tripping circuits across Hertfordshire.",
-        href: "/services/emergency-electrician",
-        icon: ZapOff,
-      },
-      {
-        title: "Fuse Board Upgrades",
-        desc: "Modern protection and fewer nuisance trips with an updated consumer unit.",
-        href: "/services/fuse-board-upgrades",
-        icon: ShieldCheck,
-      },
-      {
-        title: "House Rewiring",
-        desc: "Full or partial rewires for older properties and renovations.",
-        href: "/domestic#house-rewiring",
-        icon: Home,
-      },
-      {
-        title: "EICR Certificates",
-        desc: "Electrical safety inspections with clear findings and next steps.",
-        href: "/domestic#eicr-certificates",
-        icon: Search,
       },
     ],
   },

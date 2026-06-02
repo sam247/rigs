@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Clock, Home, MapPin, Phone, Search, ShieldCheck, ZapOff } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,6 +20,32 @@ const fadeUp = {
 export default function LocationPageClient({ location }: { location: LocationPageConfig }) {
   const path = `/electrician/${location.slug}`;
   const serviceParam = encodeURIComponent(`Electrician ${location.name}`);
+  const relatedServices = [
+    {
+      title: "Emergency Electrician",
+      desc: "Urgent faults, power outages and tripping circuits across Hertfordshire.",
+      href: "/services/emergency-electrician",
+      icon: ZapOff,
+    },
+    {
+      title: "Fuse Board Upgrades",
+      desc: "Modern protection and fewer nuisance trips with an updated consumer unit.",
+      href: "/services/fuse-board-upgrades",
+      icon: ShieldCheck,
+    },
+    {
+      title: "House Rewiring",
+      desc: "Full or partial rewires for older properties and renovations.",
+      href: "/domestic#house-rewiring",
+      icon: Home,
+    },
+    {
+      title: "EICR Certificates",
+      desc: "Electrical safety inspections with clear findings and next steps.",
+      href: "/domestic#eicr-certificates",
+      icon: Search,
+    },
+  ];
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -242,7 +268,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
               Related Services
             </motion.h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {location.relatedServices.map((s, i) => (
+              {relatedServices.map((s, i) => (
                 <motion.div key={s.title} variants={fadeUp} custom={i}>
                   <Link href={s.href} className="block h-full">
                     <Card className="h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">

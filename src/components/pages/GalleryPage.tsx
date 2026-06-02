@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Layout from "@/components/layout/Layout";
 import outsideLighting from "@/assets/gallery-outside-lighting.jpg";
 import domesticLighting from "@/assets/gallery-domestic-lighting.jpg";
@@ -67,12 +68,13 @@ const GalleryPage = () => {
             {projects.map((project, i) => (
               <motion.div key={project.id} initial="hidden" animate="visible" variants={fadeUp} custom={i}>
                 <div className="group relative rounded-xl overflow-hidden border-2 border-border hover:border-primary/30 transition-all duration-300 bg-card h-full">
-                  <div className="aspect-[4/3] overflow-hidden bg-muted">
-                    <img
+                  <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                    <Image
                       src={project.image}
                       alt={project.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-5">

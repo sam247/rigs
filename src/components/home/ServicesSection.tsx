@@ -86,7 +86,7 @@ const ServicesSection = () => (
             variants={fadeUp}
             custom={i}
           >
-            <Link to={service.href} className="block h-full">
+            <Link href={service.href} className="block h-full">
               <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-5 md:p-7">
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 md:mb-5 group-hover:bg-primary transition-colors duration-300">

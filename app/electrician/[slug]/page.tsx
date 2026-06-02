@@ -4,11 +4,12 @@ import LocationPageClient from "@/components/location/LocationPageClient";
 import { LOCATION_PAGES } from "@/content/locations";
 
 type PageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const key = (params.slug ?? "").toLowerCase();
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const key = (slug ?? "").toLowerCase();
   const location = LOCATION_PAGES[key];
   if (!location) return {};
 
@@ -23,8 +24,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function Page({ params }: PageProps) {
-  const key = (params.slug ?? "").toLowerCase();
+export default async function Page({ params }: PageProps) {
+  const { slug } = await params;
+  const key = (slug ?? "").toLowerCase();
   const location = LOCATION_PAGES[key];
   if (!location) notFound();
 
