@@ -6,6 +6,7 @@
 - Improved Emergency Electrician landing page with hero background image + in-page image break
 - Added Vercel rewrite fallback for SPA client-side routes (prevents hard-refresh 404s)
 - Added reusable location page template and first location landing page: /electrician/tring
+- Improved /electrician/tring with stronger localised content, common issues section, coverage map, schema enrichment and related articles
 
 ## Next
 

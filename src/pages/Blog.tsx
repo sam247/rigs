@@ -4,21 +4,12 @@ import { ArrowRight, Calendar } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import Seo from "@/components/Seo";
 import { Card, CardContent } from "@/components/ui/card";
+import { BLOG_POSTS } from "@/content/blogPosts";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
 };
-
-const posts = [
-  {
-    title: "Consumer Unit vs Fuse Box: What’s the Difference?",
-    description:
-      "Understand the key differences between a consumer unit and an old fuse box, why it matters for safety and compliance, and when to consider an upgrade.",
-    href: "/blog/consumer-unit-vs-fuse-box",
-    dateLabel: "June 2026",
-  },
-];
 
 const Blog = () => (
   <Layout>
@@ -46,7 +37,7 @@ const Blog = () => (
     <section className="py-20 md:py-28">
       <div className="container">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {posts.map((p, i) => (
+          {BLOG_POSTS.map((p, i) => (
             <motion.div key={p.href} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
               <Link to={p.href} className="block h-full">
                 <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
@@ -72,4 +63,3 @@ const Blog = () => (
 );
 
 export default Blog;
-

@@ -16,10 +16,10 @@ describe("Blog", () => {
     );
 
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Blog");
-    expect(screen.getByRole("link", { name: /Consumer Unit vs Fuse Box/i })).toHaveAttribute(
-      "href",
-      "/blog/consumer-unit-vs-fuse-box",
-    );
+    const link = screen
+      .getAllByRole("link", { name: /Consumer Unit vs Fuse Box/i })
+      .find((a) => a.getAttribute("href") === "/blog/consumer-unit-vs-fuse-box");
+    expect(link).toBeTruthy();
   });
 
   it("renders article, table, image, and internal links", () => {
@@ -50,4 +50,3 @@ describe("Blog", () => {
     expect(consumerUnitUpgradeLink).toBeTruthy();
   });
 });
-
