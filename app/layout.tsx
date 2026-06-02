@@ -1,41 +1,69 @@
 import type { Metadata } from "next";
 import Providers from "./providers";
 import "../src/index.css";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "RIGS Electrical | Trusted Tring Electrician | Hertfordshire",
+  metadataBase: new URL("https://rigselectrical.co.uk"),
+  title: "RIGS Electrical | Local Electrician in Tring, Hertfordshire",
   description:
-    "NICEIC registered Tring electricians for rewires, EV chargers, fault finding and more across Hertfordshire. Request a callback today.",
+    "NICEIC registered domestic electricians in Tring covering Hertfordshire and surrounding areas. Fault finding, consumer units, rewires, lighting and EICRs.",
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    title: "RIGS Electrical | Trusted Tring Electrician | Hertfordshire",
+    siteName: "RIGS Electrical",
+    locale: "en_GB",
+    title: "RIGS Electrical | Local Electrician in Tring, Hertfordshire",
     description:
-      "NICEIC registered Tring electricians for rewires, EV chargers, fault finding and more across Hertfordshire. Request a callback today.",
-    images: [
-      {
-        url: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ccbacb7b-15e5-4f34-94be-a5d3b56eebe6/id-preview-d5d536a4--2206eaf7-84ed-4836-8faf-340691cd3b46.lovable.app-1777125823664.png",
-      },
-    ],
+      "NICEIC registered domestic electricians in Tring covering Hertfordshire and surrounding areas. Fault finding, consumer units, rewires, lighting and EICRs.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RIGS Electrical | Trusted Tring Electrician | Hertfordshire",
+    title: "RIGS Electrical | Local Electrician in Tring, Hertfordshire",
     description:
-      "NICEIC registered Tring electricians for rewires, EV chargers, fault finding and more across Hertfordshire. Request a callback today.",
-    images: [
-      "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ccbacb7b-15e5-4f34-94be-a5d3b56eebe6/id-preview-d5d536a4--2206eaf7-84ed-4836-8faf-340691cd3b46.lovable.app-1777125823664.png",
-    ],
+      "NICEIC registered domestic electricians in Tring covering Hertfordshire and surrounding areas. Fault finding, consumer units, rewires, lighting and EICRs.",
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    name: "RIGS Electrical",
+    url: "https://rigselectrical.co.uk",
+    telephone: "07989 205468",
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Hertfordshire" },
+      { "@type": "AdministrativeArea", name: "Buckinghamshire" },
+      { "@type": "AdministrativeArea", name: "Bedfordshire" },
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Tring",
+      addressRegion: "Hertfordshire",
+      addressCountry: "GB",
+    },
+    sameAs: [
+      "https://www.instagram.com/rigselectrical",
+      "https://www.checkatrade.com/trades/rigselectrical",
+      "https://share.google/XUn0fl3yeiuCGd4Nr",
+    ],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "RIGS Electrical",
+    url: "https://rigselectrical.co.uk",
+  };
+
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <body>
+        <JsonLd data={orgSchema} />
+        <JsonLd data={websiteSchema} />
         <Providers>{children}</Providers>
       </body>
     </html>
   );
 }
-

@@ -16,6 +16,7 @@ dist-ssr
 *.local
 test-results
 playwright-report
+public/sitemap*.xml
 
 # Editor directories and files
 .vscode/*

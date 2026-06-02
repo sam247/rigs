@@ -43,12 +43,12 @@ const ConsumerUnitVsFuseBoxPage = () => {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: "Consumer Unit vs Fuse Box: What’s the Difference?",
-    image: ["https://www.rigselectrical.co.uk/blog_images/consumer_unit_vs_fuse_box.jpg"],
+    image: ["https://rigselectrical.co.uk/blog_images/consumer_unit_vs_fuse_box.jpg"],
     datePublished: "2026-06-02",
     dateModified: "2026-06-02",
     author: { "@type": "Organization", name: "RIGS Electrical" },
     publisher: { "@type": "Organization", name: "RIGS Electrical" },
-    mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.rigselectrical.co.uk/blog/consumer-unit-vs-fuse-box" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://rigselectrical.co.uk/blog/consumer-unit-vs-fuse-box" },
   };
 
   const faqSchema = {

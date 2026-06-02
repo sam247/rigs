@@ -10,6 +10,7 @@
 - Migrated Vite SPA to Next.js App Router (preserves URLs and prevents hard-refresh 404s without SPA rewrites)
 - Cleaned repo: removed Vite/Lovable/Supabase artifacts and switched tests to Playwright smoke coverage
 - Updated /electrician/tring map to use the same OpenStreetMap embed approach as the homepage CTA section
+- SEO hardening: consistent canonical domain (non-www), dynamic Open Graph/Twitter images, per-page OpenGraph/Twitter metadata, global Organization/WebSite schema, location pages statically generated for sitemap inclusion, static-cached sitemap/robots routes, and server-side redirect for /services/fuse-board-upgrades
 
 ## Next
 

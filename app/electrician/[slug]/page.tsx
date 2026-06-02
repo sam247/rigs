@@ -3,9 +3,15 @@ import { notFound } from "next/navigation";
 import LocationPageClient from "@/components/location/LocationPageClient";
 import { LOCATION_PAGES } from "@/content/locations";
 
+export const dynamicParams = false;
+
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateStaticParams() {
+  return Object.keys(LOCATION_PAGES).map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -15,12 +21,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = `Electrician ${location.name} | RIGS Electrical`;
   const description = `Looking for a local electrician in ${location.name}, ${location.region}? NICEIC registered domestic electricians for fault finding, consumer units, rewires, lighting and EICRs.`;
-  const canonical = `https://www.rigselectrical.co.uk/electrician/${location.slug}`;
+  const canonical = `https://rigselectrical.co.uk/electrician/${location.slug}`;
 
   return {
     title,
     description,
     alternates: { canonical },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url: canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 

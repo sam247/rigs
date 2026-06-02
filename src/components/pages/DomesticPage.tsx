@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Home,
@@ -58,22 +60,33 @@ const services = [
   { icon: ShieldCheck, title: "EICR Certificates", desc: "Home electrical safety checks (EICRs) to confirm your installation is safe, highlight any issues and provide clear next steps.", id: "eicr-certificates" },
 ];
 
-const DomesticPage = () => (
-  <Layout>
-    <section className="bg-primary text-primary-foreground py-20 md:py-28">
-      <div className="container">
-        <motion.div initial="hidden" animate="visible" className="max-w-3xl">
-          <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Our Services</motion.p>
-          <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">
-            Domestic Electrical Services in Tring
-          </motion.h1>
-          <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed">
-            Safe, certified electrical work for your home. From simple repairs to full rewires —
-            RIGS Electrical is the local Tring electrician you can rely on.
-          </motion.p>
-        </motion.div>
-      </div>
-    </section>
+const DomesticPage = () => {
+  const searchParams = useSearchParams();
+  const service = searchParams.get("service");
+
+  useEffect(() => {
+    if (!service) return;
+    const target = document.getElementById(service);
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [service]);
+
+  return (
+    <Layout>
+      <section className="bg-primary text-primary-foreground py-20 md:py-28">
+        <div className="container">
+          <motion.div initial="hidden" animate="visible" className="max-w-3xl">
+            <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Our Services</motion.p>
+            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">
+              Domestic Electrical Services in Tring
+            </motion.h1>
+            <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed">
+              Safe, certified electrical work for your home. From simple repairs to full rewires —
+              RIGS Electrical is the local Tring electrician you can rely on.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
 
     <section className="py-20 md:py-28">
       <div className="container">
@@ -111,7 +124,8 @@ const DomesticPage = () => (
         </Button>
       </div>
     </section>
-  </Layout>
-);
+    </Layout>
+  );
+};
 
 export default DomesticPage;

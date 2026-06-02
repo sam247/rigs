@@ -51,7 +51,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "RIGS Electrical",
-    url: `https://www.rigselectrical.co.uk${path}`,
+    url: `https://rigselectrical.co.uk${path}`,
     telephone: "07989 205468",
     areaServed: [
       { "@type": "Place", name: location.name },
