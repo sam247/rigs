@@ -2,6 +2,10 @@ export type LocationPageConfig = {
   slug: string;
   name: string;
   region: string;
+  map: {
+    bbox: [number, number, number, number];
+    marker: { lat: number; lon: number };
+  };
   heroIntro: string;
   servicesIntro?: string;
   serviceBlocks: { title: string; href: string; body: string }[];
@@ -21,6 +25,10 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     slug: "tring",
     name: "Tring",
     region: "Hertfordshire",
+    map: {
+      bbox: [-0.73, 51.77, -0.61, 51.82],
+      marker: { lat: 51.7956, lon: -0.67 },
+    },
     heroIntro:
       "Need a reliable electrician in Tring? RIGS Electrical helps homeowners across Tring, Aldbury, Wigginton and Aston Clinton with safe, tidy domestic electrical work — whether it’s a fault that needs sorting quickly or an upgrade planned as part of home improvements. We also cover the surrounding villages, so you can get local, practical advice from a NICEIC registered electrician that understands the mix of older homes and newer developments in this area.",
     servicesIntro:

@@ -7,7 +7,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import CoverageMap from "@/components/location/CoverageMap";
+import OpenStreetMapEmbed from "@/components/location/OpenStreetMapEmbed";
 import { BLOG_POSTS } from "@/content/blogPosts";
 import type { LocationPageConfig } from "@/content/locations";
 import JsonLd from "@/components/JsonLd";
@@ -249,11 +249,11 @@ export default function LocationPageClient({ location }: { location: LocationPag
                 </div>
               </div>
               <div className="lg:col-span-1 lg:max-w-sm">
-                <CoverageMap
-                  mainTown={location.name}
-                  nearbyTowns={location.areasCovered.nearby}
-                  nearbyVillages={location.areasCovered.villages}
-                  variant="compact"
+                <OpenStreetMapEmbed
+                  title={`Map of ${location.name}, ${location.region}`}
+                  bbox={location.map.bbox}
+                  marker={location.map.marker}
+                  className="relative rounded-2xl overflow-hidden border border-border shadow-lg aspect-[4/3] bg-muted"
                 />
               </div>
             </div>

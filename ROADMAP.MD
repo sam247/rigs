@@ -9,6 +9,7 @@
 - Adjusted Areas Covered layout to prioritise written coverage reassurance with map as supporting element
 - Migrated Vite SPA to Next.js App Router (preserves URLs and prevents hard-refresh 404s without SPA rewrites)
 - Cleaned repo: removed Vite/Lovable/Supabase artifacts and switched tests to Playwright smoke coverage
+- Updated /electrician/tring map to use the same OpenStreetMap embed approach as the homepage CTA section
 
 ## Next
 
