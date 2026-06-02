@@ -36,7 +36,7 @@ const Header = () => {
       {/* Main nav */}
       <div className="container flex items-center justify-between py-3 md:py-4">
         <Link href="/" aria-label="RIGS Electrical home" className="flex items-center">
-          <img src={rigsLogo} alt="RIGS Electrical" className="h-9 md:h-11 w-auto" />
+          <img src={rigsLogo.src} alt="RIGS Electrical" className="h-9 md:h-11 w-auto" />
         </Link>
 
         {/* Desktop nav */}

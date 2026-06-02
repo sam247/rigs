@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <img src={rigsLogoWhite} alt="RIGS Electrical" className="h-10 md:h-12 w-auto mb-4" />
+            <img src={rigsLogoWhite.src} alt="RIGS Electrical" className="h-10 md:h-12 w-auto mb-4" />
             <p className="text-primary-foreground/70 text-xs md:text-sm leading-relaxed">
               Your local Tring electrician. NICEIC registered, C&G qualified and fully insured —
               trusted domestic electrical work across Hertfordshire.
