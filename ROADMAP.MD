@@ -5,6 +5,7 @@
 - Added Blog hub (/blog) and first article (/blog/consumer-unit-vs-fuse-box)
 - Improved Emergency Electrician landing page with hero background image + in-page image break
 - Added Vercel rewrite fallback for SPA client-side routes (prevents hard-refresh 404s)
+- Added reusable location page template and first location landing page: /electrician/tring
 
 ## Next
 

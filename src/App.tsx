@@ -15,6 +15,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import EmergencyElectricianHertfordshire from "./pages/services/EmergencyElectricianHertfordshire";
 import Blog from "./pages/Blog";
 import ConsumerUnitVsFuseBox from "./pages/blog/ConsumerUnitVsFuseBox";
+import LocationPage from "./pages/electrician/LocationPage";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/services/fuse-board-upgrades" element={<Navigate to="/domestic#fuse-board-upgrades" replace />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/consumer-unit-vs-fuse-box" element={<ConsumerUnitVsFuseBox />} />
+          <Route path="/electrician/:slug" element={<LocationPage />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />

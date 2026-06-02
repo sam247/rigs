@@ -193,21 +193,6 @@ const EmergencyElectricianHertfordshire = () => {
                 test circuits and equipment, and talk you through what we’ve found. If the best next step is a follow-up repair or upgrade,
                 we’ll give you clear options and a straightforward quote.
               </motion.p>
-              <motion.div variants={fadeUp} custom={3} className="grid sm:grid-cols-2 gap-4">
-                {[
-                  { title: "Make safe", desc: "Isolate dangerous circuits, damaged accessories or overheating connections." },
-                  { title: "Fault finding", desc: "Test methodically to locate the source of tripping or loss of power." },
-                  { title: "Restore power", desc: "Where safe, reinstate circuits and replace failed components." },
-                  { title: "Practical advice", desc: "Clear next steps for repairs, upgrades, or certification where required." },
-                ].map((item) => (
-                  <Card key={item.title} className="border-2 border-border">
-                    <CardContent className="p-5">
-                      <p className="font-heading font-700 mb-1">{item.title}</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </motion.div>
             </motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
@@ -242,6 +227,27 @@ const EmergencyElectricianHertfordshire = () => {
               </motion.p>
             </motion.div>
           </div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="max-w-6xl mx-auto mt-10">
+            <motion.h3 variants={fadeUp} custom={0} className="text-2xl font-heading font-800 mb-6">
+              What This Service Includes
+            </motion.h3>
+            <motion.div variants={fadeUp} custom={1} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { title: "Make safe", desc: "Isolate dangerous circuits, damaged accessories or overheating connections." },
+                { title: "Fault finding", desc: "Test methodically to locate the source of tripping or loss of power." },
+                { title: "Restore power", desc: "Where safe, reinstate circuits and replace failed components." },
+                { title: "Practical advice", desc: "Clear next steps for repairs, upgrades, or certification where required." },
+              ].map((item) => (
+                <Card key={item.title} className="border-2 border-border">
+                  <CardContent className="p-5">
+                    <p className="font-heading font-700 mb-1">{item.title}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
