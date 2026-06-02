@@ -3,6 +3,7 @@
 - Added Emergency Electrician service card across key site entry points (homepage, domestic services hub, footer)
 - Built SEO landing page: /services/emergency-electrician (schema, FAQ, related service links)
 - Added Blog hub (/blog) and first article (/blog/consumer-unit-vs-fuse-box)
+- Improved Emergency Electrician landing page with hero background image + in-page image break
 
 ## Next
 

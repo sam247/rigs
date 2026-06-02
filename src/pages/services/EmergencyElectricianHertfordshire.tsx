@@ -121,9 +121,17 @@ const EmergencyElectricianHertfordshire = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <section className="bg-primary text-primary-foreground py-20 md:py-28">
+      <section className="relative text-primary-foreground py-20 md:py-28 overflow-hidden">
+        <img
+          src="/services_images/emergency_electrician.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
         <div className="container">
-          <motion.div initial="hidden" animate="visible" className="max-w-3xl">
+          <motion.div initial="hidden" animate="visible" className="max-w-3xl relative">
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
               Emergency Domestic Electrician
             </motion.p>
@@ -195,6 +203,14 @@ const EmergencyElectricianHertfordshire = () => {
             </motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
+              <motion.div variants={fadeUp} custom={0} className="rounded-xl overflow-hidden border border-border mb-8">
+                <img
+                  src="/services_images/emergency_electrician_hero.jpg"
+                  alt="Emergency electrician inspecting electrical equipment"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </motion.div>
               <motion.h3 variants={fadeUp} custom={0} className="text-2xl font-heading font-800 mb-4">
                 Typical Jobs We’re Called Out For
               </motion.h3>
@@ -454,4 +470,3 @@ const EmergencyElectricianHertfordshire = () => {
 };
 
 export default EmergencyElectricianHertfordshire;
-

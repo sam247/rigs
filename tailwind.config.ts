@@ -17,6 +17,40 @@ export default {
         heading: ['"Plus Jakarta Sans"', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
+      typography: ({ theme }: { theme: (path: string) => string | string[] }) => {
+        const headingFont = Array.isArray(theme("fontFamily.heading")) ? (theme("fontFamily.heading") as string[]).join(",") : (theme("fontFamily.heading") as string);
+        return {
+          rigs: {
+            css: {
+              "--tw-prose-body": theme("colors.foreground") as string,
+              "--tw-prose-headings": theme("colors.foreground") as string,
+              "--tw-prose-lead": theme("colors.muted.foreground") as string,
+              "--tw-prose-links": theme("colors.primary.DEFAULT") as string,
+              "--tw-prose-bold": theme("colors.foreground") as string,
+              "--tw-prose-counters": theme("colors.muted.foreground") as string,
+              "--tw-prose-bullets": theme("colors.muted.foreground") as string,
+              "--tw-prose-hr": theme("colors.border") as string,
+              "--tw-prose-quotes": theme("colors.foreground") as string,
+              "--tw-prose-quote-borders": theme("colors.border") as string,
+              "--tw-prose-captions": theme("colors.muted.foreground") as string,
+              "--tw-prose-code": theme("colors.foreground") as string,
+              "--tw-prose-pre-code": theme("colors.foreground") as string,
+              "--tw-prose-pre-bg": theme("colors.muted.DEFAULT") as string,
+              "--tw-prose-th-borders": theme("colors.border") as string,
+              "--tw-prose-td-borders": theme("colors.border") as string,
+              h2: { fontFamily: headingFont, fontWeight: "800" },
+              h3: { fontFamily: headingFont, fontWeight: "800" },
+              h4: { fontFamily: headingFont, fontWeight: "800" },
+              a: { fontWeight: "600", textDecoration: "none" },
+              "a:hover": { textDecoration: "underline" },
+              strong: { fontWeight: "700" },
+              code: { fontWeight: "600" },
+              "ul > li::marker": { color: theme("colors.muted.foreground") as string },
+              "ol > li::marker": { color: theme("colors.muted.foreground") as string },
+            },
+          },
+        };
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -94,5 +128,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
