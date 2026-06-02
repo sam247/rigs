@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Plug, Lightbulb, ShieldCheck, Zap, Search, Bath, ArrowRight, ZapOff } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -107,7 +109,7 @@ const ServicesSection = () => (
         custom={0}
         className="text-center mt-8 md:mt-10"
       >
-        <Link to="/domestic" className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
+        <Link href="/domestic" className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
           See all services <ArrowRight className="h-4 w-4" />
         </Link>
       </motion.div>

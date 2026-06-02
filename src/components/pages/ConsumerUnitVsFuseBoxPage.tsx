@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+"use client";
+
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import Layout from "@/components/layout/Layout";
-import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import JsonLd from "@/components/JsonLd";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -37,7 +38,7 @@ const faqs = [
   },
 ];
 
-const ConsumerUnitVsFuseBox = () => {
+const ConsumerUnitVsFuseBoxPage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -62,15 +63,8 @@ const ConsumerUnitVsFuseBox = () => {
 
   return (
     <Layout>
-      <Seo
-        title="Consumer Unit vs Fuse Box: What’s the Difference? | RIGS Electrical"
-        description="Learn the difference between a consumer unit and an old fuse box, why it matters for safety and compliance, and when to consider an upgrade in Tring and Hertfordshire."
-        path="/blog/consumer-unit-vs-fuse-box"
-      />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <JsonLd data={articleSchema} />
+      <JsonLd data={faqSchema} />
 
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
@@ -88,7 +82,7 @@ const ConsumerUnitVsFuseBox = () => {
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700">
-                <Link to="/contact?service=Consumer%20Unit%20Upgrade">
+                <Link href="/contact?service=Consumer%20Unit%20Upgrade">
                   Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -107,10 +101,10 @@ const ConsumerUnitVsFuseBox = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center justify-between gap-4 mb-10">
-              <Link to="/blog" className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
+              <Link href="/blog" className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
                 ← Back to Blog
               </Link>
-              <Link to="/services/emergency-electrician" className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
+              <Link href="/services/emergency-electrician" className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
                 Need urgent help? Emergency electrician →
               </Link>
             </div>
@@ -197,7 +191,7 @@ const ConsumerUnitVsFuseBox = () => {
                 <li>You still have ceramic fuses or a wooden-backed fuse box</li>
                 <li>
                   Your electrics trip frequently or unpredictably (if it feels unsafe, speak to an{" "}
-                  <Link to="/services/emergency-electrician">emergency electrician</Link>)
+                  <Link href="/services/emergency-electrician">emergency electrician</Link>)
                 </li>
                 <li>You’re planning a renovation or extension</li>
                 <li>Your home hasn’t had an electrical upgrade in 20+ years</li>
@@ -209,7 +203,7 @@ const ConsumerUnitVsFuseBox = () => {
 
               <h2>Benefits of a Consumer Unit Upgrade</h2>
               <p>
-                Investing in a <Link to="/services/fuse-board-upgrades">consumer unit upgrade</Link> offers both immediate and long-term benefits:
+                Investing in a <Link href="/services/fuse-board-upgrades">consumer unit upgrade</Link> offers both immediate and long-term benefits:
               </p>
               <ul>
                 <li>Improved protection against electrical fires and shocks</li>
@@ -253,4 +247,4 @@ const ConsumerUnitVsFuseBox = () => {
   );
 };
 
-export default ConsumerUnitVsFuseBox;
+export default ConsumerUnitVsFuseBoxPage;

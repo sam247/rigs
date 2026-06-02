@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Zap, ArrowRight, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -69,10 +71,10 @@ const HeroSection = () => {
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700 text-base w-full sm:w-auto">
-                <Link to="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Link href="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
               <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-heading font-600 text-base w-full sm:w-auto">
-                <Link to="/about">Why Choose Us</Link>
+                <Link href="/about">Why Choose Us</Link>
               </Button>
             </motion.div>
           </motion.div>

@@ -1,19 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import { HelmetProvider } from "react-helmet-async";
-import { MemoryRouter } from "react-router-dom";
 import { describe, it, expect } from "vitest";
 import Blog from "@/pages/Blog";
 import ConsumerUnitVsFuseBox from "@/pages/blog/ConsumerUnitVsFuseBox";
 
 describe("Blog", () => {
   it("renders blog hub and links to first article", () => {
-    render(
-      <HelmetProvider>
-        <MemoryRouter initialEntries={["/blog"]}>
-          <Blog />
-        </MemoryRouter>
-      </HelmetProvider>,
-    );
+    render(<Blog />);
 
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Blog");
     const link = screen
@@ -23,13 +15,7 @@ describe("Blog", () => {
   });
 
   it("renders article, table, image, and internal links", () => {
-    render(
-      <HelmetProvider>
-        <MemoryRouter initialEntries={["/blog/consumer-unit-vs-fuse-box"]}>
-          <ConsumerUnitVsFuseBox />
-        </MemoryRouter>
-      </HelmetProvider>,
-    );
+    render(<ConsumerUnitVsFuseBox />);
 
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Consumer Unit vs Fuse Box: What’s the Difference?");
     expect(screen.getByRole("img", { name: /Modern consumer unit/i })).toHaveAttribute(

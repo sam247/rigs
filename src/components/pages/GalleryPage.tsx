@@ -1,6 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
-import Seo from "@/components/Seo";
 import outsideLighting from "@/assets/gallery-outside-lighting.jpg";
 import domesticLighting from "@/assets/gallery-domestic-lighting.jpg";
 import ledLighting from "@/assets/gallery-led-lighting.jpg";
@@ -45,14 +46,9 @@ const projects = [
   },
 ];
 
-const Gallery = () => {
+const GalleryPage = () => {
   return (
     <Layout>
-      <Seo
-        title="Project Gallery | RIGS Electrical Tring"
-        description="See recent electrical work by RIGS Electrical — lighting, rewires, sockets and outdoor installations across Tring and Hertfordshire."
-        path="/gallery"
-      />
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
@@ -69,13 +65,7 @@ const Gallery = () => {
         <div className="container">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, i) => (
-              <motion.div
-                key={project.id}
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp}
-                custom={i}
-              >
+              <motion.div key={project.id} initial="hidden" animate="visible" variants={fadeUp} custom={i}>
                 <div className="group relative rounded-xl overflow-hidden border-2 border-border hover:border-primary/30 transition-all duration-300 bg-card h-full">
                   <div className="aspect-[4/3] overflow-hidden bg-muted">
                     <img
@@ -99,4 +89,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default GalleryPage;

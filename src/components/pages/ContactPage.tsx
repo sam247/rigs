@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,7 +11,6 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/layout/Layout";
-import Seo from "@/components/Seo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -24,17 +25,17 @@ const contactInfo = [
   { icon: Clock, label: "Hours", value: "Mon–Fri: 8am–6pm, Sat: 9am–1pm" },
 ];
 
-const Contact = () => {
+const ContactPage = () => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
-  const [searchParams] = useSearchParams();
+  const searchParams = useSearchParams();
   const prefilledService = searchParams.get("service") ?? "";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
-    if (fd.get("_gotcha")) return; // honeypot
+    if (fd.get("_gotcha")) return;
     setSubmitting(true);
     try {
       const res = await fetch("https://formbold.com/s/9BaZ2", {
@@ -58,11 +59,6 @@ const Contact = () => {
 
   return (
     <Layout>
-      <Seo
-        title="Contact RIGS Electrical | Get a Quote"
-        description="Get in touch with RIGS Electrical in Tring. Call 07989 205468 or request a free, no-obligation quote today."
-        path="/contact"
-      />
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
@@ -79,7 +75,6 @@ const Contact = () => {
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
-            {/* Form */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:col-span-3">
               <motion.h2 variants={fadeUp} custom={0} className="text-2xl font-heading font-800 mb-6">Send Us a Message</motion.h2>
               <motion.form variants={fadeUp} custom={1} onSubmit={handleSubmit} className="space-y-5">
@@ -115,7 +110,6 @@ const Contact = () => {
               </motion.form>
             </motion.div>
 
-            {/* Contact info */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:col-span-2 space-y-6">
               <motion.h2 variants={fadeUp} custom={0} className="text-2xl font-heading font-800 mb-2">Contact Details</motion.h2>
               {contactInfo.map((c, i) => (
@@ -145,4 +139,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;

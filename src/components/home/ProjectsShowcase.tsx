@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Plug, Lightbulb, Bath, Home, ShieldAlert, Search } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -111,7 +113,7 @@ const ProjectsShowcase = () => (
         className="text-center mt-8 md:mt-10"
       >
         <Button asChild variant="outline" className="font-heading font-600">
-          <Link to="/gallery">View Our Full Gallery <ArrowRight className="ml-2 h-4 w-4" /></Link>
+          <Link href="/gallery">View Our Full Gallery <ArrowRight className="ml-2 h-4 w-4" /></Link>
         </Button>
       </motion.div>
     </div>

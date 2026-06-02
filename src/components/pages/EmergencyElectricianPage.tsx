@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 import { ArrowRight, Clock, MapPin, Phone, Search, ShieldCheck, ZapOff } from "lucide-react";
 import Layout from "@/components/layout/Layout";
-import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import JsonLd from "@/components/JsonLd";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -81,7 +82,7 @@ const relatedServices = [
   },
 ];
 
-const EmergencyElectricianHertfordshire = () => {
+const EmergencyElectricianPage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -111,17 +112,10 @@ const EmergencyElectricianHertfordshire = () => {
 
   return (
     <Layout>
-      <Seo
-        title="Emergency Electrician Hertfordshire | Rapid Domestic Call-Outs | RIGS Electrical"
-        description="Need an emergency electrician in Hertfordshire? RIGS Electrical handles tripping circuits, power outages, hot sockets and urgent domestic faults with fast, practical help and same-day quotations."
-        path="/services/emergency-electrician"
-      />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
 
-      <section className="relative text-primary-foreground py-20 md:py-28 overflow-hidden">
+      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center text-primary-foreground overflow-hidden">
         <img
           src="/services_images/emergency_electrician.jpg"
           alt=""
@@ -130,8 +124,8 @@ const EmergencyElectricianHertfordshire = () => {
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
-        <div className="container">
-          <motion.div initial="hidden" animate="visible" className="max-w-3xl relative">
+        <div className="container relative py-16 md:py-28">
+          <motion.div initial="hidden" animate="visible" className="max-w-3xl">
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
               Emergency Domestic Electrician
             </motion.p>
@@ -144,7 +138,7 @@ const EmergencyElectricianHertfordshire = () => {
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700">
-                <Link to="/contact?service=Emergency%20Electrician%20Hertfordshire">
+                <Link href="/contact?service=Emergency%20Electrician%20Hertfordshire">
                   Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -216,11 +210,11 @@ const EmergencyElectricianHertfordshire = () => {
               </motion.div>
               <motion.p variants={fadeUp} custom={2} className="text-sm text-muted-foreground mt-6 leading-relaxed">
                 If you suspect your fuse board is outdated or your wiring is struggling to cope, we’ll advise on longer-term fixes such as{" "}
-                <Link to="/domestic#consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/domestic#consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   consumer unit upgrades
                 </Link>{" "}
                 or{" "}
-                <Link to="/domestic#house-rewiring" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/domestic#house-rewiring" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   house rewiring
                 </Link>
                 .
@@ -390,7 +384,7 @@ const EmergencyElectricianHertfordshire = () => {
                     If you’re just outside these areas, contact us anyway — we may still be able to help, or we can recommend the safest next step.
                   </p>
                   <Button asChild className="font-heading font-700 w-full">
-                    <Link to="/contact?service=Emergency%20Electrician%20Hertfordshire">Request a Quote</Link>
+                    <Link href="/contact?service=Emergency%20Electrician%20Hertfordshire">Request a Quote</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -407,14 +401,14 @@ const EmergencyElectricianHertfordshire = () => {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 For immediate advice, call us. For non-urgent issues, request a quote and we’ll respond as soon as possible.
                 You can also browse our{" "}
-                <Link to="/domestic" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/domestic" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   domestic services
                 </Link>{" "}
                 for upgrades and preventative work.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" className="font-heading font-700">
-                  <Link to="/contact?service=Emergency%20Electrician%20Hertfordshire">
+                  <Link href="/contact?service=Emergency%20Electrician%20Hertfordshire">
                     Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -451,7 +445,7 @@ const EmergencyElectricianHertfordshire = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedServices.map((s, i) => (
                 <motion.div key={s.title} variants={fadeUp} custom={i}>
-                  <Link to={s.href} className="block h-full">
+                  <Link href={s.href} className="block h-full">
                     <Card className="h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
                       <CardContent className="p-6">
                         <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
@@ -475,4 +469,4 @@ const EmergencyElectricianHertfordshire = () => {
   );
 };
 
-export default EmergencyElectricianHertfordshire;
+export default EmergencyElectricianPage;

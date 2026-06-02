@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import Layout from "@/components/layout/Layout";
-import Seo from "@/components/Seo";
 import { Card, CardContent } from "@/components/ui/card";
 import { BLOG_POSTS } from "@/content/blogPosts";
 
@@ -11,13 +12,8 @@ const fadeUp = {
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
 };
 
-const Blog = () => (
+const BlogHubPage = () => (
   <Layout>
-    <Seo
-      title="Blog | RIGS Electrical"
-      description="Practical, homeowner-focused electrical advice from RIGS Electrical — safety, upgrades and common domestic faults across Tring and Hertfordshire."
-      path="/blog"
-    />
     <section className="bg-primary text-primary-foreground py-20 md:py-28">
       <div className="container">
         <motion.div initial="hidden" animate="visible" className="max-w-3xl">
@@ -39,7 +35,7 @@ const Blog = () => (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {BLOG_POSTS.map((p, i) => (
             <motion.div key={p.href} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
-              <Link to={p.href} className="block h-full">
+              <Link href={p.href} className="block h-full">
                 <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
                   <CardContent className="p-8">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
@@ -62,4 +58,4 @@ const Blog = () => (
   </Layout>
 );
 
-export default Blog;
+export default BlogHubPage;

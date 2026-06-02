@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Home,
@@ -17,7 +19,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
-import Seo from "@/components/Seo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -57,13 +58,8 @@ const services = [
   { icon: ShieldCheck, title: "EICR Certificates", desc: "Home electrical safety checks (EICRs) to confirm your installation is safe, highlight any issues and provide clear next steps.", id: "eicr-certificates" },
 ];
 
-const Domestic = () => (
+const DomesticPage = () => (
   <Layout>
-    <Seo
-      title="Domestic Electrical Services in Tring | RIGS Electrical"
-      description="Rewires, consumer units, kitchen & bathroom electrics, lighting, fault finding and smart home wiring from your local Tring domestic electricians."
-      path="/domestic"
-    />
     <section className="bg-primary text-primary-foreground py-20 md:py-28">
       <div className="container">
         <motion.div initial="hidden" animate="visible" className="max-w-3xl">
@@ -93,7 +89,7 @@ const Domestic = () => (
                   <h3 className="font-heading font-700 text-lg mb-2">{s.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.desc}</p>
                   <Link
-                    to={s.ctaHref ?? `/contact?service=${encodeURIComponent(s.title)}`}
+                    href={s.ctaHref ?? `/contact?service=${encodeURIComponent(s.title)}`}
                     className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors"
                   >
                     {s.ctaLabel ?? "Get a Quote"} <ArrowRight className="h-4 w-4" />
@@ -111,11 +107,11 @@ const Domestic = () => (
         <h2 className="text-3xl font-heading font-800 mb-4">Need a Home Electrician in Tring?</h2>
         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Get in touch for friendly, professional advice and a free quote — same-day callbacks.</p>
         <Button asChild size="lg" className="font-heading font-700">
-          <Link to="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
+          <Link href="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
         </Button>
       </div>
     </section>
   </Layout>
 );
 
-export default Domestic;
+export default DomesticPage;

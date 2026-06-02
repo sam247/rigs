@@ -1,10 +1,11 @@
+"use client";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
-import Seo from "@/components/Seo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -66,17 +67,12 @@ const filterLabels: Record<FilterType, string> = {
   sockets: "Sockets",
 };
 
-const Testimonials = () => {
+const TestimonialsPage = () => {
   const [filter, setFilter] = useState<FilterType>("all");
   const filtered = filter === "all" ? reviews : reviews.filter((r) => r.type === filter);
 
   return (
     <Layout>
-      <Seo
-        title="Customer Reviews | RIGS Electrical Tring"
-        description="Read 5-star reviews from RIGS Electrical customers across Tring and Hertfordshire — rewires, kitchen & bathroom electrics, lighting and fault finding."
-        path="/testimonials"
-      />
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
@@ -147,4 +143,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsPage;

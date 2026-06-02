@@ -1,5 +1,8 @@
+"use client";
+
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import rigsLogo from "@/assets/rigs-logo.svg";
@@ -13,7 +16,7 @@ const navLinks = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-background shadow-sm">
@@ -41,9 +44,9 @@ const Header = () => {
           {navLinks.map((link) => (
             <Link
               key={link.path}
-              to={link.path}
+              href={link.path}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-muted ${
-                location.pathname === link.path ? "bg-muted text-primary" : "text-foreground"
+                pathname === link.path ? "bg-muted text-primary" : "text-foreground"
               }`}
             >
               {link.label}
@@ -56,7 +59,7 @@ const Header = () => {
             <a href="tel:+447989205468"><Phone className="mr-1.5 h-4 w-4" /> Call Now</a>
           </Button>
           <Button asChild className="font-heading font-700 hidden sm:inline-flex" size="sm">
-            <Link to="/contact">Get a Quote</Link>
+            <Link href="/contact">Get a Quote</Link>
           </Button>
           <button
             className="lg:hidden p-2 hover:bg-muted rounded-md transition-colors"
@@ -75,17 +78,17 @@ const Header = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 onClick={() => setMobileOpen(false)}
                 className={`px-4 py-3 rounded-md text-sm font-medium transition-colors hover:bg-muted ${
-                  location.pathname === link.path ? "bg-muted text-primary" : "text-foreground"
+                  pathname === link.path ? "bg-muted text-primary" : "text-foreground"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
             <Button asChild className="font-heading font-700 mt-2 sm:hidden">
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
+              <Link href="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
             </Button>
             <Button asChild variant="secondary" className="font-heading font-700 bg-primary/10 text-primary hover:bg-primary/20 sm:hidden">
               <a href="tel:+447989205468" onClick={() => setMobileOpen(false)}><Phone className="mr-1.5 h-4 w-4" /> Call Now</a>
