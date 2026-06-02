@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Plug, Lightbulb, ShieldCheck, Zap, Search, Bath, ArrowRight } from "lucide-react";
+import { Plug, Lightbulb, ShieldCheck, Zap, Search, Bath, ArrowRight, ZapOff } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const fadeUp = {
@@ -14,34 +14,46 @@ const fadeUp = {
 
 const services = [
   {
+    icon: ZapOff,
+    title: "Emergency Electrician",
+    desc: "Urgent faults, power outages and tripping circuits — fast domestic call-outs across Hertfordshire.",
+    href: "/services/emergency-electrician",
+  },
+  {
     icon: Plug,
     title: "Rewires & Consumer Units",
     desc: "Full or partial rewires, consumer unit upgrades and additional sockets — all to current 18th Edition standards.",
+    href: "/domestic#house-rewiring",
   },
   {
     icon: Lightbulb,
     title: "Lighting & Installations",
     desc: "Indoor, outdoor and security lighting, LED downlights and complete installation design for any room or property.",
+    href: "/domestic#lighting-installations",
   },
   {
     icon: Zap,
     title: "Electric Showers & Heaters",
     desc: "Supply, install and replace electric showers, storage heaters and central heating wiring systems safely and reliably.",
+    href: "/domestic#electric-showers-heaters",
   },
   {
     icon: ShieldCheck,
     title: "Smoke & Alarm Systems",
     desc: "Mains-wired smoke alarms, emergency lighting and home alarm systems for complete peace of mind.",
+    href: "/domestic#alarm-smoke-systems",
   },
   {
     icon: Search,
     title: "Fault Finding & Repairs",
     desc: "Tracing and fixing faulty wiring, tripping circuits and emergency electrical issues — fast and methodical.",
+    href: "/domestic#fault-finding",
   },
   {
     icon: Bath,
     title: "Kitchen & Bathroom Electrics",
     desc: "Extractor fans, heated towel rails, cooker circuits, shaver sockets and underfloor heating for kitchens and bathrooms.",
+    href: "/domestic#kitchen-bathroom-electrics",
   },
 ];
 
@@ -72,15 +84,17 @@ const ServicesSection = () => (
             variants={fadeUp}
             custom={i}
           >
-            <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
-              <CardContent className="p-5 md:p-7">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 md:mb-5 group-hover:bg-primary transition-colors duration-300">
-                  <service.icon className="h-6 w-6 md:h-7 md:w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-                </div>
-                <h3 className="font-heading font-700 text-lg mb-2">{service.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
-              </CardContent>
-            </Card>
+            <Link to={service.href} className="block h-full">
+              <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+                <CardContent className="p-5 md:p-7">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 md:mb-5 group-hover:bg-primary transition-colors duration-300">
+                    <service.icon className="h-6 w-6 md:h-7 md:w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                  </div>
+                  <h3 className="font-heading font-700 text-lg mb-2">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
+                </CardContent>
+              </Card>
+            </Link>
           </motion.div>
         ))}
       </div>

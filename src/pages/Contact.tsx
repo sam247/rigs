@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,8 @@ const contactInfo = [
 const Contact = () => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
+  const [searchParams] = useSearchParams();
+  const prefilledService = searchParams.get("service") ?? "";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -98,7 +101,7 @@ const Contact = () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="service" className="font-heading font-600">Service Required</Label>
-                    <Input id="service" name="service" placeholder="e.g. Rewire, Kitchen Electrics" />
+                    <Input id="service" name="service" placeholder="e.g. Rewire, Kitchen Electrics" defaultValue={prefilledService} />
                   </div>
                 </div>
                 <div className="space-y-2">

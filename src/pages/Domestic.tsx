@@ -25,17 +25,36 @@ const fadeUp = {
 };
 
 const services = [
-  { icon: ZapOff, title: "Full & Partial Rewires", desc: "Complete house rewires and partial rewires for older properties — bringing your home's electrics up to current 18th Edition standards." },
-  { icon: Home, title: "Consumer Unit Upgrades", desc: "Replace outdated fuse boxes with modern dual-RCD consumer units. Essential for home safety and insurance compliance." },
-  { icon: Lightbulb, title: "Lighting Installations", desc: "Indoor lighting design — LED downlights, pendants, dimmers, smart lighting and full lighting refits for any room." },
-  { icon: Sun, title: "Outdoor & Security Lighting", desc: "Garden lighting, PIR-controlled security floodlights and pathway lighting for safety, style and peace of mind." },
-  { icon: Bell, title: "Alarm & Smoke Systems", desc: "Mains-wired smoke alarms, home alarm systems and emergency lighting installation, testing and maintenance." },
-  { icon: Flame, title: "Electric Showers & Heaters", desc: "Supply, installation and replacement of electric showers, storage heaters and central heating wiring systems." },
-  { icon: Search, title: "Fault Finding", desc: "Diagnosing tripping circuits, faulty wiring and intermittent issues quickly and methodically — minimal disruption." },
-  { icon: Plug, title: "Sockets & Extensions", desc: "Additional sockets, USB outlets and electrical work for kitchen extensions, loft conversions and bathroom upgrades." },
-  { icon: Bath, title: "Kitchen & Bathroom Electrics", desc: "Extractor fans, heated towel rails, cooker circuits, shaver sockets and underfloor heating for kitchens and bathrooms." },
-  { icon: Cpu, title: "Smart Home Wiring", desc: "Future-proof your home with smart lighting, automated systems and structured wiring for modern living." },
-  { icon: ShieldCheck, title: "Periodic Testing", desc: "Routine electrical testing for owner-occupied homes to confirm everything is safe, compliant and properly certified." },
+  {
+    icon: ZapOff,
+    title: "Emergency Electrician",
+    desc: "Urgent electrical faults, power outages, tripping circuits and emergency call-outs across Hertfordshire and surrounding areas.",
+    id: "emergency-electrician",
+    ctaHref: "/services/emergency-electrician",
+    ctaLabel: "View Service",
+  },
+  {
+    icon: ZapOff,
+    title: "Full & Partial Rewires",
+    desc: "Complete house rewires and partial rewires for older properties — bringing your home's electrics up to current 18th Edition standards.",
+    id: "house-rewiring",
+  },
+  {
+    icon: Home,
+    title: "Consumer Unit Upgrades",
+    desc: "Replace outdated fuse boxes with modern dual-RCD consumer units. Essential for home safety and insurance compliance.",
+    id: "consumer-unit-upgrades",
+    aliases: ["fuse-board-upgrades"],
+  },
+  { icon: Lightbulb, title: "Lighting Installations", desc: "Indoor lighting design — LED downlights, pendants, dimmers, smart lighting and full lighting refits for any room.", id: "lighting-installations" },
+  { icon: Sun, title: "Outdoor & Security Lighting", desc: "Garden lighting, PIR-controlled security floodlights and pathway lighting for safety, style and peace of mind.", id: "outdoor-security-lighting" },
+  { icon: Bell, title: "Alarm & Smoke Systems", desc: "Mains-wired smoke alarms, home alarm systems and emergency lighting installation, testing and maintenance.", id: "alarm-smoke-systems" },
+  { icon: Flame, title: "Electric Showers & Heaters", desc: "Supply, installation and replacement of electric showers, storage heaters and central heating wiring systems.", id: "electric-showers-heaters" },
+  { icon: Search, title: "Fault Finding", desc: "Diagnosing tripping circuits, faulty wiring and intermittent issues quickly and methodically — minimal disruption.", id: "fault-finding" },
+  { icon: Plug, title: "Sockets & Extensions", desc: "Additional sockets, USB outlets and electrical work for kitchen extensions, loft conversions and bathroom upgrades.", id: "sockets-extensions" },
+  { icon: Bath, title: "Kitchen & Bathroom Electrics", desc: "Extractor fans, heated towel rails, cooker circuits, shaver sockets and underfloor heating for kitchens and bathrooms.", id: "kitchen-bathroom-electrics" },
+  { icon: Cpu, title: "Smart Home Wiring", desc: "Future-proof your home with smart lighting, automated systems and structured wiring for modern living.", id: "smart-home-wiring" },
+  { icon: ShieldCheck, title: "EICR Certificates", desc: "Home electrical safety checks (EICRs) to confirm your installation is safe, highlight any issues and provide clear next steps.", id: "eicr-certificates" },
 ];
 
 const Domestic = () => (
@@ -64,16 +83,20 @@ const Domestic = () => (
       <div className="container">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((s, i) => (
-            <motion.div key={s.title} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
+            <motion.div id={s.id} key={s.title} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
               <Card className="h-full border-2 border-border hover:border-primary/20 transition-all duration-300">
                 <CardContent className="p-8">
+                  {s.aliases?.map((alias) => <span key={alias} id={alias} />)}
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <s.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-heading font-700 text-lg mb-2">{s.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.desc}</p>
-                  <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
-                    Get a Quote <ArrowRight className="h-4 w-4" />
+                  <Link
+                    to={s.ctaHref ?? `/contact?service=${encodeURIComponent(s.title)}`}
+                    className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors"
+                  >
+                    {s.ctaLabel ?? "Get a Quote"} <ArrowRight className="h-4 w-4" />
                   </Link>
                 </CardContent>
               </Card>

@@ -21,8 +21,10 @@ const Footer = () => {
             <h3 className="font-heading font-700 text-xs md:text-sm uppercase tracking-wider mb-3 md:mb-4 text-accent">Services</h3>
             <ul className="space-y-2 text-xs md:text-sm text-primary-foreground/70">
               <li><Link to="/domestic" className="hover:text-accent transition-colors">Domestic Electrical</Link></li>
+              <li><Link to="/services/emergency-electrician" className="hover:text-accent transition-colors">Emergency Electrician</Link></li>
               <li><Link to="/gallery" className="hover:text-accent transition-colors">Recent Work</Link></li>
               <li><Link to="/testimonials" className="hover:text-accent transition-colors">Testimonials</Link></li>
+              <li><Link to="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
             </ul>
           </div>
 
