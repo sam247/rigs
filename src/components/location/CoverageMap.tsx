@@ -2,6 +2,7 @@ type CoverageMapProps = {
   mainTown: string;
   nearbyTowns: string[];
   nearbyVillages: string[];
+  variant?: "default" | "compact";
 };
 
 const seededAngle = (index: number, total: number) => {
@@ -16,7 +17,7 @@ const polar = (cx: number, cy: number, r: number, angle: number) => ({
 
 const clampLabel = (label: string, max = 16) => (label.length > max ? `${label.slice(0, max - 1)}…` : label);
 
-const CoverageMap = ({ mainTown, nearbyTowns, nearbyVillages }: CoverageMapProps) => {
+const CoverageMap = ({ mainTown, nearbyTowns, nearbyVillages, variant = "default" }: CoverageMapProps) => {
   const cx = 180;
   const cy = 140;
 
@@ -31,27 +32,29 @@ const CoverageMap = ({ mainTown, nearbyTowns, nearbyVillages }: CoverageMapProps
   }));
 
   return (
-    <div className="rounded-xl border border-border bg-secondary p-5 md:p-6">
-      <div className="flex items-center justify-between gap-3 mb-4">
-        <div>
-          <p className="font-heading font-800 text-lg">Coverage map</p>
-          <p className="text-sm text-muted-foreground">Typical service area around {mainTown}</p>
+    <div className={variant === "compact" ? "rounded-xl border border-border bg-secondary p-4" : "rounded-xl border border-border bg-secondary p-5 md:p-6"}>
+      {variant === "default" ? (
+        <div className="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <p className="font-heading font-800 text-lg">Coverage map</p>
+            <p className="text-sm text-muted-foreground">Typical service area around {mainTown}</p>
+          </div>
+          <div className="hidden sm:flex items-center gap-3 text-xs text-muted-foreground">
+            <span className="inline-flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-primary" />
+              Main town
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-primary/50" />
+              Towns
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/50" />
+              Villages
+            </span>
+          </div>
         </div>
-        <div className="hidden sm:flex items-center gap-3 text-xs text-muted-foreground">
-          <span className="inline-flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-            Main town
-          </span>
-          <span className="inline-flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-primary/50" />
-            Towns
-          </span>
-          <span className="inline-flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/50" />
-            Villages
-          </span>
-        </div>
-      </div>
+      ) : null}
 
       <svg viewBox="0 0 360 280" role="img" aria-label={`${mainTown} coverage map`} className="w-full h-auto">
         <defs>
@@ -93,9 +96,13 @@ const CoverageMap = ({ mainTown, nearbyTowns, nearbyVillages }: CoverageMapProps
           {mainTown}
         </text>
       </svg>
+      {variant === "compact" ? (
+        <p className="text-xs text-muted-foreground mt-3">
+          Coverage illustration for {mainTown} and nearby areas.
+        </p>
+      ) : null}
     </div>
   );
 };
 
 export default CoverageMap;
-

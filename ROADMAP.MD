@@ -7,6 +7,7 @@
 - Added Vercel rewrite fallback for SPA client-side routes (prevents hard-refresh 404s)
 - Added reusable location page template and first location landing page: /electrician/tring
 - Improved /electrician/tring with stronger localised content, common issues section, coverage map, schema enrichment and related articles
+- Adjusted Areas Covered layout to prioritise written coverage reassurance with map as supporting element
 
 ## Next
 

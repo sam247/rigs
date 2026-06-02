@@ -208,38 +208,38 @@ const LocationPage = () => {
             <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-10 text-center">
               Areas Covered
             </motion.h2>
-            <div className="grid lg:grid-cols-5 gap-6">
-              <div className="lg:col-span-3">
-                <CoverageMap mainTown={location.name} nearbyTowns={location.areasCovered.nearby} nearbyVillages={location.areasCovered.villages} />
+            <div className="grid lg:grid-cols-3 gap-10 items-start">
+              <div className="lg:col-span-2">
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  We’re based locally and regularly carry out domestic electrical work across Tring and the surrounding villages, as well as nearby
+                  towns in Hertfordshire and Buckinghamshire. If you’re not sure whether we cover your road, get in touch and we’ll confirm.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="font-heading font-800 mb-3">Villages We Regularly Cover</h3>
+                    <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                      {location.areasCovered.villages.map((v) => (
+                        <li key={v}>{v}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-800 mb-3">Nearby Towns</h3>
+                    <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                      {location.areasCovered.nearby.map((t) => (
+                        <li key={t}>{t}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div className="lg:col-span-2 grid gap-6">
-              <Card className="border-2 border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <h3 className="font-heading font-700 text-lg">Tring</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{location.areasCovered.primary.join(" • ")}</p>
-                </CardContent>
-              </Card>
-              <Card className="border-2 border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <h3 className="font-heading font-700 text-lg">Villages We Regularly Cover</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{location.areasCovered.villages.join(" • ")}</p>
-                </CardContent>
-              </Card>
-              <Card className="border-2 border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <h3 className="font-heading font-700 text-lg">Nearby Towns</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{location.areasCovered.nearby.join(" • ")}</p>
-                </CardContent>
-              </Card>
+              <div className="lg:col-span-1 lg:max-w-sm">
+                <CoverageMap
+                  mainTown={location.name}
+                  nearbyTowns={location.areasCovered.nearby}
+                  nearbyVillages={location.areasCovered.villages}
+                  variant="compact"
+                />
               </div>
             </div>
           </motion.div>
