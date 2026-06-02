@@ -4,6 +4,7 @@
 - Built SEO landing page: /services/emergency-electrician (schema, FAQ, related service links)
 - Added Blog hub (/blog) and first article (/blog/consumer-unit-vs-fuse-box)
 - Improved Emergency Electrician landing page with hero background image + in-page image break
+- Added Vercel rewrite fallback for SPA client-side routes (prevents hard-refresh 404s)
 
 ## Next
 

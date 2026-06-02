@@ -180,12 +180,20 @@ const EmergencyElectricianHertfordshire = () => {
               <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-6">
                 Service Overview
               </motion.h2>
-              <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed mb-6">
+              <motion.div variants={fadeUp} custom={1} className="rounded-xl overflow-hidden border border-border mb-8">
+                <img
+                  src="/services_images/emergency_electrician_hero.jpg"
+                  alt="Emergency electrician inspecting electrical equipment"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </motion.div>
+              <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed mb-6">
                 Emergency call-outs are about making your home safe first, then fixing the root cause properly. We’ll isolate faults,
                 test circuits and equipment, and talk you through what we’ve found. If the best next step is a follow-up repair or upgrade,
                 we’ll give you clear options and a straightforward quote.
               </motion.p>
-              <motion.div variants={fadeUp} custom={2} className="grid sm:grid-cols-2 gap-4">
+              <motion.div variants={fadeUp} custom={3} className="grid sm:grid-cols-2 gap-4">
                 {[
                   { title: "Make safe", desc: "Isolate dangerous circuits, damaged accessories or overheating connections." },
                   { title: "Fault finding", desc: "Test methodically to locate the source of tripping or loss of power." },
@@ -203,14 +211,6 @@ const EmergencyElectricianHertfordshire = () => {
             </motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
-              <motion.div variants={fadeUp} custom={0} className="rounded-xl overflow-hidden border border-border mb-8">
-                <img
-                  src="/services_images/emergency_electrician_hero.jpg"
-                  alt="Emergency electrician inspecting electrical equipment"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </motion.div>
               <motion.h3 variants={fadeUp} custom={0} className="text-2xl font-heading font-800 mb-4">
                 Typical Jobs We’re Called Out For
               </motion.h3>
