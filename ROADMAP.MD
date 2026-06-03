@@ -5,6 +5,7 @@
 - Added Blog hub (/blog) and first article (/blog/consumer-unit-vs-fuse-box)
 - Added Domestic Services card + SEO landing page: /services/electrical-fault-finding (service + FAQ schema, internal links, related articles)
 - Added supporting blog articles for common faults (tripping electrics, flickering lights)
+- Expanded the two new blog articles with deeper homeowner troubleshooting, stronger internal linking, and improved metadata
 - Added server-side redirects for key service slugs (/services/house-rewiring, /services/eicr-certificates, /services/consumer-unit-upgrades)
 - Updated sitemap and smoke route coverage for new service + blog pages
 - Improved Emergency Electrician landing page with hero background image + in-page image break

@@ -17,6 +17,7 @@ dist-ssr
 test-results
 playwright-report
 public/sitemap*.xml
+.trae/
 
 # Editor directories and files
 .vscode/*

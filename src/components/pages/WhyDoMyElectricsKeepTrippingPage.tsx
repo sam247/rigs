@@ -23,8 +23,20 @@ const faqs = [
     a: "If it trips repeatedly, stop resetting it. Unplug what you safely can and contact an electrician. Repeated resets can allow overheating or arcing to continue.",
   },
   {
+    q: "What’s the difference between an RCD trip and an MCB trip?",
+    a: "An RCD/RCBO trip is commonly linked to earth leakage (moisture, insulation breakdown, appliance leakage). An MCB trip is more often overload or a short circuit. Knowing which one is tripping helps narrow down the cause.",
+  },
+  {
     q: "What is the most common cause of tripping electrics?",
     a: "Faulty appliances and moisture-related faults are common. Kettles, washing machines, outdoor sockets, and bathroom circuits can all trigger trips depending on the fault type and the protection on your board.",
+  },
+  {
+    q: "Why does it trip even when nothing is plugged in?",
+    a: "If everything is unplugged and it still trips, the fault is likely fixed wiring or an accessory on that circuit (a socket, switch, junction, outdoor point, or a light fitting). That’s when electrical testing is needed rather than trial-and-error.",
+  },
+  {
+    q: "Can a single appliance cause the whole house to trip?",
+    a: "Yes. On some boards, one RCD may protect multiple circuits. A faulty appliance can then trip the RCD and take out more than one circuit at once. We can advise whether a board configuration change or upgrade would reduce nuisance trips.",
   },
   {
     q: "Can RIGS Electrical diagnose the cause?",
@@ -129,7 +141,29 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
                 <li>RCBO trips: similar to RCD, but specific to one circuit</li>
                 <li>MCB trips: often overload or short circuit on a circuit</li>
               </ul>
-              <p>If you’re not sure, don’t worry — a fault finding visit can confirm which device is operating and why.</p>
+              <p>
+                If you’re not sure which device has tripped, don’t worry. A fault finding visit can confirm what’s operating and why, without
+                guesswork.
+              </p>
+
+              <h2>Patterns That Help Identify the Cause</h2>
+              <p>
+                Homeowners often describe tripping as “random”, but there’s usually a pattern. These are the clues that matter most:
+              </p>
+              <ul>
+                <li>
+                  <strong>Trips instantly when reset:</strong> more likely a hard fault on the circuit or a failed accessory.
+                </li>
+                <li>
+                  <strong>Trips after a few minutes:</strong> can point to an appliance warming up, moisture, or a connection that fails under load.
+                </li>
+                <li>
+                  <strong>Only trips when it rains:</strong> outdoor sockets, garden lighting, and exterior junctions are common causes.
+                </li>
+                <li>
+                  <strong>Trips when one item runs:</strong> kettles, washing machines, tumble dryers and dishwashers often expose faults.
+                </li>
+              </ul>
 
               <h2>Common Causes of Tripping Electrics</h2>
               <ul>
@@ -158,6 +192,27 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
                 <li>Plug appliances back in one at a time to see if one triggers the trip.</li>
                 <li>If it trips with everything unplugged, it’s likely a circuit/accessory/wiring fault and needs testing.</li>
               </ol>
+              <p>
+                If you discover it’s one appliance, keep it unplugged and have it checked. If the trip returns when nothing is plugged in, stop
+                resetting and book proper testing.
+              </p>
+
+              <h2>When It’s Not an Appliance Problem</h2>
+              <p>These situations usually need electrical testing rather than more resets:</p>
+              <ul>
+                <li>The same circuit trips even with everything unplugged.</li>
+                <li>You’ve got dead sockets in one room or on one wall.</li>
+                <li>Lights dim or flicker before the trip happens.</li>
+                <li>The trip started after heavy rain (outdoor fault is likely).</li>
+              </ul>
+              <p>
+                A useful next step is an{" "}
+                <Link href="/services/eicr-certificates">
+                  EICR certificate
+                </Link>{" "}
+                if your home hasn’t been tested in a long time, or if you’ve moved into an older property and you want a clear picture of the
+                installation’s condition.
+              </p>
 
               <h2>When to Call for Urgent Help</h2>
               <p>
@@ -177,6 +232,21 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
                   electrical fault finding Hertfordshire
                 </Link>{" "}
                 for what we typically investigate and how the process works.
+              </p>
+              <p>
+                If nuisance trips are frequent and your board is older, it’s also worth understanding the difference between a modern consumer
+                unit and an older fuse box. This article explains it clearly:{" "}
+                <Link href="/blog/consumer-unit-vs-fuse-box">
+                  consumer unit vs fuse box
+                </Link>
+                .
+              </p>
+              <p>
+                For some homes, a{" "}
+                <Link href="/services/fuse-board-upgrades">
+                  fuse board upgrade
+                </Link>{" "}
+                can reduce the “whole house went off” scenario by improving protection and separating circuits more effectively.
               </p>
 
               <h2>FAQ</h2>

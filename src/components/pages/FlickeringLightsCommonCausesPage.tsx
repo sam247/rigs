@@ -30,6 +30,22 @@ const faqs = [
     q: "What should I do if lights flicker when an appliance turns on?",
     a: "It may be normal in some homes, but it can also indicate a circuit issue or a weakened connection. If it’s getting worse or happens across multiple rooms, a fault finding visit is the safest next step.",
   },
+  {
+    q: "Why do lights flicker in just one room?",
+    a: "If it’s limited to one room or one fitting, it’s often a lamp, driver/transformer, switch, dimmer, or a local connection issue. We focus testing on that circuit and those accessories first.",
+  },
+  {
+    q: "Can flickering be linked to tripping electrics?",
+    a: "It can. Flicker can show up when there’s a failing accessory or connection. If your consumer unit is also tripping, treat it as a fault finding job rather than just a lighting issue.",
+  },
+  {
+    q: "Should I worry if only one bulb flickers?",
+    a: "Start with the simple checks: swap the lamp, check whether it’s on a dimmer, and see if the flicker returns. If the same fitting keeps flickering with different lamps, it’s likely a fitting/switch/connection issue and should be inspected.",
+  },
+  {
+    q: "When should I book an EICR?",
+    a: "If your home is older, you’re seeing multiple electrical symptoms (flicker, dead sockets, nuisance trips), or you’ve never had the installation tested, an EICR can identify underlying issues and prioritise fixes.",
+  },
 ];
 
 const FlickeringLightsCommonCausesPage = () => {
@@ -124,11 +140,18 @@ const FlickeringLightsCommonCausesPage = () => {
                 Some LED lamps flicker when they’re low quality, nearing end of life, or not compatible with the fitting/dimmer. If you can swap
                 the lamp for a known good one, it’s a simple first check.
               </p>
+              <p>
+                Pay attention to the type of lamp too. GU10 LEDs and integrated LED fittings behave differently, and some cheaper lamps flicker
+                noticeably on certain circuits.
+              </p>
 
               <h2>2) Incompatible or Failing Dimmers</h2>
               <p>
                 Older dimmers often don’t play nicely with LEDs. You might see flicker, buzzing, or lights that won’t dim smoothly. Replacing the
                 dimmer with an LED-compatible model usually resolves it, but we still check the wiring and connections.
+              </p>
+              <p>
+                A common giveaway is flicker only at low dim settings, or a “pulse” that starts a few minutes after the lights have been on.
               </p>
 
               <h2>3) Loose Connections (A Common “Real Fault”)</h2>
@@ -146,6 +169,30 @@ const FlickeringLightsCommonCausesPage = () => {
                 If multiple lights across different rooms flicker, it can point to a broader issue that needs proper testing. A fault finding
                 visit can isolate whether the problem sits within a lighting circuit, an accessory, or a wider supply/connection issue.
               </p>
+              <p>
+                If flicker is accompanied by other symptoms (dead sockets, buzzing from a switch, or any tripping at the consumer unit), it’s
+                often better handled as{" "}
+                <Link href="/services/electrical-fault-finding">
+                  electrical fault finding
+                </Link>{" "}
+                rather than “just swapping a bulb”.
+              </p>
+
+              <h2>Situations Where Flicker Often Shows a Fault</h2>
+              <ul>
+                <li>
+                  <strong>Bathroom lights:</strong> moisture can affect fittings, transformers and connections.
+                </li>
+                <li>
+                  <strong>Outdoor lighting:</strong> rain and condensation can cause intermittent faults over time.
+                </li>
+                <li>
+                  <strong>After DIY work:</strong> a new fitting or switch that starts flickering can point to a poor connection.
+                </li>
+                <li>
+                  <strong>Older properties:</strong> ageing accessories and junctions are more likely to loosen or overheat.
+                </li>
+              </ul>
 
               <h2>What You Can Check Safely</h2>
               <ul>
@@ -154,12 +201,30 @@ const FlickeringLightsCommonCausesPage = () => {
                 <li>Note whether flicker happens with a specific appliance switching on (kettle, washing machine, etc.).</li>
                 <li>Don’t remove switches or fittings — leave fixed wiring to a qualified electrician.</li>
               </ul>
+              <p>
+                If you want one extra useful step, note whether flicker happens in multiple rooms at the same time. That detail helps an
+                electrician decide whether to focus on one circuit, one accessory, or something broader.
+              </p>
 
               <h2>When to Book Fault Finding</h2>
               <p>
                 If the flicker is persistent, getting worse, or affecting multiple areas, the safest option is structured testing. See{" "}
                 <Link href="/services/electrical-fault-finding">electrical fault finding Hertfordshire</Link> for what we investigate and how we
                 approach diagnosis.
+              </p>
+              <p>
+                If you’re also dealing with trips at the consumer unit, this guide is useful alongside flickering issues:{" "}
+                <Link href="/blog/why-do-my-electrics-keep-tripping">
+                  why do my electrics keep tripping
+                </Link>
+                .
+              </p>
+              <p>
+                For homeowners in Tring and nearby towns, our local page covers common domestic issues we see:{" "}
+                <Link href="/electrician/tring">
+                  electrician Tring
+                </Link>
+                .
               </p>
 
               <h2>FAQ</h2>
