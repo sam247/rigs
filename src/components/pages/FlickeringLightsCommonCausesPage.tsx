@@ -37,7 +37,7 @@ const FlickeringLightsCommonCausesPage = () => {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: "Flickering Lights: Common Causes in UK Homes",
-    image: ["https://rigselectrical.co.uk/blog_images/consumer_unit_vs_fuse_box.jpg"],
+    image: ["https://rigselectrical.co.uk/blog_images/flickering-lights-common-causes.jpg"],
     datePublished: "2026-06-03",
     dateModified: "2026-06-03",
     author: { "@type": "Organization", name: "RIGS Electrical" },
@@ -105,7 +105,7 @@ const FlickeringLightsCommonCausesPage = () => {
 
             <div className="rounded-xl overflow-hidden border border-border mb-10">
               <img
-                src="/blog_images/consumer_unit_vs_fuse_box.jpg"
+                src="/blog_images/flickering-lights-common-causes.jpg"
                 alt="Home lighting and electrical consumer unit"
                 className="w-full h-auto"
                 loading="lazy"
@@ -181,4 +181,3 @@ const FlickeringLightsCommonCausesPage = () => {
 };
 
 export default FlickeringLightsCommonCausesPage;
-

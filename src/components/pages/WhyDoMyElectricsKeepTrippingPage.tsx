@@ -37,7 +37,7 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: "Why Do My Electrics Keep Tripping?",
-    image: ["https://rigselectrical.co.uk/blog_images/consumer_unit_vs_fuse_box.jpg"],
+    image: ["https://rigselectrical.co.uk/blog_images/why-do-my-electrics-keep-tripping.jpg"],
     datePublished: "2026-06-03",
     dateModified: "2026-06-03",
     author: { "@type": "Organization", name: "RIGS Electrical" },
@@ -106,7 +106,7 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
 
             <div className="rounded-xl overflow-hidden border border-border mb-10">
               <img
-                src="/blog_images/consumer_unit_vs_fuse_box.jpg"
+                src="/blog_images/why-do-my-electrics-keep-tripping.jpg"
                 alt="Consumer unit with circuit breakers"
                 className="w-full h-auto"
                 loading="lazy"
@@ -198,4 +198,3 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
 };
 
 export default WhyDoMyElectricsKeepTrippingPage;
-

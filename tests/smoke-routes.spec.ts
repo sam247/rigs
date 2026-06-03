@@ -27,6 +27,8 @@ test.describe("smoke", () => {
       "/sitemap.xml",
       "/robots.txt",
       "/blog_images/consumer_unit_vs_fuse_box.jpg",
+      "/blog_images/why-do-my-electrics-keep-tripping.jpg",
+      "/blog_images/flickering-lights-common-causes.jpg",
       "/services_images/emergency_electrician_hero.jpg",
     ];
 
