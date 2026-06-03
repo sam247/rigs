@@ -66,8 +66,15 @@ const ConsumerUnitVsFuseBoxPage = () => {
       <JsonLd data={articleSchema} />
       <JsonLd data={faqSchema} />
 
-      <section className="bg-primary text-primary-foreground py-20 md:py-28">
-        <div className="container">
+      <section className="relative overflow-hidden text-primary-foreground">
+        <img
+          src="/blog_images/consumer_unit_vs_fuse_box.jpg"
+          alt="Modern consumer unit with circuit breakers"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
+        <div className="container relative py-20 md:py-28">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
               Blog
@@ -76,9 +83,9 @@ const ConsumerUnitVsFuseBoxPage = () => {
               Consumer Unit vs Fuse Box: What’s the Difference?
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              If you’ve ever looked at your home’s electrical setup and wondered whether you have a consumer unit or an old fuse box,
-              you’re not alone. Properties in Tring, Berkhamsted, Hemel Hempstead and across Hertfordshire still rely on older fuse boxes
-              installed decades ago.
+              If you’ve ever looked at your home’s electrical setup and wondered whether you have a consumer unit or an old fuse box, you’re not
+              alone. Properties in Tring, Berkhamsted, Hemel Hempstead and across Hertfordshire still rely on older fuse boxes installed decades
+              ago.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700">
@@ -107,15 +114,6 @@ const ConsumerUnitVsFuseBoxPage = () => {
               <Link href="/services/emergency-electrician" className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
                 Need urgent help? Emergency electrician →
               </Link>
-            </div>
-
-            <div className="rounded-xl overflow-hidden border border-border mb-10">
-              <img
-                src="/blog_images/consumer_unit_vs_fuse_box.jpg"
-                alt="Modern consumer unit with circuit breakers"
-                className="w-full h-auto"
-                loading="lazy"
-              />
             </div>
 
             <article className="prose prose-rigs max-w-none md:prose-lg">
@@ -153,6 +151,15 @@ const ConsumerUnitVsFuseBoxPage = () => {
               <h2>Key Differences at a Glance</h2>
               <p>The main differences between a consumer unit vs fuse box come down to safety, convenience, and compliance.</p>
             </article>
+
+            <div className="rounded-xl overflow-hidden border border-border my-10">
+              <img
+                src="/blog_images/consumer_unit_vs_fuse_box.jpg"
+                alt="Modern UK consumer unit with circuit breakers and RCD protection"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
 
             <Card className="border-2 border-border my-8 not-prose">
               <CardContent className="p-0">

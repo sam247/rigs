@@ -72,8 +72,15 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
       <JsonLd data={articleSchema} />
       <JsonLd data={faqSchema} />
 
-      <section className="bg-primary text-primary-foreground py-20 md:py-28">
-        <div className="container">
+      <section className="relative overflow-hidden text-primary-foreground">
+        <img
+          src="/blog_images/why-do-my-electrics-keep-tripping.jpg"
+          alt="Consumer unit with a tripped breaker"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
+        <div className="container relative py-20 md:py-28">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
               Blog
@@ -114,15 +121,6 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
                 <Calendar className="h-4 w-4" />
                 <span>June 2026</span>
               </div>
-            </div>
-
-            <div className="rounded-xl overflow-hidden border border-border mb-10">
-              <img
-                src="/blog_images/why-do-my-electrics-keep-tripping.jpg"
-                alt="Consumer unit with circuit breakers"
-                className="w-full h-auto"
-                loading="lazy"
-              />
             </div>
 
             <article className="prose prose-rigs max-w-none md:prose-lg">
@@ -183,6 +181,15 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
                   <strong>Wiring issues:</strong> damaged cable insulation, junction box faults, or older wiring struggling under load.
                 </li>
               </ul>
+
+              <div className="rounded-xl overflow-hidden border border-border my-10">
+                <img
+                  src="/blog_images/why-do-my-electrics-keep-tripping.jpg"
+                  alt="Domestic consumer unit showing a tripped circuit breaker"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
 
               <h2>What You Can Check Safely (Without Guessing)</h2>
               <p>These steps help you narrow down the cause without taking covers off or touching fixed wiring:</p>

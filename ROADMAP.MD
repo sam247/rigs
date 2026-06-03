@@ -6,6 +6,7 @@
 - Added Domestic Services card + SEO landing page: /services/electrical-fault-finding (service + FAQ schema, internal links, related articles)
 - Added supporting blog articles for common faults (tripping electrics, flickering lights)
 - Expanded the two new blog articles with deeper homeowner troubleshooting, stronger internal linking, and improved metadata
+- Adjusted all blog articles to use hero background images with overlay and moved inline images into the mid-body content
 - Added server-side redirects for key service slugs (/services/house-rewiring, /services/eicr-certificates, /services/consumer-unit-upgrades)
 - Updated sitemap and smoke route coverage for new service + blog pages
 - Improved Emergency Electrician landing page with hero background image + in-page image break

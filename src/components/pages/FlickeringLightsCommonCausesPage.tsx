@@ -76,8 +76,15 @@ const FlickeringLightsCommonCausesPage = () => {
       <JsonLd data={articleSchema} />
       <JsonLd data={faqSchema} />
 
-      <section className="bg-primary text-primary-foreground py-20 md:py-28">
-        <div className="container">
+      <section className="relative overflow-hidden text-primary-foreground">
+        <img
+          src="/blog_images/flickering-lights-common-causes.jpg"
+          alt="Domestic lighting in a UK home"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
+        <div className="container relative py-20 md:py-28">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
             <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
               Blog
@@ -119,15 +126,6 @@ const FlickeringLightsCommonCausesPage = () => {
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden border border-border mb-10">
-              <img
-                src="/blog_images/flickering-lights-common-causes.jpg"
-                alt="Home lighting and electrical consumer unit"
-                className="w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-
             <article className="prose prose-rigs max-w-none md:prose-lg">
               <p className="lead">
                 Flicker is common with some LED lamps, but persistent flickering, dimming, or lights that cut out can indicate an electrical
@@ -159,6 +157,16 @@ const FlickeringLightsCommonCausesPage = () => {
                 Loose terminals behind a switch, ceiling rose, or junction point can cause intermittent contact and heat. This often shows as
                 flicker that gets worse over time, especially when something else in the home switches on.
               </p>
+
+              <div className="rounded-xl overflow-hidden border border-border my-10">
+                <img
+                  src="/blog_images/flickering-lights-common-causes.jpg"
+                  alt="Flickering light fitting in a domestic room"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+
               <p>
                 If you notice heat, a burning smell, or crackling/buzzing, treat it as urgent and contact an{" "}
                 <Link href="/services/emergency-electrician">emergency electrician</Link>.
