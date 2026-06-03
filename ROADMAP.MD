@@ -3,6 +3,10 @@
 - Added Emergency Electrician service card across key site entry points (homepage, domestic services hub, footer)
 - Built SEO landing page: /services/emergency-electrician (schema, FAQ, related service links)
 - Added Blog hub (/blog) and first article (/blog/consumer-unit-vs-fuse-box)
+- Added Domestic Services card + SEO landing page: /services/electrical-fault-finding (service + FAQ schema, internal links, related articles)
+- Added supporting blog articles for common faults (tripping electrics, flickering lights)
+- Added server-side redirects for key service slugs (/services/house-rewiring, /services/eicr-certificates, /services/consumer-unit-upgrades)
+- Updated sitemap and smoke route coverage for new service + blog pages
 - Improved Emergency Electrician landing page with hero background image + in-page image break
 - Added reusable location page template and first location landing page: /electrician/tring
 - Improved /electrician/tring with stronger localised content, common issues section, coverage map, schema enrichment and related articles

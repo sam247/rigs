@@ -13,5 +13,16 @@ export const BLOG_POSTS: BlogPost[] = [
     href: "/blog/consumer-unit-vs-fuse-box",
     dateLabel: "June 2026",
   },
+  {
+    title: "Why Do My Electrics Keep Tripping?",
+    description: "Common causes of tripping electrics, safe homeowner checks, and when to book electrical fault finding.",
+    href: "/blog/why-do-my-electrics-keep-tripping",
+    dateLabel: "June 2026",
+  },
+  {
+    title: "Flickering Lights: Common Causes in UK Homes",
+    description: "What flickering can mean, what’s normal with LEDs, and when it could indicate a loose connection.",
+    href: "/blog/flickering-lights-common-causes",
+    dateLabel: "June 2026",
+  },
 ];
-

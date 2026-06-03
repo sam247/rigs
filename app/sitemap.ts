@@ -19,6 +19,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy",
     "/blog",
     "/services/emergency-electrician",
+    "/services/electrical-fault-finding",
+    "/services/fuse-board-upgrades",
+    "/services/house-rewiring",
+    "/services/eicr-certificates",
+    "/services/consumer-unit-upgrades",
   ];
 
   const blogRoutes = BLOG_POSTS.map((p) => p.href);
