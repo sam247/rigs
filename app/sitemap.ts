@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/privacy",
     "/blog",
+    "/services",
+    "/locations",
     "/services/emergency-electrician",
     "/services/electrical-fault-finding",
     "/services/fuse-board-upgrades",

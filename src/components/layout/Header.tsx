@@ -9,7 +9,7 @@ import rigsLogo from "@/assets/rigs-logo.svg";
 
 const navLinks = [
   { label: "About", path: "/about" },
-  { label: "Services", path: "/domestic" },
+  { label: "Services", path: "/services" },
   { label: "Gallery", path: "/gallery" },
   { label: "Testimonials", path: "/testimonials" },
 ];

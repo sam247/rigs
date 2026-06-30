@@ -36,13 +36,13 @@ export default function LocationPageClient({ location }: { location: LocationPag
     {
       title: "House Rewiring",
       desc: "Full or partial rewires for older properties and renovations.",
-      href: "/domestic#house-rewiring",
+      href: "/services/house-rewiring",
       icon: Home,
     },
     {
       title: "EICR Certificates",
       desc: "Electrical safety inspections with clear findings and next steps.",
-      href: "/domestic#eicr-certificates",
+      href: "/services/eicr-certificates",
       icon: Search,
     },
   ];
@@ -121,8 +121,8 @@ export default function LocationPageClient({ location }: { location: LocationPag
               <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed">
                 We carry out domestic electrical work for homeowners in {location.name} — repairs, installations and upgrades completed to current
                 standards with tidy workmanship and clear communication. For a full breakdown, browse our{" "}
-                <Link href="/domestic" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
-                  domestic electrical services
+                <Link href="/services" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  electrical services
                 </Link>
                 .
               </motion.p>
@@ -154,7 +154,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
               </motion.div>
               <motion.p variants={fadeUp} custom={4} className="text-sm text-muted-foreground leading-relaxed mt-6">
                 Planning upgrades? You may also want to look at{" "}
-                <Link href="/domestic#consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/services/consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   consumer unit upgrades
                 </Link>{" "}
                 and our guide to{" "}

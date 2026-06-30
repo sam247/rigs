@@ -25,7 +25,7 @@ const services = [
     icon: Plug,
     title: "Rewires & Consumer Units",
     desc: "Full or partial rewires, consumer unit upgrades and additional sockets — all to current 18th Edition standards.",
-    href: "/domestic#house-rewiring",
+    href: "/services/house-rewiring",
   },
   {
     icon: Lightbulb,
@@ -49,7 +49,7 @@ const services = [
     icon: Search,
     title: "Fault Finding & Repairs",
     desc: "Tracing and fixing faulty wiring, tripping circuits and emergency electrical issues — fast and methodical.",
-    href: "/domestic#fault-finding",
+    href: "/services/electrical-fault-finding",
   },
   {
     icon: Bath,
@@ -109,7 +109,7 @@ const ServicesSection = () => (
         custom={0}
         className="text-center mt-8 md:mt-10"
       >
-        <Link href="/domestic" className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
+        <Link href="/services" className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
           See all services <ArrowRight className="h-4 w-4" />
         </Link>
       </motion.div>

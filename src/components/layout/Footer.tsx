@@ -20,6 +20,7 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-700 text-xs md:text-sm uppercase tracking-wider mb-3 md:mb-4 text-accent">Services</h3>
             <ul className="space-y-2 text-xs md:text-sm text-primary-foreground/70">
+              <li><Link href="/services" className="hover:text-accent transition-colors">All Services</Link></li>
               <li><Link href="/domestic" className="hover:text-accent transition-colors">Domestic Electrical</Link></li>
               <li><Link href="/services/emergency-electrician" className="hover:text-accent transition-colors">Emergency Electrician</Link></li>
               <li><Link href="/gallery" className="hover:text-accent transition-colors">Recent Work</Link></li>
@@ -33,6 +34,7 @@ const Footer = () => {
             <h3 className="font-heading font-700 text-xs md:text-sm uppercase tracking-wider mb-3 md:mb-4 text-accent">Quick Links</h3>
             <ul className="space-y-2 text-xs md:text-sm text-primary-foreground/70">
               <li><Link href="/about" className="hover:text-accent transition-colors">About Us</Link></li>
+              <li><Link href="/locations" className="hover:text-accent transition-colors">Locations</Link></li>
               <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
               <li><Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link></li>
             </ul>

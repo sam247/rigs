@@ -13,13 +13,17 @@ test.describe("smoke", () => {
     await assertRoute("/blog/consumer-unit-vs-fuse-box", /Consumer Unit vs Fuse Box/i, page);
     await assertRoute("/blog/why-do-my-electrics-keep-tripping", /Why Do My Electrics Keep Tripping/i, page);
     await assertRoute("/blog/flickering-lights-common-causes", /Flickering Lights/i, page);
+    await assertRoute("/services", /Electrical Services in Hertfordshire/i, page);
+    await assertRoute("/locations", /Electrician Locations/i, page);
     await assertRoute("/services/emergency-electrician", /Emergency Electrician Hertfordshire/i, page);
     await assertRoute("/services/electrical-fault-finding", /Electrical Fault Finding Hertfordshire/i, page);
-    await assertRoute("/services/fuse-board-upgrades", /Domestic Electrical Services in Tring/i, page);
+    await assertRoute("/services/fuse-board-upgrades", /Fuse Board Upgrades Hertfordshire/i, page);
     await assertRoute("/services/house-rewiring", /Domestic Electrical Services in Tring/i, page);
-    await assertRoute("/services/eicr-certificates", /Domestic Electrical Services in Tring/i, page);
+    await assertRoute("/services/eicr-certificates", /EICR Certificates Hertfordshire/i, page);
     await assertRoute("/services/consumer-unit-upgrades", /Domestic Electrical Services in Tring/i, page);
     await assertRoute("/electrician/tring", /Electrician Tring/i, page);
+    await assertRoute("/electrician/st-albans", /Electrician St Albans/i, page);
+    await assertRoute("/electrician/watford", /Electrician Watford/i, page);
   });
 
   test("static assets resolve", async ({ request }) => {
