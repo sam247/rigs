@@ -21,6 +21,7 @@
 - Added new location landing pages: /electrician/st-albans and /electrician/watford (unique local content + schema)
 - Normalised service discovery around /services as the canonical hub, removed internal links to /domestic, and redirected /domestic permanently to /services
 - Expanded /services to list every service from the growth sheet, using live page links where available and placeholder cards with a Contact Us CTA for planned services
+- Refined the /services hub card set by removing status labels, adding two extra placeholder services to keep the grid balanced, and aligning page content widths with the header container
 
 ## Next
 

@@ -11,6 +11,7 @@ import {
   Home,
   Lightbulb,
   MapPin,
+  Plug,
   Search,
   ShieldCheck,
   Sun,
@@ -36,7 +37,6 @@ const services = [
     id: "emergency-electrician",
     icon: ZapOff,
     ctaLabel: "View service",
-    status: "Live",
   },
   {
     title: "Electrical Fault Finding",
@@ -46,7 +46,6 @@ const services = [
     id: "electrical-fault-finding",
     icon: Search,
     ctaLabel: "View service",
-    status: "Live",
   },
   {
     title: "Fuse Board Upgrades",
@@ -56,7 +55,6 @@ const services = [
     id: "fuse-board-upgrades",
     icon: ShieldCheck,
     ctaLabel: "View service",
-    status: "Live",
   },
   {
     title: "EICR Certificates",
@@ -66,7 +64,6 @@ const services = [
     id: "eicr-certificates",
     icon: Search,
     ctaLabel: "View service",
-    status: "Live",
   },
   {
     title: "Outdoor Lighting Installation",
@@ -76,7 +73,6 @@ const services = [
     id: "outdoor-lighting",
     icon: Sun,
     ctaLabel: "Contact Us",
-    status: "Placeholder",
   },
   {
     title: "House Rewiring",
@@ -86,7 +82,24 @@ const services = [
     id: "house-rewiring",
     icon: Home,
     ctaLabel: "Contact Us",
-    status: "Placeholder",
+  },
+  {
+    title: "Lighting Installations",
+    desc: "Interior lighting upgrades, LED downlights, pendant changes and practical lighting improvements for lived-in homes.",
+    href: "/contact?service=Lighting%20Installations%20Hertfordshire",
+    schemaHref: "/services#lighting-installations",
+    id: "lighting-installations",
+    icon: Lightbulb,
+    ctaLabel: "Contact Us",
+  },
+  {
+    title: "Sockets & Extensions",
+    desc: "Additional sockets, upgraded outlets and electrical first-fix work for extensions, conversions and room changes.",
+    href: "/contact?service=Sockets%20and%20Extensions%20Hertfordshire",
+    schemaHref: "/services#sockets-extensions",
+    id: "sockets-extensions",
+    icon: Plug,
+    ctaLabel: "Contact Us",
   },
   {
     title: "Smart Home Installation",
@@ -96,7 +109,6 @@ const services = [
     id: "smart-home-installation",
     icon: Cpu,
     ctaLabel: "Contact Us",
-    status: "Placeholder",
   },
   {
     title: "Security Lighting Installation",
@@ -106,7 +118,6 @@ const services = [
     id: "security-lighting",
     icon: Bell,
     ctaLabel: "Contact Us",
-    status: "Placeholder",
   },
   {
     title: "Electrical Inspections",
@@ -116,7 +127,6 @@ const services = [
     id: "electrical-inspections",
     icon: ClipboardCheck,
     ctaLabel: "Contact Us",
-    status: "Placeholder",
   },
   {
     title: "Consumer Unit Replacement",
@@ -127,7 +137,6 @@ const services = [
     icon: ShieldCheck,
     aliases: ["consumer-unit-upgrades"],
     ctaLabel: "Contact Us",
-    status: "Placeholder",
   },
   {
     title: "Electric Shower Installation",
@@ -137,7 +146,6 @@ const services = [
     id: "electric-shower-installation",
     icon: Zap,
     ctaLabel: "Contact Us",
-    status: "Placeholder",
   },
   {
     title: "Kitchen Electrical Installation",
@@ -147,7 +155,6 @@ const services = [
     id: "kitchen-electrics",
     icon: Bath,
     ctaLabel: "Contact Us",
-    status: "Placeholder",
   },
   {
     title: "Landlord Electrical Certificates",
@@ -157,7 +164,6 @@ const services = [
     id: "landlord-electrical-certificates",
     icon: ClipboardCheck,
     ctaLabel: "Contact Us",
-    status: "Placeholder",
   },
 ];
 
@@ -222,7 +228,7 @@ export default function ServicesHubPage() {
 
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {services.map((s, i) => (
               <motion.div id={s.id} key={s.id} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
                 <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
@@ -231,12 +237,7 @@ export default function ServicesHubPage() {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                       <s.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                     </div>
-                    <div className="flex items-center justify-between gap-3 mb-3">
-                      <h2 className="font-heading font-800 text-xl">{s.title}</h2>
-                      <span className="shrink-0 rounded-full bg-secondary px-3 py-1 text-[11px] font-heading font-700 uppercase tracking-wider text-muted-foreground">
-                        {s.status}
-                      </span>
-                    </div>
+                    <h2 className="font-heading font-800 text-xl mb-3">{s.title}</h2>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
                     <Link href={s.href} className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
                       {s.ctaLabel} <ArrowRight className="h-4 w-4" />
@@ -251,7 +252,7 @@ export default function ServicesHubPage() {
 
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10 items-center">
+          <div className="grid lg:grid-cols-5 gap-10 items-center">
             <div className="lg:col-span-3">
               <h2 className="text-3xl font-heading font-800 mb-4">Need a Local Electrician?</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">

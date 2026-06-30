@@ -113,7 +113,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
 
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10">
+          <div className="grid lg:grid-cols-2 gap-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
               <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-4">
                 Electrical Services in {location.name}
@@ -197,7 +197,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
 
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="max-w-6xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
             <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-10 text-center">
               Common Electrical Problems We Solve in {location.name}
             </motion.h2>
@@ -219,7 +219,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
 
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="max-w-6xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
             <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-10 text-center">
               Areas Covered
             </motion.h2>
@@ -263,7 +263,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
 
       <section className="py-20 md:py-28">
         <div className="container">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="max-w-6xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
             <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-10 text-center">
               Related Services
             </motion.h2>
@@ -293,7 +293,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
 
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="max-w-6xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
             <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-10 text-center">
               Related Articles
             </motion.h2>
@@ -341,7 +341,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
 
       <section className="py-20">
         <div className="container">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10 items-center">
+          <div className="grid lg:grid-cols-5 gap-10 items-center">
             <div className="lg:col-span-3">
               <h2 className="text-3xl font-heading font-800 mb-4">Need an Electrician in {location.name}?</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">

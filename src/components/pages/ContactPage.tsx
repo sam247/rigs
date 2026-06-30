@@ -74,7 +74,7 @@ const ContactPage = () => {
 
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-12 ">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:col-span-3">
               <motion.h2 variants={fadeUp} custom={0} className="text-2xl font-heading font-800 mb-6">Send Us a Message</motion.h2>
               <motion.form variants={fadeUp} custom={1} onSubmit={handleSubmit} className="space-y-5">

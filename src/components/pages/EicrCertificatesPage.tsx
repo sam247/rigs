@@ -146,7 +146,7 @@ export default function EicrCertificatesPage() {
 
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 ">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
               <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-6">
                 What an EICR Gives You
@@ -227,7 +227,7 @@ export default function EicrCertificatesPage() {
 
       <section className="py-20 md:py-28">
         <div className="container">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="max-w-6xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
             <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-10 text-center">
               Related Pages
             </motion.h2>
@@ -257,7 +257,7 @@ export default function EicrCertificatesPage() {
 
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10 items-center">
+          <div className="grid lg:grid-cols-5 gap-10 items-center">
             <div className="lg:col-span-3">
               <h2 className="text-3xl font-heading font-800 mb-4">Book an EICR</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">

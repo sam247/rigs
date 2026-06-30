@@ -109,7 +109,7 @@ const DomesticPage = () => {
 
     <section className="py-20 md:py-28">
       <div className="container">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((s, i) => (
             <motion.div id={s.id} key={s.title} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
               <Card className="h-full border-2 border-border hover:border-primary/20 transition-all duration-300">
