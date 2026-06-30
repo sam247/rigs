@@ -1,23 +1,10 @@
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import type { CountyTown, CountyTownStatus } from "@/content/hertfordshireCounty";
 
 type Props = {
   towns: CountyTown[];
-};
-
-const statusLabel: Record<CountyTownStatus, string> = {
-  live: "Live pages",
-  planned: "Planned pages",
-  coverage: "County coverage",
-};
-
-const statusClasses: Record<CountyTownStatus, string> = {
-  live: "bg-primary text-primary-foreground",
-  planned: "border-transparent bg-accent text-accent-foreground",
-  coverage: "border-border bg-background text-foreground",
 };
 
 const markerClasses: Record<CountyTownStatus, string> = {
@@ -31,11 +18,10 @@ export default function InteractiveCountyMap({ towns }: Props) {
     <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.95fr)] gap-8 items-start">
       <Card className="border-2 border-border overflow-hidden">
         <CardContent className="p-6">
-          <div className="flex flex-wrap items-center gap-2 mb-4">
-            <Badge className={statusClasses.live}>{statusLabel.live}</Badge>
-            <Badge className={statusClasses.planned}>{statusLabel.planned}</Badge>
-            <Badge className={statusClasses.coverage}>{statusLabel.coverage}</Badge>
-          </div>
+          <h3 className="text-2xl font-heading font-800 mb-3">Hertfordshire Map</h3>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            A simple static map showing the towns we cover across Hertfordshire. Use the town links alongside it to go straight to the right page or enquiry route.
+          </p>
           <div className="relative aspect-[5/4] overflow-hidden rounded-2xl border border-border bg-[radial-gradient(circle_at_top,_hsl(var(--accent)/0.14),_transparent_45%),linear-gradient(180deg,_hsl(var(--background)),_hsl(var(--secondary)))]">
             <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" aria-hidden="true">
               <path
@@ -91,16 +77,6 @@ export default function InteractiveCountyMap({ towns }: Props) {
               </div>
             </div>
           </div>
-          <div className="mt-4">
-            <a
-              href="https://www.openstreetmap.org/#map=10/51.82/-0.23"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors"
-            >
-              View larger county map
-            </a>
-          </div>
         </CardContent>
       </Card>
 
@@ -108,12 +84,12 @@ export default function InteractiveCountyMap({ towns }: Props) {
         <div>
           <h3 className="text-2xl font-heading font-800 mb-3">Town Directory</h3>
           <p className="text-muted-foreground leading-relaxed">
-            Every town name is linked. Live pages take customers to full local content, while planned towns and wider county coverage areas still route to a working enquiry path so there are no dead ends.
+            Every town name is linked. Some towns already have a full local page, while others route to a working enquiry path so there are no dead ends.
           </p>
         </div>
 
         <div className="grid gap-4">
-          <DirectoryGroup title="Live town pages" towns={towns.filter((town) => town.status === "live")} suffix="Live page" />
+          <DirectoryGroup title="Detailed town pages" towns={towns.filter((town) => town.status === "live")} suffix="Town page" />
           <DirectoryGroup title="More Hertfordshire areas" towns={towns.filter((town) => town.status === "planned")} suffix="Enquiry" />
           <DirectoryGroup title="Other towns we cover" towns={towns.filter((town) => town.status === "coverage")} suffix="Enquiry" />
         </div>

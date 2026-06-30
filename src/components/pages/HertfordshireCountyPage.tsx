@@ -121,8 +121,8 @@ export default function HertfordshireCountyPage() {
               Electrician Hertfordshire
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Need a reliable electrician anywhere in Hertfordshire? This county page brings together the live town pages already on the site, the next
-              planned Hertfordshire locations from the growth roadmap, and broader county coverage links so homeowners can quickly find the right next step.
+              Need a reliable electrician anywhere in Hertfordshire? This county page brings together the detailed town pages already available, the next
+              Hertfordshire locations from the growth roadmap, and broader county coverage links so homeowners can quickly find the right next step.
               Whether you are dealing with tripping electrics in an older property, planning a consumer unit upgrade, or arranging an EICR before a move,
               the same domestic-first approach runs across every area we cover.
             </motion.p>
@@ -150,7 +150,7 @@ export default function HertfordshireCountyPage() {
               Towns We Cover Across Hertfordshire
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed max-w-4xl mb-10">
-              The map is there as a quick visual guide, while the directory does the real job for customers: helping you get to your nearest live page or a
+              The map is there as a quick visual guide, while the directory does the real job for customers: helping you get to your nearest town page or a
               working enquiry link without any guesswork.
             </motion.p>
             <motion.div variants={fadeUp} custom={2}>
@@ -168,7 +168,7 @@ export default function HertfordshireCountyPage() {
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed max-w-4xl mb-10">
               Hertfordshire combines market towns, cathedral-city streets, new-town neighbourhoods, village edges and commuter corridors, so the homes we
-              work in vary a lot from one area to the next. This page is here to make coverage clear, show where the live town pages already exist, and help
+              work in vary a lot from one area to the next. This page is here to make coverage clear, show which areas already have a detailed town page, and help
               customers get to the right enquiry route quickly.
             </motion.p>
             <div className="grid md:grid-cols-3 gap-6">
@@ -293,7 +293,7 @@ export default function HertfordshireCountyPage() {
                       <p className="font-heading font-800 mb-2">Broader county coverage</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         The directory also covers towns such as {HERTFORDSHIRE_COVERAGE_TOWNS.slice(0, 8).map((town) => town.name).join(", ")} and more,
-                        alongside live pages in {HERTFORDSHIRE_LIVE_TOWNS.map((town) => town.name).join(", ")} and roadmap placeholders for{" "}
+                        alongside detailed town pages for {HERTFORDSHIRE_LIVE_TOWNS.map((town) => town.name).join(", ")} and enquiry routes for{" "}
                         {HERTFORDSHIRE_PLANNED_TOWNS.map((town) => town.name).join(", ")}.
                       </p>
                     </CardContent>
@@ -381,15 +381,15 @@ export default function HertfordshireCountyPage() {
             <div className="lg:col-span-2 grid gap-4">
               {[
                 {
-                  title: "Live pages ready",
-                  desc: `Current live town pages: ${HERTFORDSHIRE_LIVE_TOWNS.map((town) => town.name).join(", ")}.`,
+                  title: "Detailed town pages",
+                  desc: `You can currently browse dedicated town pages for ${HERTFORDSHIRE_LIVE_TOWNS.map((town) => town.name).join(", ")}.`,
                 },
                 {
-                  title: "Planned rollout towns",
-                  desc: `${HERTFORDSHIRE_PLANNED_TOWNS.length} Hertfordshire locations from the growth sheet are included as working placeholders.`,
+                  title: "More areas covered",
+                  desc: `${HERTFORDSHIRE_PLANNED_TOWNS.length} more Hertfordshire areas are available through the county enquiry route while their own pages are still being added.`,
                 },
                 {
-                  title: "County-first coverage",
+                  title: "County-wide coverage",
                   desc: "Major towns across the county are linked here so homeowners can always take a useful next step instead of hitting a dead end.",
                 },
               ].map((item) => (

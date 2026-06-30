@@ -29,6 +29,7 @@
 - Built a dedicated `/electrician/hertfordshire` county page with county overview content, an interactive town directory map, live town-page links, and placeholder links for planned Hertfordshire locations from the growth sheet
 - Updated `/locations` so Hertfordshire now links to the live county page, added county backlinks on town pages, and extended sitemap/smoke coverage for the new route
 - Refined the Hertfordshire county page to feel more customer-first by simplifying the map/directory section, reducing page density, and removing the more SEO-style supporting article block
+- Replaced the Hertfordshire county page's map section with a static county map treatment and removed internal rollout wording like "live pages" from customer-facing copy and CTA messaging
 
 ## Next
 
