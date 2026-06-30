@@ -55,7 +55,7 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden lg:block w-4" />
+          <div className="hidden lg:block w-6" />
         </div>
 
         <div className="flex items-center gap-2 md:gap-3 lg:ml-0">

@@ -25,6 +25,7 @@
 - Strengthened the About page with a real gallery image and a reusable customer review carousel sourced from the testimonial content
 - Expanded /locations with top-level county placeholder cards for Hertfordshire, Bedfordshire and Buckinghamshire, each using a Contact Us CTA until dedicated pages are built
 - Refined the /locations hub wording to feel more natural for homeowners and adjusted the header so the desktop nav aligns cleanly to the right with breathing room before the CTA buttons
+- Tweaked the /locations section titles to "Counties We Cover" and "Towns We Cover", and slightly increased the desktop nav-to-CTA spacing in the header
 
 ## Next
 
