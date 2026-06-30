@@ -17,8 +17,8 @@ const fadeUp = {
 const countyPlaceholders = [
   {
     name: "Hertfordshire",
-    blurb: "Domestic electrical work across towns and villages throughout Hertfordshire.",
-    href: "/contact?service=Electrician%20Hertfordshire",
+    blurb: "County-wide page with an interactive town map, linked directory and local coverage guidance across Hertfordshire.",
+    href: "/electrician/hertfordshire",
   },
   {
     name: "Bedfordshire",
@@ -97,8 +97,8 @@ export default function LocationsHubPage() {
             <div className="mb-6">
               <h2 className="text-2xl md:text-3xl font-heading font-800 mb-3">Counties We Cover</h2>
               <p className="text-muted-foreground leading-relaxed max-w-2xl">
-                If you're looking for an electrician across Hertfordshire, Bedfordshire or Buckinghamshire, start here. These are broader coverage
-                areas, so for now the best next step is to get in touch and we’ll confirm availability.
+                Start with the county that fits your area. Hertfordshire now has a dedicated county landing page, while Bedfordshire and Buckinghamshire
+                still use broader coverage placeholders until their own pages are built.
               </p>
             </div>
 
@@ -115,7 +115,7 @@ export default function LocationsHubPage() {
                         {county.blurb}
                       </p>
                       <Link href={county.href} className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
-                        Contact Us <ArrowRight className="h-4 w-4" />
+                        {county.name === "Hertfordshire" ? "View county page" : "Contact Us"} <ArrowRight className="h-4 w-4" />
                       </Link>
                     </CardContent>
                   </Card>

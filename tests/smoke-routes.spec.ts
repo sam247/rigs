@@ -26,6 +26,7 @@ test.describe("smoke", () => {
     await assertRoute("/services/electrical-fault-finding", /Electrical Fault Finding Hertfordshire/i, page);
     await assertRoute("/services/fuse-board-upgrades", /Fuse Board Upgrades Hertfordshire/i, page);
     await assertRoute("/services/eicr-certificates", /EICR Certificates Hertfordshire/i, page);
+    await assertRoute("/electrician/hertfordshire", /Electrician Hertfordshire/i, page);
     await assertRoute("/electrician/tring", /Electrician Tring/i, page);
     await assertRoute("/electrician/st-albans", /Electrician St Albans/i, page);
     await assertRoute("/electrician/watford", /Electrician Watford/i, page);

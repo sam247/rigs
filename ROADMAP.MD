@@ -26,6 +26,8 @@
 - Expanded /locations with top-level county placeholder cards for Hertfordshire, Bedfordshire and Buckinghamshire, each using a Contact Us CTA until dedicated pages are built
 - Refined the /locations hub wording to feel more natural for homeowners and adjusted the header so the desktop nav aligns cleanly to the right with breathing room before the CTA buttons
 - Tweaked the /locations section titles to "Counties We Cover" and "Towns We Cover", and slightly increased the desktop nav-to-CTA spacing in the header
+- Built a dedicated `/electrician/hertfordshire` county page with county overview content, an interactive town directory map, live town-page links, and placeholder links for planned Hertfordshire locations from the growth sheet
+- Updated `/locations` so Hertfordshire now links to the live county page, added county backlinks on town pages, and extended sitemap/smoke coverage for the new route
 
 ## Next
 

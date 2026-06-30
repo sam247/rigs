@@ -227,7 +227,12 @@ export default function LocationPageClient({ location }: { location: LocationPag
               <div className="lg:col-span-2">
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   We’re based locally and regularly carry out domestic electrical work across {location.name} and the surrounding villages, as well as nearby
-                  towns in {location.region} and Buckinghamshire. If you’re not sure whether we cover your road, get in touch and we’ll confirm.
+                  towns in {location.region} and Buckinghamshire. If you’re not sure whether we cover your road, get in touch and we’ll confirm. You can also
+                  browse our{" "}
+                  <Link href="/electrician/hertfordshire" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                    Hertfordshire county page
+                  </Link>{" "}
+                  for a wider town directory and county overview.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-8">
                   <div>
@@ -346,6 +351,13 @@ export default function LocationPageClient({ location }: { location: LocationPag
               <h2 className="text-3xl font-heading font-800 mb-4">Need an Electrician in {location.name}?</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Tell us what you need and we’ll come back with friendly advice and a clear quote. If it’s urgent, call now.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                Need a broader county view first? Visit our{" "}
+                <Link href="/electrician/hertfordshire" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  Hertfordshire electrician page
+                </Link>{" "}
+                to browse live town pages, planned locations and wider county coverage.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" className="font-heading font-700">
