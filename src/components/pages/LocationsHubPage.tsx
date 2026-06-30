@@ -14,6 +14,24 @@ const fadeUp = {
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }),
 };
 
+const countyPlaceholders = [
+  {
+    name: "Hertfordshire",
+    blurb: "Domestic electrical work across towns and villages throughout Hertfordshire.",
+    href: "/contact?service=Electrician%20Hertfordshire",
+  },
+  {
+    name: "Bedfordshire",
+    blurb: "Home electrical repairs, upgrades and inspections across Bedfordshire.",
+    href: "/contact?service=Electrician%20Bedfordshire",
+  },
+  {
+    name: "Buckinghamshire",
+    blurb: "Trusted domestic electrician support across Buckinghamshire and nearby areas.",
+    href: "/contact?service=Electrician%20Buckinghamshire",
+  },
+];
+
 const locations = Object.values(LOCATION_PAGES).sort((a, b) => a.name.localeCompare(b.name));
 
 export default function LocationsHubPage() {
@@ -75,31 +93,69 @@ export default function LocationsHubPage() {
 
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-            {locations.map((l, i) => (
-              <motion.div key={l.slug} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
-                <Link href={`/electrician/${l.slug}`} className="block h-full">
+          <div className="mb-12">
+            <div className="mb-6">
+              <h2 className="text-2xl md:text-3xl font-heading font-800 mb-3">County Coverage</h2>
+              <p className="text-muted-foreground leading-relaxed max-w-2xl">
+                These are our top-level county coverage areas. For now, just get in touch and we’ll advise on availability and the best next step.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {countyPlaceholders.map((county, i) => (
+                <motion.div key={county.name} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
                   <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
                     <CardContent className="p-8">
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                       </div>
-                      <h2 className="font-heading font-800 text-xl mb-3">Electrician {l.name}</h2>
+                      <h2 className="font-heading font-800 text-xl mb-3">Electrician {county.name}</h2>
                       <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                        NICEIC registered domestic electricians covering {l.name}, {l.region} and surrounding areas.
+                        {county.blurb}
                       </p>
-                      <span className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary group-hover:text-primary/80 transition-colors">
-                        View location <ArrowRight className="h-4 w-4" />
-                      </span>
+                      <Link href={county.href} className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
+                        Contact Us <ArrowRight className="h-4 w-4" />
+                      </Link>
                     </CardContent>
                   </Card>
-                </Link>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="mb-6">
+              <h2 className="text-2xl md:text-3xl font-heading font-800 mb-3">Town Pages</h2>
+              <p className="text-muted-foreground leading-relaxed max-w-2xl">
+                Browse the live local area pages below for towns where we already have dedicated electrician coverage pages.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {locations.map((l, i) => (
+                <motion.div key={l.slug} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i + countyPlaceholders.length}>
+                  <Link href={`/electrician/${l.slug}`} className="block h-full">
+                    <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+                      <CardContent className="p-8">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                          <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <h2 className="font-heading font-800 text-xl mb-3">Electrician {l.name}</h2>
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                          NICEIC registered domestic electricians covering {l.name}, {l.region} and surrounding areas.
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary group-hover:text-primary/80 transition-colors">
+                          View location <ArrowRight className="h-4 w-4" />
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
     </Layout>
   );
 }
-

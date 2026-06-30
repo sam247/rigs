@@ -23,6 +23,7 @@
 - Expanded /services to list every service from the growth sheet, using live page links where available and placeholder cards with a Contact Us CTA for planned services
 - Refined the /services hub card set by removing status labels, adding two extra placeholder services to keep the grid balanced, and aligning page content widths with the header container
 - Strengthened the About page with a real gallery image and a reusable customer review carousel sourced from the testimonial content
+- Expanded /locations with top-level county placeholder cards for Hertfordshire, Bedfordshire and Buckinghamshire, each using a Contact Us CTA until dedicated pages are built
 
 ## Next
 
