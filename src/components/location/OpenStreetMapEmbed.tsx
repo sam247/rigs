@@ -15,11 +15,12 @@ export default function OpenStreetMapEmbed({ title, bbox, marker, zoom = 13, cla
   return (
     <div className={className}>
       <iframe title={title} src={embedSrc} className="w-full h-full border-0" loading="lazy" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-background/95" aria-hidden="true" />
       <a
         href={viewHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute bottom-3 right-3 bg-background/90 backdrop-blur px-3 py-1.5 rounded-md text-xs font-heading font-600 text-foreground hover:bg-background transition-colors shadow"
+        className="absolute top-3 right-3 bg-background/90 backdrop-blur px-3 py-1.5 rounded-md text-xs font-heading font-600 text-foreground hover:bg-background transition-colors shadow"
       >
         View larger map
       </a>

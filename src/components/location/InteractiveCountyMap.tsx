@@ -35,16 +35,16 @@ export default function InteractiveCountyMap({ towns }: Props) {
         </div>
 
         <div className="grid gap-4">
-          <DirectoryGroup title="Detailed town pages" towns={towns.filter((town) => town.status === "live")} suffix="Town page" />
-          <DirectoryGroup title="More Hertfordshire areas" towns={towns.filter((town) => town.status === "planned")} suffix="Enquiry" />
-          <DirectoryGroup title="Other towns we cover" towns={towns.filter((town) => town.status === "coverage")} suffix="Enquiry" />
+          <DirectoryGroup title="Detailed town pages" towns={towns.filter((town) => town.status === "live")} />
+          <DirectoryGroup title="More Hertfordshire areas" towns={towns.filter((town) => town.status === "planned")} />
+          <DirectoryGroup title="Other towns we cover" towns={towns.filter((town) => town.status === "coverage")} />
         </div>
       </div>
     </div>
   );
 }
 
-function DirectoryGroup({ title, towns, suffix }: { title: string; towns: CountyTown[]; suffix: string }) {
+function DirectoryGroup({ title, towns }: { title: string; towns: CountyTown[] }) {
   return (
     <Card className="border-2 border-border">
       <CardContent className="p-6">
@@ -57,7 +57,6 @@ function DirectoryGroup({ title, towns, suffix }: { title: string; towns: County
               className="text-sm font-heading font-700 text-primary hover:text-primary/80 transition-colors"
             >
               {town.name}
-              <span className="ml-1 text-xs font-500 text-muted-foreground">{suffix}</span>
             </Link>
           ))}
         </div>

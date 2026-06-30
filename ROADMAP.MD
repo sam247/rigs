@@ -31,6 +31,7 @@
 - Refined the Hertfordshire county page to feel more customer-first by simplifying the map/directory section, reducing page density, and removing the more SEO-style supporting article block
 - Replaced the Hertfordshire county page's map section with a static county map treatment and removed internal rollout wording like "live pages" from customer-facing copy and CTA messaging
 - Swapped the Hertfordshire county map to the same normal embedded map style used elsewhere on the site and removed the SEO-leaning detailed-town-pages card from the closing CTA section
+- Simplified the Hertfordshire town directory by removing repeated link suffix labels and masked the OpenStreetMap embed footer styling for a cleaner presentation across map blocks
 
 ## Next
 
