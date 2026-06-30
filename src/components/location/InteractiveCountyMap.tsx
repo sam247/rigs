@@ -1,16 +1,10 @@
 import Link from "next/link";
-import { MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import type { CountyTown, CountyTownStatus } from "@/content/hertfordshireCounty";
+import OpenStreetMapEmbed from "@/components/location/OpenStreetMapEmbed";
+import type { CountyTown } from "@/content/hertfordshireCounty";
 
 type Props = {
   towns: CountyTown[];
-};
-
-const markerClasses: Record<CountyTownStatus, string> = {
-  live: "bg-primary border-primary shadow-primary/30",
-  planned: "bg-accent border-accent shadow-accent/30",
-  coverage: "bg-background border-primary/30 shadow-primary/15",
 };
 
 export default function InteractiveCountyMap({ towns }: Props) {
@@ -22,61 +16,13 @@ export default function InteractiveCountyMap({ towns }: Props) {
           <p className="text-muted-foreground leading-relaxed mb-4">
             A simple static map showing the towns we cover across Hertfordshire. Use the town links alongside it to go straight to the right page or enquiry route.
           </p>
-          <div className="relative aspect-[5/4] overflow-hidden rounded-2xl border border-border bg-[radial-gradient(circle_at_top,_hsl(var(--accent)/0.14),_transparent_45%),linear-gradient(180deg,_hsl(var(--background)),_hsl(var(--secondary)))]">
-            <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" aria-hidden="true">
-              <path
-                d="M17 18 L29 12 L46 13 L58 8 L72 13 L87 25 L89 36 L85 49 L89 61 L86 78 L70 92 L51 92 L39 88 L26 81 L15 70 L11 56 L14 42 L10 28 Z"
-                className="fill-primary/10 stroke-primary/30"
-                strokeWidth="1.5"
-                vectorEffect="non-scaling-stroke"
-              />
-              <path
-                d="M23 31 L79 69"
-                className="stroke-primary/15"
-                strokeWidth="0.7"
-                strokeDasharray="2 3"
-                vectorEffect="non-scaling-stroke"
-              />
-              <path
-                d="M20 58 L78 24"
-                className="stroke-primary/12"
-                strokeWidth="0.7"
-                strokeDasharray="2 3"
-                vectorEffect="non-scaling-stroke"
-              />
-              <path
-                d="M38 17 L58 89"
-                className="stroke-primary/10"
-                strokeWidth="0.7"
-                strokeDasharray="2 3"
-                vectorEffect="non-scaling-stroke"
-              />
-            </svg>
-
-            {towns.map((town) => (
-              <span
-                key={town.name}
-                title={town.name}
-                aria-label={town.name}
-                className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full border-2 h-3.5 w-3.5 shadow-md ${markerClasses[town.status]}`}
-                style={{ left: `${town.x}%`, top: `${town.y}%` }}
-              />
-            ))}
-
-            <div className="absolute left-4 right-4 bottom-4 rounded-2xl border border-border bg-background/95 p-4 shadow-lg backdrop-blur">
-              <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary shrink-0">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="font-heading font-800">County coverage map</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    A simple visual guide to the towns we cover across Hertfordshire, with live pages called out separately in the directory.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <OpenStreetMapEmbed
+            title="Map of Hertfordshire"
+            bbox={[-0.8000, 51.6200, 0.1500, 52.1000]}
+            marker={{ lat: 51.8170, lon: -0.2400 }}
+            zoom={10}
+            className="relative rounded-2xl overflow-hidden border border-border shadow-lg aspect-[4/3] bg-muted"
+          />
         </CardContent>
       </Card>
 

@@ -14,7 +14,6 @@ import {
   HERTFORDSHIRE_COMMON_NEEDS,
   HERTFORDSHIRE_COVERAGE_TOWNS,
   HERTFORDSHIRE_FAQ,
-  HERTFORDSHIRE_LIVE_TOWNS,
   HERTFORDSHIRE_OVERVIEW,
   HERTFORDSHIRE_PLANNED_TOWNS,
   HERTFORDSHIRE_SERVICE_HIGHLIGHTS,
@@ -293,7 +292,7 @@ export default function HertfordshireCountyPage() {
                       <p className="font-heading font-800 mb-2">Broader county coverage</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         The directory also covers towns such as {HERTFORDSHIRE_COVERAGE_TOWNS.slice(0, 8).map((town) => town.name).join(", ")} and more,
-                        alongside detailed town pages for {HERTFORDSHIRE_LIVE_TOWNS.map((town) => town.name).join(", ")} and enquiry routes for{" "}
+                        alongside dedicated town pages and enquiry routes for areas across the county, including{" "}
                         {HERTFORDSHIRE_PLANNED_TOWNS.map((town) => town.name).join(", ")}.
                       </p>
                     </CardContent>
@@ -380,10 +379,6 @@ export default function HertfordshireCountyPage() {
             </div>
             <div className="lg:col-span-2 grid gap-4">
               {[
-                {
-                  title: "Detailed town pages",
-                  desc: `You can currently browse dedicated town pages for ${HERTFORDSHIRE_LIVE_TOWNS.map((town) => town.name).join(", ")}.`,
-                },
                 {
                   title: "More areas covered",
                   desc: `${HERTFORDSHIRE_PLANNED_TOWNS.length} more Hertfordshire areas are available through the county enquiry route while their own pages are still being added.`,
