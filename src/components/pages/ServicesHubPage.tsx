@@ -18,36 +18,42 @@ const services = [
     title: "Emergency Electrician",
     desc: "Urgent domestic faults, tripping circuits and power outages across Hertfordshire and surrounding areas.",
     href: "/services/emergency-electrician",
+    id: "emergency-electrician",
     icon: ZapOff,
   },
   {
     title: "Electrical Fault Finding",
     desc: "Safe, methodical diagnosis for flickering lights, dead sockets, nuisance tripping and intermittent faults.",
     href: "/services/electrical-fault-finding",
+    id: "electrical-fault-finding",
     icon: Search,
   },
   {
     title: "Fuse Board Upgrades",
     desc: "Upgrade outdated fuse boards/consumer units for modern protection and simpler fault isolation.",
     href: "/services/fuse-board-upgrades",
+    id: "fuse-board-upgrades",
     icon: ShieldCheck,
   },
   {
     title: "EICR Certificates",
     desc: "Domestic electrical safety inspections with clear findings and practical next steps.",
     href: "/services/eicr-certificates",
+    id: "eicr-certificates",
     icon: Search,
   },
   {
     title: "House Rewiring",
     desc: "Full or partial rewires for older properties, renovations, extensions and modern appliance loads.",
-    href: "/services/house-rewiring",
+    href: "/services#house-rewiring",
+    id: "house-rewiring",
     icon: MapPin,
   },
   {
     title: "Consumer Unit Upgrades",
     desc: "Modern consumer unit replacements installed safely, neatly and to current standards.",
-    href: "/services/consumer-unit-upgrades",
+    href: "/services#consumer-unit-upgrades",
+    id: "consumer-unit-upgrades",
     icon: ShieldCheck,
   },
 ];
@@ -115,7 +121,7 @@ export default function ServicesHubPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((s, i) => (
-              <motion.div key={s.href} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
+              <motion.div id={s.id} key={s.href} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
                 <Link href={s.href} className="block h-full">
                   <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
                     <CardContent className="p-8">
@@ -180,4 +186,3 @@ export default function ServicesHubPage() {
     </Layout>
   );
 }
-

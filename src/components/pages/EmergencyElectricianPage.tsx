@@ -51,33 +51,33 @@ const faqs = [
 
 const relatedServices = [
   {
-    title: "Domestic Services Hub",
+    title: "Services Hub",
     desc: "Explore all domestic electrical services offered by RIGS Electrical.",
-    href: "/domestic",
+    href: "/services",
     icon: ShieldCheck,
   },
   {
     title: "Fuse Board Upgrades",
     desc: "Upgrade outdated fuse boards for safer protection and fewer nuisance trips.",
-    href: "/domestic#fuse-board-upgrades",
+    href: "/services/fuse-board-upgrades",
     icon: ZapOff,
   },
   {
     title: "House Rewiring",
     desc: "Full or partial rewires for older properties, extensions and renovations.",
-    href: "/domestic#house-rewiring",
+    href: "/services#house-rewiring",
     icon: MapPin,
   },
   {
     title: "EICR Certificates",
     desc: "Home electrical safety checks with clear findings and practical next steps.",
-    href: "/domestic#eicr-certificates",
+    href: "/services/eicr-certificates",
     icon: Search,
   },
   {
     title: "Consumer Unit Upgrades",
     desc: "Modern RCBO/RCD protection and compliant installation for peace of mind.",
-    href: "/domestic#consumer-unit-upgrades",
+    href: "/services#consumer-unit-upgrades",
     icon: ShieldCheck,
   },
 ];
@@ -210,11 +210,11 @@ const EmergencyElectricianPage = () => {
               </motion.div>
               <motion.p variants={fadeUp} custom={2} className="text-sm text-muted-foreground mt-6 leading-relaxed">
                 If you suspect your fuse board is outdated or your wiring is struggling to cope, we’ll advise on longer-term fixes such as{" "}
-                <Link href="/domestic#consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/services#consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   consumer unit upgrades
                 </Link>{" "}
                 or{" "}
-                <Link href="/domestic#house-rewiring" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/services#house-rewiring" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   house rewiring
                 </Link>
                 .
@@ -401,8 +401,8 @@ const EmergencyElectricianPage = () => {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 For immediate advice, call us. For non-urgent issues, request a quote and we’ll respond as soon as possible.
                 You can also browse our{" "}
-                <Link href="/domestic" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
-                  domestic services
+                <Link href="/services" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  services
                 </Link>{" "}
                 for upgrades and preventative work.
               </p>

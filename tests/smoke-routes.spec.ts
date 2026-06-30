@@ -6,9 +6,15 @@ const assertRoute = async (path: string, heading: RegExp, page: any) => {
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(heading);
 };
 
+const assertRedirect = async (from: string, to: string, page: any) => {
+  const res = await page.goto(from);
+  expect(res?.ok()).toBeTruthy();
+  await page.waitForURL(`**${to}`);
+  expect(page.url()).toContain(to);
+};
+
 test.describe("smoke", () => {
   test("key pages render", async ({ page }) => {
-    await assertRoute("/domestic", /Domestic Electrical Services in Tring/i, page);
     await assertRoute("/blog", /^Blog$/i, page);
     await assertRoute("/blog/consumer-unit-vs-fuse-box", /Consumer Unit vs Fuse Box/i, page);
     await assertRoute("/blog/why-do-my-electrics-keep-tripping", /Why Do My Electrics Keep Tripping/i, page);
@@ -18,12 +24,16 @@ test.describe("smoke", () => {
     await assertRoute("/services/emergency-electrician", /Emergency Electrician Hertfordshire/i, page);
     await assertRoute("/services/electrical-fault-finding", /Electrical Fault Finding Hertfordshire/i, page);
     await assertRoute("/services/fuse-board-upgrades", /Fuse Board Upgrades Hertfordshire/i, page);
-    await assertRoute("/services/house-rewiring", /Domestic Electrical Services in Tring/i, page);
     await assertRoute("/services/eicr-certificates", /EICR Certificates Hertfordshire/i, page);
-    await assertRoute("/services/consumer-unit-upgrades", /Domestic Electrical Services in Tring/i, page);
     await assertRoute("/electrician/tring", /Electrician Tring/i, page);
     await assertRoute("/electrician/st-albans", /Electrician St Albans/i, page);
     await assertRoute("/electrician/watford", /Electrician Watford/i, page);
+  });
+
+  test("legacy service routes redirect to /services", async ({ page }) => {
+    await assertRedirect("/domestic", "/services", page);
+    await assertRedirect("/services/house-rewiring", "/services#house-rewiring", page);
+    await assertRedirect("/services/consumer-unit-upgrades", "/services#consumer-unit-upgrades", page);
   });
 
   test("static assets resolve", async ({ request }) => {

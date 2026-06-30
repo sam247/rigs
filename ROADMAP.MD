@@ -19,6 +19,7 @@
 - Published new hub pages: /services and /locations (primary internal linking targets for scalable service + location growth)
 - Built dedicated SEO landing pages: /services/fuse-board-upgrades and /services/eicr-certificates (service + FAQ schema, breadcrumb schema, internal linking)
 - Added new location landing pages: /electrician/st-albans and /electrician/watford (unique local content + schema)
+- Normalised service discovery around /services as the canonical hub, removed internal links to /domestic, and redirected /domestic permanently to /services
 
 ## Next
 

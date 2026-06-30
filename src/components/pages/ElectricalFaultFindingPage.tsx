@@ -61,7 +61,7 @@ const relatedServices = [
   {
     title: "House Rewiring",
     desc: "Full or partial rewires for older properties, extensions and renovations.",
-    href: "/services/house-rewiring",
+    href: "/services#house-rewiring",
     icon: MapPin,
   },
   {
@@ -73,7 +73,7 @@ const relatedServices = [
   {
     title: "Consumer Unit Upgrades",
     desc: "Modern RCBO/RCD protection and compliant installation for safer circuits.",
-    href: "/services/consumer-unit-upgrades",
+    href: "/services#consumer-unit-upgrades",
     icon: ShieldCheck,
   },
 ];
@@ -497,8 +497,8 @@ const ElectricalFaultFindingPage = () => {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Request a callback or quotation and we’ll arrange a fault finding visit. If something feels unsafe (burning smell, heat, buzzing
                 or repeated tripping), call us for immediate advice. You can also browse the{" "}
-                <Link href="/domestic" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
-                  domestic services hub
+                <Link href="/services" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  services hub
                 </Link>{" "}
                 for upgrades and preventative work.
               </p>
@@ -536,4 +536,3 @@ const ElectricalFaultFindingPage = () => {
 };
 
 export default ElectricalFaultFindingPage;
-

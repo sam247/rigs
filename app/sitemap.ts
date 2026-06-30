@@ -12,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "/",
     "/about",
-    "/domestic",
     "/gallery",
     "/testimonials",
     "/contact",
@@ -23,9 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/emergency-electrician",
     "/services/electrical-fault-finding",
     "/services/fuse-board-upgrades",
-    "/services/house-rewiring",
     "/services/eicr-certificates",
-    "/services/consumer-unit-upgrades",
   ];
 
   const blogRoutes = BLOG_POSTS.map((p) => p.href);

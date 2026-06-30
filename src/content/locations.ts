@@ -46,7 +46,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "House Rewiring",
-        href: "/services/house-rewiring",
+        href: "/services#house-rewiring",
         body: "Older wiring can show up as brittle insulation, unreliable sockets, or a patchwork of past alterations. If you’re renovating, extending, or you’ve been advised by an inspection report, we can plan a full or partial rewire in stages to minimise disruption while bringing everything up to current standards.",
       },
       {

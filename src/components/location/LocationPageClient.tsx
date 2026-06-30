@@ -36,7 +36,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
     {
       title: "House Rewiring",
       desc: "Full or partial rewires for older properties and renovations.",
-      href: "/services/house-rewiring",
+      href: "/services#house-rewiring",
       icon: Home,
     },
     {
@@ -154,7 +154,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
               </motion.div>
               <motion.p variants={fadeUp} custom={4} className="text-sm text-muted-foreground leading-relaxed mt-6">
                 Planning upgrades? You may also want to look at{" "}
-                <Link href="/services/consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/services#consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   consumer unit upgrades
                 </Link>{" "}
                 and our guide to{" "}
