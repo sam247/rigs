@@ -95,9 +95,10 @@ export default function LocationsHubPage() {
         <div className="container">
           <div className="mb-12">
             <div className="mb-6">
-              <h2 className="text-2xl md:text-3xl font-heading font-800 mb-3">County Coverage</h2>
+              <h2 className="text-2xl md:text-3xl font-heading font-800 mb-3">Areas We Cover</h2>
               <p className="text-muted-foreground leading-relaxed max-w-2xl">
-                These are our top-level county coverage areas. For now, just get in touch and we’ll advise on availability and the best next step.
+                If you're looking for an electrician across Hertfordshire, Bedfordshire or Buckinghamshire, start here. These are broader coverage
+                areas, so for now the best next step is to get in touch and we’ll confirm availability.
               </p>
             </div>
 
@@ -125,9 +126,9 @@ export default function LocationsHubPage() {
 
           <div>
             <div className="mb-6">
-              <h2 className="text-2xl md:text-3xl font-heading font-800 mb-3">Town Pages</h2>
+              <h2 className="text-2xl md:text-3xl font-heading font-800 mb-3">Local Area Pages</h2>
               <p className="text-muted-foreground leading-relaxed max-w-2xl">
-                Browse the live local area pages below for towns where we already have dedicated electrician coverage pages.
+                These are the towns where we already have dedicated local electrician pages with more detail on coverage, services and common types of work.
               </p>
             </div>
 

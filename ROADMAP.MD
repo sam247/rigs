@@ -24,6 +24,7 @@
 - Refined the /services hub card set by removing status labels, adding two extra placeholder services to keep the grid balanced, and aligning page content widths with the header container
 - Strengthened the About page with a real gallery image and a reusable customer review carousel sourced from the testimonial content
 - Expanded /locations with top-level county placeholder cards for Hertfordshire, Bedfordshire and Buckinghamshire, each using a Contact Us CTA until dedicated pages are built
+- Refined the /locations hub wording to feel more natural for homeowners and adjusted the header so the desktop nav aligns cleanly to the right with breathing room before the CTA buttons
 
 ## Next
 

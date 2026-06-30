@@ -39,22 +39,26 @@ const Header = () => {
           <img src={rigsLogo.src} alt="RIGS Electrical" className="h-9 md:h-11 w-auto" />
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              href={link.path}
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-muted ${
-                pathname === link.path ? "bg-muted text-primary" : "text-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex items-center justify-end flex-1 ml-8">
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                href={link.path}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-muted ${
+                  pathname === link.path ? "bg-muted text-primary" : "text-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="flex items-center gap-2 md:gap-3">
+          <div className="hidden lg:block w-4" />
+        </div>
+
+        <div className="flex items-center gap-2 md:gap-3 lg:ml-0">
           <Button asChild variant="secondary" className="font-heading font-700 bg-primary/10 text-primary hover:bg-primary/20" size="sm">
             <a href="tel:+447989205468"><Phone className="mr-1.5 h-4 w-4" /> Call Now</a>
           </Button>
