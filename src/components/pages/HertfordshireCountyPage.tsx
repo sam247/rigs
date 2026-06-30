@@ -2,14 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Car, Map, Phone, ShieldCheck, TrainFront } from "lucide-react";
+import { ArrowRight, Car, Home, Phone, Search, ShieldCheck, TrainFront, ZapOff } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import InteractiveCountyMap from "@/components/location/InteractiveCountyMap";
 import JsonLd from "@/components/JsonLd";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BLOG_POSTS } from "@/content/blogPosts";
 import {
   HERTFORDSHIRE_AMENITIES,
   HERTFORDSHIRE_COMMON_NEEDS,
@@ -32,13 +31,13 @@ const relatedServices = [
     title: "Emergency Electrician",
     desc: "Urgent domestic electrical faults and power loss across Hertfordshire.",
     href: "/services/emergency-electrician",
-    icon: ShieldCheck,
+    icon: ZapOff,
   },
   {
     title: "Electrical Fault Finding",
     desc: "Methodical testing for tripping circuits, dead sockets and intermittent problems.",
     href: "/services/electrical-fault-finding",
-    icon: Map,
+    icon: Search,
   },
   {
     title: "Fuse Board Upgrades",
@@ -47,10 +46,10 @@ const relatedServices = [
     icon: ShieldCheck,
   },
   {
-    title: "EICR Certificates",
-    desc: "Clear inspection reports and practical next steps for homeowners.",
-    href: "/services/eicr-certificates",
-    icon: ShieldCheck,
+    title: "House Rewiring",
+    desc: "Full or partial rewires for older properties, extensions and major renovations.",
+    href: "/services#house-rewiring",
+    icon: Home,
   },
 ];
 
@@ -144,6 +143,23 @@ export default function HertfordshireCountyPage() {
         </div>
       </section>
 
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
+            <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-4">
+              Towns We Cover Across Hertfordshire
+            </motion.h2>
+            <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed max-w-4xl mb-10">
+              The map is there as a quick visual guide, while the directory does the real job for customers: helping you get to your nearest live page or a
+              working enquiry link without any guesswork.
+            </motion.p>
+            <motion.div variants={fadeUp} custom={2}>
+              <InteractiveCountyMap towns={HERTFORDSHIRE_TOWNS} />
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28">
         <div className="container">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
@@ -151,10 +167,9 @@ export default function HertfordshireCountyPage() {
               Hertfordshire County Overview
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed max-w-4xl mb-10">
-              Hertfordshire combines market towns, cathedral-city streets, new-town neighbourhoods, village edges and dense commuter corridors into one of
-              the most varied domestic electrical environments in the region. That is exactly why the county page needs more than a thin location intro: the
-              work can range from updating older consumer units in period homes to fault finding on altered circuits in family properties that have grown in
-              stages over time.
+              Hertfordshire combines market towns, cathedral-city streets, new-town neighbourhoods, village edges and commuter corridors, so the homes we
+              work in vary a lot from one area to the next. This page is here to make coverage clear, show where the live town pages already exist, and help
+              customers get to the right enquiry route quickly.
             </motion.p>
             <div className="grid md:grid-cols-3 gap-6">
               {HERTFORDSHIRE_OVERVIEW.map((item, index) => (
@@ -172,33 +187,16 @@ export default function HertfordshireCountyPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-secondary">
-        <div className="container">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
-            <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-4">
-              Interactive Hertfordshire Map And Town Directory
-            </motion.h2>
-            <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed max-w-4xl mb-10">
-              Use the map to inspect towns across the county, then jump straight to a live local page or a working placeholder link for towns still in the
-              planned rollout. The directory includes every major Hertfordshire town, with the growth-sheet locations clearly marked.
-            </motion.p>
-            <motion.div variants={fadeUp} custom={2}>
-              <InteractiveCountyMap towns={HERTFORDSHIRE_TOWNS} />
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
               <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-4">
-                Local Service Highlights Across Hertfordshire
+                How We Help Across The County
               </motion.h2>
               <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed mb-8">
-                The county-wide enquiries that matter most tend to be practical homeowner jobs: fault finding, safety testing, upgrading old fuse boards and
-                making planned improvements safe before kitchens, bathrooms or extensions move forward.
+                Most county-wide enquiries come back to the same core homeowner needs: faults that need tracing properly, older fuse boards that need
+                updating, and inspections before people commit to buying, renovating or upgrading.
               </motion.p>
               <motion.div variants={fadeUp} custom={2} className="grid gap-4">
                 {HERTFORDSHIRE_SERVICE_HIGHLIGHTS.map((service) => (
@@ -219,11 +217,11 @@ export default function HertfordshireCountyPage() {
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
               <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-4">
-                Common Electrical Needs We See Across The County
+                Why Customers Enquire From Different Parts Of Hertfordshire
               </motion.h2>
               <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed mb-8">
-                The pattern changes by town, but the underlying theme is consistent: homes are being adapted for modern family life and the electrics need to
-                keep up safely.
+                The details vary by town, but the pattern is familiar: homes are being adapted for modern life and the electrics need to keep up safely,
+                clearly and without unnecessary disruption.
               </motion.p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {HERTFORDSHIRE_COMMON_NEEDS.map((item, index) => (
@@ -247,8 +245,12 @@ export default function HertfordshireCountyPage() {
           <div className="grid lg:grid-cols-2 gap-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
               <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-4">
-                County Amenities And Everyday Property Context
+                County Context
               </motion.h2>
+              <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed mb-8">
+                This is still a customer page first, so the main purpose here is reassurance: we understand the mix of properties, travel patterns and day-to-day
+                routines that shape domestic electrical work across the county.
+              </motion.p>
               <motion.div variants={fadeUp} custom={1} className="grid gap-4">
                 {HERTFORDSHIRE_AMENITIES.map((item) => (
                   <Card key={item.title} className="border-2 border-border">
@@ -263,8 +265,11 @@ export default function HertfordshireCountyPage() {
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}>
               <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-4">
-                Travel And Transport Across Hertfordshire
+                Access And Travel
               </motion.h2>
+              <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed mb-8">
+                Travel matters because customers want realistic appointment windows and dependable follow-up, especially around commuter schedules and busy family homes.
+              </motion.p>
               <motion.div variants={fadeUp} custom={1} className="grid gap-4">
                 {travelHighlights.map((item) => {
                   const Icon = item.icon;
@@ -319,34 +324,6 @@ export default function HertfordshireCountyPage() {
                         <p className="text-sm text-muted-foreground leading-relaxed mb-4">{service.desc}</p>
                         <span className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
                           View service <ArrowRight className="h-4 w-4" />
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-secondary">
-        <div className="container">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full">
-            <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-heading font-800 mb-10 text-center">
-              Related Articles
-            </motion.h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {BLOG_POSTS.slice(0, 3).map((post, index) => (
-                <motion.div key={post.href} variants={fadeUp} custom={index + 1}>
-                  <Link href={post.href} className="block h-full">
-                    <Card className="h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
-                      <CardContent className="p-6">
-                        <p className="text-xs text-muted-foreground mb-2">{post.dateLabel}</p>
-                        <h3 className="font-heading font-800 text-lg mb-2">{post.title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-4">{post.description}</p>
-                        <span className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
-                          Read article <ArrowRight className="h-4 w-4" />
                         </span>
                       </CardContent>
                     </Card>

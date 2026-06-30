@@ -28,6 +28,7 @@
 - Tweaked the /locations section titles to "Counties We Cover" and "Towns We Cover", and slightly increased the desktop nav-to-CTA spacing in the header
 - Built a dedicated `/electrician/hertfordshire` county page with county overview content, an interactive town directory map, live town-page links, and placeholder links for planned Hertfordshire locations from the growth sheet
 - Updated `/locations` so Hertfordshire now links to the live county page, added county backlinks on town pages, and extended sitemap/smoke coverage for the new route
+- Refined the Hertfordshire county page to feel more customer-first by simplifying the map/directory section, reducing page density, and removing the more SEO-style supporting article block
 
 ## Next
 
