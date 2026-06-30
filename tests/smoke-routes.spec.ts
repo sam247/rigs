@@ -15,6 +15,7 @@ const assertRedirect = async (from: string, to: string, page: any) => {
 
 test.describe("smoke", () => {
   test("key pages render", async ({ page }) => {
+    await assertRoute("/about", /Tring's Local Domestic Electrician/i, page);
     await assertRoute("/blog", /^Blog$/i, page);
     await assertRoute("/blog/consumer-unit-vs-fuse-box", /Consumer Unit vs Fuse Box/i, page);
     await assertRoute("/blog/why-do-my-electrics-keep-tripping", /Why Do My Electrics Keep Tripping/i, page);
