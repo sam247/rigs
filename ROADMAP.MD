@@ -37,8 +37,10 @@
 - Rewired hubs, county directory, local pages, redirects and sitemap so the new locations/services are all internally linked as live pages rather than contact placeholders
 - Expanded Playwright smoke coverage to cover every live growth-sheet service and location page, updated the legacy consumer-unit redirect, and verified the rollout with a production build plus smoke tests
 - Added GA4 sitewide tag injection and tracked lead form submit/success events for the homepage quick-quote and contact page forms, with Playwright coverage for the analytics flow
+- Completed the three-county strip on `/locations` by building dedicated county pages for `/electrician/bedfordshire` and `/electrician/buckinghamshire`, refactoring the county page system into a shared template, and replacing the remaining placeholder county CTAs with live county-page links
 
 ## Next
 
 - Generate the next growth plan now that the current service/location rollout is complete
 - Expand supporting content clusters around the new live services and locations using Search Console performance data
+- Build out the new Bedfordshire and Buckinghamshire town pages from the next growth tab, starting with the highest-intent towns linked from the new county pages

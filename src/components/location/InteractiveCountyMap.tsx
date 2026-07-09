@@ -1,30 +1,38 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import OpenStreetMapEmbed from "@/components/location/OpenStreetMapEmbed";
-import type { CountyTown } from "@/content/hertfordshireCounty";
+import type { CountyTown } from "@/content/countyCoverage";
 
 type Props = {
+  countyName: string;
   towns: CountyTown[];
+  map: {
+    bbox: [number, number, number, number];
+    marker: { lat: number; lon: number };
+    zoom: number;
+  };
 };
 
-export default function InteractiveCountyMap({ towns }: Props) {
+export default function InteractiveCountyMap({ countyName, towns, map }: Props) {
   const liveTowns = towns.filter((town) => town.status === "live");
   const plannedTowns = towns.filter((town) => town.status === "planned");
   const coverageTowns = towns.filter((town) => town.status === "coverage");
+  const detailedPagesTitle = liveTowns.length > 0 ? "Detailed town pages" : "County-linked towns";
+  const moreAreasTitle = `More ${countyName} areas`;
 
   return (
     <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.95fr)] gap-8 items-start">
       <Card className="border-2 border-border overflow-hidden">
         <CardContent className="p-6">
-          <h3 className="text-2xl font-heading font-800 mb-3">Hertfordshire Map</h3>
+          <h3 className="text-2xl font-heading font-800 mb-3">{countyName} Map</h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            A simple static map showing the towns we cover across Hertfordshire. Use the town links alongside it to go straight to the right page or enquiry route.
+            A simple static map showing the towns we cover across {countyName}. Use the town links alongside it to go straight to the right page or enquiry route.
           </p>
           <OpenStreetMapEmbed
-            title="Map of Hertfordshire"
-            bbox={[-0.8000, 51.6200, 0.1500, 52.1000]}
-            marker={{ lat: 51.8170, lon: -0.2400 }}
-            zoom={10}
+            title={`Map of ${countyName}`}
+            bbox={map.bbox}
+            marker={map.marker}
+            zoom={map.zoom}
             className="relative rounded-2xl overflow-hidden border border-border shadow-lg aspect-[4/3] bg-muted"
           />
         </CardContent>
@@ -39,8 +47,8 @@ export default function InteractiveCountyMap({ towns }: Props) {
         </div>
 
         <div className="grid gap-4">
-          <DirectoryGroup title="Detailed town pages" towns={liveTowns} />
-          {plannedTowns.length > 0 ? <DirectoryGroup title="More Hertfordshire areas" towns={plannedTowns} /> : null}
+          {liveTowns.length > 0 ? <DirectoryGroup title={detailedPagesTitle} towns={liveTowns} /> : null}
+          {plannedTowns.length > 0 ? <DirectoryGroup title={moreAreasTitle} towns={plannedTowns} /> : null}
           <DirectoryGroup title="Other towns we cover" towns={coverageTowns} />
         </div>
       </div>

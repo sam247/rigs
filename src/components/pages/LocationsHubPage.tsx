@@ -22,13 +22,13 @@ const countyPlaceholders = [
   },
   {
     name: "Bedfordshire",
-    blurb: "Home electrical repairs, upgrades and inspections across Bedfordshire.",
-    href: "/contact?service=Electrician%20Bedfordshire",
+    blurb: "County-wide page with town-directory coverage, Bedfordshire context and domestic electrician guidance across the county.",
+    href: "/electrician/bedfordshire",
   },
   {
     name: "Buckinghamshire",
-    blurb: "Trusted domestic electrician support across Buckinghamshire and nearby areas.",
-    href: "/contact?service=Electrician%20Buckinghamshire",
+    blurb: "County-wide page with town-directory coverage, Buckinghamshire context and domestic electrician guidance across the county.",
+    href: "/electrician/buckinghamshire",
   },
 ];
 
@@ -97,8 +97,7 @@ export default function LocationsHubPage() {
             <div className="mb-6">
               <h2 className="text-2xl md:text-3xl font-heading font-800 mb-3">Counties We Cover</h2>
               <p className="text-muted-foreground leading-relaxed max-w-2xl">
-                Start with the county that fits your area. Hertfordshire now has a dedicated county landing page, while Bedfordshire and Buckinghamshire
-                still use broader coverage placeholders until their own pages are built.
+                Start with the county that fits your area. All three counties now have dedicated county landing pages with a clearer route into local coverage.
               </p>
             </div>
 
@@ -115,7 +114,7 @@ export default function LocationsHubPage() {
                         {county.blurb}
                       </p>
                       <Link href={county.href} className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
-                        {county.name === "Hertfordshire" ? "View county page" : "Contact Us"} <ArrowRight className="h-4 w-4" />
+                        View county page <ArrowRight className="h-4 w-4" />
                       </Link>
                     </CardContent>
                   </Card>

@@ -9,6 +9,8 @@ const coreRoutes: Array<[string, RegExp]> = [
   ["/services", /Electrical Services in Hertfordshire/i],
   ["/locations", /Electrician Locations/i],
   ["/electrician/hertfordshire", /Electrician Hertfordshire/i],
+  ["/electrician/bedfordshire", /Electrician Bedfordshire/i],
+  ["/electrician/buckinghamshire", /Electrician Buckinghamshire/i],
 ];
 
 const serviceRoutes: Array<[string, RegExp]> = [
@@ -56,6 +58,7 @@ const assertRedirect = async (from: string, to: string, page: any) => {
 };
 
 test.describe("smoke", () => {
+  test.describe.configure({ mode: "serial" });
   test.setTimeout(120000);
 
   test("core pages render", async ({ page }) => {

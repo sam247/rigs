@@ -44,7 +44,7 @@ test.describe("form analytics", () => {
     await quickQuoteForm.getByPlaceholder("Service needed (e.g. rewire)").fill("Consumer unit replacement");
     await quickQuoteForm.getByRole("button", { name: /Get a Quote/i }).click();
 
-    await expect(page.getByText("Quote requested!")).toBeVisible();
+    await expect(page.getByText("Quote requested!", { exact: true })).toBeVisible();
 
     await expect
       .poll(async () => getTrackedEvents(page))
@@ -86,7 +86,7 @@ test.describe("form analytics", () => {
     await page.getByLabel("Message").fill("Please call me back about a quote.");
     await page.getByRole("button", { name: /Get a Quote/i }).click();
 
-    await expect(page.getByText("Quote requested!")).toBeVisible();
+    await expect(page.getByText("Quote requested!", { exact: true })).toBeVisible();
 
     await expect
       .poll(async () => getTrackedEvents(page))

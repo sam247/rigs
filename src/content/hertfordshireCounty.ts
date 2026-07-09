@@ -1,43 +1,33 @@
-export type CountyTownStatus = "live" | "planned" | "coverage";
-
-export type CountyTown = {
-  name: string;
-  href: string;
-  status: CountyTownStatus;
-  note: string;
-  x: number;
-  y: number;
-};
-
-const makeContactHref = (town: string) => `/contact?service=${encodeURIComponent(`Electrician ${town}`)}`;
+import type { CountyCoveragePageConfig, CountyTown } from "@/content/countyCoverage";
+import { makeCountyTownContactHref } from "@/content/countyCoverage";
 
 export const HERTFORDSHIRE_TOWNS: CountyTown[] = [
-  { name: "Baldock", href: makeContactHref("Baldock"), status: "coverage", note: "A-Z county coverage area.", x: 74, y: 24 },
-  { name: "Berkhamsted", href: makeContactHref("Berkhamsted"), status: "coverage", note: "A-Z county coverage area.", x: 17, y: 44 },
-  { name: "Bishop's Stortford", href: makeContactHref("Bishop's Stortford"), status: "coverage", note: "A-Z county coverage area.", x: 84, y: 34 },
+  { name: "Baldock", href: makeCountyTownContactHref("Baldock"), status: "coverage", note: "A-Z county coverage area.", x: 74, y: 24 },
+  { name: "Berkhamsted", href: makeCountyTownContactHref("Berkhamsted"), status: "coverage", note: "A-Z county coverage area.", x: 17, y: 44 },
+  { name: "Bishop's Stortford", href: makeCountyTownContactHref("Bishop's Stortford"), status: "coverage", note: "A-Z county coverage area.", x: 84, y: 34 },
   { name: "Borehamwood", href: "/electrician/borehamwood", status: "live", note: "Live town page with full local content.", x: 47, y: 76 },
-  { name: "Broxbourne", href: makeContactHref("Broxbourne"), status: "coverage", note: "A-Z county coverage area.", x: 73, y: 73 },
-  { name: "Buntingford", href: makeContactHref("Buntingford"), status: "coverage", note: "A-Z county coverage area.", x: 76, y: 42 },
-  { name: "Bushey", href: makeContactHref("Bushey"), status: "coverage", note: "A-Z county coverage area.", x: 35, y: 78 },
+  { name: "Broxbourne", href: makeCountyTownContactHref("Broxbourne"), status: "coverage", note: "A-Z county coverage area.", x: 73, y: 73 },
+  { name: "Buntingford", href: makeCountyTownContactHref("Buntingford"), status: "coverage", note: "A-Z county coverage area.", x: 76, y: 42 },
+  { name: "Bushey", href: makeCountyTownContactHref("Bushey"), status: "coverage", note: "A-Z county coverage area.", x: 35, y: 78 },
   { name: "Cheshunt", href: "/electrician/cheshunt", status: "live", note: "Live town page with full local content.", x: 66, y: 82 },
   { name: "Harpenden", href: "/electrician/harpenden", status: "live", note: "Live town page with full local content.", x: 41, y: 48 },
   { name: "Hatfield", href: "/electrician/hatfield", status: "live", note: "Live town page with full local content.", x: 55, y: 62 },
   { name: "Hemel Hempstead", href: "/electrician/hemel-hempstead", status: "live", note: "Live town page with full local content.", x: 27, y: 55 },
-  { name: "Hertford", href: makeContactHref("Hertford"), status: "coverage", note: "A-Z county coverage area.", x: 66, y: 60 },
+  { name: "Hertford", href: makeCountyTownContactHref("Hertford"), status: "coverage", note: "A-Z county coverage area.", x: 66, y: 60 },
   { name: "Hitchin", href: "/electrician/hitchin", status: "live", note: "Live town page with full local content.", x: 58, y: 30 },
-  { name: "Hoddesdon", href: makeContactHref("Hoddesdon"), status: "coverage", note: "A-Z county coverage area.", x: 70, y: 70 },
+  { name: "Hoddesdon", href: makeCountyTownContactHref("Hoddesdon"), status: "coverage", note: "A-Z county coverage area.", x: 70, y: 70 },
   { name: "Letchworth", href: "/electrician/letchworth", status: "live", note: "Live town page with full local content.", x: 66, y: 20 },
-  { name: "Potters Bar", href: makeContactHref("Potters Bar"), status: "coverage", note: "A-Z county coverage area.", x: 58, y: 84 },
-  { name: "Rickmansworth", href: makeContactHref("Rickmansworth"), status: "coverage", note: "A-Z county coverage area.", x: 22, y: 72 },
-  { name: "Royston", href: makeContactHref("Royston"), status: "coverage", note: "A-Z county coverage area.", x: 86, y: 18 },
-  { name: "Sawbridgeworth", href: makeContactHref("Sawbridgeworth"), status: "coverage", note: "A-Z county coverage area.", x: 84, y: 52 },
+  { name: "Potters Bar", href: makeCountyTownContactHref("Potters Bar"), status: "coverage", note: "A-Z county coverage area.", x: 58, y: 84 },
+  { name: "Rickmansworth", href: makeCountyTownContactHref("Rickmansworth"), status: "coverage", note: "A-Z county coverage area.", x: 22, y: 72 },
+  { name: "Royston", href: makeCountyTownContactHref("Royston"), status: "coverage", note: "A-Z county coverage area.", x: 86, y: 18 },
+  { name: "Sawbridgeworth", href: makeCountyTownContactHref("Sawbridgeworth"), status: "coverage", note: "A-Z county coverage area.", x: 84, y: 52 },
   { name: "St Albans", href: "/electrician/st-albans", status: "live", note: "Live town page with full local content.", x: 45, y: 58 },
   { name: "Stevenage", href: "/electrician/stevenage", status: "live", note: "Live town page with full local content.", x: 61, y: 42 },
   { name: "Tring", href: "/electrician/tring", status: "live", note: "Live town page with full local content.", x: 10, y: 30 },
-  { name: "Ware", href: makeContactHref("Ware"), status: "coverage", note: "A-Z county coverage area.", x: 71, y: 58 },
+  { name: "Ware", href: makeCountyTownContactHref("Ware"), status: "coverage", note: "A-Z county coverage area.", x: 71, y: 58 },
   { name: "Watford", href: "/electrician/watford", status: "live", note: "Live town page with full local content.", x: 31, y: 72 },
   { name: "Welwyn Garden City", href: "/electrician/welwyn-garden-city", status: "live", note: "Live town page with full local content.", x: 57, y: 52 },
-  { name: "Waltham Cross", href: makeContactHref("Waltham Cross"), status: "coverage", note: "A-Z county coverage area.", x: 68, y: 88 },
+  { name: "Waltham Cross", href: makeCountyTownContactHref("Waltham Cross"), status: "coverage", note: "A-Z county coverage area.", x: 68, y: 88 },
 ];
 
 export const HERTFORDSHIRE_LIVE_TOWNS = HERTFORDSHIRE_TOWNS.filter((town) => town.status === "live");
@@ -124,18 +114,21 @@ export const HERTFORDSHIRE_AMENITIES = [
   },
 ];
 
-export const HERTFORDSHIRE_TRAVEL = [
+export const HERTFORDSHIRE_TRAVEL: CountyCoveragePageConfig["travel"] = [
   {
     title: "Rail-connected county",
     body: "Mainline routes into London from Watford, St Albans, Harpenden, Hatfield, Welwyn Garden City, Stevenage and Hitchin make access straightforward for homeowners who need appointments planned around commuting windows.",
+    icon: "TrainFront",
   },
   {
     title: "Road access across the county",
     body: "The M1, A1(M), M25 and A41 corridors help connect west, central and south Hertfordshire, while east-west travel can still be slower through town centres and village roads. Planning routes properly matters for responsive call-outs.",
+    icon: "Car",
   },
   {
     title: "County-wide coverage reassurance",
     body: "Whether you are in a larger urban centre, a market town or a village edge property, the county page gives you a quick route to detailed local pages and broader county coverage links where you need them.",
+    icon: "MapPin",
   },
 ];
 
@@ -162,6 +155,42 @@ export const HERTFORDSHIRE_FAQ = [
   },
   {
     q: "Can I use this page on mobile to find my nearest town quickly?",
-    a: "Yes. The county directory and interactive map are designed to work across desktop, tablet and mobile so you can jump to live pages or placeholder town enquiries from any device.",
+    a: "Yes. The county directory and interactive map are designed to work across desktop, tablet and mobile so you can jump to detailed town pages or broader county enquiry routes from any device.",
   },
 ];
+
+export const HERTFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
+  countyName: "Hertfordshire",
+  slug: "hertfordshire",
+  title: "Electrician Hertfordshire",
+  metaTitle: "Electrician Hertfordshire | Town Directory, Map & Areas Covered | RIGS Electrical",
+  metaDescription:
+    "Explore Hertfordshire electrical coverage with a county-wide town directory, interactive map, live local pages and broader local domestic electrician coverage.",
+  heroIntro:
+    "Need a reliable electrician anywhere in Hertfordshire? This county page brings together the detailed town pages already available and broader county coverage links so homeowners can quickly find the right next step. Whether you are dealing with tripping electrics in an older property, planning a consumer unit upgrade, or arranging an EICR before a move, the same domestic-first approach runs across every area we cover.",
+  townsIntro:
+    "The map is there as a quick visual guide, while the directory does the real job for customers: helping you get to your nearest town page or a working enquiry link without any guesswork.",
+  overviewIntro:
+    "Hertfordshire combines market towns, cathedral-city streets, new-town neighbourhoods, village edges and commuter corridors, so the homes we work in vary a lot from one area to the next. This page is here to make coverage clear, show which areas already have a detailed town page, and help customers get to the right enquiry route quickly.",
+  howWeHelpIntro:
+    "Most county-wide enquiries come back to the same core homeowner needs: faults that need tracing properly, older fuse boards that need updating, and inspections before people commit to buying, renovating or upgrading.",
+  whyCustomersIntro:
+    "The details vary by town, but the pattern is familiar: homes are being adapted for modern life and the electrics need to keep up safely, clearly and without unnecessary disruption.",
+  countyContextIntro:
+    "This is still a customer page first, so the main purpose here is reassurance: we understand the mix of properties, travel patterns and day-to-day routines that shape domestic electrical work across the county.",
+  ctaTitle: "Need An Electrician Anywhere In Hertfordshire?",
+  ctaBody:
+    "Tell us what you need and we will point you to the right town page, talk through the job, and come back with clear advice. If the work is urgent, call now.",
+  map: {
+    bbox: [-0.8, 51.62, 0.15, 52.1],
+    marker: { lat: 51.817, lon: -0.24 },
+    zoom: 10,
+  },
+  towns: HERTFORDSHIRE_TOWNS,
+  overview: HERTFORDSHIRE_OVERVIEW,
+  serviceHighlights: HERTFORDSHIRE_SERVICE_HIGHLIGHTS,
+  commonNeeds: HERTFORDSHIRE_COMMON_NEEDS,
+  amenities: HERTFORDSHIRE_AMENITIES,
+  travel: HERTFORDSHIRE_TRAVEL,
+  faq: HERTFORDSHIRE_FAQ,
+};

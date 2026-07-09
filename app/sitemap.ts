@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services",
     "/locations",
     "/electrician/hertfordshire",
+    "/electrician/bedfordshire",
+    "/electrician/buckinghamshire",
     "/services/emergency-electrician",
     "/services/electrical-fault-finding",
     "/services/fuse-board-upgrades",
