@@ -36,6 +36,7 @@
 - Published the remaining planned service landing pages via a shared SEO template: `/services/outdoor-lighting`, `/services/house-rewiring`, `/services/smart-home-installation`, `/services/security-lighting`, `/services/electrical-inspections`, `/services/consumer-unit-replacement`, `/services/electric-shower-installation`, `/services/kitchen-electrics`, `/services/landlord-electrical-certificates`
 - Rewired hubs, county directory, local pages, redirects and sitemap so the new locations/services are all internally linked as live pages rather than contact placeholders
 - Expanded Playwright smoke coverage to cover every live growth-sheet service and location page, updated the legacy consumer-unit redirect, and verified the rollout with a production build plus smoke tests
+- Added GA4 sitewide tag injection and tracked lead form submit/success events for the homepage quick-quote and contact page forms, with Playwright coverage for the analytics flow
 
 ## Next
 

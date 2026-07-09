@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/layout/Layout";
+import { trackFormSubmit, trackFormSuccess } from "@/lib/gtag";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -36,6 +37,7 @@ const ContactPage = () => {
     const form = e.currentTarget;
     const fd = new FormData(form);
     if (fd.get("_gotcha")) return;
+    trackFormSubmit({ formName: "contact_page", formLocation: "/contact" });
     setSubmitting(true);
     try {
       const res = await fetch("https://formbold.com/s/9BaZ2", {
@@ -44,6 +46,7 @@ const ContactPage = () => {
         body: fd,
       });
       if (!res.ok) throw new Error("Request failed");
+      trackFormSuccess({ formName: "contact_page", formLocation: "/contact" });
       toast({ title: "Quote requested!", description: "We'll be in touch as soon as possible." });
       form.reset();
     } catch {

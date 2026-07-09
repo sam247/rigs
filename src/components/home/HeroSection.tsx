@@ -7,6 +7,7 @@ import { Zap, ArrowRight, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { trackFormSubmit, trackFormSuccess } from "@/lib/gtag";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -26,7 +27,8 @@ const HeroSection = () => {
     const form = e.currentTarget;
     const fd = new FormData(form);
     if (fd.get("_gotcha")) return;
-    fd.append("_source", "Hero Quick Quote");
+    fd.set("_source", "Hero Quick Quote");
+    trackFormSubmit({ formName: "hero_quick_quote", formLocation: "homepage_hero" });
     setSubmitting(true);
     try {
       const res = await fetch("https://formbold.com/s/9BaZ2", {
@@ -35,6 +37,7 @@ const HeroSection = () => {
         body: fd,
       });
       if (!res.ok) throw new Error("Request failed");
+      trackFormSuccess({ formName: "hero_quick_quote", formLocation: "homepage_hero" });
       toast({ title: "Quote requested!", description: "We'll be in touch shortly." });
       form.reset();
     } catch {

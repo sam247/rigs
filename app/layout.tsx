@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Providers from "./providers";
 import "../src/index.css";
 import JsonLd from "@/components/JsonLd";
+import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rigselectrical.co.uk"),
@@ -60,6 +62,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-GB">
       <body>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <JsonLd data={orgSchema} />
         <JsonLd data={websiteSchema} />
         <Providers>{children}</Providers>
