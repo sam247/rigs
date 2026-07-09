@@ -32,8 +32,12 @@
 - Replaced the Hertfordshire county page's map section with a static county map treatment and removed internal rollout wording like "live pages" from customer-facing copy and CTA messaging
 - Swapped the Hertfordshire county map to the same normal embedded map style used elsewhere on the site and removed the SEO-leaning detailed-town-pages card from the closing CTA section
 - Simplified the Hertfordshire town directory by removing repeated link suffix labels and masked the OpenStreetMap embed footer styling for a cleaner presentation across map blocks
+- Published the remaining Hertfordshire location pages from the growth sheet: `/electrician/hemel-hempstead`, `/electrician/stevenage`, `/electrician/hitchin`, `/electrician/harpenden`, `/electrician/hatfield`, `/electrician/welwyn-garden-city`, `/electrician/cheshunt`, `/electrician/borehamwood`, `/electrician/letchworth`
+- Published the remaining planned service landing pages via a shared SEO template: `/services/outdoor-lighting`, `/services/house-rewiring`, `/services/smart-home-installation`, `/services/security-lighting`, `/services/electrical-inspections`, `/services/consumer-unit-replacement`, `/services/electric-shower-installation`, `/services/kitchen-electrics`, `/services/landlord-electrical-certificates`
+- Rewired hubs, county directory, local pages, redirects and sitemap so the new locations/services are all internally linked as live pages rather than contact placeholders
+- Expanded Playwright smoke coverage to cover every live growth-sheet service and location page, updated the legacy consumer-unit redirect, and verified the rollout with a production build plus smoke tests
 
 ## Next
 
-- Create dedicated landing pages for remaining high-intent domestic services (rewires, consumer units and additional priority services)
-- Add programmatic location pages and surface service links per location
+- Generate the next growth plan now that the current service/location rollout is complete
+- Expand supporting content clusters around the new live services and locations using Search Console performance data

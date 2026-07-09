@@ -47,7 +47,7 @@ const relatedServices = [
   {
     title: "House Rewiring",
     desc: "Full or partial rewires for older properties, extensions and major renovations.",
-    href: "/services#house-rewiring",
+    href: "/services/house-rewiring",
     icon: Home,
   },
 ];
@@ -120,8 +120,8 @@ export default function HertfordshireCountyPage() {
               Electrician Hertfordshire
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Need a reliable electrician anywhere in Hertfordshire? This county page brings together the detailed town pages already available, the next
-              Hertfordshire locations from the growth roadmap, and broader county coverage links so homeowners can quickly find the right next step.
+              Need a reliable electrician anywhere in Hertfordshire? This county page brings together the detailed town pages already available and
+              broader county coverage links so homeowners can quickly find the right next step.
               Whether you are dealing with tripping electrics in an older property, planning a consumer unit upgrade, or arranging an EICR before a move,
               the same domestic-first approach runs across every area we cover.
             </motion.p>
@@ -381,7 +381,7 @@ export default function HertfordshireCountyPage() {
               {[
                 {
                   title: "More areas covered",
-                  desc: `${HERTFORDSHIRE_PLANNED_TOWNS.length} more Hertfordshire areas are available through the county enquiry route while their own pages are still being added.`,
+                  desc: "The county page still supports broader Hertfordshire coverage beyond the detailed town pages, so homeowners always have a clear enquiry route.",
                 },
                 {
                   title: "County-wide coverage",

@@ -8,6 +8,10 @@ type Props = {
 };
 
 export default function InteractiveCountyMap({ towns }: Props) {
+  const liveTowns = towns.filter((town) => town.status === "live");
+  const plannedTowns = towns.filter((town) => town.status === "planned");
+  const coverageTowns = towns.filter((town) => town.status === "coverage");
+
   return (
     <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.95fr)] gap-8 items-start">
       <Card className="border-2 border-border overflow-hidden">
@@ -30,14 +34,14 @@ export default function InteractiveCountyMap({ towns }: Props) {
         <div>
           <h3 className="text-2xl font-heading font-800 mb-3">Town Directory</h3>
           <p className="text-muted-foreground leading-relaxed">
-            Every town name is linked. Some towns already have a full local page, while others route to a working enquiry path so there are no dead ends.
+            Every town name is linked so you can jump straight to a detailed local page or a useful county-level route without hitting a dead end.
           </p>
         </div>
 
         <div className="grid gap-4">
-          <DirectoryGroup title="Detailed town pages" towns={towns.filter((town) => town.status === "live")} />
-          <DirectoryGroup title="More Hertfordshire areas" towns={towns.filter((town) => town.status === "planned")} />
-          <DirectoryGroup title="Other towns we cover" towns={towns.filter((town) => town.status === "coverage")} />
+          <DirectoryGroup title="Detailed town pages" towns={liveTowns} />
+          {plannedTowns.length > 0 ? <DirectoryGroup title="More Hertfordshire areas" towns={plannedTowns} /> : null}
+          <DirectoryGroup title="Other towns we cover" towns={coverageTowns} />
         </div>
       </div>
     </div>

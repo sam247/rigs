@@ -61,7 +61,7 @@ const relatedServices = [
   {
     title: "House Rewiring",
     desc: "Full or partial rewires for older properties, extensions and renovations.",
-    href: "/services#house-rewiring",
+    href: "/services/house-rewiring",
     icon: MapPin,
   },
   {
@@ -71,9 +71,9 @@ const relatedServices = [
     icon: Search,
   },
   {
-    title: "Consumer Unit Upgrades",
+    title: "Consumer Unit Replacement",
     desc: "Modern RCBO/RCD protection and compliant installation for safer circuits.",
-    href: "/services#consumer-unit-upgrades",
+    href: "/services/consumer-unit-replacement",
     icon: ShieldCheck,
   },
 ];

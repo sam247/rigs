@@ -36,7 +36,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
     {
       title: "House Rewiring",
       desc: "Full or partial rewires for older properties and renovations.",
-      href: "/services#house-rewiring",
+      href: "/services/house-rewiring",
       icon: Home,
     },
     {
@@ -154,8 +154,8 @@ export default function LocationPageClient({ location }: { location: LocationPag
               </motion.div>
               <motion.p variants={fadeUp} custom={4} className="text-sm text-muted-foreground leading-relaxed mt-6">
                 Planning upgrades? You may also want to look at{" "}
-                <Link href="/services#consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
-                  consumer unit upgrades
+                <Link href="/services/consumer-unit-replacement" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  consumer unit replacement
                 </Link>{" "}
                 and our guide to{" "}
                 <Link href="/blog/consumer-unit-vs-fuse-box" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
@@ -357,7 +357,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
                 <Link href="/electrician/hertfordshire" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   Hertfordshire electrician page
                 </Link>{" "}
-                to browse live town pages, planned locations and wider county coverage.
+                to browse town pages and wider county coverage.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" className="font-heading font-700">

@@ -65,7 +65,7 @@ const relatedServices = [
   {
     title: "House Rewiring",
     desc: "Full or partial rewires for older properties, extensions and renovations.",
-    href: "/services#house-rewiring",
+    href: "/services/house-rewiring",
     icon: MapPin,
   },
   {
@@ -75,9 +75,9 @@ const relatedServices = [
     icon: Search,
   },
   {
-    title: "Consumer Unit Upgrades",
+    title: "Consumer Unit Replacement",
     desc: "Modern RCBO/RCD protection and compliant installation for peace of mind.",
-    href: "/services#consumer-unit-upgrades",
+    href: "/services/consumer-unit-replacement",
     icon: ShieldCheck,
   },
 ];
@@ -210,11 +210,11 @@ const EmergencyElectricianPage = () => {
               </motion.div>
               <motion.p variants={fadeUp} custom={2} className="text-sm text-muted-foreground mt-6 leading-relaxed">
                 If you suspect your fuse board is outdated or your wiring is struggling to cope, we’ll advise on longer-term fixes such as{" "}
-                <Link href="/services#consumer-unit-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
-                  consumer unit upgrades
+                <Link href="/services/consumer-unit-replacement" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  consumer unit replacement
                 </Link>{" "}
                 or{" "}
-                <Link href="/services#house-rewiring" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/services/house-rewiring" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   house rewiring
                 </Link>
                 .

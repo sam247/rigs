@@ -41,7 +41,7 @@ const services = [
     title: "Full & Partial Rewires",
     desc: "Complete house rewires and partial rewires for older properties — bringing your home's electrics up to current 18th Edition standards.",
     id: "house-rewiring",
-    ctaHref: "/services#house-rewiring",
+    ctaHref: "/services/house-rewiring",
     ctaLabel: "View Service",
   },
   {
@@ -50,7 +50,7 @@ const services = [
     desc: "Replace outdated fuse boxes with modern dual-RCD consumer units. Essential for home safety and insurance compliance.",
     id: "consumer-unit-upgrades",
     aliases: ["fuse-board-upgrades"],
-    ctaHref: "/services#consumer-unit-upgrades",
+    ctaHref: "/services/consumer-unit-replacement",
     ctaLabel: "View Service",
   },
   { icon: Lightbulb, title: "Lighting Installations", desc: "Indoor lighting design — LED downlights, pendants, dimmers, smart lighting and full lighting refits for any room.", id: "lighting-installations" },

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/content/blogPosts";
 import { LOCATION_PAGES } from "@/content/locations";
+import { DYNAMIC_SERVICE_ROUTES } from "@/content/serviceLandingPages";
 
 export const dynamic = "force-static";
 
@@ -27,9 +28,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogRoutes = BLOG_POSTS.map((p) => p.href);
+  const serviceRoutes = DYNAMIC_SERVICE_ROUTES;
   const locationRoutes = Object.keys(LOCATION_PAGES).map((slug) => `/electrician/${slug}`);
 
-  const urls = [...staticRoutes, ...blogRoutes, ...locationRoutes];
+  const urls = [...staticRoutes, ...serviceRoutes, ...blogRoutes, ...locationRoutes];
 
   return urls.map((path) => ({
     url: `${baseUrl}${path === "/" ? "" : path}`,

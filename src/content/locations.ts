@@ -46,7 +46,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "House Rewiring",
-        href: "/services#house-rewiring",
+        href: "/services/house-rewiring",
         body: "Older wiring can show up as brittle insulation, unreliable sockets, or a patchwork of past alterations. If you’re renovating, extending, or you’ve been advised by an inspection report, we can plan a full or partial rewire in stages to minimise disruption while bringing everything up to current standards.",
       },
       {
@@ -241,6 +241,573 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       { q: "Can you do EICR inspections for homeowners?", a: "Yes. An EICR is ideal if you want to understand your home’s electrical safety, especially before renovations or after recurring faults." },
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
       { q: "How do I get a quote?", a: "Send details of what you need (and photos if helpful). We’ll advise the next step and provide a clear quote." },
+    ],
+  },
+  "hemel-hempstead": {
+    slug: "hemel-hempstead",
+    name: "Hemel Hempstead",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.55, 51.71, -0.4, 51.79],
+      marker: { lat: 51.752, lon: -0.471 },
+    },
+    heroIntro:
+      "Looking for a reliable electrician in Hemel Hempstead? RIGS Electrical helps homeowners with safe, tidy domestic electrical work across Hemel Hempstead, Boxmoor, Apsley and nearby areas. Whether you are dealing with repeated tripping, an older fuse board, or planning upgrades as part of a kitchen, extension or home improvement project, you can get practical advice from a local domestic electrician who works in lived-in homes every day.",
+    servicesIntro:
+      "Hemel Hempstead homes range from older roads and family semis to New Town layouts, later extensions and converted garages, so the right electrical solution often depends on how the property has evolved over time.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If something feels unsafe, power has gone off, or the board will not reset, we can make the installation safe first and then diagnose the actual cause properly.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Intermittent faults, dead sockets and nuisance trips need proper testing rather than guesswork, especially in homes with a mix of older and newer alterations.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "A lot of Hemel Hempstead homes still benefit from clearer, safer circuit protection when kitchen upgrades, showers or later extensions have outgrown the original board.",
+      },
+      {
+        title: "House Rewiring",
+        href: "/services/house-rewiring",
+        body: "If the wiring is older, patchy or holding back a wider renovation, we can advise whether a staged rewire or a larger upgrade is the best route.",
+      },
+    ],
+    commonProblems: [
+      { title: "Repeated tripping", desc: "Trips caused by ageing circuits, faulty appliances, damp on outside feeds or overloaded rooms." },
+      { title: "Older fuse boards", desc: "Boards that lack modern protection or have become cramped after years of electrical additions." },
+      { title: "Extension-related alterations", desc: "Kitchens, utility spaces and rear extensions that need clearer circuit planning and safer protection." },
+      { title: "Garden and garage supplies", desc: "External electrics and outbuilding feeds that have deteriorated or no longer feel reliable." },
+      { title: "Dead sockets and loose accessories", desc: "Common in busy family spaces where older fittings have seen years of wear." },
+      { title: "Pre-renovation uncertainty", desc: "Homeowners wanting to know what needs upgrading before bigger decorative work begins." },
+    ],
+    whyChooseIntro:
+      "A lot of domestic electrical work in Hemel Hempstead comes back to making older layouts work properly for modern life. We focus on homeowner jobs, explain the safest next step clearly, and keep disruption under control where work is being done in occupied rooms.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "We work on family homes, kitchens, lighting, consumer units and household circuits rather than generic trade work." },
+      { title: "Useful upgrade advice", desc: "Clear guidance on what needs doing now versus what can be planned alongside future home improvements." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Hemel Hempstead and surrounding Hertfordshire towns with tidy, homeowner-friendly workmanship." },
+    ],
+    areasCovered: {
+      primary: ["Hemel Hempstead"],
+      villages: ["Boxmoor", "Apsley", "Leverstock Green", "Nash Mills"],
+      nearby: ["Berkhamsted", "Kings Langley", "St Albans", "Harpenden"],
+    },
+    faq: [
+      { q: "Do you cover all of Hemel Hempstead?", a: "Yes. We cover Hemel Hempstead itself plus nearby neighbourhoods and surrounding areas across this part of Hertfordshire." },
+      { q: "Can you help with older fuse boards and repeated tripping?", a: "Yes. That is one of the most common reasons homeowners contact us. We can test the fault properly and advise whether repair, consumer unit replacement or wider upgrade work makes most sense." },
+      { q: "Do you handle domestic upgrades as well as repairs?", a: "Yes. We carry out repairs, fault finding, lighting work, inspections, consumer unit changes and larger upgrade projects for homeowners." },
+      { q: "Can I book an inspection before renovating?", a: "Yes. If you are planning a kitchen, extension or wider refurbishment, we can inspect the electrics and help you prioritise the right work early." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  stevenage: {
+    slug: "stevenage",
+    name: "Stevenage",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.28, 51.86, -0.14, 51.94],
+      marker: { lat: 51.902, lon: -0.202 },
+    },
+    heroIntro:
+      "Need a dependable electrician in Stevenage? RIGS Electrical carries out domestic electrical repairs, upgrades and inspections for homeowners across Stevenage and nearby areas. From tripping circuits and failed sockets to consumer unit work and pre-renovation checks, you get practical help from a local domestic electrician who understands the mix of original New Town layouts, later refurbishments and family-home alterations found across this part of Hertfordshire.",
+    servicesIntro:
+      "Stevenage homes often involve reworked kitchens, converted garages, shower upgrades and altered consumer units, so a clear view of the overall installation matters just as much as the immediate job.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "For urgent power loss, hot accessories or persistent tripping, we make the situation safe first and then identify the cause without guesswork.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Useful where faults appear random, a circuit only trips under load, or several alterations over the years have made the layout harder to understand.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "If the board is dated, awkward to isolate, or no longer suited to modern kitchen and shower demand, we can advise on a safer replacement.",
+      },
+      {
+        title: "Electrical Inspections",
+        href: "/services/electrical-inspections",
+        body: "Ideal before refurbishments, house purchases or larger upgrade work when you want to understand what is safe and what needs planning.",
+      },
+    ],
+    commonProblems: [
+      { title: "Altered kitchen circuits", desc: "Later kitchen changes and appliance upgrades that have outgrown the original electrical layout." },
+      { title: "Consumer unit confusion", desc: "Boards with unclear labelling or mixed old and new work that make faults harder to isolate." },
+      { title: "Shower and immersion issues", desc: "High-load circuits that need proper testing, particularly in older family homes." },
+      { title: "Socket and lighting faults", desc: "Dead points, flickering circuits and loose accessories in busy household rooms." },
+      { title: "Extension or conversion electrics", desc: "Garage conversions and additional rooms that need clearer integration with the main installation." },
+      { title: "Pre-purchase concerns", desc: "Buyers wanting a clearer view before committing to larger improvements." },
+    ],
+    whyChooseIntro:
+      "A good chunk of domestic work in Stevenage is about making earlier layouts work better for how the property is used now. We keep the advice practical, prioritise safety clearly and carry out the work neatly in occupied homes.",
+    whyChoosePoints: [
+      { title: "Homeowner-first advice", desc: "Straight answers about what needs doing urgently and what can be planned alongside later work." },
+      { title: "Domestic-only focus", desc: "Household circuits, kitchens, lighting, boards, inspections and electrical troubleshooting." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Stevenage and nearby Hertfordshire towns with tidy workmanship and clear communication." },
+    ],
+    areasCovered: {
+      primary: ["Stevenage"],
+      villages: ["Knebworth", "Aston", "Walkern", "Codicote"],
+      nearby: ["Hitchin", "Letchworth", "Welwyn Garden City", "Hertford"],
+    },
+    faq: [
+      { q: "Do you cover all of Stevenage and nearby areas?", a: "Yes. We cover Stevenage plus nearby villages and surrounding Hertfordshire towns where needed." },
+      { q: "Can you help with tripping consumer units and older electrical layouts?", a: "Yes. We regularly test and repair installations where several generations of changes have made the electrics harder to understand or less reliable." },
+      { q: "Do you carry out inspections before renovations?", a: "Yes. An inspection can be the best first step before kitchen work, room conversions or wider electrical upgrades." },
+      { q: "Do you only handle domestic work?", a: "Yes. RIGS Electrical focuses on homeowners and domestic electrical jobs rather than commercial work." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  hitchin: {
+    slug: "hitchin",
+    name: "Hitchin",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.36, 51.92, -0.22, 51.98],
+      marker: { lat: 51.947, lon: -0.284 },
+    },
+    heroIntro:
+      "Looking for a trusted electrician in Hitchin? RIGS Electrical helps homeowners across Hitchin and nearby villages with safe, tidy domestic electrical work, from urgent faults and failed sockets to rewiring advice, consumer unit upgrades and EICR inspections. If you want practical help from a local domestic electrician who understands the mix of period homes, terraced streets and modern housing around Hitchin, we are here to help.",
+    servicesIntro:
+      "In Hitchin, the right solution often depends on whether the property has retained older wiring layouts, been extended over time, or needs planning ahead of a renovation or move.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If a circuit trips repeatedly, something smells hot, or part of the home has lost power, we can make things safe and test the fault properly.",
+      },
+      {
+        title: "House Rewiring",
+        href: "/services/house-rewiring",
+        body: "Older homes and renovation projects often need more than piecemeal repairs, and we can advise when staged rewiring is the sensible option.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "An EICR is a useful starting point if you want a clearer picture of an older installation before buying, selling or improving the property.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "Where the board is dated or awkward to live with, a replacement can improve safety and make future electrical work easier to manage.",
+      },
+    ],
+    commonProblems: [
+      { title: "Older wiring layouts", desc: "Period homes and older terraces where the installation has built up through several generations of changes." },
+      { title: "Fuse boards due for replacement", desc: "Outdated protection that makes faults harder to trace and modern demand harder to support." },
+      { title: "Renovation-led upgrades", desc: "Homeowners improving kitchens, bathrooms and living spaces who need a clearer electrical plan." },
+      { title: "Intermittent lighting and socket faults", desc: "Loose connections and ageing accessories in lived-in rooms." },
+      { title: "Inspection concerns before moving", desc: "Uncertainty around what is safe and what work should be budgeted for after purchase." },
+      { title: "Garden and external electrics", desc: "Outside circuits that have degraded over time or need upgrading alongside wider work." },
+    ],
+    whyChooseIntro:
+      "Hitchin properties can be charming, but older domestic electrics often need careful, methodical work rather than rushed assumptions. We focus on residential jobs, explain options clearly and help homeowners plan safely around both urgent repairs and bigger upgrades.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "Home electrics, boards, inspections, rewires, lighting and fault finding completed with homeowners in mind." },
+      { title: "Clear planning for older homes", desc: "Practical guidance on what can be repaired, what should be upgraded and what can be staged." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Hitchin and nearby Hertfordshire towns with tidy workmanship and straightforward quoting." },
+    ],
+    areasCovered: {
+      primary: ["Hitchin"],
+      villages: ["Ickleford", "St Ippolyts", "Pirton", "Preston"],
+      nearby: ["Letchworth", "Stevenage", "Harpenden", "Luton"],
+    },
+    faq: [
+      { q: "Do you cover Hitchin and nearby villages?", a: "Yes. We cover Hitchin itself plus nearby villages and surrounding Hertfordshire towns where needed." },
+      { q: "Can you help with older wiring and fuse boards?", a: "Yes. Older domestic electrics are a common reason homeowners contact us. We can inspect, test and advise on the safest next step." },
+      { q: "Do you handle rewires as well as repairs?", a: "Yes. We carry out fault finding and repairs, but also advise on partial or full rewiring where the condition of the installation makes that the better long-term option." },
+      { q: "Can I book an EICR before buying or renovating?", a: "Yes. An EICR is a very useful way to understand what is safe, what needs attention and how to plan future electrical work sensibly." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  harpenden: {
+    slug: "harpenden",
+    name: "Harpenden",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.4, 51.79, -0.3, 51.84],
+      marker: { lat: 51.816, lon: -0.351 },
+    },
+    heroIntro:
+      "Need a reliable electrician in Harpenden? RIGS Electrical helps homeowners across Harpenden and nearby areas with careful domestic electrical work, from fault finding and inspections to larger upgrades such as consumer unit replacement, rewiring advice and exterior lighting improvements. If you want clear communication and tidy work from a local domestic electrician, we are here to help.",
+    servicesIntro:
+      "Harpenden homes often involve a mix of period details, larger family-house upgrades and later garden or extension work, so the electrics need to be planned around both character and modern demand.",
+    serviceBlocks: [
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Useful where faults are intermittent, one area of the home behaves differently to another, or earlier changes have made the installation harder to understand.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "Many homeowner upgrades start with a safer, clearer main board so later kitchen, shower or lighting work can be planned properly.",
+      },
+      {
+        title: "House Rewiring",
+        href: "/services/house-rewiring",
+        body: "Where older wiring is holding back wider improvements, we can advise on staged rewiring or more substantial electrical upgrade work.",
+      },
+      {
+        title: "Outdoor Lighting Installation",
+        href: "/services/outdoor-lighting",
+        body: "Garden, pathway and entrance lighting can make a big difference around larger family homes, side access and evening use of outdoor space.",
+      },
+    ],
+    commonProblems: [
+      { title: "Older property upgrades", desc: "Homes that need electrical improvements without losing sight of how the property is actually used day to day." },
+      { title: "Consumer unit replacement planning", desc: "Board upgrades that sit alongside larger improvement works or recurring nuisance trips." },
+      { title: "Kitchen and extension demand", desc: "Home improvements that need clearer circuit planning and better protection." },
+      { title: "Garden and exterior lighting", desc: "Outdoor electrics, side access lighting and weather-exposed circuits that need tidy installation." },
+      { title: "Inspection-led decision making", desc: "Homeowners wanting a clear view before committing to larger upgrades." },
+      { title: "Socket and lighting wear", desc: "Busy family rooms where fittings have aged or loosened over time." },
+    ],
+    whyChooseIntro:
+      "Domestic electrical work in Harpenden is often about getting the detail right: safe upgrades, careful fault finding and improvements that fit well with how the home is used. We keep the advice practical and the workmanship tidy.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "Homeowner electrical work planned around lived-in spaces, family routines and long-term reliability." },
+      { title: "Useful upgrade guidance", desc: "Clear advice on what needs doing now and what can be staged alongside future improvements." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Harpenden and nearby Hertfordshire towns with a tidy, homeowner-friendly approach." },
+    ],
+    areasCovered: {
+      primary: ["Harpenden"],
+      villages: ["Wheathampstead", "Redbourn", "Batford", "Kinsbourne Green"],
+      nearby: ["St Albans", "Hemel Hempstead", "Hitchin", "Welwyn Garden City"],
+    },
+    faq: [
+      { q: "Do you cover all of Harpenden?", a: "Yes. We cover Harpenden plus nearby villages and surrounding Hertfordshire areas where needed." },
+      { q: "Can you help with inspections before a renovation?", a: "Yes. Inspections are a sensible first step where homeowners want to understand the electrical work before a larger project starts." },
+      { q: "Do you carry out consumer unit and rewire work?", a: "Yes. We handle both targeted upgrade work and larger electrical improvement projects where the existing setup needs more than a small repair." },
+      { q: "Can you install outdoor and garden lighting?", a: "Yes. We carry out practical domestic exterior lighting work for entrances, paths, gardens and side access." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  hatfield: {
+    slug: "hatfield",
+    name: "Hatfield",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.29, 51.73, -0.16, 51.79],
+      marker: { lat: 51.763, lon: -0.224 },
+    },
+    heroIntro:
+      "Looking for a dependable electrician in Hatfield? RIGS Electrical provides domestic electrical repairs, inspections and upgrade work across Hatfield and surrounding areas, helping homeowners with faults, consumer unit changes, shower circuits and wider electrical planning. If you want clear advice from a local domestic electrician who understands family homes, rented properties and later home alterations, we are here to help.",
+    servicesIntro:
+      "Hatfield homes often include a mix of family housing, planned estates, later kitchen changes and rental-property maintenance, so it helps to have a clear view of what the wider installation is doing.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If you have partial power loss, hot accessories or repeated trips, we can make the property safe first and then diagnose the actual issue.",
+      },
+      {
+        title: "Electrical Inspections",
+        href: "/services/electrical-inspections",
+        body: "A useful route before upgrades, after repeated faults or when you want a clearer picture of a property's overall electrical condition.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "Where the existing board is dated or not well suited to modern domestic demand, a replacement can make the whole installation easier to manage safely.",
+      },
+      {
+        title: "Electric Shower Installation",
+        href: "/services/electric-shower-installation",
+        body: "Shower circuits are a common domestic job, especially during bathroom upgrades or when older units start to fail or trip the supply.",
+      },
+    ],
+    commonProblems: [
+      { title: "Repeated tripping", desc: "Trips caused by appliances, showers, overloaded circuits or underlying faults that need proper testing." },
+      { title: "Older consumer units", desc: "Boards that no longer suit the electrical demand of a modern family home." },
+      { title: "Rental property upgrades", desc: "Landlord and homeowner concerns around safety checks, remedials and practical next steps." },
+      { title: "Bathroom electrical issues", desc: "Shower supplies, extractor fans and isolators that need careful testing and safe repair." },
+      { title: "Kitchen and socket alterations", desc: "Later room changes where the electrical layout needs improving or clarifying." },
+      { title: "Pre-project inspections", desc: "Homeowners wanting clarity before a bathroom, kitchen or wider home upgrade." },
+    ],
+    whyChooseIntro:
+      "A lot of homeowner work in Hatfield comes back to clarity: understanding whether the fault is isolated, whether the board needs upgrading, and whether the property is ready for the next improvement. We keep the process practical and the advice straightforward.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "Household circuits, inspections, boards, showers, repairs and upgrade work tailored to residential properties." },
+      { title: "Clear next-step advice", desc: "We explain whether you need repair work, certification, a board change or wider planning." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Hatfield and nearby Hertfordshire towns with tidy workmanship and clear communication." },
+    ],
+    areasCovered: {
+      primary: ["Hatfield"],
+      villages: ["Welham Green", "Brookmans Park", "Essendon", "North Mymms"],
+      nearby: ["St Albans", "Welwyn Garden City", "Potters Bar", "Harpenden"],
+    },
+    faq: [
+      { q: "Do you cover Hatfield and nearby areas?", a: "Yes. We cover Hatfield plus nearby villages and surrounding Hertfordshire areas where needed." },
+      { q: "Can you help with electric showers and bathroom electrics?", a: "Yes. We install and replace electric showers, test shower circuits and advise on the safest route where bathroom electrical faults are causing problems." },
+      { q: "Do you carry out inspections before other work starts?", a: "Yes. Electrical inspections are useful where you want clarity before a renovation, a purchase or a larger upgrade project." },
+      { q: "Can you replace old consumer units?", a: "Yes. We carry out consumer unit replacement where the existing board is outdated, awkward to manage or no longer suited to the home's demand." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  "welwyn-garden-city": {
+    slug: "welwyn-garden-city",
+    name: "Welwyn Garden City",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.27, 51.77, -0.15, 51.84],
+      marker: { lat: 51.806, lon: -0.207 },
+    },
+    heroIntro:
+      "Need a reliable electrician in Welwyn Garden City? RIGS Electrical carries out domestic electrical repairs, upgrades and inspections across Welwyn Garden City and nearby areas, helping homeowners with fault finding, consumer unit replacement, rewiring advice and smarter lighting improvements. If you want practical guidance from a local domestic electrician, we are here to help.",
+    servicesIntro:
+      "Welwyn Garden City homes often involve original layouts that have been adapted over time, so a clear electrical plan matters when faults, refurbishments or modern control upgrades are involved.",
+    serviceBlocks: [
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "The right place to start when circuits trip intermittently, sockets fail or the electrical history of the property is not clear.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "A modern board can be the key upgrade where the installation needs safer protection and better circuit organisation.",
+      },
+      {
+        title: "Smart Home Installation",
+        href: "/services/smart-home-installation",
+        body: "Useful if you want to modernise lighting and controls while keeping the underlying electrical work properly planned and reliable.",
+      },
+      {
+        title: "House Rewiring",
+        href: "/services/house-rewiring",
+        body: "Where older wiring or bigger home changes mean the property needs more than isolated repairs, we can advise on the best long-term route.",
+      },
+    ],
+    commonProblems: [
+      { title: "Older circuits with newer alterations", desc: "Homes where decades of changes need tidying up into a clearer, safer layout." },
+      { title: "Consumer units due for replacement", desc: "Boards that lack modern protection or no longer suit current electrical demand." },
+      { title: "Lighting and control upgrades", desc: "Homeowners modernising room use, switching and lighting convenience." },
+      { title: "Faults in lived-in family spaces", desc: "Sockets, lights and accessories that have loosened or become unreliable over time." },
+      { title: "Renovation planning", desc: "Kitchen, bathroom and wider improvement projects that need electrical clarity early." },
+      { title: "External electrical wear", desc: "Garden lights and outside circuits that need proper testing and upgrading." },
+    ],
+    whyChooseIntro:
+      "Domestic work in Welwyn Garden City is often about making original house layouts work better for modern routines. We keep the advice clear, the workmanship tidy and the next steps easy to understand.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "Household electrics, lighting, boards, inspections, repairs and upgrades designed around homeowner needs." },
+      { title: "Practical modernisation advice", desc: "Useful guidance on what can be improved now and what should be planned as part of a larger project." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Welwyn Garden City and nearby Hertfordshire towns with tidy, homeowner-friendly work." },
+    ],
+    areasCovered: {
+      primary: ["Welwyn Garden City"],
+      villages: ["Welwyn", "Digswell", "Oaklands", "Panshanger"],
+      nearby: ["Hatfield", "St Albans", "Stevenage", "Harpenden"],
+    },
+    faq: [
+      { q: "Do you cover Welwyn Garden City and nearby areas?", a: "Yes. We cover Welwyn Garden City plus nearby villages and surrounding Hertfordshire towns where needed." },
+      { q: "Can you help with modernising older electrics?", a: "Yes. We regularly work on homes where the installation needs clearer circuit planning, a better board setup or more suitable wiring for modern use." },
+      { q: "Do you install smart lighting and smart home controls?", a: "Yes. We provide practical smart home installation work where the wiring, switches and room use need to be planned properly." },
+      { q: "Can you advise on rewiring if the property needs more than small repairs?", a: "Yes. We can inspect the installation and explain whether targeted upgrades, staged rewiring or a larger project is the better route." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  cheshunt: {
+    slug: "cheshunt",
+    name: "Cheshunt",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.09, 51.67, 0.01, 51.73],
+      marker: { lat: 51.702, lon: -0.035 },
+    },
+    heroIntro:
+      "Looking for a trusted electrician in Cheshunt? RIGS Electrical provides domestic electrical repairs, upgrades and inspections across Cheshunt and nearby areas, helping homeowners with urgent faults, security lighting, fault finding and consumer unit upgrades. If you want clear advice from a local domestic electrician who works neatly in lived-in homes, we are here to help.",
+    servicesIntro:
+      "In Cheshunt, a lot of homeowner work comes back to keeping family homes, extensions, garages and outside electrics working safely and reliably without overcomplicating the solution.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If something feels unsafe, the power has partly failed, or the board will not stop tripping, we can make the installation safe and test the cause properly.",
+      },
+      {
+        title: "Security Lighting Installation",
+        href: "/services/security-lighting",
+        body: "Useful for driveways, side access, garden routes and entrances where homeowners want better visibility after dark.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Ideal where the issue is intermittent, linked to outdoor circuits or difficult to isolate without proper testing.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "If the main board is outdated or awkward to manage, replacement can improve safety and support wider upgrade work more confidently.",
+      },
+    ],
+    commonProblems: [
+      { title: "Outdoor circuit issues", desc: "Security lights, sheds and weather-exposed circuits affected by damp or ageing accessories." },
+      { title: "Repeated tripping", desc: "Faults that come and go, especially on socket, kitchen or exterior circuits." },
+      { title: "Board upgrades for family homes", desc: "Consumer units that need replacing to suit modern appliance demand more safely." },
+      { title: "Socket and switch wear", desc: "Loose or heat-damaged accessories in busy household rooms." },
+      { title: "Garage and outbuilding electrics", desc: "Later additions that need clearer circuit planning and safer protection." },
+      { title: "General safety inspections", desc: "Homeowners wanting reassurance before more upgrade work begins." },
+    ],
+    whyChooseIntro:
+      "Domestic electrical work in Cheshunt is often about practical reliability: safer access outside, fewer nuisance trips and clearer electrical planning inside the home. We focus on homeowner jobs and keep the process straightforward.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "Repairs, boards, lighting, inspections and household electrics designed around residential properties." },
+      { title: "Practical exterior lighting advice", desc: "Useful guidance for security lighting, garden circuits and outside electrical upgrades." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Cheshunt and nearby Hertfordshire areas with tidy workmanship and clear communication." },
+    ],
+    areasCovered: {
+      primary: ["Cheshunt"],
+      villages: ["Goffs Oak", "Waltham Cross", "Cuffley", "Bury Green"],
+      nearby: ["Broxbourne", "Enfield", "Potters Bar", "Hertford"],
+    },
+    faq: [
+      { q: "Do you cover Cheshunt and nearby areas?", a: "Yes. We cover Cheshunt plus nearby areas and surrounding Hertfordshire towns where needed." },
+      { q: "Can you install security lighting and outdoor electrics?", a: "Yes. We carry out practical domestic exterior lighting and related electrical work for homeowners who want better visibility and safer access." },
+      { q: "What if an outside circuit keeps tripping?", a: "That usually needs proper testing. Moisture, failed fittings and damaged accessories are all common causes, and we can diagnose the issue safely." },
+      { q: "Do you replace older consumer units?", a: "Yes. We carry out consumer unit replacement where the existing board is outdated, awkward to manage or no longer suited to the home's demand." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  borehamwood: {
+    slug: "borehamwood",
+    name: "Borehamwood",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.35, 51.63, -0.22, 51.69],
+      marker: { lat: 51.657, lon: -0.279 },
+    },
+    heroIntro:
+      "Need a reliable electrician in Borehamwood? RIGS Electrical helps homeowners across Borehamwood and nearby areas with domestic electrical repairs, inspections and upgrade work, from urgent faults and board changes to kitchen electrics and pre-project planning. If you want practical advice from a local domestic electrician, we are here to help.",
+    servicesIntro:
+      "Borehamwood homes often involve extensions, flat or house refurbishments, kitchen changes and later wiring alterations, so a tidy, well-planned electrical approach matters.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If the power has partly gone off, a socket feels hot or something keeps tripping, we can make the property safe and diagnose the underlying issue.",
+      },
+      {
+        title: "Kitchen Electrical Installation",
+        href: "/services/kitchen-electrics",
+        body: "Useful for kitchen refurbishments, appliance circuits, socket planning and lighting changes that need to work properly once the room is finished.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "A modern board can provide a better base for later electrical work, clearer protection and easier fault isolation.",
+      },
+      {
+        title: "Electrical Inspections",
+        href: "/services/electrical-inspections",
+        body: "Ideal when you want clarity before a renovation, after recurring electrical problems or ahead of buying a property.",
+      },
+    ],
+    commonProblems: [
+      { title: "Kitchen-led upgrades", desc: "Properties where new kitchen layouts need more suitable circuits, sockets and appliance planning." },
+      { title: "Consumer unit replacement", desc: "Older boards that are no longer ideal for modern domestic demand or repeated alterations." },
+      { title: "Inspection concerns before refurbishing", desc: "Homeowners wanting to understand what needs dealing with before decorative work begins." },
+      { title: "Lighting and socket faults", desc: "Failed fittings, loose accessories and intermittent domestic faults in everyday living spaces." },
+      { title: "Extension and conversion changes", desc: "Later additions to the property that need clearer electrical organisation." },
+      { title: "Power reliability issues", desc: "Partial outages and nuisance trips that need proper fault diagnosis rather than repeated resets." },
+    ],
+    whyChooseIntro:
+      "Domestic electrical work in Borehamwood is often tied to bigger room changes or making the property easier to live with day to day. We keep the work tidy, explain the safest route clearly and focus on what makes sense for homeowners rather than pushing unnecessary upgrades.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "Household circuits, kitchens, boards, inspections and repairs tailored to residential homes." },
+      { title: "Useful planning before works", desc: "Clear advice before kitchen upgrades, refurbishments and wider electrical improvements." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Borehamwood and nearby Hertfordshire areas with clear communication and tidy workmanship." },
+    ],
+    areasCovered: {
+      primary: ["Borehamwood"],
+      villages: ["Elstree", "Radlett", "Shenley", "Aldenham"],
+      nearby: ["Watford", "St Albans", "Hatfield", "Potters Bar"],
+    },
+    faq: [
+      { q: "Do you cover Borehamwood and nearby areas?", a: "Yes. We cover Borehamwood plus nearby villages and surrounding Hertfordshire areas where needed." },
+      { q: "Can you handle the electrical side of a kitchen refurbishment?", a: "Yes. We carry out kitchen electrical installation work including circuits, sockets, lighting and practical layout planning." },
+      { q: "Do you provide inspections before refurbishments?", a: "Yes. An inspection is often the best first step where the electrical history of the property is unclear or wider upgrades are likely." },
+      { q: "Can you replace old consumer units?", a: "Yes. We carry out consumer unit replacement where the main board is outdated or no longer suits the home's demand." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  letchworth: {
+    slug: "letchworth",
+    name: "Letchworth",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.29, 51.95, -0.17, 52.01],
+      marker: { lat: 51.979, lon: -0.226 },
+    },
+    heroIntro:
+      "Looking for a trusted electrician in Letchworth? RIGS Electrical helps homeowners across Letchworth and nearby areas with domestic electrical repairs, inspections and upgrade work, from fault finding and consumer unit replacement to rewiring advice and EICR testing. If you want practical help from a local domestic electrician who understands older layouts as well as later family-home alterations, we are here to help.",
+    servicesIntro:
+      "In Letchworth, electrical work often comes back to making older layouts and later upgrades work together safely, clearly and with as little disruption as possible.",
+    serviceBlocks: [
+      {
+        title: "House Rewiring",
+        href: "/services/house-rewiring",
+        body: "Useful where older wiring has built up through years of changes or where larger improvements need a clearer long-term electrical plan.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "The right place to start when faults are intermittent, part of the home keeps losing power, or the cause is not obvious.",
+      },
+      {
+        title: "Consumer Unit Replacement",
+        href: "/services/consumer-unit-replacement",
+        body: "A replacement can improve protection and make future electrical work more straightforward where the existing board is dated or awkward to manage.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "A useful way to understand the condition of the installation before buying, selling, renovating or planning bigger upgrades.",
+      },
+    ],
+    commonProblems: [
+      { title: "Older wiring with later additions", desc: "Homes where the electrics have evolved over time and now need a clearer structure." },
+      { title: "Fuse boards due for upgrading", desc: "Main boards that no longer offer the protection or convenience homeowners need." },
+      { title: "Recurring domestic faults", desc: "Trips, dead sockets and lighting issues that need proper diagnosis rather than repeated temporary fixes." },
+      { title: "Inspection needs before projects", desc: "Homeowners wanting to understand what is safe before wider refurbishment work begins." },
+      { title: "Kitchen and bathroom load changes", desc: "Higher-demand circuits that need better planning and safer protection." },
+      { title: "General wear in lived-in homes", desc: "Sockets, switches and accessories that have loosened or aged over time." },
+    ],
+    whyChooseIntro:
+      "Domestic electrical work in Letchworth is often about careful improvement rather than quick fixes: understanding what the existing setup is doing, deciding what needs upgrading and making the finished result safer and easier to live with. We keep the process clear and practical.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "Homeowner electrical work including repairs, inspections, boards, rewires and practical upgrades." },
+      { title: "Clear long-term planning", desc: "Useful guidance where the home needs more than one isolated electrical improvement." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Letchworth and nearby Hertfordshire towns with tidy workmanship and clear communication." },
+    ],
+    areasCovered: {
+      primary: ["Letchworth"],
+      villages: ["Baldock", "Stotfold", "Arlesey", "Willian"],
+      nearby: ["Hitchin", "Stevenage", "Royston", "Welwyn Garden City"],
+    },
+    faq: [
+      { q: "Do you cover Letchworth and nearby areas?", a: "Yes. We cover Letchworth plus nearby areas and surrounding Hertfordshire towns where needed." },
+      { q: "Can you help with older wiring and larger upgrade projects?", a: "Yes. We regularly advise on staged electrical improvements where the installation needs more than a small repair." },
+      { q: "Do you provide EICR inspections for homeowners?", a: "Yes. An EICR is a useful way to understand the condition of the electrics before a move, renovation or larger upgrade plan." },
+      { q: "Can you replace old consumer units?", a: "Yes. We carry out consumer unit replacement where the board is outdated, awkward to manage or no longer suits the home's demand." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
     ],
   },
 };

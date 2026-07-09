@@ -1,5 +1,5 @@
 import { permanentRedirect } from "next/navigation";
 
 export default function Page() {
-  permanentRedirect("/services#consumer-unit-upgrades");
+  permanentRedirect("/services/consumer-unit-replacement");
 }

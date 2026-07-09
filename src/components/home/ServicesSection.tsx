@@ -25,19 +25,19 @@ const services = [
     icon: Plug,
     title: "Rewires & Consumer Units",
     desc: "Full or partial rewires, consumer unit upgrades and additional sockets — all to current 18th Edition standards.",
-    href: "/services#house-rewiring",
+    href: "/services/house-rewiring",
   },
   {
     icon: Lightbulb,
     title: "Lighting & Installations",
     desc: "Indoor, outdoor and security lighting, LED downlights and complete installation design for any room or property.",
-    href: "/services",
+    href: "/services/outdoor-lighting",
   },
   {
     icon: Zap,
     title: "Electric Showers & Heaters",
     desc: "Supply, install and replace electric showers, storage heaters and central heating wiring systems safely and reliably.",
-    href: "/services",
+    href: "/services/electric-shower-installation",
   },
   {
     icon: ShieldCheck,
@@ -55,7 +55,7 @@ const services = [
     icon: Bath,
     title: "Kitchen & Bathroom Electrics",
     desc: "Extractor fans, heated towel rails, cooker circuits, shaver sockets and underfloor heating for kitchens and bathrooms.",
-    href: "/services",
+    href: "/services/kitchen-electrics",
   },
 ];
 
