@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, MapPin, Phone, Search, ShieldCheck, ZapOff } from "lucide-react";
 import Layout from "@/components/layout/Layout";
@@ -116,12 +117,14 @@ const EmergencyElectricianPage = () => {
       <JsonLd data={faqSchema} />
 
       <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center text-primary-foreground overflow-hidden">
-        <img
+        <Image
           src="/services_images/emergency_electrician.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="eager"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
         <div className="container relative py-16 md:py-28">
@@ -175,11 +178,12 @@ const EmergencyElectricianPage = () => {
                 Service Overview
               </motion.h2>
               <motion.div variants={fadeUp} custom={1} className="rounded-xl overflow-hidden border border-border mb-8">
-                <img
+                <Image
                   src="/services_images/emergency_electrician_hero.jpg"
                   alt="Emergency electrician inspecting electrical equipment"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto"
-                  loading="lazy"
                 />
               </motion.div>
               <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed mb-6">

@@ -7,23 +7,23 @@ import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rigselectrical.co.uk"),
-  title: "RIGS Electrical | Local Electrician in Tring, Hertfordshire",
+  title: "RIGS Electrical | NICEIC Domestic Electrician in Tring",
   description:
-    "NICEIC registered domestic electricians in Tring covering Hertfordshire and surrounding areas. Fault finding, consumer units, rewires, lighting and EICRs.",
+    "Call 07989 205468 for a NICEIC domestic electrician in Tring. Fault finding, urgent repairs, consumer units, EICRs, rewires and home electrical upgrades.",
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     siteName: "RIGS Electrical",
     locale: "en_GB",
-    title: "RIGS Electrical | Local Electrician in Tring, Hertfordshire",
+    title: "RIGS Electrical | NICEIC Domestic Electrician in Tring",
     description:
-      "NICEIC registered domestic electricians in Tring covering Hertfordshire and surrounding areas. Fault finding, consumer units, rewires, lighting and EICRs.",
+      "Call 07989 205468 for a NICEIC domestic electrician in Tring. Fault finding, urgent repairs, consumer units, EICRs, rewires and home electrical upgrades.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RIGS Electrical | Local Electrician in Tring, Hertfordshire",
+    title: "RIGS Electrical | NICEIC Domestic Electrician in Tring",
     description:
-      "NICEIC registered domestic electricians in Tring covering Hertfordshire and surrounding areas. Fault finding, consumer units, rewires, lighting and EICRs.",
+      "Call 07989 205468 for a NICEIC domestic electrician in Tring. Fault finding, urgent repairs, consumer units, EICRs, rewires and home electrical upgrades.",
   },
 };
 

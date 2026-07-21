@@ -22,6 +22,7 @@ import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import JsonLd from "@/components/JsonLd";
+import { SERVICE_LOCATION_PAGES } from "@/content/serviceLocationPages";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -252,6 +253,21 @@ export default function ServicesHubPage() {
 
       <section className="py-20 bg-secondary">
         <div className="container">
+          <div className="mb-14">
+            <h2 className="text-3xl font-heading font-800 mb-6">Popular Local Electrical Services</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {SERVICE_LOCATION_PAGES.slice(0, 8).map((page) => (
+                <Link
+                  key={`${page.locationSlug}-${page.serviceSlug}`}
+                  href={`/electrician/${page.locationSlug}/${page.serviceSlug}`}
+                  className="rounded-lg border border-border bg-background p-5 hover:border-primary/30 transition-colors"
+                >
+                  <p className="font-heading font-700 mb-1">{page.title}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{page.metaDescription}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
           <div className="grid lg:grid-cols-5 gap-10 items-center">
             <div className="lg:col-span-3">
               <h2 className="text-3xl font-heading font-800 mb-4">Need a Local Electrician?</h2>

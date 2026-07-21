@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import TestimonialsPage from "@/components/pages/TestimonialsPage";
 
 export const metadata: Metadata = {
-  title: "Customer Reviews | RIGS Electrical Tring",
+  title: "Electrician Reviews Tring | RIGS Electrical Customers",
   description:
-    "Read 5-star reviews from RIGS Electrical customers across Tring and Hertfordshire — rewires, kitchen & bathroom electrics, lighting and fault finding.",
+    "Read customer reviews for RIGS Electrical in Tring and Hertfordshire. Domestic electrician feedback for fault finding, lighting, rewires and upgrades.",
   alternates: { canonical: "https://rigselectrical.co.uk/testimonials" },
   openGraph: {
     type: "website",
-    title: "Customer Reviews | RIGS Electrical Tring",
+    title: "Electrician Reviews Tring | RIGS Electrical Customers",
     description:
-      "Read 5-star reviews from RIGS Electrical customers across Tring and Hertfordshire — rewires, kitchen & bathroom electrics, lighting and fault finding.",
+      "Read customer reviews for RIGS Electrical in Tring and Hertfordshire. Domestic electrician feedback for fault finding, lighting, rewires and upgrades.",
     url: "https://rigselectrical.co.uk/testimonials",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Customer Reviews | RIGS Electrical Tring",
+    title: "Electrician Reviews Tring | RIGS Electrical Customers",
     description:
-      "Read 5-star reviews from RIGS Electrical customers across Tring and Hertfordshire — rewires, kitchen & bathroom electrics, lighting and fault finding.",
+      "Read customer reviews for RIGS Electrical in Tring and Hertfordshire. Domestic electrician feedback for fault finding, lighting, rewires and upgrades.",
   },
 };
 

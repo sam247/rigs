@@ -163,9 +163,9 @@ export const HERTFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
   countyName: "Hertfordshire",
   slug: "hertfordshire",
   title: "Electrician Hertfordshire",
-  metaTitle: "Electrician Hertfordshire | Town Directory, Map & Areas Covered | RIGS Electrical",
+  metaTitle: "Electrician Hertfordshire | NICEIC Domestic Coverage | RIGS",
   metaDescription:
-    "Explore Hertfordshire electrical coverage with a county-wide town directory, interactive map, live local pages and broader local domestic electrician coverage.",
+    "Find a NICEIC domestic electrician across Hertfordshire. Town pages for Tring, St Albans, Hemel Hempstead, Watford and local electrical services.",
   heroIntro:
     "Need a reliable electrician anywhere in Hertfordshire? This county page brings together the detailed town pages already available and broader county coverage links so homeowners can quickly find the right next step. Whether you are dealing with tripping electrics in an older property, planning a consumer unit upgrade, or arranging an EICR before a move, the same domestic-first approach runs across every area we cover.",
   townsIntro:

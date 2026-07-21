@@ -25,9 +25,9 @@ export const BEDFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
   countyName: "Bedfordshire",
   slug: "bedfordshire",
   title: "Electrician Bedfordshire",
-  metaTitle: "Electrician Bedfordshire | County Coverage, Town Directory & Areas Covered | RIGS Electrical",
+  metaTitle: "Electrician Bedfordshire | Domestic County Coverage | RIGS",
   metaDescription:
-    "Local domestic electrician coverage across Bedfordshire, including Luton, Dunstable, Leighton Buzzard, Bedford and nearby towns. Explore county coverage, town links and homeowner-focused electrical services.",
+    "Domestic electrician coverage across Bedfordshire, including Luton, Dunstable, Leighton Buzzard, Bedford and nearby towns.",
   heroIntro:
     "Need a local domestic electrician anywhere in Bedfordshire? This county page brings together the main towns we cover across Bedfordshire, from the Luton and Dunstable side of the county through to Bedford, Biggleswade and surrounding towns. It is designed to help homeowners find the right next step quickly, whether the job is an urgent fault, a consumer unit upgrade, inspection work, or wider domestic electrical planning.",
   townsIntro:

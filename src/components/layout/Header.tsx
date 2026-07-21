@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
@@ -36,7 +37,7 @@ const Header = () => {
       {/* Main nav */}
       <div className="container flex items-center justify-between py-3 md:py-4">
         <Link href="/" aria-label="RIGS Electrical home" className="flex items-center">
-          <img src={rigsLogo.src} alt="RIGS Electrical" className="h-9 md:h-11 w-auto" />
+          <Image src={rigsLogo} alt="RIGS Electrical" className="h-9 md:h-11 w-auto" priority />
         </Link>
 
         <div className="flex items-center justify-end flex-1 ml-8">

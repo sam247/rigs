@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Phone } from "lucide-react";
 import Layout from "@/components/layout/Layout";
@@ -77,11 +78,13 @@ const FlickeringLightsCommonCausesPage = () => {
       <JsonLd data={faqSchema} />
 
       <section className="relative overflow-hidden text-primary-foreground">
-        <img
+        <Image
           src="/blog_images/flickering-lights-common-causes.jpg"
           alt="Domestic lighting in a UK home"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="eager"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
         <div className="container relative py-20 md:py-28">
@@ -159,11 +162,12 @@ const FlickeringLightsCommonCausesPage = () => {
               </p>
 
               <div className="rounded-xl overflow-hidden border border-border my-10">
-                <img
+                <Image
                   src="/blog_images/flickering-lights-common-causes.jpg"
                   alt="Flickering light fitting in a domestic room"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto"
-                  loading="lazy"
                 />
               </div>
 

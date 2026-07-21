@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 
 const coreRoutes: Array<[string, RegExp]> = [
   ["/about", /Tring's Local Domestic Electrician/i],
@@ -6,6 +6,9 @@ const coreRoutes: Array<[string, RegExp]> = [
   ["/blog/consumer-unit-vs-fuse-box", /Consumer Unit vs Fuse Box/i],
   ["/blog/why-do-my-electrics-keep-tripping", /Why Do My Electrics Keep Tripping/i],
   ["/blog/flickering-lights-common-causes", /Flickering Lights/i],
+  ["/blog/do-i-need-an-emergency-electrician-or-can-it-wait", /Do I Need an Emergency Electrician/i],
+  ["/blog/how-to-tell-if-your-fuse-board-needs-replacing", /How to Tell If Your Fuse Board/i],
+  ["/why-an-electric-shower-might-be-right-for-your-home", /Why an Electric Shower Might Be Right/i],
   ["/services", /Electrical Services in Hertfordshire/i],
   ["/locations", /Electrician Locations/i],
   ["/electrician/hertfordshire", /Electrician Hertfordshire/i],
@@ -44,13 +47,20 @@ const locationRoutes: Array<[string, RegExp]> = [
   ["/electrician/letchworth", /Electrician Letchworth/i],
 ];
 
-const assertRoute = async (path: string, heading: RegExp, page: any) => {
+const serviceLocationRoutes: Array<[string, RegExp]> = [
+  ["/electrician/tring/emergency-electrician", /Emergency Electrician Tring/i],
+  ["/electrician/tring/eicr-certificates", /EICR Certificates Tring/i],
+  ["/electrician/tring/electric-shower-installation", /Electric Shower Installation Tring/i],
+  ["/electrician/hemel-hempstead/emergency-electrician", /Emergency Electrician Hemel Hempstead/i],
+];
+
+const assertRoute = async (path: string, heading: RegExp, page: Page) => {
   const res = await page.goto(path);
   expect(res?.ok()).toBeTruthy();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(heading);
 };
 
-const assertRedirect = async (from: string, to: string, page: any) => {
+const assertRedirect = async (from: string, to: string, page: Page) => {
   const res = await page.goto(from);
   expect(res?.ok()).toBeTruthy();
   await page.waitForURL(`**${to}`);
@@ -75,6 +85,12 @@ test.describe("smoke", () => {
 
   test("location pages render", async ({ page }) => {
     for (const [path, heading] of locationRoutes) {
+      await assertRoute(path, heading, page);
+    }
+  });
+
+  test("service location pages render", async ({ page }) => {
+    for (const [path, heading] of serviceLocationRoutes) {
       await assertRoute(path, heading, page);
     }
   });

@@ -22,9 +22,9 @@ export const BUCKINGHAMSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
   countyName: "Buckinghamshire",
   slug: "buckinghamshire",
   title: "Electrician Buckinghamshire",
-  metaTitle: "Electrician Buckinghamshire | County Coverage, Town Directory & Areas Covered | RIGS Electrical",
+  metaTitle: "Electrician Buckinghamshire | Domestic County Coverage | RIGS",
   metaDescription:
-    "Local domestic electrician coverage across Buckinghamshire, including Aylesbury, Wendover, Chesham, Amersham, High Wycombe and nearby towns. Explore county coverage and homeowner-focused services.",
+    "Domestic electrician coverage across Buckinghamshire, including Aylesbury, Wendover, Chesham, Amersham, High Wycombe and nearby towns.",
   heroIntro:
     "Need a local domestic electrician anywhere in Buckinghamshire? This county page brings together the main Buckinghamshire towns we cover, from Aylesbury Vale and the Wendover side of the county through to Chesham, Amersham, High Wycombe and the wider commuter belt. It gives homeowners a clear first route into county coverage while the dedicated town pages are built out over time.",
   townsIntro:

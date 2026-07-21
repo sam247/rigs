@@ -10,6 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import OpenStreetMapEmbed from "@/components/location/OpenStreetMapEmbed";
 import { BLOG_POSTS } from "@/content/blogPosts";
 import type { LocationPageConfig } from "@/content/locations";
+import { getServiceLocationPath } from "@/content/serviceLocationPages";
 import JsonLd from "@/components/JsonLd";
 
 const fadeUp = {
@@ -132,25 +133,29 @@ export default function LocationPageClient({ location }: { location: LocationPag
                 </motion.p>
               ) : null}
               <motion.div variants={fadeUp} custom={3} className="mt-8 grid gap-4">
-                {location.serviceBlocks.map((s) => (
+                {location.serviceBlocks.map((s) => {
+                  const localServiceHref = getServiceLocationPath(location.slug, s.href);
+
+                  return (
                   <Card key={s.title} className="border-2 border-border">
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between gap-4">
                         <p className="font-heading font-800">{s.title}</p>
-                        <Link href={s.href} className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
-                          View service →
+                        <Link href={localServiceHref} className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
+                          View local service →
                         </Link>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed mt-2">
                         {s.body}{" "}
-                        <Link href={s.href} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                        <Link href={localServiceHref} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                           Learn more
                         </Link>
                         .
                       </p>
                     </CardContent>
                   </Card>
-                ))}
+                  );
+                })}
               </motion.div>
               <motion.p variants={fadeUp} custom={4} className="text-sm text-muted-foreground leading-relaxed mt-6">
                 Planning upgrades? You may also want to look at{" "}

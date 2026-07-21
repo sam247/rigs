@@ -3,21 +3,21 @@ import { Suspense } from "react";
 import ContactPage from "@/components/pages/ContactPage";
 
 export const metadata: Metadata = {
-  title: "Contact RIGS Electrical | Get a Quote",
-  description: "Get in touch with RIGS Electrical in Tring. Call 07989 205468 or request a free, no-obligation quote today.",
+  title: "Contact Electrician in Tring | Call RIGS Electrical",
+  description: "Call 07989 205468 or request a quote from RIGS Electrical, a NICEIC domestic electrician in Tring for faults, EICRs, consumer units and rewires.",
   alternates: { canonical: "https://rigselectrical.co.uk/contact" },
   openGraph: {
     type: "website",
-    title: "Contact RIGS Electrical | Get a Quote",
+    title: "Contact Electrician in Tring | Call RIGS Electrical",
     description:
-      "Get in touch with RIGS Electrical in Tring. Call 07989 205468 or request a free, no-obligation quote today.",
+      "Call 07989 205468 or request a quote from RIGS Electrical, a NICEIC domestic electrician in Tring for faults, EICRs, consumer units and rewires.",
     url: "https://rigselectrical.co.uk/contact",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact RIGS Electrical | Get a Quote",
+    title: "Contact Electrician in Tring | Call RIGS Electrical",
     description:
-      "Get in touch with RIGS Electrical in Tring. Call 07989 205468 or request a free, no-obligation quote today.",
+      "Call 07989 205468 or request a quote from RIGS Electrical, a NICEIC domestic electrician in Tring for faults, EICRs, consumer units and rewires.",
   },
 };
 

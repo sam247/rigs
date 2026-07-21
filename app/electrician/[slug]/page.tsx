@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const location = LOCATION_PAGES[key];
   if (!location) return {};
 
-  const title = `Electrician ${location.name} | RIGS Electrical`;
-  const description = `Looking for a local domestic electrician in ${location.name}, ${location.region}? NICEIC registered domestic electricians for fault finding, consumer units, rewires, lighting and EICRs.`;
+  const title = `Electrician ${location.name} | Domestic NICEIC | RIGS`;
+  const description = `Need an electrician in ${location.name}? Call RIGS Electrical for domestic faults, consumer units, EICRs, rewires and clear quotes across ${location.region}.`;
   const canonical = `https://rigselectrical.co.uk/electrician/${location.slug}`;
 
   return {

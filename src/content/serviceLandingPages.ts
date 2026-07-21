@@ -59,9 +59,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "outdoor-lighting",
     title: "Outdoor Lighting Installation Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Outdoor Lighting Installation Hertfordshire | Local Domestic Electrician | RIGS Electrical",
+    metaTitle: "Outdoor Lighting Hertfordshire | Garden & Driveway Lights",
     metaDescription:
-      "Outdoor lighting installation in Hertfordshire for gardens, driveways, side access and entrances. RIGS Electrical is a local domestic electrician providing tidy, weather-aware exterior lighting installs.",
+      "Outdoor lighting installation in Tring and Hertfordshire for gardens, driveways, side access and entrances. Weather-aware domestic lighting installs.",
     heroIntro:
       "Need outdoor lighting installation in Hertfordshire? RIGS Electrical installs practical, tidy exterior lighting for homeowners who want safer entrances, better-lit gardens and more usable outdoor space. As a local domestic electrician, we plan fittings, switching and circuit protection around real day-to-day use, not just how the lights look on day one.",
     contactService: "Outdoor Lighting Installation Hertfordshire",
@@ -131,9 +131,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "house-rewiring",
     title: "House Rewiring Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "House Rewiring Hertfordshire | Full & Partial Rewires | RIGS Electrical",
+    metaTitle: "House Rewiring Hertfordshire | Full & Partial Rewires",
     metaDescription:
-      "House rewiring in Hertfordshire for older homes, renovations and major electrical upgrades. RIGS Electrical is a local domestic electrician providing full and partial rewires with clear planning and tidy work.",
+      "House rewiring in Tring and Hertfordshire for older homes, renovations and upgrades. Full and partial domestic rewires with clear planning.",
     heroIntro:
       "Need house rewiring in Hertfordshire? RIGS Electrical carries out full and partial rewires for homeowners dealing with ageing wiring, major renovations, extensions or repeated electrical issues. As a local domestic electrician, we plan rewires around how people actually live in their homes, with clear staging, sensible disruption control and practical advice from the start.",
     contactService: "House Rewiring Hertfordshire",
@@ -203,9 +203,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "smart-home-installation",
     title: "Smart Home Installation Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Smart Home Installation Hertfordshire | Smart Lighting & Controls | RIGS Electrical",
+    metaTitle: "Smart Home Installation Hertfordshire | Lighting Controls",
     metaDescription:
-      "Smart home installation in Hertfordshire for lighting, switches, controls and practical domestic automation. RIGS Electrical is a local domestic electrician helping homeowners wire smart upgrades properly.",
+      "Smart home installation in Tring and Hertfordshire for lighting, switches, controls and practical automation built on safe domestic wiring.",
     heroIntro:
       "Need smart home installation in Hertfordshire? RIGS Electrical helps homeowners add smart lighting, app-controlled switching and practical automation without turning the job into a gadget experiment. As a local domestic electrician, we focus on reliable domestic wiring first, then build smart controls around how you actually use each room.",
     contactService: "Smart Home Installation Hertfordshire",
@@ -275,9 +275,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "security-lighting",
     title: "Security Lighting Installation Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Security Lighting Installation Hertfordshire | PIR & Exterior Lights | RIGS Electrical",
+    metaTitle: "Security Lighting Hertfordshire | PIR Exterior Lights",
     metaDescription:
-      "Security lighting installation in Hertfordshire for driveways, side access, gardens and entrances. RIGS Electrical is a local domestic electrician installing practical PIR and exterior lighting for homeowners.",
+      "Security lighting installation in Tring and Hertfordshire for driveways, side access, gardens and entrances. PIR and exterior lights for homes.",
     heroIntro:
       "Need security lighting installation in Hertfordshire? RIGS Electrical installs practical exterior lighting for homeowners who want better visibility around entrances, driveways, side access and garden boundaries. As a local domestic electrician, we focus on lighting that is genuinely useful at home: well positioned, properly switched and not prone to nuisance problems.",
     contactService: "Security Lighting Installation Hertfordshire",
@@ -347,9 +347,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "electrical-inspections",
     title: "Electrical Inspections Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Electrical Inspections Hertfordshire | Home Safety Checks | RIGS Electrical",
+    metaTitle: "Electrical Inspections Hertfordshire | Home Safety Checks",
     metaDescription:
-      "Electrical inspections in Hertfordshire for homeowners who want clear advice before buying, renovating or upgrading. RIGS Electrical is a local domestic electrician offering practical domestic inspection work.",
+      "Electrical inspections in Tring and Hertfordshire for homeowners buying, renovating or checking older electrics. Clear safety advice and next steps.",
     heroIntro:
       "Need an electrical inspection in Hertfordshire? RIGS Electrical helps homeowners understand the condition of their electrics before renovations, after recurring faults, or when they want a clearer picture of what is safe and what needs attention. As a local domestic electrician, we focus on practical domestic advice rather than overloading you with jargon.",
     contactService: "Electrical Inspections Hertfordshire",
@@ -419,9 +419,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "consumer-unit-replacement",
     title: "Consumer Unit Replacement Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Consumer Unit Replacement Hertfordshire | Local Domestic Electrician | RIGS Electrical",
+    metaTitle: "Consumer Unit Replacement Hertfordshire | Fuse Box Upgrades",
     metaDescription:
-      "Consumer unit replacement in Hertfordshire for outdated, unsafe or unsuitable fuse boards. RIGS Electrical is a local domestic electrician providing modern consumer unit replacements and clear advice for homeowners.",
+      "Consumer unit replacement in Tring and Hertfordshire for old fuse boards, renovations and safer RCD/RCBO protection with certification.",
     heroIntro:
       "Need consumer unit replacement in Hertfordshire? RIGS Electrical replaces outdated, overcrowded or unreliable fuse boards with modern consumer units that offer better protection and clearer circuit control. As a local domestic electrician, we help homeowners understand when replacement is the sensible route and what should be checked alongside it.",
     contactService: "Consumer Unit Replacement Hertfordshire",
@@ -491,9 +491,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "electric-shower-installation",
     title: "Electric Shower Installation Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Electric Shower Installation Hertfordshire | Local Domestic Electrician | RIGS Electrical",
+    metaTitle: "Electric Shower Installation Hertfordshire | Bathroom Electrics",
     metaDescription:
-      "Electric shower installation in Hertfordshire for new showers, replacements and dedicated shower circuits. RIGS Electrical is a local domestic electrician providing safe domestic shower installation work.",
+      "Electric shower installation in Tring and Hertfordshire for replacements, new circuits and bathroom electrics with safe protection checks.",
     heroIntro:
       "Need electric shower installation in Hertfordshire? RIGS Electrical installs and replaces electric showers for homeowners who want safe, properly rated supplies and clear advice on what the circuit can realistically support. As a local domestic electrician, we look at the whole electrical setup around the shower, not just the unit on the wall.",
     contactService: "Electric Shower Installation Hertfordshire",
@@ -563,9 +563,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "kitchen-electrics",
     title: "Kitchen Electrical Installation Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Kitchen Electrical Installation Hertfordshire | Local Domestic Electrician | RIGS Electrical",
+    metaTitle: "Kitchen Electrics Hertfordshire | Sockets & Circuits",
     metaDescription:
-      "Kitchen electrical installation in Hertfordshire for refurbishments, appliance circuits, sockets and lighting. RIGS Electrical is a local domestic electrician helping homeowners plan kitchen electrics properly.",
+      "Kitchen electrical installation in Tring and Hertfordshire for cooker circuits, sockets, appliance points, lighting and renovation planning.",
     heroIntro:
       "Need kitchen electrical installation in Hertfordshire? RIGS Electrical helps homeowners plan and carry out the electrical side of kitchen refurbishments, appliance upgrades and layout changes. As a local domestic electrician, we make sure the circuits, sockets, lighting and switching all suit how the kitchen will actually be used once the work is finished.",
     contactService: "Kitchen Electrical Installation Hertfordshire",
@@ -635,9 +635,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "landlord-electrical-certificates",
     title: "Landlord Electrical Certificates Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Landlord Electrical Certificates Hertfordshire | EICR For Landlords | RIGS Electrical",
+    metaTitle: "Landlord Electrical Certificates Hertfordshire | Rental EICR",
     metaDescription:
-      "Landlord electrical certificates in Hertfordshire for rental properties, EICRs and remedial work. RIGS Electrical is a local domestic electrician helping landlords keep homes compliant and safe.",
+      "Landlord electrical certificates in Tring and Hertfordshire for rental EICRs, remedial work and clear domestic electrical compliance.",
     heroIntro:
       "Need landlord electrical certificates in Hertfordshire? RIGS Electrical helps landlords, letting agents and homeowners preparing a rental property with EICRs, certificate-led remedial work and straightforward advice. As a local domestic electrician, we focus on domestic rental homes and explain what is required in practical terms.",
     contactService: "Landlord Electrical Certificates Hertfordshire",
