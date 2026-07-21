@@ -156,7 +156,7 @@ export function MarkdownBlogArticle({ post, markdown }: { post: BlogPost; markdo
 
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="flex items-center justify-between gap-4 mb-10">
               <Link href="/blog" className="text-sm font-heading font-600 text-primary hover:text-primary/80 transition-colors">
                 Back to Blog
@@ -171,7 +171,7 @@ export function MarkdownBlogArticle({ post, markdown }: { post: BlogPost; markdo
             {post.internalLinks?.length ? (
               <nav className="mt-12 rounded-lg border border-border bg-secondary p-6" aria-label="Related electrical pages">
                 <h2 className="font-heading text-xl font-800 mb-4">Related electrical pages</h2>
-                <div className="grid sm:grid-cols-2 gap-3">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {post.internalLinks.map((link) => (
                     <Link
                       key={link.href}
