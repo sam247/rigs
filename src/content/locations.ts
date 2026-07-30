@@ -30,7 +30,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       marker: { lat: 51.7956, lon: -0.67 },
     },
     heroIntro:
-      "Need a reliable electrician in Tring? RIGS Electrical helps homeowners across Tring, Aldbury, Wigginton and Aston Clinton with safe, tidy domestic electrical work — whether it’s a fault that needs sorting quickly or an upgrade planned as part of home improvements. We also cover the surrounding villages, so you can get local, practical advice from a NICEIC registered electrician that understands the mix of older homes and newer developments in this area.",
+      "Need an electrician in Tring? RIGS Electrical is the local NICEIC registered domestic electrician for Tring, Aldbury, Wigginton, Pitstone and surrounding villages. We help homeowners with safe, tidy electrical work — whether it’s a fault that needs sorting quickly, a consumer unit upgrade, an EICR, or electrics planned as part of home improvements across HP23 and nearby Hertfordshire and Buckinghamshire.",
     servicesIntro:
       "From quick fixes to planned upgrades, we focus on the kind of work homeowners actually need — keeping your home safe, compliant and ready for modern appliances.",
     serviceBlocks: [
@@ -85,8 +85,8 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     ],
     areasCovered: {
       primary: ["Tring"],
-      villages: ["Aldbury", "Wigginton", "Long Marston", "Pitstone", "Marsworth", "Ivinghoe"],
-      nearby: ["Berkhamsted", "Hemel Hempstead", "Aylesbury", "Leighton Buzzard"],
+      villages: ["Aldbury", "Wigginton", "Long Marston", "Pitstone", "Marsworth"],
+      nearby: ["Berkhamsted", "Hemel Hempstead", "Aylesbury", "Ivinghoe", "Wendover"],
     },
     faq: [
       {
@@ -252,55 +252,61 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       marker: { lat: 51.752, lon: -0.471 },
     },
     heroIntro:
-      "Looking for a reliable electrician in Hemel Hempstead? RIGS Electrical helps homeowners with safe, tidy domestic electrical work across Hemel Hempstead, Boxmoor, Apsley and nearby areas. Whether you are dealing with repeated tripping, an older fuse board, or planning upgrades as part of a kitchen, extension or home improvement project, you can get practical advice from a local domestic electrician who works in lived-in homes every day.",
+      "Need an electrician in Hemel Hempstead? RIGS Electrical is a NICEIC registered domestic electrician helping homeowners across Hemel Hempstead, Boxmoor, Apsley, Leverstock Green and Nash Mills. From urgent tripping and power loss to consumer unit upgrades, EICRs and kitchen electrics, you get practical advice from a local team used to New Town layouts, later extensions and lived-in family homes.",
     servicesIntro:
-      "Hemel Hempstead homes range from older roads and family semis to New Town layouts, later extensions and converted garages, so the right electrical solution often depends on how the property has evolved over time.",
+      "Hemel Hempstead homes range from older Adeyfield and Bennetts End roads to Grovehill estates, Boxmoor semis and converted garages, so the right electrical solution often depends on how the property has been altered over time.",
     serviceBlocks: [
       {
         title: "Emergency Electrician",
         href: "/services/emergency-electrician",
-        body: "If something feels unsafe, power has gone off, or the board will not reset, we can make the installation safe first and then diagnose the actual cause properly.",
+        body: "If something feels unsafe, power has gone off, or the board will not reset in Hemel Hempstead, we make the installation safe first and then diagnose the actual cause properly — including outdoor and garage circuits affected by damp.",
       },
       {
         title: "Electrical Fault Finding",
         href: "/services/electrical-fault-finding",
-        body: "Intermittent faults, dead sockets and nuisance trips need proper testing rather than guesswork, especially in homes with a mix of older and newer alterations.",
+        body: "Intermittent faults, dead sockets and nuisance trips need proper testing rather than guesswork, especially where New Town wiring has been extended for kitchens, loft conversions or garden rooms.",
       },
       {
-        title: "Consumer Unit Replacement",
-        href: "/services/consumer-unit-replacement",
-        body: "A lot of Hemel Hempstead homes still benefit from clearer, safer circuit protection when kitchen upgrades, showers or later extensions have outgrown the original board.",
+        title: "Fuse Board Upgrades",
+        href: "/services/fuse-board-upgrades",
+        body: "Many Hemel Hempstead homes still run on older fuse boards that struggle with showers, kitchen circuits and home working. A modern consumer unit improves protection and makes future work clearer to manage.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "Buying, selling or renovating in Hemel Hempstead? An EICR gives a clear picture of what is safe now and what should be planned before decorative work starts.",
       },
       {
         title: "House Rewiring",
         href: "/services/house-rewiring",
-        body: "If the wiring is older, patchy or holding back a wider renovation, we can advise whether a staged rewire or a larger upgrade is the best route.",
+        body: "If the wiring is older, patchy or holding back a wider renovation, we can advise whether a staged rewire or a larger upgrade is the best route for the property.",
       },
     ],
     commonProblems: [
-      { title: "Repeated tripping", desc: "Trips caused by ageing circuits, faulty appliances, damp on outside feeds or overloaded rooms." },
-      { title: "Older fuse boards", desc: "Boards that lack modern protection or have become cramped after years of electrical additions." },
+      { title: "Repeated tripping", desc: "Trips caused by ageing circuits, faulty appliances, damp on outside feeds or overloaded kitchen and shower circuits." },
+      { title: "Older fuse boards", desc: "Boards that lack modern RCD/RCBO protection or have become cramped after years of electrical additions." },
       { title: "Extension-related alterations", desc: "Kitchens, utility spaces and rear extensions that need clearer circuit planning and safer protection." },
-      { title: "Garden and garage supplies", desc: "External electrics and outbuilding feeds that have deteriorated or no longer feel reliable." },
+      { title: "Garden and garage supplies", desc: "External electrics and outbuilding feeds that have deteriorated or no longer feel reliable after wet weather." },
       { title: "Dead sockets and loose accessories", desc: "Common in busy family spaces where older fittings have seen years of wear." },
-      { title: "Pre-renovation uncertainty", desc: "Homeowners wanting to know what needs upgrading before bigger decorative work begins." },
+      { title: "Pre-renovation uncertainty", desc: "Homeowners wanting to know what needs upgrading before bigger decorative or kitchen work begins." },
     ],
     whyChooseIntro:
-      "A lot of domestic electrical work in Hemel Hempstead comes back to making older layouts work properly for modern life. We focus on homeowner jobs, explain the safest next step clearly, and keep disruption under control where work is being done in occupied rooms.",
+      "Domestic electrical work in Hemel Hempstead often means making older New Town layouts and later alterations work safely for modern family life. We focus on homeowner jobs, explain the safest next step clearly, and keep disruption under control in occupied homes.",
     whyChoosePoints: [
       { title: "Domestic-only focus", desc: "We work on family homes, kitchens, lighting, consumer units and household circuits rather than generic trade work." },
       { title: "Useful upgrade advice", desc: "Clear guidance on what needs doing now versus what can be planned alongside future home improvements." },
       { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
-      { title: "Local domestic electrician", desc: "Regular coverage across Hemel Hempstead and surrounding Hertfordshire towns with tidy, homeowner-friendly workmanship." },
+      { title: "Local domestic electrician", desc: "Regular coverage across Hemel Hempstead, Berkhamsted, Kings Langley and surrounding Hertfordshire towns." },
     ],
     areasCovered: {
       primary: ["Hemel Hempstead"],
-      villages: ["Boxmoor", "Apsley", "Leverstock Green", "Nash Mills"],
-      nearby: ["Berkhamsted", "Kings Langley", "St Albans", "Harpenden"],
+      villages: ["Boxmoor", "Apsley", "Leverstock Green", "Nash Mills", "Adeyfield", "Bennetts End"],
+      nearby: ["Berkhamsted", "Tring", "Kings Langley", "St Albans", "Harpenden"],
     },
     faq: [
-      { q: "Do you cover all of Hemel Hempstead?", a: "Yes. We cover Hemel Hempstead itself plus nearby neighbourhoods and surrounding areas across this part of Hertfordshire." },
-      { q: "Can you help with older fuse boards and repeated tripping?", a: "Yes. That is one of the most common reasons homeowners contact us. We can test the fault properly and advise whether repair, consumer unit replacement or wider upgrade work makes most sense." },
+      { q: "Do you cover all of Hemel Hempstead?", a: "Yes. We cover Hemel Hempstead itself plus Boxmoor, Apsley, Leverstock Green, Nash Mills and surrounding Hertfordshire towns." },
+      { q: "Can you help with older fuse boards and repeated tripping?", a: "Yes. That is one of the most common reasons homeowners in Hemel Hempstead contact us. We test the fault properly and advise whether repair, consumer unit replacement or wider upgrade work makes most sense." },
+      { q: "Do you offer emergency electrician cover in Hemel Hempstead?", a: "Yes. For urgent domestic faults, power loss and circuits that will not reset, we focus on making the installation safe first and then finding the cause." },
       { q: "Do you handle domestic upgrades as well as repairs?", a: "Yes. We carry out repairs, fault finding, lighting work, inspections, consumer unit changes and larger upgrade projects for homeowners." },
       { q: "Can I book an inspection before renovating?", a: "Yes. If you are planning a kitchen, extension or wider refurbishment, we can inspect the electrics and help you prioritise the right work early." },
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
@@ -808,6 +814,258 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       { q: "Do you provide EICR inspections for homeowners?", a: "Yes. An EICR is a useful way to understand the condition of the electrics before a move, renovation or larger upgrade plan." },
       { q: "Can you replace old consumer units?", a: "Yes. We carry out consumer unit replacement where the board is outdated, awkward to manage or no longer suits the home's demand." },
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and works to current standards, providing certification where required." },
+    ],
+  },
+  aylesbury: {
+    slug: "aylesbury",
+    name: "Aylesbury",
+    region: "Buckinghamshire",
+    map: {
+      bbox: [-0.92, 51.78, -0.72, 51.86],
+      marker: { lat: 51.8168, lon: -0.8124 },
+    },
+    heroIntro:
+      "Need an electrician in Aylesbury? RIGS Electrical is a NICEIC registered domestic electrician covering Aylesbury Vale and surrounding Buckinghamshire towns. Whether you are dealing with repeated tripping, an older fuse board, an urgent fault, or planning electrics for a kitchen or extension, you get clear advice and tidy workmanship from a domestic-first team based nearby in Tring.",
+    servicesIntro:
+      "Aylesbury homes range from older town-centre streets and Victorian terraces to later estates, new developments and village-edge properties — so electrical work often means sorting mixed-age layouts safely for modern family demand.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If power has dropped out, a board will not reset, or something smells hot in an Aylesbury home, we make the installation safe first and then trace the cause properly.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Intermittent trips, dead sockets and lighting faults need methodical testing — especially where kitchens, showers or outdoor circuits have been added over the years.",
+      },
+      {
+        title: "Fuse Board Upgrades",
+        href: "/services/fuse-board-upgrades",
+        body: "Many Aylesbury properties still benefit from a modern consumer unit when older boards struggle with showers, kitchen loads and home working circuits.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "Buying, selling or renting in Aylesbury? An EICR gives a plain-English picture of what is safe now and what should be planned next.",
+      },
+    ],
+    commonProblems: [
+      { title: "Repeated RCD/RCBO trips", desc: "Common where older circuits, damp outdoor feeds or overloaded kitchen and shower loads share protection." },
+      { title: "Outdated fuse boards", desc: "Boards that lack modern protection or have become cramped after years of piecemeal additions." },
+      { title: "Kitchen and utility upgrades", desc: "Extra appliances and lighting that need clearer circuit planning before work starts." },
+      { title: "Garden and garage electrics", desc: "External supplies that fail after wet weather or no longer feel safe to use." },
+      { title: "Pre-purchase uncertainty", desc: "Buyers and sellers wanting a clear electrical report before committing to renovation budgets." },
+      { title: "Worn sockets and switches", desc: "Everyday fittings that have loosened, cracked or run warm in busy family rooms." },
+    ],
+    whyChooseIntro:
+      "Aylesbury domestic electrical work is often about making busy family homes safer and easier to live with — not generic trade jobs. We explain options clearly, keep disruption down, and plan upgrades around how the property is actually used.",
+    whyChoosePoints: [
+      { title: "Domestic-only focus", desc: "Homeowner repairs, inspections, boards, lighting and upgrades rather than commercial contracting." },
+      { title: "Local Buckinghamshire coverage", desc: "Regular work across Aylesbury Vale, Wendover, Tring and nearby Bucks/Herts border towns." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Clear same-day quoting", desc: "Practical options explained in plain English so you can decide with confidence." },
+    ],
+    areasCovered: {
+      primary: ["Aylesbury"],
+      villages: ["Bierton", "Weedon", "Quarrendon", "Bedgrove", "Walton Court"],
+      nearby: ["Wendover", "Tring", "Ivinghoe", "Princes Risborough", "Leighton Buzzard"],
+    },
+    faq: [
+      { q: "Do you cover Aylesbury and nearby villages?", a: "Yes. We cover Aylesbury itself plus nearby estates, villages and surrounding Buckinghamshire towns including Wendover and the Tring border." },
+      { q: "Can you help with urgent faults in Aylesbury?", a: "Yes. For power loss, repeated tripping or accessories that feel unsafe, we prioritise making the installation safe and then diagnosing the cause." },
+      { q: "Do you replace old consumer units?", a: "Yes. Consumer unit upgrades are a common request where older boards no longer suit kitchen, shower or home-working demand." },
+      { q: "Can I get an EICR before buying or renovating?", a: "Yes. An EICR is a useful starting point before a move, rental change or larger refurbishment." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
+    ],
+  },
+  berkhamsted: {
+    slug: "berkhamsted",
+    name: "Berkhamsted",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.62, 51.74, -0.5, 51.78],
+      marker: { lat: 51.7604, lon: -0.5604 },
+    },
+    heroIntro:
+      "Looking for an electrician in Berkhamsted? RIGS Electrical helps homeowners across Berkhamsted, Northchurch and nearby Chiltern-edge streets with domestic fault finding, urgent repairs, consumer unit upgrades, EICRs and planned home electrical work. Based nearby in Tring, we understand the mix of period cottages, Victorian terraces and later family homes that shape electrical work here.",
+    servicesIntro:
+      "Berkhamsted properties often combine older wiring layouts with later kitchens, loft conversions and garden rooms — so careful testing and clear upgrade planning matter more than quick temporary fixes.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "Urgent domestic faults in Berkhamsted — power loss, boards that will not reset, hot sockets or circuits that trip repeatedly — are made safe first, then diagnosed properly.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Intermittent trips and dead circuits are common where older layouts meet modern appliance loads. We test methodically rather than guessing.",
+      },
+      {
+        title: "Fuse Board Upgrades",
+        href: "/services/fuse-board-upgrades",
+        body: "Period and family homes in Berkhamsted often benefit from safer, clearer consumer unit protection before more kitchen or extension work is added.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "Useful before buying, selling or renovating in Berkhamsted — especially where years of alterations need a clear electrical picture.",
+      },
+    ],
+    commonProblems: [
+      { title: "Period-property wiring issues", desc: "Older layouts that struggle with modern showers, kitchens and home-office demand." },
+      { title: "Nuisance tripping", desc: "RCDs that trip with outdoor lighting, damp feeds or mixed-age circuit alterations." },
+      { title: "Dated consumer units", desc: "Boards that lack modern protection or space for sensible circuit labelling." },
+      { title: "Loft and extension electrics", desc: "Later additions that need clearer planning and safer isolation." },
+      { title: "Garden and outbuilding supplies", desc: "Weather-exposed circuits that fail or feel unsafe after wet weather." },
+      { title: "Pre-renovation inspections", desc: "Homeowners wanting priorities before decorative or kitchen work begins." },
+    ],
+    whyChooseIntro:
+      "Berkhamsted domestic electrical work rewards careful diagnosis and tidy finishing. We focus on lived-in family homes, explain what is urgent versus what can wait, and keep disruption under control.",
+    whyChoosePoints: [
+      { title: "Local Chiltern coverage", desc: "Regular work across Berkhamsted, Tring, Hemel Hempstead and nearby Hertfordshire towns." },
+      { title: "Domestic-only focus", desc: "Home electrics, upgrades, repairs and testing — not generic commercial contracting." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Clear homeowner advice", desc: "Plain-English options so you know what needs doing now and what can be planned later." },
+    ],
+    areasCovered: {
+      primary: ["Berkhamsted"],
+      villages: ["Northchurch", "Shootersway", "Gossoms End", "Ashlyns"],
+      nearby: ["Tring", "Hemel Hempstead", "Kings Langley", "Chesham", "Wendover"],
+    },
+    faq: [
+      { q: "Do you cover Berkhamsted and Northchurch?", a: "Yes. We cover Berkhamsted, Northchurch and nearby Chiltern-edge areas, plus surrounding Hertfordshire towns." },
+      { q: "Can you help with emergency electrician call-outs in Berkhamsted?", a: "Yes. For urgent domestic faults we make the installation safe first and then find the underlying cause." },
+      { q: "Do you work on older period properties?", a: "Yes. Period and mixed-age homes are a regular part of our Berkhamsted work, including careful upgrades during renovations." },
+      { q: "Can you upgrade an old fuse board?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
+    ],
+  },
+  wendover: {
+    slug: "wendover",
+    name: "Wendover",
+    region: "Buckinghamshire",
+    map: {
+      bbox: [-0.8, 51.74, -0.68, 51.79],
+      marker: { lat: 51.7619, lon: -0.7417 },
+    },
+    heroIntro:
+      "Need an electrician in Wendover? RIGS Electrical provides NICEIC domestic electrical work for homeowners in Wendover and the surrounding Chiltern villages. From urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements, you get practical local support from a Tring-based team covering this side of Buckinghamshire.",
+    servicesIntro:
+      "Wendover homes often sit between village streets, Chiltern-edge properties and later family housing — so outdoor electrics, older boards and renovation-related alterations come up regularly.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If electrics trip repeatedly, power drops out or something feels unsafe in a Wendover home, we stabilise the installation first and then diagnose the fault properly.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Intermittent issues and mixed-age circuits need careful testing — especially where gardens, garages and extensions have been added over time.",
+      },
+      {
+        title: "Fuse Board Upgrades",
+        href: "/services/fuse-board-upgrades",
+        body: "A modern consumer unit helps Wendover homes cope safely with showers, kitchens and outdoor supplies that older boards were never designed for.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "Useful before buying, selling or renovating locally — giving a clear report rather than guesswork about what needs attention.",
+      },
+    ],
+    commonProblems: [
+      { title: "Tripping outdoor circuits", desc: "Garden lighting, sockets and garage feeds affected by damp or ageing accessories." },
+      { title: "Older fuse boards", desc: "Boards that lack modern protection or space for clearer circuit isolation." },
+      { title: "Village-home alterations", desc: "Piecemeal upgrades that leave mixed wiring needing careful testing." },
+      { title: "Kitchen and shower demand", desc: "Higher loads that expose weak points in older domestic layouts." },
+      { title: "Worn accessories", desc: "Sockets and switches that have loosened or run warm in day-to-day use." },
+      { title: "Pre-project inspections", desc: "Homeowners wanting priorities before decorative or extension work starts." },
+    ],
+    whyChooseIntro:
+      "Wendover domestic electrical work needs a local, homeowner-focused approach: tidy finishes, weather-aware outdoor circuits and clear advice about what is urgent versus what can wait.",
+    whyChoosePoints: [
+      { title: "Chiltern-edge coverage", desc: "Regular work across Wendover, Aylesbury Vale, Tring and nearby Buckinghamshire villages." },
+      { title: "Domestic-only focus", desc: "Repairs, inspections, boards and upgrades for lived-in homes." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Clear communication", desc: "Same-day quoting where possible and plain-English options for homeowners." },
+    ],
+    areasCovered: {
+      primary: ["Wendover"],
+      villages: ["Halton", "Weston Turville", "Aston Clinton", "Butler's Cross"],
+      nearby: ["Aylesbury", "Tring", "Berkhamsted", "Princes Risborough", "Ivinghoe"],
+    },
+    faq: [
+      { q: "Do you cover Wendover and nearby villages?", a: "Yes. We cover Wendover plus nearby Chiltern villages and surrounding Buckinghamshire towns." },
+      { q: "Can you help with outdoor and garage electrics?", a: "Yes. Garden lighting, external sockets and garage supplies are a regular part of domestic work around Wendover." },
+      { q: "Do you offer consumer unit upgrades?", a: "Yes. We replace outdated fuse boards where safer protection and clearer circuits are needed." },
+      { q: "Can I book an EICR?", a: "Yes. EICRs are useful before a move, rental change or renovation in Wendover." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
+    ],
+  },
+  ivinghoe: {
+    slug: "ivinghoe",
+    name: "Ivinghoe",
+    region: "Buckinghamshire",
+    map: {
+      bbox: [-0.68, 51.82, -0.58, 51.86],
+      marker: { lat: 51.8369, lon: -0.6297 },
+    },
+    heroIntro:
+      "Need an electrician in Ivinghoe? RIGS Electrical covers Ivinghoe and nearby Buckinghamshire villages with NICEIC domestic electrical work — from urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements. Based close by in Tring, we are used to village properties, older layouts and outdoor electrics that need careful, weather-aware attention.",
+    servicesIntro:
+      "Ivinghoe homes often include older village wiring, later extensions and garden or outbuilding supplies. Practical domestic support means diagnosing faults properly and planning upgrades without unnecessary disruption.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "For power loss, boards that will not reset or accessories that feel unsafe in Ivinghoe, we make the installation safe first and then find the cause.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Intermittent trips and dead circuits need methodical testing — especially where outdoor feeds and older indoor wiring share the same installation.",
+      },
+      {
+        title: "Fuse Board Upgrades",
+        href: "/services/fuse-board-upgrades",
+        body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "A clear inspection report helps before buying, selling or renovating an Ivinghoe property with mixed-age electrics.",
+      },
+    ],
+    commonProblems: [
+      { title: "Village wiring age", desc: "Older layouts that struggle with modern household demand." },
+      { title: "Outdoor circuit faults", desc: "Garden, garage and outbuilding supplies affected by damp or ageing accessories." },
+      { title: "Repeated tripping", desc: "Shared protection that trips when showers, kitchens or outdoor circuits load up." },
+      { title: "Outdated fuse boards", desc: "Boards that need safer protection and clearer circuit labelling." },
+      { title: "Extension-related changes", desc: "Later additions that need careful integration with the existing installation." },
+      { title: "Pre-purchase checks", desc: "Buyers wanting a clear electrical picture before committing to renovation budgets." },
+    ],
+    whyChooseIntro:
+      "Ivinghoe domestic electrical work is about practical village coverage: tidy finishes, clear advice and a local team that already works the Tring–Aylesbury Vale corridor every week.",
+    whyChoosePoints: [
+      { title: "Close local coverage", desc: "Based in Tring with regular work across Ivinghoe, Pitstone, Marsworth and nearby Bucks villages." },
+      { title: "Domestic-only focus", desc: "Homeowner repairs, inspections, boards and upgrades." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Clear next steps", desc: "Plain-English quoting and sensible prioritisation for urgent versus planned work." },
+    ],
+    areasCovered: {
+      primary: ["Ivinghoe"],
+      villages: ["Pitstone", "Marsworth", "Ivinghoe Aston", "Ringshall"],
+      nearby: ["Tring", "Aylesbury", "Wendover", "Leighton Buzzard", "Berkhamsted"],
+    },
+    faq: [
+      { q: "Do you cover Ivinghoe and nearby villages?", a: "Yes. We cover Ivinghoe plus Pitstone, Marsworth and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
+      { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
+      { q: "Can I get an EICR in Ivinghoe?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
     ],
   },
 };

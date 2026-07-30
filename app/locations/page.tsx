@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import LocationsHubPage from "@/components/pages/LocationsHubPage";
 
 export const metadata: Metadata = {
-  title: "Electrician Near Tring & Hertfordshire | Areas Covered | RIGS",
+  title: "Electrician Locations | Herts, Bucks & Beds | RIGS",
   description:
-    "Find RIGS Electrical coverage for Tring, St Albans, Hemel Hempstead, Watford and Hertfordshire towns. Domestic faults, EICRs and consumer units.",
+    "Find RIGS Electrical coverage across Tring, Aylesbury, Hemel Hempstead, Berkhamsted, Wendover and towns in Hertfordshire, Buckinghamshire and Bedfordshire.",
   alternates: { canonical: "https://rigselectrical.co.uk/locations" },
   openGraph: {
     type: "website",
-    title: "Electrician Near Tring & Hertfordshire | Areas Covered | RIGS",
+    title: "Electrician Locations | Herts, Bucks & Beds | RIGS",
     description:
-      "Find RIGS Electrical coverage for Tring, St Albans, Hemel Hempstead, Watford and Hertfordshire towns. Domestic faults, EICRs and consumer units.",
+      "Find RIGS Electrical coverage across Tring, Aylesbury, Hemel Hempstead, Berkhamsted, Wendover and towns in Hertfordshire, Buckinghamshire and Bedfordshire.",
     url: "https://rigselectrical.co.uk/locations",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Electrician Near Tring & Hertfordshire | Areas Covered | RIGS",
+    title: "Electrician Locations | Herts, Bucks & Beds | RIGS",
     description:
-      "Find RIGS Electrical coverage for Tring, St Albans, Hemel Hempstead, Watford and Hertfordshire towns. Domestic faults, EICRs and consumer units.",
+      "Find RIGS Electrical coverage across Tring, Aylesbury, Hemel Hempstead, Berkhamsted, Wendover and towns in Hertfordshire, Buckinghamshire and Bedfordshire.",
   },
 };
 

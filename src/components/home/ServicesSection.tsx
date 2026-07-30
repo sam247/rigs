@@ -72,7 +72,7 @@ const ServicesSection = () => (
         <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-4xl font-heading font-800 mb-3 md:mb-4">Trusted Domestic Electrical Work</motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
           Whatever your home needs — from a quick repair to a full rewire — RIGS Electrical delivers
-          high-quality, fully certified work across Tring and Hertfordshire.
+          high-quality, fully certified work across Hertfordshire, Buckinghamshire and nearby towns.
         </motion.p>
       </motion.div>
 

@@ -2,14 +2,15 @@ import type { CountyCoveragePageConfig, CountyTown } from "@/content/countyCover
 import { makeCountyTownContactHref } from "@/content/countyCoverage";
 
 export const BUCKINGHAMSHIRE_TOWNS: CountyTown[] = [
-  { name: "Aylesbury", href: makeCountyTownContactHref("Aylesbury"), status: "planned", note: "Planned town page from the next growth plan.", x: 28, y: 46 },
+  { name: "Aylesbury", href: "/electrician/aylesbury", status: "live", note: "Live town page with full local content.", x: 28, y: 46 },
   { name: "Amersham", href: makeCountyTownContactHref("Amersham"), status: "planned", note: "Planned town page from the next growth plan.", x: 42, y: 69 },
   { name: "Beaconsfield", href: makeCountyTownContactHref("Beaconsfield"), status: "planned", note: "Planned town page from the next growth plan.", x: 44, y: 80 },
   { name: "Chesham", href: makeCountyTownContactHref("Chesham"), status: "planned", note: "Planned town page from the next growth plan.", x: 36, y: 62 },
   { name: "Great Missenden", href: makeCountyTownContactHref("Great Missenden"), status: "planned", note: "Planned town page from the next growth plan.", x: 33, y: 57 },
   { name: "High Wycombe", href: makeCountyTownContactHref("High Wycombe"), status: "planned", note: "Planned town page from the next growth plan.", x: 37, y: 76 },
+  { name: "Ivinghoe", href: "/electrician/ivinghoe", status: "live", note: "Live town page with full local content.", x: 22, y: 48 },
   { name: "Princes Risborough", href: makeCountyTownContactHref("Princes Risborough"), status: "planned", note: "Planned town page from the next growth plan.", x: 26, y: 63 },
-  { name: "Wendover", href: makeCountyTownContactHref("Wendover"), status: "planned", note: "Planned town page from the next growth plan.", x: 25, y: 55 },
+  { name: "Wendover", href: "/electrician/wendover", status: "live", note: "Live town page with full local content.", x: 25, y: 55 },
   { name: "Buckingham", href: makeCountyTownContactHref("Buckingham"), status: "coverage", note: "County coverage area.", x: 17, y: 18 },
   { name: "Bletchley", href: makeCountyTownContactHref("Bletchley"), status: "coverage", note: "County coverage area.", x: 12, y: 36 },
   { name: "Marlow", href: makeCountyTownContactHref("Marlow"), status: "coverage", note: "County coverage area.", x: 31, y: 85 },
@@ -22,13 +23,13 @@ export const BUCKINGHAMSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
   countyName: "Buckinghamshire",
   slug: "buckinghamshire",
   title: "Electrician Buckinghamshire",
-  metaTitle: "Electrician Buckinghamshire | Domestic County Coverage | RIGS",
+  metaTitle: "Electrician Buckinghamshire | Aylesbury, Wendover & County | RIGS",
   metaDescription:
-    "Domestic electrician coverage across Buckinghamshire, including Aylesbury, Wendover, Chesham, Amersham, High Wycombe and nearby towns.",
+    "Domestic electrician coverage across Buckinghamshire, with live town pages for Aylesbury, Wendover and Ivinghoe plus wider county enquiry routes.",
   heroIntro:
-    "Need a local domestic electrician anywhere in Buckinghamshire? This county page brings together the main Buckinghamshire towns we cover, from Aylesbury Vale and the Wendover side of the county through to Chesham, Amersham, High Wycombe and the wider commuter belt. It gives homeowners a clear first route into county coverage while the dedicated town pages are built out over time.",
+    "Need a local domestic electrician anywhere in Buckinghamshire? This county page brings together live town pages for Aylesbury, Wendover and Ivinghoe, plus the wider Buckinghamshire towns we cover from Aylesbury Vale through the Chilterns to Chesham, Amersham and High Wycombe. It gives homeowners a clear first route into county coverage while more dedicated town pages are built out.",
   townsIntro:
-    "Use the directory to jump to the Buckinghamshire town that best fits your area. The key next-step towns from the growth plan are already surfaced here, alongside broader county enquiry routes.",
+    "Use the directory to jump to the Buckinghamshire town that best fits your area. Live pages for Aylesbury, Wendover and Ivinghoe are ready now, alongside broader county enquiry routes for the remaining towns.",
   overviewIntro:
     "Buckinghamshire combines market towns, Chiltern villages, commuter-belt housing and family homes spread across a fairly wide county footprint. That mix creates a strong need for practical domestic electrical support, especially where homeowners are upgrading, renovating or trying to make older layouts work more safely for modern living.",
   howWeHelpIntro:
@@ -145,8 +146,12 @@ export const BUCKINGHAMSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
       a: "We cover homes across Buckinghamshire and nearby border areas. This county page is here to make that coverage clearer and give homeowners a useful county-level starting point.",
     },
     {
+      q: "Which Buckinghamshire town pages are live today?",
+      a: "Live dedicated town pages currently include Aylesbury, Wendover and Ivinghoe. Other key next-step towns include Chesham, Amersham, High Wycombe, Princes Risborough, Great Missenden and Beaconsfield.",
+    },
+    {
       q: "Which Buckinghamshire towns are next in the rollout?",
-      a: "The key next-step towns include Aylesbury, Wendover, Chesham, Amersham, High Wycombe, Princes Risborough, Great Missenden and Beaconsfield.",
+      a: "After Aylesbury, Wendover and Ivinghoe, the key next-step towns include Chesham, Amersham, High Wycombe, Princes Risborough, Great Missenden and Beaconsfield.",
     },
     {
       q: "Can I still enquire if my town does not have a standalone page yet?",

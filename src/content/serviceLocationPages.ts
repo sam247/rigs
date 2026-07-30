@@ -149,6 +149,74 @@ const serviceLocationPages = [
     commonReasons: ["Repeated trips", "Power loss to part of the home", "Socket or switch overheating", "Lighting faults", "Outdoor circuit problems"],
     relatedArticleHrefs: ["/blog/why-do-my-electrics-keep-tripping", "/blog/flickering-lights-common-causes"],
   },
+  {
+    locationSlug: "hemel-hempstead",
+    serviceSlug: "electrical-fault-finding",
+    title: "Electrical Fault Finding Hemel Hempstead",
+    metaTitle: "Electrical Fault Finding Hemel Hempstead | RIGS",
+    metaDescription:
+      "Electrical fault finding in Hemel Hempstead for tripping circuits, dead sockets, intermittent faults and mixed-age domestic wiring.",
+    intro:
+      "RIGS Electrical provides domestic electrical fault finding in Hemel Hempstead for homeowners dealing with repeated tripping, intermittent faults, dead sockets and circuits that fail after extensions or kitchen work.",
+    whyItMatters: [
+      "Hemel Hempstead homes often mix New Town wiring with later alterations that hide the real cause of a fault.",
+      "Repeated resetting without testing can leave unsafe conditions in place.",
+      "Clear diagnosis helps decide between a local repair and a wider upgrade.",
+    ],
+    commonReasons: ["Repeated RCD trips", "Dead sockets or lighting circuits", "Faults after kitchen or extension work", "Outdoor circuit problems", "Intermittent power loss"],
+    relatedArticleHrefs: ["/blog/why-do-my-electrics-keep-tripping", "/blog/what-happens-during-an-electrical-fault-finding-visit"],
+  },
+  {
+    locationSlug: "hemel-hempstead",
+    serviceSlug: "fuse-board-upgrades",
+    title: "Fuse Board Upgrades Hemel Hempstead",
+    metaTitle: "Fuse Board Upgrades Hemel Hempstead | Consumer Units",
+    metaDescription:
+      "Fuse board and consumer unit upgrades in Hemel Hempstead for safer protection, clearer circuits and modern household demand.",
+    intro:
+      "Need a fuse board upgrade in Hemel Hempstead? RIGS Electrical replaces outdated consumer units so kitchens, showers, home offices and outdoor circuits are better protected and easier to manage.",
+    whyItMatters: [
+      "Many Hemel homes still rely on older boards that were never designed for today's appliance load.",
+      "A modern consumer unit improves safety and makes future electrical work clearer.",
+      "Upgrade planning can sit alongside kitchen or extension projects rather than becoming a last-minute scramble.",
+    ],
+    commonReasons: ["Old rewireable fuses", "Repeated nuisance tripping", "No spare ways for new circuits", "Kitchen or shower upgrades", "Advice after an EICR"],
+    relatedArticleHrefs: ["/blog/how-to-tell-if-your-fuse-board-needs-replacing", "/blog/consumer-unit-vs-fuse-box"],
+  },
+  {
+    locationSlug: "aylesbury",
+    serviceSlug: "emergency-electrician",
+    title: "Emergency Electrician Aylesbury",
+    metaTitle: "Emergency Electrician Aylesbury | Urgent Domestic Faults",
+    metaDescription:
+      "Need an emergency electrician in Aylesbury? RIGS helps with urgent domestic faults, power loss, tripping circuits and unsafe electrics.",
+    intro:
+      "RIGS Electrical helps Aylesbury homeowners with urgent domestic electrical faults, from repeated tripping and partial power loss to hot sockets and boards that will not reset. We make the situation safe first, then test properly.",
+    whyItMatters: [
+      "Urgent symptoms should be checked carefully before the same circuit is put back into use.",
+      "Aylesbury homes often include mixed-age wiring and outdoor circuits that complicate faults.",
+      "A domestic-first approach keeps the focus on safe, tidy work in lived-in homes.",
+    ],
+    commonReasons: ["Repeated tripping", "Loss of power", "Hot or buzzing accessories", "Lighting or socket faults", "Outdoor circuit issues"],
+    relatedArticleHrefs: ["/blog/why-do-my-electrics-keep-tripping", "/blog/do-i-need-an-emergency-electrician-or-can-it-wait"],
+  },
+  {
+    locationSlug: "berkhamsted",
+    serviceSlug: "emergency-electrician",
+    title: "Emergency Electrician Berkhamsted",
+    metaTitle: "Emergency Electrician Berkhamsted | Urgent Domestic Faults",
+    metaDescription:
+      "Emergency electrician in Berkhamsted for domestic faults, tripping electrics, power loss, hot sockets and urgent electrical safety issues.",
+    intro:
+      "If you need an emergency electrician in Berkhamsted, RIGS Electrical can help with urgent domestic faults, repeated tripping, loss of power and accessories that feel unsafe. We test methodically and explain the safest next step clearly.",
+    whyItMatters: [
+      "Period properties and later alterations can hide faults until a circuit starts tripping.",
+      "Urgent electrical symptoms should be made safe before wider repair work is planned.",
+      "Clear diagnosis helps avoid replacing parts unnecessarily.",
+    ],
+    commonReasons: ["RCD or RCBO tripping", "Loss of power to sockets or lighting", "Hot, cracked or buzzing accessories", "Faults after renovation work", "Unsafe outdoor lighting or sockets"],
+    relatedArticleHrefs: ["/blog/why-do-my-electrics-keep-tripping", "/blog/do-i-need-an-emergency-electrician-or-can-it-wait"],
+  },
 ] satisfies ServiceLocationPageConfig[];
 
 export const SERVICE_LOCATION_PAGES = serviceLocationPages.filter((page) => LOCATION_PAGES[page.locationSlug]);

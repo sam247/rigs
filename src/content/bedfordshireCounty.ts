@@ -27,11 +27,11 @@ export const BEDFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
   title: "Electrician Bedfordshire",
   metaTitle: "Electrician Bedfordshire | Domestic County Coverage | RIGS",
   metaDescription:
-    "Domestic electrician coverage across Bedfordshire, including Luton, Dunstable, Leighton Buzzard, Bedford and nearby towns.",
+    "Domestic electrician coverage across Bedfordshire, including Luton, Dunstable, Leighton Buzzard, Bedford and nearby towns. Clear county enquiry routes for faults, boards and EICRs.",
   heroIntro:
-    "Need a local domestic electrician anywhere in Bedfordshire? This county page brings together the main towns we cover across Bedfordshire, from the Luton and Dunstable side of the county through to Bedford, Biggleswade and surrounding towns. It is designed to help homeowners find the right next step quickly, whether the job is an urgent fault, a consumer unit upgrade, inspection work, or wider domestic electrical planning.",
+    "Need a local domestic electrician anywhere in Bedfordshire? This county page is the clearest starting point for homeowners across Luton, Dunstable, Leighton Buzzard, Bedford, Biggleswade and surrounding towns. Whether the job is an urgent fault, a consumer unit upgrade, inspection work, or wider domestic electrical planning, you can enquire by area today while dedicated town pages are rolled out.",
   townsIntro:
-    "Use the directory to jump to the town that fits your area. Some Bedfordshire towns are next in the rollout plan, while the wider county links still give homeowners a clear enquiry route today.",
+    "Use the directory to jump to the town that fits your area. Planned Bedfordshire town pages are surfaced clearly, while the wider county links still give homeowners a working enquiry route today.",
   overviewIntro:
     "Bedfordshire includes larger urban centres, market-town pockets, commuter areas and village-edge housing, so domestic electrical work can range from older house upgrades to modern family-home alterations. The point of this page is to make county coverage easy to understand and give homeowners a useful first stop even before every town has its own dedicated page.",
   howWeHelpIntro:

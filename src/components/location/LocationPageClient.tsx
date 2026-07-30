@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import OpenStreetMapEmbed from "@/components/location/OpenStreetMapEmbed";
 import { BLOG_POSTS } from "@/content/blogPosts";
-import type { LocationPageConfig } from "@/content/locations";
+import { LOCATION_PAGES, type LocationPageConfig } from "@/content/locations";
 import { getServiceLocationPath } from "@/content/serviceLocationPages";
 import JsonLd from "@/components/JsonLd";
 
@@ -18,9 +18,22 @@ const fadeUp = {
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }),
 };
 
+const LOCATION_HREF_BY_NAME = Object.fromEntries(
+  Object.values(LOCATION_PAGES).map((location) => [location.name, `/electrician/${location.slug}`]),
+);
+
+function countyPageForRegion(region: string) {
+  const slug = region.toLowerCase().replace(/\s+/g, "-");
+  if (slug === "hertfordshire" || slug === "buckinghamshire" || slug === "bedfordshire") {
+    return { href: `/electrician/${slug}`, label: region };
+  }
+  return { href: "/electrician/hertfordshire", label: "Hertfordshire" };
+}
+
 export default function LocationPageClient({ location }: { location: LocationPageConfig }) {
   const path = `/electrician/${location.slug}`;
   const serviceParam = encodeURIComponent(`Electrician ${location.name}`);
+  const countyPage = countyPageForRegion(location.region);
   const relatedServices = [
     {
       title: "Emergency Electrician",
@@ -232,10 +245,9 @@ export default function LocationPageClient({ location }: { location: LocationPag
               <div className="lg:col-span-2">
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   We’re based locally and regularly carry out domestic electrical work across {location.name} and the surrounding villages, as well as nearby
-                  towns in {location.region} and Buckinghamshire. If you’re not sure whether we cover your road, get in touch and we’ll confirm. You can also
-                  browse our{" "}
-                  <Link href="/electrician/hertfordshire" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
-                    Hertfordshire county page
+                  towns in {location.region}. If you’re not sure whether we cover your road, get in touch and we’ll confirm. You can also browse our{" "}
+                  <Link href={countyPage.href} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                    {countyPage.label} county page
                   </Link>{" "}
                   for a wider town directory and county overview.
                 </p>
@@ -251,9 +263,20 @@ export default function LocationPageClient({ location }: { location: LocationPag
                   <div>
                     <h3 className="font-heading font-800 mb-3">Nearby Towns</h3>
                     <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                      {location.areasCovered.nearby.map((t) => (
-                        <li key={t}>{t}</li>
-                      ))}
+                      {location.areasCovered.nearby.map((t) => {
+                        const href = LOCATION_HREF_BY_NAME[t];
+                        return (
+                          <li key={t}>
+                            {href ? (
+                              <Link href={href} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                                {t}
+                              </Link>
+                            ) : (
+                              t
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -359,8 +382,8 @@ export default function LocationPageClient({ location }: { location: LocationPag
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-6">
                 Need a broader county view first? Visit our{" "}
-                <Link href="/electrician/hertfordshire" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
-                  Hertfordshire electrician page
+                <Link href={countyPage.href} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  {countyPage.label} electrician page
                 </Link>{" "}
                 to browse town pages and wider county coverage.
               </p>

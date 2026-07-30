@@ -29,11 +29,15 @@ const CTASection = () => (
             Get in touch
           </motion.p>
           <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-4xl font-heading font-800 mb-3 md:mb-4 text-foreground">
-            Need an Electrician in Tring? Let's Talk.
+            Need a Local Domestic Electrician? Let's Talk.
           </motion.h2>
           <motion.p variants={fadeUp} custom={2} className="text-sm md:text-base text-muted-foreground max-w-xl mb-6 md:mb-8">
             Get in touch today for a free, no-obligation quote. We'll call you back the same day —
-            tidy, friendly and fully certified work for your home.
+            tidy, friendly and fully certified work for your home. Looking specifically for{" "}
+            <Link href="/electrician/tring" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+              an electrician in Tring
+            </Link>
+            ? Start on our dedicated local page.
           </motion.p>
 
           <motion.ul variants={fadeUp} custom={3} className="space-y-3 mb-6 md:mb-8 text-sm md:text-base">
@@ -47,7 +51,12 @@ const CTASection = () => (
             </li>
             <li className="flex items-center gap-3 text-foreground">
               <MapPin className="h-4 w-4 text-primary shrink-0" />
-              <span>Tring, Hertfordshire & surrounding areas</span>
+              <span>
+                Based in Tring ·{" "}
+                <Link href="/locations" className="hover:text-primary transition-colors">
+                  Areas we cover
+                </Link>
+              </span>
             </li>
           </motion.ul>
 

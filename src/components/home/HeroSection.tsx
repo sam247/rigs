@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { trackFormSubmit, trackFormSuccess } from "@/lib/gtag";
+import { submitLeadForm } from "@/lib/leadForm";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -26,17 +27,19 @@ const HeroSection = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
-    if (fd.get("_gotcha")) return;
-    fd.set("_source", "Hero Quick Quote");
+    const service = String(fd.get("service") ?? "");
     trackFormSubmit({ formName: "hero_quick_quote", formLocation: "homepage_hero" });
     setSubmitting(true);
     try {
-      const res = await fetch("https://formbold.com/s/9BaZ2", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: fd,
+      await submitLeadForm({
+        name: String(fd.get("name") ?? ""),
+        email: String(fd.get("email") ?? ""),
+        phone: String(fd.get("phone") ?? "") || undefined,
+        message: service ? `Service needed: ${service}` : undefined,
+        service: service || undefined,
+        form_name: "hero_quick_quote",
+        website: String(fd.get("website") ?? ""),
       });
-      if (!res.ok) throw new Error("Request failed");
       trackFormSuccess({ formName: "hero_quick_quote", formLocation: "homepage_hero" });
       toast({ title: "Quote requested!", description: "We'll be in touch shortly." });
       form.reset();
@@ -65,19 +68,23 @@ const HeroSection = () => {
               NICEIC Registered • C&G Qualified
             </motion.div>
             <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-6xl font-heading font-800 leading-[1.1] mb-4 md:mb-6">
-              Professional Local Tring
-              <span className="text-primary-foreground/90"> Electrician.</span>
+              RIGS Electrical
+              <span className="text-primary-foreground/90"> — Local Domestic Electrician.</span>
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-base md:text-xl text-primary-foreground/80 mb-6 md:mb-8 max-w-lg leading-relaxed">
-              Professional, reliable, friendly electrician available 24/7 for all domestic projects
-              in Tring, Hertfordshire and Buckinghamshire.
+              NICEIC registered domestic electrician covering Hertfordshire, Buckinghamshire and nearby towns.
+              Based in{" "}
+              <Link href="/electrician/tring" className="underline underline-offset-4 decoration-primary-foreground/40 hover:decoration-primary-foreground">
+                Tring
+              </Link>
+              , available for faults, upgrades and clear same-day quotes.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700 text-base w-full sm:w-auto">
                 <Link href="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
               <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-heading font-600 text-base w-full sm:w-auto">
-                <Link href="/about">Why Choose Us</Link>
+                <Link href="/electrician/tring">Electrician in Tring</Link>
               </Button>
             </motion.div>
           </motion.div>
@@ -97,7 +104,7 @@ const HeroSection = () => {
                 <h2 className="font-heading font-800 text-xl">Quick Quote</h2>
                 <p className="text-xs text-muted-foreground">Same-day response, no obligation.</p>
               </div>
-              <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
               <Input name="name" placeholder="Full name" required />
               <Input name="email" type="email" placeholder="Email" required />
               <Input name="phone" placeholder="Phone" />

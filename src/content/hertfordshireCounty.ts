@@ -3,7 +3,7 @@ import { makeCountyTownContactHref } from "@/content/countyCoverage";
 
 export const HERTFORDSHIRE_TOWNS: CountyTown[] = [
   { name: "Baldock", href: makeCountyTownContactHref("Baldock"), status: "coverage", note: "A-Z county coverage area.", x: 74, y: 24 },
-  { name: "Berkhamsted", href: makeCountyTownContactHref("Berkhamsted"), status: "coverage", note: "A-Z county coverage area.", x: 17, y: 44 },
+  { name: "Berkhamsted", href: "/electrician/berkhamsted", status: "live", note: "Live town page with full local content.", x: 17, y: 44 },
   { name: "Bishop's Stortford", href: makeCountyTownContactHref("Bishop's Stortford"), status: "coverage", note: "A-Z county coverage area.", x: 84, y: 34 },
   { name: "Borehamwood", href: "/electrician/borehamwood", status: "live", note: "Live town page with full local content.", x: 47, y: 76 },
   { name: "Broxbourne", href: makeCountyTownContactHref("Broxbourne"), status: "coverage", note: "A-Z county coverage area.", x: 73, y: 73 },
@@ -139,7 +139,7 @@ export const HERTFORDSHIRE_FAQ = [
   },
   {
     q: "Which Hertfordshire town pages are live today?",
-    a: "The dedicated live town pages include Tring, St Albans, Watford, Hemel Hempstead, Stevenage, Hitchin, Harpenden, Hatfield, Welwyn Garden City, Cheshunt, Borehamwood and Letchworth.",
+    a: "The dedicated live town pages include Tring, Berkhamsted, St Albans, Watford, Hemel Hempstead, Stevenage, Hitchin, Harpenden, Hatfield, Welwyn Garden City, Cheshunt, Borehamwood and Letchworth.",
   },
   {
     q: "Do the town links go to full local pages?",
@@ -165,9 +165,9 @@ export const HERTFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
   title: "Electrician Hertfordshire",
   metaTitle: "Electrician Hertfordshire | NICEIC Domestic Coverage | RIGS",
   metaDescription:
-    "Find a NICEIC domestic electrician across Hertfordshire. Town pages for Tring, St Albans, Hemel Hempstead, Watford and local electrical services.",
+    "Find a NICEIC domestic electrician across Hertfordshire. Live town pages for Tring, Berkhamsted, Hemel Hempstead, St Albans, Watford and county-wide domestic coverage.",
   heroIntro:
-    "Need a reliable electrician anywhere in Hertfordshire? This county page brings together the detailed town pages already available and broader county coverage links so homeowners can quickly find the right next step. Whether you are dealing with tripping electrics in an older property, planning a consumer unit upgrade, or arranging an EICR before a move, the same domestic-first approach runs across every area we cover.",
+    "Need a reliable electrician anywhere in Hertfordshire? This county page brings together live town pages for Tring, Berkhamsted, Hemel Hempstead, St Albans, Watford and more, plus broader county coverage links so homeowners can quickly find the right next step. Whether you are dealing with tripping electrics in an older property, planning a consumer unit upgrade, or arranging an EICR before a move, the same domestic-first approach runs across every area we cover.",
   townsIntro:
     "The map is there as a quick visual guide, while the directory does the real job for customers: helping you get to your nearest town page or a working enquiry link without any guesswork.",
   overviewIntro:

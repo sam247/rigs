@@ -12,6 +12,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/layout/Layout";
 import { trackFormSubmit, trackFormSuccess } from "@/lib/gtag";
+import { submitLeadForm } from "@/lib/leadForm";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -36,16 +37,18 @@ const ContactPage = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
-    if (fd.get("_gotcha")) return;
     trackFormSubmit({ formName: "contact_page", formLocation: "/contact" });
     setSubmitting(true);
     try {
-      const res = await fetch("https://formbold.com/s/9BaZ2", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: fd,
+      await submitLeadForm({
+        name: String(fd.get("name") ?? ""),
+        email: String(fd.get("email") ?? ""),
+        phone: String(fd.get("phone") ?? "") || undefined,
+        message: String(fd.get("message") ?? ""),
+        service: String(fd.get("service") ?? "") || undefined,
+        form_name: "contact_page",
+        website: String(fd.get("website") ?? ""),
       });
-      if (!res.ok) throw new Error("Request failed");
       trackFormSuccess({ formName: "contact_page", formLocation: "/contact" });
       toast({ title: "Quote requested!", description: "We'll be in touch as soon as possible." });
       form.reset();
@@ -81,7 +84,7 @@ const ContactPage = () => {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:col-span-3">
               <motion.h2 variants={fadeUp} custom={0} className="text-2xl font-heading font-800 mb-6">Send Us a Message</motion.h2>
               <motion.form variants={fadeUp} custom={1} onSubmit={handleSubmit} className="space-y-5">
-                <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+                <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="font-heading font-600">Full Name</Label>

@@ -73,7 +73,7 @@ const ProjectsShowcase = () => (
         <motion.p variants={fadeUp} custom={0} className="text-xs md:text-sm font-heading font-600 uppercase tracking-wider text-primary mb-2 md:mb-3">Recent Projects</motion.p>
         <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-4xl font-heading font-800 mb-3 md:mb-4">Work We're Proud Of</motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-          A snapshot of recent domestic electrical work completed across Tring, Hertfordshire and the surrounding villages.
+          A snapshot of recent domestic electrical work completed across Hertfordshire, Buckinghamshire and nearby towns.
         </motion.p>
       </motion.div>
 

@@ -45,6 +45,10 @@ const locationRoutes: Array<[string, RegExp]> = [
   ["/electrician/cheshunt", /Electrician Cheshunt/i],
   ["/electrician/borehamwood", /Electrician Borehamwood/i],
   ["/electrician/letchworth", /Electrician Letchworth/i],
+  ["/electrician/aylesbury", /Electrician Aylesbury/i],
+  ["/electrician/berkhamsted", /Electrician Berkhamsted/i],
+  ["/electrician/wendover", /Electrician Wendover/i],
+  ["/electrician/ivinghoe", /Electrician Ivinghoe/i],
 ];
 
 const serviceLocationRoutes: Array<[string, RegExp]> = [
@@ -52,6 +56,10 @@ const serviceLocationRoutes: Array<[string, RegExp]> = [
   ["/electrician/tring/eicr-certificates", /EICR Certificates Tring/i],
   ["/electrician/tring/electric-shower-installation", /Electric Shower Installation Tring/i],
   ["/electrician/hemel-hempstead/emergency-electrician", /Emergency Electrician Hemel Hempstead/i],
+  ["/electrician/hemel-hempstead/electrical-fault-finding", /Electrical Fault Finding Hemel Hempstead/i],
+  ["/electrician/hemel-hempstead/fuse-board-upgrades", /Fuse Board Upgrades Hemel Hempstead/i],
+  ["/electrician/aylesbury/emergency-electrician", /Emergency Electrician Aylesbury/i],
+  ["/electrician/berkhamsted/emergency-electrician", /Emergency Electrician Berkhamsted/i],
 ];
 
 const assertRoute = async (path: string, heading: RegExp, page: Page) => {

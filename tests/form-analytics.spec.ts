@@ -1,6 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 
-const formEndpoint = "https://formbold.com/s/9BaZ2";
+const formEndpoint =
+  "https://admin.betterranking.co.uk/sender/api/f/bs_0g7oojs9n3vwco145o1g8n8t";
 
 async function stubLeadSubmission(page: Page) {
   await page.route(formEndpoint, async (route) => {
