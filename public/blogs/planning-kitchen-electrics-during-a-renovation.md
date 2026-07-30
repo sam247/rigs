@@ -130,4 +130,4 @@ The most important step is to involve a qualified electrician early. Do not wait
 
 If you are planning a kitchen renovation and need a clear, fixed-price quote for the electrical work, **Get A Quote** from a local registered electrician who understands Part P and BS 7671. Proper planning upfront saves time, money, and disruption later.
 
-For more guidance on specific electrical work, read about [Electrical Services in Hertfordshire](https://rigselectrical.co.uk/electrical-services-hertfordshire) or speak to an [Emergency Electrician Hertfordshire](https://rigselectrical.co.uk/emergency-electrician-hertfordshire) if the work is urgent.
+For more guidance on specific electrical work, read about [Electrical Services in Hertfordshire](https://rigselectrical.co.uk/services) or speak to an [Emergency Electrician Hertfordshire](https://rigselectrical.co.uk/services/emergency-electrician) if the work is urgent.
