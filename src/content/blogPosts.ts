@@ -77,9 +77,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "What Happens During an Electrical Fault Finding Visit?",
-    metaTitle: "What Happens During Electrical Fault Finding?",
+    metaTitle: "Electrical Fault Finding: What Happens On a Visit",
     description:
-      "Booking electrical fault finding? See how electricians trace tripping circuits, dead sockets and flickering lights safely in domestic homes.",
+      "Need electrical fault finding? See how a domestic electrician traces tripping circuits, dead sockets and flickering lights — and when to book a visit.",
     href: "/blog/what-happens-during-an-electrical-fault-finding-visit",
     dateLabel: "July 2026",
     sourceSlug: "what-happens-during-an-electrical-fault-finding-visit",

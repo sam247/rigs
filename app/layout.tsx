@@ -7,23 +7,26 @@ import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rigselectrical.co.uk"),
-  title: "RIGS Electrical | NICEIC Domestic Electrician | Herts & Bucks",
+  title: {
+    default: "Electrician Tring | NICEIC Domestic Electrician | RIGS Electrical",
+    template: "%s",
+  },
   description:
-    "Call 07989 205468 for a NICEIC domestic electrician across Hertfordshire, Buckinghamshire and nearby towns. Fault finding, urgent repairs, consumer units, EICRs and home upgrades.",
+    "Call 07989 205468 for a NICEIC domestic electrician in Tring and across Hertfordshire, Buckinghamshire and nearby towns. Fault finding, urgent repairs, consumer units, EICRs and home upgrades.",
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     siteName: "RIGS Electrical",
     locale: "en_GB",
-    title: "RIGS Electrical | NICEIC Domestic Electrician | Herts & Bucks",
+    title: "Electrician Tring | NICEIC Domestic Electrician | RIGS Electrical",
     description:
-      "Call 07989 205468 for a NICEIC domestic electrician across Hertfordshire, Buckinghamshire and nearby towns. Fault finding, urgent repairs, consumer units, EICRs and home upgrades.",
+      "Call 07989 205468 for a NICEIC domestic electrician in Tring and across Hertfordshire, Buckinghamshire and nearby towns. Fault finding, urgent repairs, consumer units, EICRs and home upgrades.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RIGS Electrical | NICEIC Domestic Electrician | Herts & Bucks",
+    title: "Electrician Tring | NICEIC Domestic Electrician | RIGS Electrical",
     description:
-      "Call 07989 205468 for a NICEIC domestic electrician across Hertfordshire, Buckinghamshire and nearby towns. Fault finding, urgent repairs, consumer units, EICRs and home upgrades.",
+      "Call 07989 205468 for a NICEIC domestic electrician in Tring and across Hertfordshire, Buckinghamshire and nearby towns. Fault finding, urgent repairs, consumer units, EICRs and home upgrades.",
   },
 };
 
