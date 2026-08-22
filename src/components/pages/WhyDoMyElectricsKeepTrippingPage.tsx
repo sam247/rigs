@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Phone } from "lucide-react";
+import BlogCoverImage from "@/components/blog/BlogCoverImage";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -73,30 +74,20 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
       <JsonLd data={articleSchema} />
       <JsonLd data={faqSchema} />
 
-      <section className="relative overflow-hidden text-primary-foreground">
-        <Image
-          src="/blog_images/why-do-my-electrics-keep-tripping.jpg"
-          alt="Consumer unit with a tripped breaker"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
-        <div className="container relative py-20 md:py-28">
-          <motion.div initial="hidden" animate="visible" className="max-w-3xl">
-            <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
-              Blog
-            </motion.p>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">
-              Why Do My Electrics Keep Tripping?
-            </motion.h1>
-            <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Tripping electrics can feel random and frustrating, but it usually means your consumer unit is protecting you from a genuine
-              electrical problem. This guide explains the common causes, what you can check safely as a homeowner, and when to call an electrician
-              in Hertfordshire.
-            </motion.p>
-            <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+      <section className="text-primary-foreground">
+        <BlogCoverImage title="Why Do My Electrics Keep Tripping?" variant="hero" asHeading />
+        <div className="bg-primary">
+          <div className="container py-10 md:py-14">
+            <motion.div initial="hidden" animate="visible" className="max-w-3xl">
+              <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
+                Blog
+              </motion.p>
+              <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
+                Tripping electrics can feel random and frustrating, but it usually means your consumer unit is protecting you from a genuine
+                electrical problem. This guide explains the common causes, what you can check safely as a homeowner, and when to call an electrician
+                in Hertfordshire.
+              </motion.p>
+              <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700">
                 <Link href="/services/electrical-fault-finding">
                   Electrical fault finding <ArrowRight className="ml-2 h-5 w-5" />
@@ -110,6 +101,7 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
               </Button>
             </motion.div>
           </motion.div>
+          </div>
         </div>
       </section>
 

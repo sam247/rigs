@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
+import BlogCoverImage from "@/components/blog/BlogCoverImage";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -67,30 +68,20 @@ const ConsumerUnitVsFuseBoxPage = () => {
       <JsonLd data={articleSchema} />
       <JsonLd data={faqSchema} />
 
-      <section className="relative overflow-hidden text-primary-foreground">
-        <Image
-          src="/blog_images/consumer_unit_vs_fuse_box.jpg"
-          alt="Modern consumer unit with circuit breakers"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-rigs-dark/90 via-primary/80 to-primary/60" />
-        <div className="container relative py-20 md:py-28">
-          <motion.div initial="hidden" animate="visible" className="max-w-3xl">
-            <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
-              Blog
-            </motion.p>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">
-              Consumer Unit vs Fuse Box: What’s the Difference?
-            </motion.h1>
-            <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              If you’ve ever looked at your home’s electrical setup and wondered whether you have a consumer unit or an old fuse box, you’re not
-              alone. Properties in Tring, Berkhamsted, Hemel Hempstead and across Hertfordshire still rely on older fuse boxes installed decades
-              ago.
-            </motion.p>
-            <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+      <section className="text-primary-foreground">
+        <BlogCoverImage title="Consumer Unit vs Fuse Box: What’s the Difference?" variant="hero" asHeading />
+        <div className="bg-primary">
+          <div className="container py-10 md:py-14">
+            <motion.div initial="hidden" animate="visible" className="max-w-3xl">
+              <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
+                Blog
+              </motion.p>
+              <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
+                If you’ve ever looked at your home’s electrical setup and wondered whether you have a consumer unit or an old fuse box, you’re not
+                alone. Properties in Tring, Berkhamsted, Hemel Hempstead and across Hertfordshire still rely on older fuse boxes installed decades
+                ago.
+              </motion.p>
+              <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700">
                 <Link href="/contact?service=Consumer%20Unit%20Upgrade">
                   Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
@@ -104,6 +95,7 @@ const ConsumerUnitVsFuseBoxPage = () => {
               </Button>
             </motion.div>
           </motion.div>
+          </div>
         </div>
       </section>
 

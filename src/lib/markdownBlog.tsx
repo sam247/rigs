@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
+import BlogCoverImage from "@/components/blog/BlogCoverImage";
 import JsonLd from "@/components/JsonLd";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -131,12 +132,13 @@ export function MarkdownBlogArticle({ post, markdown }: { post: BlogPost; markdo
     <Layout>
       <JsonLd data={articleSchema} />
 
-      <section className="bg-primary text-primary-foreground py-20 md:py-28">
-        <div className="container">
-          <div className="max-w-3xl">
-            <p className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Advice & Guides</p>
-            <h1 className="text-4xl md:text-5xl font-heading font-800 mb-6">{post.title}</h1>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">{post.description}</p>
+      <section className="text-primary-foreground">
+        <BlogCoverImage title={post.title} variant="hero" asHeading />
+        <div className="bg-primary">
+          <div className="container py-10 md:py-14">
+            <div className="max-w-3xl">
+              <p className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Advice & Guides</p>
+              <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">{post.description}</p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700">
                 <Link href={post.relatedServiceHref ?? "/contact"}>
@@ -151,6 +153,7 @@ export function MarkdownBlogArticle({ post, markdown }: { post: BlogPost; markdo
               </Button>
             </div>
           </div>
+        </div>
         </div>
       </section>
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
+import BlogCoverImage from "@/components/blog/BlogCoverImage";
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { BLOG_POSTS } from "@/content/blogPosts";
@@ -36,13 +37,14 @@ const BlogHubPage = () => (
           {BLOG_POSTS.map((p, i) => (
             <motion.div key={p.href} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp} custom={i}>
               <Link href={p.href} className="block h-full">
-                <Card className="group h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
-                  <CardContent className="p-8">
+                <Card className="group h-full overflow-hidden border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+                  <BlogCoverImage title={p.title} variant="card" />
+                  <CardContent className="p-6 md:p-8">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
                       <Calendar className="h-4 w-4" />
                       <span>{p.dateLabel}</span>
                     </div>
-                    <h2 className="font-heading font-800 text-xl mb-3">{p.title}</h2>
+                    <h2 className="sr-only">{p.title}</h2>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-6">{p.description}</p>
                     <span className="inline-flex items-center gap-2 text-sm font-heading font-600 text-primary group-hover:text-primary/80 transition-colors">
                       Read article <ArrowRight className="h-4 w-4" />
