@@ -55,6 +55,12 @@ const relatedLinks = [
     icon: ShieldCheck,
   },
   {
+    title: "Electrical Checks When Buying a House",
+    desc: "Documents to request and what to look for before you complete on a property.",
+    href: "/blog/electrical-checks-when-buying-a-house-in-tring",
+    icon: ClipboardCheck,
+  },
+  {
     title: "Why Do My Electrics Keep Tripping?",
     desc: "A homeowner guide to common causes and what to do next.",
     href: "/blog/why-do-my-electrics-keep-tripping",

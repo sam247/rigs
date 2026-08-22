@@ -80,6 +80,11 @@ const relatedServices = [
 
 const relatedArticles = [
   {
+    title: "Signs a Socket Is Unsafe",
+    desc: "Hot, buzzing or scorch-marked outlets — warning signs and safe steps before the electrician arrives.",
+    href: "/blog/signs-a-socket-is-unsafe",
+  },
+  {
     title: "Consumer Unit vs Fuse Box: What’s the Difference?",
     desc: "Understand why older fuse boxes can lead to nuisance trips and reduced protection.",
     href: "/blog/consumer-unit-vs-fuse-box",

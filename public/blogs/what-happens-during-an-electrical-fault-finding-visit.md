@@ -12,7 +12,7 @@ You should arrange a fault finding visit as soon as you notice any of these warn
 
 *   The same circuit breaker or RCD trips repeatedly.
 *   Lights flicker or dim for no obvious reason.
-*   Sockets, switches, or light fittings feel warm to the touch.
+*   Sockets, switches, or light fittings feel warm to the touch — see [signs a socket is unsafe](/blog/signs-a-socket-is-unsafe).
 *   You smell burning or see scorch marks near electrical points.
 *   An appliance stops working while others on the same circuit remain fine.
 *   There is a buzzing or crackling sound from a socket or switch.

@@ -38,7 +38,7 @@ Notifiable work must be carried out by a registered electrician who is a member 
 - Repairing or maintaining existing installations
 - Adding a spur from an existing ring circuit (though this is best checked with your electrician)
 
-Keep the certificate from any notifiable work. You will need it when you sell your home – missing certificates can delay a sale and cost thousands to rectify.
+Keep the certificate from any notifiable work. You will need it when you sell your home – missing certificates can delay a sale and cost thousands to rectify. See our [Part P certification guide](/blog/what-electrical-work-needs-part-p-certification) for what is notifiable in kitchens.
 
 ## Dedicated Circuits: What Your Kitchen Actually Needs
 
@@ -130,4 +130,4 @@ The most important step is to involve a qualified electrician early. Do not wait
 
 If you are planning a kitchen renovation and need a clear, fixed-price quote for the electrical work, **Get A Quote** from a local registered electrician who understands Part P and BS 7671. Proper planning upfront saves time, money, and disruption later.
 
-For more guidance on specific electrical work, read about [Electrical Services in Hertfordshire](https://rigselectrical.co.uk/services) or speak to an [Emergency Electrician Hertfordshire](https://rigselectrical.co.uk/services/emergency-electrician) if the work is urgent.
+For wider renovation socket planning beyond the kitchen, see [how many sockets when renovating a house](/blog/how-many-sockets-when-renovating-a-house). If the project includes building out, read [extension electrics planning](/blog/electrics-for-a-house-extension-planning-guide).

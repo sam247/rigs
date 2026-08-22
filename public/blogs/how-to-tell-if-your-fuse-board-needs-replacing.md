@@ -47,7 +47,7 @@ A modern consumer unit (often still called a fuse box) looks very different from
 - **Main switch** – isolates the whole board.
 - **Clear labelling** – each circuit is identified, making future work safer.
 
-A replacement is notifiable work under Part P of the Building Regulations. Only a registered competent person (e.g., NICEIC, NAPIT, or ELECSA registered electrician) can self‑certify the installation. They will issue an installation certificate and, if required, an updated EICR.
+A replacement is notifiable work under Part P of the Building Regulations. Only a registered competent person (e.g., NICEIC, NAPIT, or ELECSA registered electrician) can self‑certify the installation. They will issue an installation certificate and, if required, an updated EICR. See our [Part P certification guide](/blog/what-electrical-work-needs-part-p-certification) for what is notifiable in domestic work.
 
 ## How Much Does a Fuse Board Replacement Cost?
 
@@ -57,9 +57,9 @@ Costs vary by property size, number of circuits, and any remedial work discovere
 - Labour for installation and testing
 - Certification and notification to building control
 
-Larger homes with 12+ circuits, or properties needing additional work such as earthing or bonding upgrades, can cost £1,200 to £1,500 or more. If your wiring is old (rubber or lead‑sheathed cable), a full rewire may be necessary, adding £3,000 to £6,000 for a three‑bedroom house.
+Larger homes with 12+ circuits, or properties needing additional work such as earthing or bonding upgrades, can cost £1,200 to £1,500 or more. If your wiring is old (rubber or lead‑sheathed cable), a full rewire may be necessary, adding £3,000 to £6,000 for a three‑bedroom house. See our [rewire cost guide](/blog/how-much-does-it-cost-to-rewire-a-house-in-tring) for sourced UK benchmark ranges and [full vs partial rewire](/blog/do-i-need-a-full-rewire-or-partial-rewire) scope decisions.
 
-Always get at least three itemised quotes from Part‑P registered electricians. Ask them to specify the type of unit (RCBO vs dual‑RCD), whether surge protection is included, and what remedial work they anticipate.
+Always get at least three itemised quotes from Part‑P registered electricians. Ask them to specify the type of unit (RCBO vs dual‑RCD), whether surge protection is included, and what remedial work they anticipate. For a deeper breakdown of **published UK benchmark ranges** and quotation factors — distinct from any single electrician's price — see our [consumer unit replacement cost guide](/blog/how-much-does-a-consumer-unit-replacement-cost).
 
 ## Next Steps: Getting a Qualified Electrician
 

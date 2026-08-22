@@ -224,6 +224,14 @@ const ConsumerUnitVsFuseBoxPage = () => {
               </ul>
               <p>It also gives you peace of mind knowing your electrical system is built for today’s demands.</p>
 
+              <p>
+                For budgeting, see our guide to{" "}
+                <Link href="/blog/how-much-does-a-consumer-unit-replacement-cost">consumer unit replacement costs</Link> (published UK benchmark
+                ranges, not fixed RIGS prices). If your board shows warning signs, read{" "}
+                <Link href="/blog/how-to-tell-if-your-fuse-board-needs-replacing">how to tell if your fuse board needs replacing</Link> and{" "}
+                <Link href="/blog/what-electrical-work-needs-part-p-certification">what electrical work needs Part P certification</Link>.
+              </p>
+
               <h2>Why Choose RIGS Electrical in Tring?</h2>
               <p>
                 At RIGS Electrical, we specialise in old fuse box replacement and consumer unit upgrades for homes across Tring and Hertfordshire.

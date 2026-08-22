@@ -229,7 +229,8 @@ const FlickeringLightsCommonCausesPage = () => {
                 <Link href="/blog/why-do-my-electrics-keep-tripping">
                   why do my electrics keep tripping
                 </Link>
-                .
+                . Warm or buzzing sockets need prompt attention — see{" "}
+                <Link href="/blog/signs-a-socket-is-unsafe">signs a socket is unsafe</Link>.
               </p>
               <p>
                 For homeowners in Tring and nearby towns, our local page covers common domestic issues we see:{" "}

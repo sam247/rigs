@@ -49,6 +49,12 @@ const relatedLinks = [
     icon: Search,
   },
   {
+    title: "Consumer Unit Replacement Cost",
+    desc: "Published UK benchmark ranges and what affects your quotation.",
+    href: "/blog/how-much-does-a-consumer-unit-replacement-cost",
+    icon: Search,
+  },
+  {
     title: "EICR Certificates",
     desc: "Electrical safety inspections that often highlight board and protection improvements.",
     href: "/services/eicr-certificates",

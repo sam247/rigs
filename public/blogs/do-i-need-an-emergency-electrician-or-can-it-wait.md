@@ -14,7 +14,7 @@ The following warning signs mean you should treat the situation as an emergency:
 - **Sparks or arcing** when you plug something in or operate a switch. Occasional small sparks on plugging in can be normal, but repeated or large sparks indicate a fault.
 - **Electric shock** when touching an appliance, switch, or outlet. Even a mild tingle can signal unsafe wiring.
 - **Exposed live wires** – for example, damage to a cable that reveals copper conductors.
-- **Hot outlets, switches, or wires** that are warm to the touch even when nothing is drawing power.
+- **Hot outlets, switches, or wires** that are warm to the touch even when nothing is drawing power. See [unsafe socket warning signs](/blog/signs-a-socket-is-unsafe) for what to do before help arrives.
 - **Frequent circuit breaker tripping** that you cannot reset (or that trips again immediately). This points to a short circuit or earth fault.
 - **Partial power loss** with no tripped breakers – this may indicate a loose connection or damaged neutral wire, which can cause voltage surges and fire risk.
 - **Water or flooding near electrical systems** – do not step into water if electrics are live. Call emergency services.

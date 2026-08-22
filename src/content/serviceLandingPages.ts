@@ -98,6 +98,7 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     relatedLinks: [
       { title: "Security Lighting Installation", desc: "Add PIR and driveway lighting with a security-first focus.", href: "/services/security-lighting", icon: "Bell" },
       { title: "Smart Home Installation", desc: "Smart switching, app control and scene-based lighting upgrades.", href: "/services/smart-home-installation", icon: "Cpu" },
+      { title: "Garden electrics guide", desc: "Outdoor sockets, garden room supplies and RCD-protected circuits.", href: "/blog/garden-electrics-outdoor-sockets-lighting-garden-rooms", icon: "Search" },
       { title: "Electrical Fault Finding", desc: "Useful if existing outside lights trip, fail intermittently or have been affected by damp.", href: "/services/electrical-fault-finding", icon: "Search" },
       { title: "Locations Hub", desc: "See the Hertfordshire towns where we already have local electrician pages.", href: "/locations", icon: "MapPin" },
     ],
@@ -171,7 +172,7 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
       { title: "Consumer Unit Replacement", desc: "Often part of wider rewire or major upgrade work.", href: "/services/consumer-unit-replacement", icon: "ShieldCheck" },
       { title: "Electrical Inspections", desc: "Useful if you want independent clarity before deciding whether a rewire is needed.", href: "/services/electrical-inspections", icon: "ClipboardCheck" },
       { title: "Kitchen Electrical Installation", desc: "Popular alongside rewires during larger renovation projects.", href: "/services/kitchen-electrics", icon: "Bath" },
-      { title: "EICR Certificates", desc: "A formal report can help confirm the condition of older wiring before major work starts.", href: "/services/eicr-certificates", icon: "Search" },
+      { title: "House rewire cost guide", desc: "Published UK benchmark ranges and quotation factors for budgeting.", href: "/blog/how-much-does-it-cost-to-rewire-a-house-in-tring", icon: "Search" },
     ],
     faqs: [
       {

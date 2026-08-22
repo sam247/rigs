@@ -14,7 +14,7 @@ The main reasons to get an EICR as a homeowner are:
 
 - **Safety** – Faults in fixed wiring can cause serious injuries. An EICR catches problems before they cause a fire or electric shock.
 - **Reassurance** – A satisfactory report means you and your family are protected.
-- **Property transactions** – Buyers or their solicitors often ask for an EICR, especially on older homes. Having one ready can speed up a sale.
+- **Property transactions** – Buyers or their solicitors often ask for an EICR, especially on older homes. Having one ready can speed up a sale. If you are purchasing, read [electrical checks when buying a house](/blog/electrical-checks-when-buying-a-house-in-tring) for documents to request before exchange.
 - **Insurance** – Some insurers may require an up-to-date EICR or ask about it, particularly if you have an older property or have made claims for electrical damage.
 
 ## The Recommended Schedule: Every 10 Years for Homeowners
@@ -38,7 +38,7 @@ Even if your last EICR was less than 10 years ago, you should call an electricia
 - **Scorch marks or discolouration** – Brown or black marks around sockets, switches, or the consumer unit indicate overheating.
 - **A burning smell** – A persistent smell of burning plastic or hot insulation is a serious sign of electrical trouble.
 - **Flickering or dimming lights** – This can point to loose connections, overloaded circuits, or failing wiring.
-- **Warm or vibrating sockets** – Any socket that feels warm to the touch or vibrates when in use should be checked.
+- **Warm or vibrating sockets** – Any socket that feels warm to the touch or vibrates when in use should be checked. See [unsafe socket warning signs](/blog/signs-a-socket-is-unsafe) for what to do before an electrician arrives.
 - **Shocks or tingles** – A mild shock when touching a metal fitting suggests a loss of earthing or a fault.
 - **Old fuse box with rewireable fuses** – If your consumer unit still uses old-fashioned rewireable fuses (often with a small piece of wire that you had to replace after a fuse blew), it lacks modern RCD protection. This alone is a reason to have an EICR and potentially a consumer unit upgrade.
 

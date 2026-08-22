@@ -21,7 +21,7 @@ The consumer unit (fuse box) is the heart of your home’s electrical system. In
 
 Modern wiring regulations (BS 7671, 18th Edition) require RCD protection on almost all circuits. An older unit that lacks RCDs means that a fault could go undetected until someone touches a live part. According to NICEIC guidance, a house rewire helps make your property safer by ensuring wiring and protective devices meet the latest standards.
 
-If your consumer unit has rewireable fuses or a wooden backboard, it is a strong candidate for replacement. A modern metal-clad consumer unit with RCDs and miniature circuit breakers (MCBs) is now standard.
+If your consumer unit has rewireable fuses or a wooden backboard, it is a strong candidate for replacement. A modern metal-clad consumer unit with RCDs and miniature circuit breakers (MCBs) is now standard. Budget using [published UK benchmark ranges](/blog/how-much-does-a-consumer-unit-replacement-cost) — then obtain a property-specific quotation.
 
 ## The Role of an Electrical Installation Condition Report (EICR)
 
@@ -37,7 +37,7 @@ The report assigns codes to any issues found:
 - **C2 (Potentially dangerous)** – a serious defect that needs prompt rectification.
 - **C3 (Improvement recommended)** – not immediately dangerous but could become so.
 
-If the EICR reveals one or more C2 codes, especially on multiple circuits, a full or partial rewire is often necessary. A C1 code means you should not use that circuit until it is repaired.
+If the EICR reveals one or more C2 codes, especially on multiple circuits, a full or partial rewire is often necessary. A C1 code means you should not use that circuit until it is repaired. Our guides on [full vs partial rewire](/blog/do-i-need-a-full-rewire-or-partial-rewire) and [rewire cost benchmarks](/blog/how-much-does-it-cost-to-rewire-a-house-in-tring) help you plan next steps after the report.
 
 For older homes, Electrical Safety First recommends having an EICR at least every ten years. If your property is over 50 years old, a fresh inspection is a sensible starting point when you move in or if you notice any warning signs.
 
@@ -55,7 +55,7 @@ Not every job needs a separate building notice. **Notifiable work** includes:
 
 The key to staying compliant is to use an electrician registered with a **Competent Persons Scheme** such as NICEIC or NAPIT. A registered electrician can self-certify the work and notify the local authority on your behalf. If you use an unregistered tradesperson, you must submit a building notice and arrange for the work to be certified by a registered third party or inspected by building control.
 
-For older properties, any wiring upgrade or consumer unit change is almost certainly notifiable. Always check that the electrician you hire is registered and can issue the correct BS 7671 certificate.
+For older properties, any wiring upgrade or consumer unit change is almost certainly notifiable. Always check that the electrician you hire is registered and can issue the correct BS 7671 certificate. Our [Part P guide](/blog/what-electrical-work-needs-part-p-certification) lists notifiable work in England and Wales.
 
 ## What to Expect from a Rewire and Typical Costs
 

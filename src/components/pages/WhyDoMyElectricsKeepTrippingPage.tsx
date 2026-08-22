@@ -247,6 +247,10 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
               <p>
                 If nuisance trips are frequent and your board is older, it’s also worth understanding the difference between a modern consumer
                 unit and an older fuse box. This article explains it clearly:{" "}
+                <Link href="/blog/signs-a-socket-is-unsafe" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  Unsafe socket warning signs
+                </Link>
+                {" · "}
                 <Link href="/blog/consumer-unit-vs-fuse-box">
                   consumer unit vs fuse box
                 </Link>
