@@ -2,20 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { ArrowRight, Phone } from "lucide-react";
 import BlogCoverImage from "@/components/blog/BlogCoverImage";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import JsonLd from "@/components/JsonLd";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }),
-};
 
 const comparisonRows = [
   { feature: "Fuse protection", old: "Rewireable fuses", modern: "Circuit breakers" },
@@ -68,38 +60,15 @@ const ConsumerUnitVsFuseBoxPage = () => {
       <JsonLd data={articleSchema} />
       <JsonLd data={faqSchema} />
 
-      <section className="text-primary-foreground">
-        <BlogCoverImage title="Consumer Unit vs Fuse Box: What’s the Difference?" variant="hero" asHeading />
-        <div className="bg-primary">
-          <div className="container py-10 md:py-14">
-            <motion.div initial="hidden" animate="visible" className="max-w-3xl">
-              <motion.p variants={fadeUp} custom={0} className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">
-                Blog
-              </motion.p>
-              <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-                If you’ve ever looked at your home’s electrical setup and wondered whether you have a consumer unit or an old fuse box, you’re not
-                alone. Properties in Tring, Berkhamsted, Hemel Hempstead and across Hertfordshire still rely on older fuse boxes installed decades
-                ago.
-              </motion.p>
-              <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700">
-                <Link href="/contact?service=Consumer%20Unit%20Upgrade">
-                  Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-heading font-600">
-                <a href="tel:+447989205468">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call 07989 205468
-                </a>
-              </Button>
-            </motion.div>
-          </motion.div>
+      <section className="pt-10 md:pt-14">
+        <div className="container">
+          <div className="max-w-5xl mx-auto overflow-hidden rounded-lg">
+            <BlogCoverImage title="Consumer Unit vs Fuse Box: What’s the Difference?" variant="hero" asHeading />
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="py-12 md:py-16">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center justify-between gap-4 mb-10">

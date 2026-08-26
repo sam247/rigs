@@ -1,11 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import BlogCoverImage from "@/components/blog/BlogCoverImage";
 import JsonLd from "@/components/JsonLd";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
 import type { BlogPost } from "@/content/blogPosts";
 import { BLOG_POSTS } from "@/content/blogPosts";
 
@@ -132,32 +131,15 @@ export function MarkdownBlogArticle({ post, markdown }: { post: BlogPost; markdo
     <Layout>
       <JsonLd data={articleSchema} />
 
-      <section className="text-primary-foreground">
-        <BlogCoverImage title={post.title} variant="hero" asHeading />
-        <div className="bg-primary">
-          <div className="container py-10 md:py-14">
-            <div className="max-w-3xl">
-              <p className="text-sm font-heading font-600 uppercase tracking-wider text-accent mb-3">Advice & Guides</p>
-              <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">{post.description}</p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button asChild size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-700">
-                <Link href={post.relatedServiceHref ?? "/contact"}>
-                  {post.ctaLabel ?? "Get electrical advice"} <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-heading font-600">
-                <a href="tel:+447989205468">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call 07989 205468
-                </a>
-              </Button>
-            </div>
+      <section className="pt-10 md:pt-14">
+        <div className="container">
+          <div className="max-w-5xl mx-auto overflow-hidden rounded-lg">
+            <BlogCoverImage title={post.title} variant="hero" asHeading />
           </div>
-        </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="py-12 md:py-16">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center justify-between gap-4 mb-10">
