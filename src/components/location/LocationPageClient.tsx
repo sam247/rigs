@@ -38,25 +38,25 @@ export default function LocationPageClient({ location }: { location: LocationPag
     {
       title: "Emergency Electrician",
       desc: "Urgent faults, power outages and tripping circuits across Hertfordshire.",
-      href: "/services/emergency-electrician",
+      href: getServiceLocationPath(location.slug, "/services/emergency-electrician"),
       icon: ZapOff,
     },
     {
       title: "Fuse Board Upgrades",
       desc: "Modern protection and fewer nuisance trips with an updated consumer unit.",
-      href: "/services/fuse-board-upgrades",
+      href: getServiceLocationPath(location.slug, "/services/fuse-board-upgrades"),
       icon: ShieldCheck,
     },
     {
       title: "House Rewiring",
       desc: "Full or partial rewires for older properties and renovations.",
-      href: "/services/house-rewiring",
+      href: getServiceLocationPath(location.slug, "/services/house-rewiring"),
       icon: Home,
     },
     {
       title: "EICR Certificates",
       desc: "Electrical safety inspections with clear findings and next steps.",
-      href: "/services/eicr-certificates",
+      href: getServiceLocationPath(location.slug, "/services/eicr-certificates"),
       icon: Search,
     },
   ];

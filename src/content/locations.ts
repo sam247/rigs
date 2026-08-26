@@ -452,6 +452,11 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       "Harpenden homes often involve a mix of period details, larger family-house upgrades and later garden or extension work, so the electrics need to be planned around both character and modern demand.",
     serviceBlocks: [
       {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "For urgent domestic faults in Harpenden — power loss, repeated tripping, hot sockets or anything that feels unsafe — we can help make the situation safe and diagnose the cause.",
+      },
+      {
         title: "Electrical Fault Finding",
         href: "/services/electrical-fault-finding",
         body: "Useful where faults are intermittent, one area of the home behaves differently to another, or earlier changes have made the installation harder to understand.",

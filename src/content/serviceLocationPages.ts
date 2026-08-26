@@ -51,9 +51,9 @@ const serviceLocationPages = [
     locationSlug: "tring",
     serviceSlug: "fuse-board-upgrades",
     title: "Fuse Board Upgrades Tring",
-    metaTitle: "Fuse Board Upgrades Tring | Consumer Unit Replacement",
+    metaTitle: "Fuse Box Tring | Fuse Board Upgrades | RIGS Electrical",
     metaDescription:
-      "Fuse board upgrades in Tring for old fuse boxes, nuisance tripping, renovations and safer consumer unit protection with certification.",
+      "Need a fuse box upgrade in Tring? RIGS replaces old fuse boards and consumer units for safer protection, clearer circuits and fewer nuisance trips — with certification.",
     intro:
       "Older fuse boards are a common issue in Tring homes, especially where properties have been extended, renovated or altered over time. RIGS Electrical upgrades domestic fuse boards and consumer units with modern protection, clear labelling and proper testing.",
     whyItMatters: [
@@ -62,7 +62,7 @@ const serviceLocationPages = [
       "We explain what needs upgrading and what can stay, so the work is planned around the actual condition of your home.",
     ],
     commonReasons: ["Old rewireable fuse boards", "Nuisance tripping or unclear circuit labelling", "Renovation or kitchen upgrade plans", "EICR recommendations", "Need for modern RCD or RCBO protection"],
-    relatedArticleHrefs: ["/blog/consumer-unit-vs-fuse-box", "/blog/why-do-my-electrics-keep-tripping"],
+    relatedArticleHrefs: ["/blog/how-to-tell-if-your-fuse-board-needs-replacing", "/blog/consumer-unit-vs-fuse-box", "/blog/why-do-my-electrics-keep-tripping"],
   },
   {
     locationSlug: "tring",

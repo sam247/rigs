@@ -83,6 +83,26 @@ const relatedServices = [
   },
 ];
 
+/** Town emergency pages that already exist — used to pass authority from this hub. */
+const emergencyTownLinks = {
+  hertfordshire: [
+    { name: "Tring", href: "/electrician/tring/emergency-electrician" },
+    { name: "Berkhamsted", href: "/electrician/berkhamsted/emergency-electrician" },
+    { name: "Hemel Hempstead", href: "/electrician/hemel-hempstead/emergency-electrician" },
+    { name: "St Albans", href: "/electrician/st-albans/emergency-electrician" },
+    { name: "Harpenden", href: "/electrician/harpenden" },
+    { name: "Watford", href: "/electrician/watford/emergency-electrician" },
+    { name: "Hitchin", href: "/electrician/hitchin" },
+  ],
+  buckinghamshire: [
+    { name: "Aylesbury", href: "/electrician/aylesbury/emergency-electrician" },
+    { name: "Wendover", href: "/electrician/wendover" },
+    { name: "Chesham", href: "/locations" },
+    { name: "Amersham", href: "/locations" },
+    { name: "Princes Risborough", href: "/locations" },
+  ],
+};
+
 const EmergencyElectricianPage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -361,8 +381,15 @@ const EmergencyElectricianPage = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     Fast help for domestic electrical emergencies across Hertfordshire — including Tring and the surrounding towns and villages.
                   </p>
-                  <p className="text-xs text-muted-foreground">
-                    Tring • Berkhamsted • Hemel Hempstead • St Albans • Harpenden • Watford • Hitchin
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {emergencyTownLinks.hertfordshire.map((town, index) => (
+                      <span key={town.href + town.name}>
+                        {index > 0 ? " • " : null}
+                        <Link href={town.href} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                          {town.name}
+                        </Link>
+                      </span>
+                    ))}
                   </p>
                 </CardContent>
               </Card>
@@ -375,7 +402,16 @@ const EmergencyElectricianPage = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     We regularly carry out domestic electrical work in nearby Buckinghamshire — ideal when you need a local team that can respond quickly.
                   </p>
-                  <p className="text-xs text-muted-foreground">Aylesbury • Wendover • Chesham • Amersham • Princes Risborough</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {emergencyTownLinks.buckinghamshire.map((town, index) => (
+                      <span key={town.href + town.name}>
+                        {index > 0 ? " • " : null}
+                        <Link href={town.href} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                          {town.name}
+                        </Link>
+                      </span>
+                    ))}
+                  </p>
                 </CardContent>
               </Card>
               <Card className="border-2 border-border">
