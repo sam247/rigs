@@ -255,9 +255,20 @@ export default function LocationPageClient({ location }: { location: LocationPag
                   <div>
                     <h3 className="font-heading font-800 mb-3">Villages We Regularly Cover</h3>
                     <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                      {location.areasCovered.villages.map((v) => (
-                        <li key={v}>{v}</li>
-                      ))}
+                      {location.areasCovered.villages.map((v) => {
+                        const href = LOCATION_HREF_BY_NAME[v];
+                        return (
+                          <li key={v}>
+                            {href ? (
+                              <Link href={href} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                                {v}
+                              </Link>
+                            ) : (
+                              v
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                   <div>

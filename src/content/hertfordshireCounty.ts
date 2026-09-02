@@ -24,6 +24,7 @@ export const HERTFORDSHIRE_TOWNS: CountyTown[] = [
   { name: "St Albans", href: "/electrician/st-albans", status: "live", note: "Live town page with full local content.", x: 45, y: 58 },
   { name: "Stevenage", href: "/electrician/stevenage", status: "live", note: "Live town page with full local content.", x: 61, y: 42 },
   { name: "Tring", href: "/electrician/tring", status: "live", note: "Live town page with full local content.", x: 10, y: 30 },
+  { name: "St Leonards", href: "/electrician/st-leonards", status: "live", note: "Live village page with full local content.", x: 12, y: 36 },
   { name: "Ware", href: makeCountyTownContactHref("Ware"), status: "coverage", note: "A-Z county coverage area.", x: 71, y: 58 },
   { name: "Watford", href: "/electrician/watford", status: "live", note: "Live town page with full local content.", x: 31, y: 72 },
   { name: "Welwyn Garden City", href: "/electrician/welwyn-garden-city", status: "live", note: "Live town page with full local content.", x: 57, y: 52 },
@@ -139,7 +140,7 @@ export const HERTFORDSHIRE_FAQ = [
   },
   {
     q: "Which Hertfordshire town pages are live today?",
-    a: "The dedicated live town pages include Tring, Berkhamsted, St Albans, Watford, Hemel Hempstead, Stevenage, Hitchin, Harpenden, Hatfield, Welwyn Garden City, Cheshunt, Borehamwood and Letchworth.",
+    a: "The dedicated live town pages include Tring, St Leonards, Berkhamsted, St Albans, Watford, Hemel Hempstead, Stevenage, Hitchin, Harpenden, Hatfield, Welwyn Garden City, Cheshunt, Borehamwood and Letchworth.",
   },
   {
     q: "Do the town links go to full local pages?",

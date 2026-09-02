@@ -87,6 +87,7 @@ const relatedServices = [
 const emergencyTownLinks = {
   hertfordshire: [
     { name: "Tring", href: "/electrician/tring/emergency-electrician" },
+    { name: "St Leonards", href: "/electrician/st-leonards" },
     { name: "Berkhamsted", href: "/electrician/berkhamsted/emergency-electrician" },
     { name: "Hemel Hempstead", href: "/electrician/hemel-hempstead/emergency-electrician" },
     { name: "St Albans", href: "/electrician/st-albans/emergency-electrician" },
@@ -97,9 +98,12 @@ const emergencyTownLinks = {
   buckinghamshire: [
     { name: "Aylesbury", href: "/electrician/aylesbury/emergency-electrician" },
     { name: "Wendover", href: "/electrician/wendover" },
+    { name: "Ivinghoe", href: "/electrician/ivinghoe" },
+    { name: "Pitstone", href: "/electrician/pitstone" },
+    { name: "Marsworth", href: "/electrician/marsworth" },
+    { name: "Aston Clinton", href: "/electrician/aston-clinton" },
     { name: "Chesham", href: "/locations" },
     { name: "Amersham", href: "/locations" },
-    { name: "Princes Risborough", href: "/locations" },
   ],
 };
 
