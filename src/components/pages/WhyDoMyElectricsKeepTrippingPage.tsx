@@ -46,7 +46,7 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
     headline: "Why Do My Electrics Keep Tripping?",
     image: ["https://rigselectrical.co.uk/blog_images/why-do-my-electrics-keep-tripping.jpg"],
     datePublished: "2026-06-03",
-    dateModified: "2026-06-03",
+    dateModified: "2026-09-09",
     author: { "@type": "Organization", name: "RIGS Electrical" },
     publisher: { "@type": "Organization", name: "RIGS Electrical" },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://rigselectrical.co.uk/blog/why-do-my-electrics-keep-tripping" },
@@ -92,7 +92,8 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
               <p className="lead">
                 When a circuit trips, it’s usually for a reason: earth leakage, a short circuit, an overloaded circuit, or a fault in an
                 appliance or accessory. The safest approach is to work out whether it’s a specific appliance, a specific circuit, or something
-                more intermittent.
+                more intermittent. RIGS handles domestic diagnosis from Tring across Hertfordshire — including recurring circuit tripping in
+                Hemel Hempstead and nearby towns — and explains findings before any repair.
               </p>
 
               <h2>What Does “Tripping” Actually Mean?</h2>
@@ -199,12 +200,11 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
 
               <h2>What Happens During Electrical Fault Finding?</h2>
               <p>
-                A structured visit involves safe tests to identify leakage, shorts and failed components. If you’re in Hertfordshire and need
-                help, see{" "}
-                <Link href="/services/electrical-fault-finding">
-                  electrical fault finding Hertfordshire
-                </Link>{" "}
-                for what we typically investigate and how the process works.
+                A structured visit involves safe tests to identify leakage, shorts and failed components. See{" "}
+                <Link href="/blog/what-happens-during-an-electrical-fault-finding-visit">what happens during a fault finding visit</Link>, or book{" "}
+                <Link href="/services/electrical-fault-finding">electrical fault finding</Link>. For Hemel Hempstead circuit-tripping call-outs,
+                use{" "}
+                <Link href="/electrician/hemel-hempstead/electrical-fault-finding">fault finding in Hemel Hempstead</Link>.
               </p>
               <p>
                 If nuisance trips are frequent and your board is older, it’s also worth understanding the difference between a modern consumer

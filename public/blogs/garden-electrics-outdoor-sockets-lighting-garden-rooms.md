@@ -1,6 +1,8 @@
 # Garden Electrics: Outdoor Sockets, Lighting and Garden Room Power
 
-Garden electrics must be installed by a registered electrician on RCD-protected circuits, using cables and accessories rated for outdoor use (appropriate IP ratings). Running power to a garden room, shed, or outdoor kitchen requires designed circuits — not permanent reliance on extension leads.
+**Garden electrics** cover outdoor sockets, garden lighting, and permanent power to sheds or garden rooms — always on RCD-protected circuits with outdoor-rated cable and accessories. Permanent extension leads across lawns are not a substitute for a designed outdoor installation.
+
+Garden electrics must be installed by a registered electrician. Running power to a garden room, shed, or outdoor kitchen requires designed circuits with appropriate IP-rated accessories.
 
 Outdoor work is notifiable under Part P in England and Wales when it involves new circuits or work in special locations ([Electrical Safety First — Part P](https://www.electricalsafetyfirst.org.uk/find-a-registered-electrician/part-p-of-the-building-regulations)).
 

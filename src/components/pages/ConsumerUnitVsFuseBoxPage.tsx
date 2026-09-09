@@ -20,15 +20,23 @@ const comparisonRows = [
 const faqs = [
   {
     q: "Is a fuse box the same as a consumer unit?",
-    a: "No. A consumer unit is the modern replacement for an older fuse box and provides significantly improved safety protection.",
+    a: "Colloquially people use both names for the board under the stairs. Technically an old fuse box uses rewirable fuses; a modern consumer unit uses MCBs/RCBOs with RCD protection. When you search “difference between fuse box and consumer unit”, that is the distinction that matters for safety and certification.",
+  },
+  {
+    q: "Are Fusebox consumer units any good?",
+    a: "Fusebox is a manufacturer brand of modern consumer units (not the same as an old rewirable fuse box). Suitability depends on the board specification, installation quality, and correct protective devices — not the brand name alone. A registered electrician will specify a board that meets BS 7671 for your circuits.",
   },
   {
     q: "How much does a consumer unit upgrade cost?",
-    a: "Costs vary depending on the number of circuits and condition of the existing installation.",
+    a: "Published UK guides often show roughly £350–£750 for a straightforward domestic swap. See our consumer unit replacement cost guide for benchmark ranges — not fixed RIGS prices.",
   },
   {
     q: "Can I sell a house with an old fuse box?",
-    a: "Yes, but buyers and surveyors may recommend an upgrade to meet modern safety expectations.",
+    a: "Yes, but buyers, surveyors and insurers often flag missing RCD protection. An EICR commonly codes old rewirable boards for improvement or urgent remedial work.",
+  },
+  {
+    q: "Do Tring homes still have old fuse boxes?",
+    a: "Many older Tring and Hertfordshire properties still have rewirable or early consumer units without full RCD coverage. Local searches for “fuse box Tring” usually need an inspection and, where required, a certificated upgrade.",
   },
 ];
 
@@ -39,7 +47,7 @@ const ConsumerUnitVsFuseBoxPage = () => {
     headline: "Consumer Unit vs Fuse Box: What’s the Difference?",
     image: ["https://rigselectrical.co.uk/blog_images/consumer_unit_vs_fuse_box.jpg"],
     datePublished: "2026-06-02",
-    dateModified: "2026-06-02",
+    dateModified: "2026-09-09",
     author: { "@type": "Organization", name: "RIGS Electrical" },
     publisher: { "@type": "Organization", name: "RIGS Electrical" },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://rigselectrical.co.uk/blog/consumer-unit-vs-fuse-box" },
@@ -82,8 +90,29 @@ const ConsumerUnitVsFuseBoxPage = () => {
 
             <article className="prose prose-rigs max-w-none md:prose-lg">
               <p className="lead">
-                Understanding the difference between a consumer unit vs fuse box is essential—not just for compliance, but for protecting your
-                home and family.
+                The difference between a fuse box and a consumer unit is mostly age and protection: older fuse boxes use rewirable fuses with
+                limited shock protection; a modern consumer unit uses circuit breakers and RCD/RCBO devices that meet current UK wiring
+                regulations. Understanding that difference helps you decide when an upgrade is needed — not just for compliance, but for
+                protecting your home.
+              </p>
+
+              <h2>Difference Between a Fuse Box and a Consumer Unit</h2>
+              <p>
+                People still say “fuse box” for any board in the cupboard. In practice:
+              </p>
+              <ul>
+                <li>
+                  <strong>Old fuse box</strong> — rewirable fuses (or very early breakers), often no 30 mA RCD protection on socket circuits
+                </li>
+                <li>
+                  <strong>Modern consumer unit</strong> — metal enclosure (for replacements since 2016), MCBs/RCBOs, RCD protection, clearer
+                  circuit labelling
+                </li>
+              </ul>
+              <p>
+                “Fusebox” as a single word can also mean a <em>brand</em> of modern consumer unit. That is not the same as keeping a ceramic
+                rewirable board. If a quote mentions a Fusebox (or other brand) consumer unit, ask what protective devices and ways are
+                included.
               </p>
 
               <h2>What Is a Fuse Box?</h2>
@@ -169,8 +198,9 @@ const ConsumerUnitVsFuseBoxPage = () => {
                 <li>Your home hasn’t had an electrical upgrade in 20+ years</li>
               </ul>
               <p>
-                In Tring and the wider Hertfordshire area, many older homes still rely on outdated systems. Replacing them is one of the most
-                effective ways to improve electrical safety.
+                In Tring and the wider Hertfordshire area, many older homes still rely on outdated fuse boxes. Local searches for a fuse box
+                in Tring usually need a site survey: some boards only need labelling and testing; others need a full consumer unit replacement
+                with Part P notification. Replacing an unsafe board is one of the most effective ways to improve electrical safety.
               </p>
 
               <h2>Benefits of a Consumer Unit Upgrade</h2>

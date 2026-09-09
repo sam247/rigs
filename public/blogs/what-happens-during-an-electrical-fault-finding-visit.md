@@ -1,10 +1,25 @@
 # What Happens During an Electrical Fault Finding Visit?
 
+## What Is Electrical Fault Finding?
+
+**Electrical fault finding** is the process a qualified electrician uses to diagnose why a domestic circuit or accessory is unsafe or not working — for example repeated trips, dead sockets, flickering lights, or a burning smell. It is diagnostic work first: identify the fault with testing, then recommend (and often carry out) the repair.
+
+In UK homes this usually means structured **domestic electrical fault finding** against BS 7671: safe isolation, visual checks, insulation and continuity tests, earth-fault loop measurements, and RCD/RCBO checks. It is not trial-and-error resetting of breakers.
+
+A fault finding visit typically covers:
+
+* Locating the root cause of tripping, loss of power, or unsafe accessories
+* Distinguishing appliance faults from fixed-wiring faults
+* Explaining findings in plain language with options to repair
+* Issuing a Minor Works Certificate or recommending further inspection where needed
+
+If you already know you need a booked visit rather than a how-it-works guide, see our [electrical fault finding service](/services/electrical-fault-finding) and [fault finding in Tring](/electrician/tring/electrical-fault-finding).
+
 ### What Is an Electrical Fault Finding Visit?
 
-An electrical fault finding visit is a structured, safety-first diagnostic process carried out by a qualified electrician to identify why part of your home’s electrical installation is not working correctly or safely. The aim is to locate the root cause of symptoms such as tripping breakers, flickering lights, dead sockets, burning smells, or unexplained power loss. The visit typically includes safe isolation of the affected circuit, visual inspection, a series of targeted tests using calibrated equipment, and a clear report of findings with recommended remedial actions.
+An electrical fault finding visit is a structured, safety-first diagnostic appointment. The electrician isolates the affected circuit, inspects accessible accessories and the consumer unit, runs targeted tests with calibrated meters, then reports findings and recommended remedial actions.
 
-Fault finding is not guesswork. It follows a methodical, evidence-based approach aligned with the 18th edition of the Wiring Regulations (BS 7671) – the UK standard for electrical installations. Whether you are a homeowner dealing with a recurring trip or a landlord meeting your legal duties under the Electrical Safety Standards in the Private Rented Sector (England) Regulations 2020, a professional fault finding visit is the first step to restoring safety and function.
+Fault finding is not guesswork. It follows an evidence-based sequence aligned with the 18th edition of the Wiring Regulations (BS 7671). Whether you are a homeowner with a recurring trip or a landlord acting on a tenant report under the Electrical Safety Standards in the Private Rented Sector (England) Regulations 2020, diagnosis is the first step to restoring safety and function.
 
 ### When Do You Need an Electrical Fault Finding Visit?
 
@@ -100,7 +115,20 @@ You can help the process run smoothly:
 
 If you are a landlord arranging a visit for a rented property, give the tenant at least 24 hours’ notice (unless it is an emergency) and provide written confirmation of the appointment. The tenant must allow reasonable access for inspections and repairs.
 
+### Fault Finding on Lighting and Socket Circuits
+
+Many searches for “fault finding electrical circuits” or “fault finding electrical lighting circuits” refer to the same visit type. Lighting rings/radials and socket rings fail in different ways:
+
+* **Lighting** — loose connections at roses and switches, failed dimmers, shared neutrals, water ingress at outdoor fittings
+* **Sockets** — high-resistance joints, damaged cables in walls, overloaded spur chains, failed accessories (see [unsafe socket signs](/blog/signs-a-socket-is-unsafe))
+* **Mixed symptoms** — one RCD protecting several circuits can make a single appliance look like a whole-house fault
+
+If the whole board trips when a particular kitchen or bathroom circuit is used, say so when you book — it shortens triage. For nuisance trips you can safely rule out appliances first, see [why electrics keep tripping](/blog/why-do-my-electrics-keep-tripping).
+
 ### Frequently Asked Questions
+
+**What is fault finding in electrical work?**  
+It is the systematic diagnosis of why a circuit, accessory, or protective device is not operating safely — using isolation, inspection, and instrument tests rather than guessing which part to replace.
 
 **How urgent is an electrical fault?**  
 Any fault that causes a circuit to trip, sparks, or a burning smell is urgent. Turn off the affected circuit at the consumer unit and call a qualified electrician immediately. Intermittent faults are still potentially dangerous and should be investigated promptly.
@@ -129,4 +157,4 @@ Whether you are dealing with a single tripping socket or a more complex circuit 
 ---
 
 **Ready to solve your electrical issue?**  
-[Get A Quote](#) from a registered electrician today.
+[Book electrical fault finding](/services/electrical-fault-finding) with RIGS, or [request a quote](/contact?service=electrical-fault-finding).

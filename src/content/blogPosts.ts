@@ -64,9 +64,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "How Much Does a Consumer Unit Replacement Cost?",
-    metaTitle: "Consumer Unit Replacement Cost UK",
+    metaTitle: "Consumer Unit & Fuse Box Replacement Cost UK",
     description:
-      "Published UK benchmark ranges for fuse board and consumer unit replacement, what affects your quote, and what certification you should receive.",
+      "UK fuse box and consumer unit replacement cost ranges (£350–£750 typical), what drives the quote up, RCBO vs dual RCD, and what certificates you should get.",
     href: "/blog/how-much-does-a-consumer-unit-replacement-cost",
     dateLabel: "August 2026",
     sourceSlug: "how-much-does-a-consumer-unit-replacement-cost",
@@ -81,9 +81,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "Signs a Socket or Electrical Outlet Is Unsafe",
-    metaTitle: "Unsafe Socket Warning Signs",
+    metaTitle: "Buzzing or Hot Socket? Unsafe Outlet Warning Signs",
     description:
-      "Hot, buzzing or scorch-marked sockets need prompt attention. Learn the warning signs, safe steps before the electrician arrives, and typical causes.",
+      "Is a buzzing plug socket dangerous? Hot, crackling or scorched outlets need the circuit off and an electrician — warning signs and safe first steps.",
     href: "/blog/signs-a-socket-is-unsafe",
     dateLabel: "August 2026",
     sourceSlug: "signs-a-socket-is-unsafe",
@@ -115,9 +115,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "How Many Sockets Do You Need When Renovating a House?",
-    metaTitle: "Socket Count for Home Renovations",
+    metaTitle: "How Many Sockets When Renovating a House",
     description:
-      "Room-by-room socket planning for renovations, building regulations context for new work, and when extra outlets need new circuits.",
+      "Room-by-room socket counts for renovations (living room, kitchen, bedrooms), when you need new circuits, and Part P for new work — avoid extension-lead clutter.",
     href: "/blog/how-many-sockets-when-renovating-a-house",
     dateLabel: "August 2026",
     sourceSlug: "how-many-sockets-when-renovating-a-house",
@@ -149,9 +149,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "Garden Electrics: Outdoor Sockets, Lighting and Garden Room Power",
-    metaTitle: "Garden Electrics & Outdoor Sockets Guide",
+    metaTitle: "Garden Electrics: Outdoor Sockets & Garden Rooms",
     description:
-      "RCD-protected outdoor circuits, garden room supplies, SWA cable principles, and when fixed wiring replaces extension leads.",
+      "Garden electrics done safely: RCD-protected outdoor sockets, garden lighting, SWA feeds to garden rooms, and when outdoor work needs Part P certification.",
     href: "/blog/garden-electrics-outdoor-sockets-lighting-garden-rooms",
     dateLabel: "August 2026",
     sourceSlug: "garden-electrics-outdoor-sockets-lighting-garden-rooms",
@@ -166,9 +166,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "What Electrical Work Needs Part P Certification?",
-    metaTitle: "Part P Electrical Work Guide",
+    metaTitle: "Part P Certificate & Notifiable Electrical Work",
     description:
-      "Notifiable vs non-notifiable domestic electrical work in England and Wales, certificates you should receive, and why registered electricians matter.",
+      "What a Part P certificate is, which electrical work is notifiable in England and Wales, non-notifiable jobs, and the documents you should keep.",
     href: "/blog/what-electrical-work-needs-part-p-certification",
     dateLabel: "August 2026",
     sourceSlug: "what-electrical-work-needs-part-p-certification",
@@ -233,8 +233,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "How to Tell If Your Fuse Board Needs Replacing",
+    metaTitle: "Signs Your Fuse Board Needs Replacing",
     description:
-      "Old fuse board, no RCD protection or nuisance tripping? Learn when to replace a fuse box with a modern consumer unit in Hertfordshire.",
+      "Rewirable fuses, no RCD, plastic boards and other warning signs your fuse board needs replacing — plus what an EICR codes and what a modern unit includes.",
     href: "/blog/how-to-tell-if-your-fuse-board-needs-replacing",
     dateLabel: "July 2026",
     sourceSlug: "how-to-tell-if-your-fuse-board-needs-replacing",
@@ -315,8 +316,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "Consumer Unit vs Fuse Box: What’s the Difference?",
+    metaTitle: "Consumer Unit vs Fuse Box Difference Explained",
     description:
-      "Understand the key differences between a consumer unit and an old fuse box, why it matters for safety and compliance, and when to consider an upgrade.",
+      "Fuse box vs consumer unit explained — including Fusebox-brand boards vs old rewirable fuse boxes — and when Tring homes should upgrade.",
     href: "/blog/consumer-unit-vs-fuse-box",
     dateLabel: "June 2026",
     relatedServiceHref: "/services/consumer-unit-replacement",
@@ -328,7 +330,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "Why Do My Electrics Keep Tripping?",
-    description: "How to tell what’s causing nuisance trips, what you can safely check at home, and when it’s time for proper electrical testing.",
+    metaTitle: "Why Do My Electrics Keep Tripping?",
+    description:
+      "RCD/MCB keeps tripping? Safe checks, common causes, and when to book fault finding around Tring and Hemel Hempstead.",
     href: "/blog/why-do-my-electrics-keep-tripping",
     dateLabel: "June 2026",
     relatedServiceHref: "/services/electrical-fault-finding",

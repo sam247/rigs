@@ -30,7 +30,7 @@ Devices cutting in and out may mean failing socket contacts or wiring connection
 **Old accessories without shutters or with visible damage**  
 Broken earth pins, missing covers, or accessories that do not meet current standards should be replaced by a competent person.
 
-GSC data for this site shows searches for buzzing sockets landing on emergency pages — this guide addresses the **diagnostic intent** directly. For repeated whole-house trips, see [why electrics keep tripping](/blog/why-do-my-electrics-keep-tripping).
+A buzzing plug socket is often dangerous enough to stop using that outlet until it is inspected — even if power still works. For repeated whole-house trips, see [why electrics keep tripping](/blog/why-do-my-electrics-keep-tripping).
 
 ## Safe Steps Before the Electrician Arrives
 

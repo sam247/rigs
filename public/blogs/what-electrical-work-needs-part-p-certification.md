@@ -6,6 +6,18 @@ Scotland uses a different building standards system; Northern Ireland has separa
 
 Sources: [Electrical Safety First — Part P](https://www.electricalsafetyfirst.org.uk/find-a-registered-electrician/part-p-of-the-building-regulations), [IET / Electrical Safety First guidance on notifiable work](https://electrical.theiet.org/bs-7671-18th-edition-wiring-regulations/building-regulations/part-p-england-and-wales/).
 
+## What Is a Part P Certificate?
+
+A **Part P certificate** (more precisely a **Building Regulations Compliance Certificate**) is the document that confirms notifiable electrical work was notified and certified under Part P. Homeowners usually receive it after a registered electrician (NICEIC, NAPIT, or equivalent) self-certifies the job.
+
+It is different from:
+
+- An **Electrical Installation Certificate (EIC)** — technical record of the installation work against BS 7671
+- An **EICR** — a condition inspection report, not proof that new work was notified
+- A **Minor Works Certificate** — used for smaller alterations; notifiable jobs still need the building regs compliance route when required
+
+When people search “Part P electrical certificate” or “what is a Part P certificate”, they usually need the compliance certificate plus the EIC/MEIWC for the job. Keep both for sales, insurance, and landlord records.
+
 ## What Part P Requires
 
 Part P exists so domestic electrical work meets safety standards and is independently verifiable. Homeowners must be able to prove compliance — failure is a **criminal offence** under building regulations, and local authorities can require removal or alteration of non-compliant work ([Electrical Safety First](https://www.electricalsafetyfirst.org.uk/find-a-registered-electrician/part-p-of-the-building-regulations)).
@@ -135,6 +147,9 @@ When in doubt, pay for a registered electrician’s advice before starting — c
 - **Safety:** [EICR for homeowners](/blog/eicr-for-homeowners-when-should-you-get-your-electrics-checked)
 
 ## Frequently Asked Questions
+
+**What does a Part P certificate look like / prove?**  
+It confirms building control was notified of notifiable domestic electrical work and that a competent person certified compliance. Keep it with the EIC or Minor Works Certificate for the same job.
 
 **Is Part P the same as BS 7671?**  
 No. Part P is building regulations; BS 7671 is the technical wiring standard work must meet.

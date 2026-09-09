@@ -120,6 +120,9 @@ If the property needs wider renewal, compare socket additions against [rewire co
 **How many sockets per room is legal in the UK?**  
 New dwellings have regulatory requirements; existing room refurbishments vary. Design to use, not to a single national number for all cases.
 
+**How many sockets in a living room renovation?**  
+Plan for TV wall, sofa ends, and charging — typically **six to eight double sockets** in a renovated main living room (more if open-plan includes dining or a desk). Mark furniture on the plan before first fix.
+
 **Can I copy my neighbour’s layout?**  
 Use their layout as inspiration only — your floor plan and loads differ.
 

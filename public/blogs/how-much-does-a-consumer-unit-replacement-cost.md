@@ -2,7 +2,9 @@
 
 Replacing a consumer unit in the UK typically costs between **£350 and £750** for a straightforward swap on a standard domestic property, according to published national trade guides — but the final quotation depends on the number of circuits, whether your earthing needs upgrading, and any remedial work discovered during testing. These figures are **market benchmarks**, not RIGS prices.
 
-This guide explains what is included in a replacement, what drives the price up, and how a new consumer unit differs from patching an old fuse board.
+Searches for **fuse box replacement cost**, **cost of replacing a fuse box**, and **consumer unit upgrade cost** usually mean the same job: swapping an old distribution board for a modern metal consumer unit with RCD/RCBO protection. This guide covers those cost queries in one place.
+
+This article explains what is included in a replacement, what drives the price up, and how a new consumer unit differs from patching an old fuse board.
 
 ## What Consumer Unit Replacement Involves
 
@@ -122,7 +124,21 @@ RIGS Electrical replaces consumer units for domestic properties from our base in
 
 [Request a consumer unit replacement quote](/services/consumer-unit-replacement) or see [fuse board upgrades in Tring](/electrician/tring/fuse-board-upgrades).
 
+## Fuse Box Replacement Cost — Same Job, Older Name
+
+Homeowners still search “fuse box replacement cost UK” even when the install will be a modern consumer unit. Published ranges above cover that scope. Extra cost usually appears when:
+
+- The existing board has rewirable fuses and bonding needs upgrading
+- Several circuits fail insulation tests and need remedial work first
+- You choose full RCBO protection instead of a dual-RCD layout
+- An SPD (surge protection) is added during the swap
+
+For whether replacement is needed at all, use [how to tell if your fuse board needs replacing](/blog/how-to-tell-if-your-fuse-board-needs-replacing). For terminology, see [consumer unit vs fuse box](/blog/consumer-unit-vs-fuse-box).
+
 ## Frequently Asked Questions
+
+**How much does it cost to replace a fuse box in the UK?**  
+Published trade guides commonly show roughly **£350–£750** for a straightforward domestic swap, with larger RCBO boards higher. Treat those as budgets, then get a written quote after survey.
 
 **How long does a consumer unit replacement take?**  
 Often one day for a straightforward swap if tests pass. Remedial work can extend to two days.
