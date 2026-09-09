@@ -103,7 +103,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
               Local Domestic Electrician
             </motion.p>
             <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-800 mb-6">
-              Electrician {location.name}
+              {location.h1Title ?? `Electrician ${location.name}`}
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
               {location.heroIntro}

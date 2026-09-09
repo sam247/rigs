@@ -14,6 +14,7 @@ export const BUCKINGHAMSHIRE_TOWNS: CountyTown[] = [
   { name: "Ivinghoe Aston", href: "/electrician/ivinghoe-aston", status: "live", note: "Live village page with full local content.", x: 24, y: 46 },
   { name: "Aston Clinton", href: "/electrician/aston-clinton", status: "live", note: "Live village page with full local content.", x: 26, y: 51 },
   { name: "Ringshall", href: "/electrician/ringshall", status: "live", note: "Live village page with full local content.", x: 25, y: 45 },
+  { name: "Slapton", href: "/electrician/slapton", status: "live", note: "Live village page on the Beds border near Leighton Buzzard.", x: 20, y: 50 },
   { name: "Princes Risborough", href: makeCountyTownContactHref("Princes Risborough"), status: "planned", note: "Planned town page from the next growth plan.", x: 26, y: 63 },
   { name: "Wendover", href: "/electrician/wendover", status: "live", note: "Live town page with full local content.", x: 25, y: 55 },
   { name: "Buckingham", href: makeCountyTownContactHref("Buckingham"), status: "coverage", note: "County coverage area.", x: 17, y: 18 },
@@ -34,7 +35,7 @@ export const BUCKINGHAMSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
   heroIntro:
     "Need a local domestic electrician anywhere in Buckinghamshire? This county page brings together live town pages for Aylesbury, Wendover, Ivinghoe and the surrounding Tring-border villages, plus the wider Buckinghamshire towns we cover from Aylesbury Vale through the Chilterns to Chesham, Amersham and High Wycombe. It gives homeowners a clear first route into county coverage while more dedicated town pages are built out.",
   townsIntro:
-    "Use the directory to jump to the Buckinghamshire town that best fits your area. Live pages for Aylesbury, Wendover, Ivinghoe, Pitstone, Marsworth, Ivinghoe Aston, Aston Clinton and Ringshall are ready now, alongside broader county enquiry routes for the remaining towns.",
+    "Use the directory to jump to the Buckinghamshire town that best fits your area. Live pages for Aylesbury, Wendover, Ivinghoe, Pitstone, Marsworth, Ivinghoe Aston, Aston Clinton, Ringshall and Slapton are ready now, alongside broader county enquiry routes for the remaining towns.",
   overviewIntro:
     "Buckinghamshire combines market towns, Chiltern villages, commuter-belt housing and family homes spread across a fairly wide county footprint. That mix creates a strong need for practical domestic electrical support, especially where homeowners are upgrading, renovating or trying to make older layouts work more safely for modern living.",
   howWeHelpIntro:
@@ -152,7 +153,7 @@ export const BUCKINGHAMSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
     },
     {
       q: "Which Buckinghamshire town pages are live today?",
-      a: "Live dedicated pages currently include Aylesbury, Wendover, Ivinghoe, Pitstone, Marsworth, Ivinghoe Aston, Aston Clinton and Ringshall. Other key next-step towns include Chesham, Amersham, High Wycombe, Princes Risborough, Great Missenden and Beaconsfield.",
+      a: "Live dedicated pages currently include Aylesbury, Wendover, Ivinghoe, Pitstone, Marsworth, Ivinghoe Aston, Aston Clinton, Ringshall and Slapton. Other key next-step towns include Chesham, Amersham, High Wycombe, Princes Risborough, Great Missenden and Beaconsfield.",
     },
     {
       q: "Which Buckinghamshire towns are next in the rollout?",

@@ -86,6 +86,7 @@ const relatedServices = [
 /** Town emergency pages that already exist — used to pass authority from this hub. */
 const emergencyTownLinks = {
   hertfordshire: [
+    { name: "Hertfordshire hub", href: "/electrician/hertfordshire" },
     { name: "Tring", href: "/electrician/tring/emergency-electrician" },
     { name: "St Leonards", href: "/electrician/st-leonards" },
     { name: "Berkhamsted", href: "/electrician/berkhamsted/emergency-electrician" },
@@ -96,14 +97,24 @@ const emergencyTownLinks = {
     { name: "Hitchin", href: "/electrician/hitchin" },
   ],
   buckinghamshire: [
+    { name: "Buckinghamshire hub", href: "/electrician/buckinghamshire" },
     { name: "Aylesbury", href: "/electrician/aylesbury/emergency-electrician" },
     { name: "Wendover", href: "/electrician/wendover" },
     { name: "Ivinghoe", href: "/electrician/ivinghoe" },
     { name: "Pitstone", href: "/electrician/pitstone" },
     { name: "Marsworth", href: "/electrician/marsworth" },
     { name: "Aston Clinton", href: "/electrician/aston-clinton" },
+    { name: "Slapton", href: "/electrician/slapton" },
     { name: "Chesham", href: "/locations" },
     { name: "Amersham", href: "/locations" },
+  ],
+  bedfordshire: [
+    { name: "Bedfordshire hub", href: "/electrician/bedfordshire" },
+    { name: "Luton", href: "/electrician/luton" },
+    { name: "Dunstable", href: "/electrician/dunstable" },
+    { name: "Leighton Buzzard", href: "/electrician/leighton-buzzard" },
+    { name: "Bedford", href: "/electrician/bedford" },
+    { name: "Slapton", href: "/electrician/slapton" },
   ],
 };
 
@@ -421,15 +432,25 @@ const EmergencyElectricianPage = () => {
               <Card className="border-2 border-border">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <ShieldCheck className="h-5 w-5 text-primary" />
-                    <h3 className="font-heading font-700 text-lg">Not Sure?</h3>
+                    <MapPin className="h-5 w-5 text-primary" />
+                    <h3 className="font-heading font-700 text-lg">Bedfordshire</h3>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    If you’re just outside these areas, contact us anyway — we may still be able to help, or we can recommend the safest next step.
+                    Domestic emergency cover across Bedfordshire — including Luton, Dunstable, Leighton Buzzard and Bedford.
                   </p>
-                  <Button asChild className="font-heading font-700 w-full">
-                    <Link href="/contact?service=Emergency%20Electrician%20Hertfordshire">Request a Quote</Link>
-                  </Button>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                    {emergencyTownLinks.bedfordshire.map((town, index) => (
+                      <span key={town.href + town.name}>
+                        {index > 0 ? " • " : null}
+                        <Link href={town.href} className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                          {town.name}
+                        </Link>
+                      </span>
+                    ))}
+                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Outside these areas? Contact us anyway — we may still be able to help, or we can recommend the safest next step.
+                  </p>
                 </CardContent>
               </Card>
             </div>

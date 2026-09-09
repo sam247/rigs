@@ -2,13 +2,13 @@ import type { CountyCoveragePageConfig, CountyTown } from "@/content/countyCover
 import { makeCountyTownContactHref } from "@/content/countyCoverage";
 
 export const BEDFORDSHIRE_TOWNS: CountyTown[] = [
-  { name: "Bedford", href: makeCountyTownContactHref("Bedford"), status: "planned", note: "Planned town page from the next growth plan.", x: 56, y: 26 },
+  { name: "Bedford", href: "/electrician/bedford", status: "live", note: "Live town page with full local content.", x: 56, y: 26 },
   { name: "Biggleswade", href: makeCountyTownContactHref("Biggleswade"), status: "planned", note: "Planned town page from the next growth plan.", x: 79, y: 30 },
-  { name: "Dunstable", href: makeCountyTownContactHref("Dunstable"), status: "planned", note: "Planned town page from the next growth plan.", x: 26, y: 73 },
+  { name: "Dunstable", href: "/electrician/dunstable", status: "live", note: "Live town page with full local content.", x: 26, y: 73 },
   { name: "Flitwick", href: makeCountyTownContactHref("Flitwick"), status: "planned", note: "Planned town page from the next growth plan.", x: 46, y: 55 },
   { name: "Houghton Regis", href: makeCountyTownContactHref("Houghton Regis"), status: "planned", note: "Planned town page from the next growth plan.", x: 24, y: 69 },
-  { name: "Leighton Buzzard", href: makeCountyTownContactHref("Leighton Buzzard"), status: "planned", note: "Planned town page from the next growth plan.", x: 19, y: 82 },
-  { name: "Luton", href: makeCountyTownContactHref("Luton"), status: "planned", note: "Planned town page from the next growth plan.", x: 31, y: 63 },
+  { name: "Leighton Buzzard", href: "/electrician/leighton-buzzard", status: "live", note: "Live town page with full local content.", x: 19, y: 82 },
+  { name: "Luton", href: "/electrician/luton", status: "live", note: "Live town page with full local content.", x: 31, y: 63 },
   { name: "Ampthill", href: makeCountyTownContactHref("Ampthill"), status: "coverage", note: "County coverage area.", x: 42, y: 50 },
   { name: "Arlesey", href: makeCountyTownContactHref("Arlesey"), status: "coverage", note: "County coverage area.", x: 70, y: 42 },
   { name: "Barton-le-Clay", href: makeCountyTownContactHref("Barton-le-Clay"), status: "coverage", note: "County coverage area.", x: 36, y: 58 },
@@ -27,11 +27,11 @@ export const BEDFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
   title: "Electrician Bedfordshire",
   metaTitle: "Electrician Bedfordshire | Domestic County Coverage | RIGS",
   metaDescription:
-    "Domestic electrician coverage across Bedfordshire, including Luton, Dunstable, Leighton Buzzard, Bedford and nearby towns. Clear county enquiry routes for faults, boards and EICRs.",
+    "Domestic electrician coverage across Bedfordshire, with live town pages for Luton, Dunstable, Leighton Buzzard and Bedford plus wider county enquiry routes.",
   heroIntro:
-    "Need a local domestic electrician anywhere in Bedfordshire? This county page is the clearest starting point for homeowners across Luton, Dunstable, Leighton Buzzard, Bedford, Biggleswade and surrounding towns. Whether the job is an urgent fault, a consumer unit upgrade, inspection work, or wider domestic electrical planning, you can enquire by area today while dedicated town pages are rolled out.",
+    "Need a local domestic electrician anywhere in Bedfordshire? This county page brings together live town pages for Luton, Dunstable, Leighton Buzzard and Bedford, plus broader Bedfordshire coverage so homeowners can quickly find the right next step. Whether the job is an urgent fault, a consumer unit upgrade, inspection work, or wider domestic electrical planning, you get a clear county-first route into local support.",
   townsIntro:
-    "Use the directory to jump to the town that fits your area. Planned Bedfordshire town pages are surfaced clearly, while the wider county links still give homeowners a working enquiry route today.",
+    "Use the directory to jump to the Bedfordshire town that fits your area. Live pages for Luton, Dunstable, Leighton Buzzard and Bedford are ready now, alongside broader county enquiry routes for the remaining towns.",
   overviewIntro:
     "Bedfordshire includes larger urban centres, market-town pockets, commuter areas and village-edge housing, so domestic electrical work can range from older house upgrades to modern family-home alterations. The point of this page is to make county coverage easy to understand and give homeowners a useful first stop even before every town has its own dedicated page.",
   howWeHelpIntro:
@@ -138,7 +138,7 @@ export const BEDFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
     },
     {
       title: "County-wide reassurance",
-      body: "Whether you are in a larger town, a commuter suburb or a village-edge property, this page gives you a clear county-level route while dedicated Bedfordshire town pages are added.",
+      body: "Whether you are in a larger town, a commuter suburb or a village-edge property, this page gives you a clear county-level route into live town pages for Luton, Dunstable, Leighton Buzzard and Bedford.",
       icon: "MapPin",
     },
   ],
@@ -148,8 +148,8 @@ export const BEDFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
       a: "We cover homes across Bedfordshire and nearby border areas. This county page is here to make that coverage clearer and give homeowners a useful first route by area.",
     },
     {
-      q: "Which Bedfordshire towns are on your radar first?",
-      a: "The main next-step towns include Luton, Dunstable, Leighton Buzzard, Bedford, Biggleswade, Flitwick and Houghton Regis, alongside broader Bedfordshire coverage.",
+      q: "Which Bedfordshire town pages are live today?",
+      a: "Live dedicated town pages currently include Luton, Dunstable, Leighton Buzzard and Bedford. Other next-step towns include Biggleswade, Flitwick and Houghton Regis, alongside broader Bedfordshire coverage.",
     },
     {
       q: "Can I still enquire if my town does not have a standalone page yet?",

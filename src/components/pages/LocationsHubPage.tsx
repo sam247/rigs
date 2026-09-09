@@ -22,7 +22,7 @@ const countyPlaceholders = [
   },
   {
     name: "Bedfordshire",
-    blurb: "County-wide page with town-directory coverage, Bedfordshire context and domestic electrician guidance across the county.",
+    blurb: "County-wide page with live town pages for Luton, Dunstable, Leighton Buzzard and Bedford, plus wider Bedfordshire coverage.",
     href: "/electrician/bedfordshire",
   },
   {

@@ -276,7 +276,19 @@ export default function ServicesHubPage() {
                 <Link href="/services/electrical-fault-finding" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   fault finding
                 </Link>{" "}
-                page or request a quote and we’ll advise the safest next step.
+                page or request a quote and we’ll advise the safest next step. Browse county coverage for{" "}
+                <Link href="/electrician/hertfordshire" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  Hertfordshire
+                </Link>
+                ,{" "}
+                <Link href="/electrician/buckinghamshire" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  Buckinghamshire
+                </Link>{" "}
+                and{" "}
+                <Link href="/electrician/bedfordshire" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                  Bedfordshire
+                </Link>
+                .
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild size="lg" className="font-heading font-700">

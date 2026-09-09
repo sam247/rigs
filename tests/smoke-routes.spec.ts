@@ -53,8 +53,13 @@ const locationRoutes: Array<[string, RegExp]> = [
   ["/electrician/marsworth", /Electrician Marsworth/i],
   ["/electrician/ivinghoe-aston", /Electrician Ivinghoe Aston/i],
   ["/electrician/aston-clinton", /Electrician Aston Clinton/i],
-  ["/electrician/st-leonards", /Electrician St Leonards/i],
+  ["/electrician/st-leonards", /Electrician St Leonards near Tring/i],
   ["/electrician/ringshall", /Electrician Ringshall/i],
+  ["/electrician/luton", /Electrician Luton/i],
+  ["/electrician/dunstable", /Electrician Dunstable/i],
+  ["/electrician/leighton-buzzard", /Electrician Leighton Buzzard/i],
+  ["/electrician/bedford", /Electrician Bedford/i],
+  ["/electrician/slapton", /Electrician Slapton/i],
 ];
 
 const serviceLocationRoutes: Array<[string, RegExp]> = [
