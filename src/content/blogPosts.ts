@@ -166,19 +166,19 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "What Electrical Work Needs Part P Certification?",
-    metaTitle: "Part P Certificate & Notifiable Electrical Work",
+    metaTitle: "Part P Certificate: What Electrical Work Needs One",
     description:
-      "What a Part P certificate is, which electrical work is notifiable in England and Wales, non-notifiable jobs, and the documents you should keep.",
+      "Part P electrical certificate: which notifiable work needs one, and how a NICEIC registered electrician issues the paperwork. Enquire for Tring / Herts & Bucks.",
     href: "/blog/what-electrical-work-needs-part-p-certification",
-    dateLabel: "August 2026",
+    dateLabel: "September 2026",
     sourceSlug: "what-electrical-work-needs-part-p-certification",
-    relatedServiceHref: "/services/electrical-inspections",
+    relatedServiceHref: "/services/consumer-unit-replacement",
     ctaLabel: "Speak to a registered electrician",
     internalLinks: [
+      { title: "Enquire about notifiable work", href: "/contact" },
+      { title: "Consumer unit replacement", href: "/services/consumer-unit-replacement" },
       { title: "Electrical inspections", href: "/services/electrical-inspections" },
-      { title: "Consumer unit replacement cost", href: "/blog/how-much-does-a-consumer-unit-replacement-cost" },
-      { title: "Garden electrics", href: "/blog/garden-electrics-outdoor-sockets-lighting-garden-rooms" },
-      { title: "EICR for homeowners", href: "/blog/eicr-for-homeowners-when-should-you-get-your-electrics-checked" },
+      { title: "EICR certificates", href: "/services/eicr-certificates" },
     ],
   },
   {
