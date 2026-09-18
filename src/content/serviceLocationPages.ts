@@ -170,9 +170,9 @@ const serviceLocationPages = [
     locationSlug: "hemel-hempstead",
     serviceSlug: "fuse-board-upgrades",
     title: "Fuse Board Upgrades Hemel Hempstead",
-    metaTitle: "Fuse Board Upgrades Hemel Hempstead | Consumer Units",
+    metaTitle: "Fuse Box Hemel Hempstead | Consumer Unit Upgrades | RIGS",
     metaDescription:
-      "Fuse board and consumer unit upgrades in Hemel Hempstead for safer protection, clearer circuits and modern household demand.",
+      "Need a fuse box upgrade in Hemel Hempstead? RIGS replaces old fuse boards and consumer units for safer protection, clearer circuits and fewer nuisance trips — enquire for a clear quote.",
     intro:
       "Need a fuse board upgrade in Hemel Hempstead? RIGS Electrical replaces outdated consumer units so kitchens, showers, home offices and outdoor circuits are better protected and easier to manage.",
     whyItMatters: [
@@ -181,7 +181,7 @@ const serviceLocationPages = [
       "Upgrade planning can sit alongside kitchen or extension projects rather than becoming a last-minute scramble.",
     ],
     commonReasons: ["Old rewireable fuses", "Repeated nuisance tripping", "No spare ways for new circuits", "Kitchen or shower upgrades", "Advice after an EICR"],
-    relatedArticleHrefs: ["/blog/how-to-tell-if-your-fuse-board-needs-replacing", "/blog/consumer-unit-vs-fuse-box"],
+    relatedArticleHrefs: ["/blog/how-to-tell-if-your-fuse-board-needs-replacing", "/blog/consumer-unit-vs-fuse-box", "/blog/how-much-does-a-consumer-unit-replacement-cost"],
   },
   {
     locationSlug: "aylesbury",
