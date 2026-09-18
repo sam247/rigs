@@ -27,6 +27,8 @@ export const HERTFORDSHIRE_TOWNS: CountyTown[] = [
   { name: "Aldbury", href: "/electrician/aldbury", status: "live", note: "Live village page with full local content.", x: 13, y: 28 },
   { name: "Wilstone", href: "/electrician/wilstone", status: "live", note: "Live village page with full local content.", x: 8, y: 27 },
   { name: "Wigginton", href: "/electrician/wigginton", status: "live", note: "Live village page with full local content.", x: 11, y: 34 },
+  { name: "Long Marston", href: "/electrician/long-marston", status: "live", note: "Live village page with full local content.", x: 7, y: 25 },
+  { name: "Little Gaddesden", href: "/electrician/little-gaddesden", status: "live", note: "Live village page with full local content.", x: 15, y: 29 },
   { name: "St Leonards", href: "/electrician/st-leonards", status: "live", note: "Live village page with full local content.", x: 12, y: 36 },
   { name: "Ware", href: makeCountyTownContactHref("Ware"), status: "coverage", note: "A-Z county coverage area.", x: 71, y: 58 },
   { name: "Watford", href: "/electrician/watford", status: "live", note: "Live town page with full local content.", x: 31, y: 72 },
@@ -143,7 +145,7 @@ export const HERTFORDSHIRE_FAQ = [
   },
   {
     q: "Which Hertfordshire town pages are live today?",
-    a: "The dedicated live town pages include Tring, Aldbury, Wilstone, Wigginton, St Leonards, Berkhamsted, St Albans, Watford, Hemel Hempstead, Stevenage, Hitchin, Harpenden, Hatfield, Welwyn Garden City, Cheshunt, Borehamwood and Letchworth.",
+    a: "The dedicated live town pages include Tring, Aldbury, Wilstone, Wigginton, Long Marston, Little Gaddesden, St Leonards, Berkhamsted, St Albans, Watford, Hemel Hempstead, Stevenage, Hitchin, Harpenden, Hatfield, Welwyn Garden City, Cheshunt, Borehamwood and Letchworth.",
   },
   {
     q: "Do the town links go to full local pages?",

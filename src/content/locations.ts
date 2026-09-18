@@ -88,13 +88,13 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     ],
     areasCovered: {
       primary: ["Tring"],
-      villages: ["Aldbury", "Wilstone", "Wigginton", "Long Marston", "Pitstone", "Marsworth", "St Leonards", "Ivinghoe Aston", "Ringshall"],
+      villages: ["Aldbury", "Wilstone", "Wigginton", "Long Marston", "Pitstone", "Marsworth", "St Leonards", "Ivinghoe Aston", "Ringshall", "Cheddington", "Little Gaddesden"],
       nearby: ["Berkhamsted", "Hemel Hempstead", "Aylesbury", "Ivinghoe", "Wendover", "Aston Clinton"],
     },
     faq: [
       {
         q: "Do you cover all of Tring and nearby villages?",
-        a: "Yes. We cover Tring itself plus nearby villages including Aldbury, Wilstone, Wigginton, Pitstone, Marsworth, St Leonards, Ivinghoe Aston and Ringshall, plus surrounding areas across Hertfordshire and into Buckinghamshire.",
+        a: "Yes. We cover Tring itself plus nearby villages including Aldbury, Wilstone, Wigginton, Long Marston, Cheddington, Little Gaddesden, Pitstone, Marsworth, St Leonards, Ivinghoe Aston and Ringshall, plus surrounding areas across Hertfordshire and into Buckinghamshire.",
       },
       {
         q: "What domestic electrical work do you handle?",
@@ -1071,11 +1071,11 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     ],
     areasCovered: {
       primary: ["Ivinghoe"],
-      villages: ["Pitstone", "Marsworth", "Ivinghoe Aston", "Ringshall"],
+      villages: ["Pitstone", "Marsworth", "Ivinghoe Aston", "Ringshall", "Cheddington"],
       nearby: ["Tring", "Aylesbury", "Wendover", "Leighton Buzzard", "Berkhamsted", "Aston Clinton"],
     },
     faq: [
-      { q: "Do you cover Ivinghoe and nearby villages?", a: "Yes. We cover Ivinghoe plus Pitstone, Marsworth and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Do you cover Ivinghoe and nearby villages?", a: "Yes. We cover Ivinghoe plus Pitstone, Marsworth, Cheddington and surrounding Buckinghamshire and Hertfordshire border villages." },
       { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
       { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
       { q: "Can I get an EICR in Ivinghoe?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
@@ -1134,11 +1134,11 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     ],
     areasCovered: {
       primary: ["Pitstone"],
-      villages: ["Ivinghoe", "Marsworth", "Ivinghoe Aston", "Ringshall"],
+      villages: ["Ivinghoe", "Marsworth", "Ivinghoe Aston", "Ringshall", "Cheddington"],
       nearby: ["Tring", "Aylesbury", "Wendover", "Aston Clinton", "Berkhamsted"],
     },
     faq: [
-      { q: "Do you cover Pitstone and nearby villages?", a: "Yes. We cover Pitstone plus Ivinghoe, Marsworth and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Do you cover Pitstone and nearby villages?", a: "Yes. We cover Pitstone plus Ivinghoe, Marsworth, Cheddington and surrounding Buckinghamshire and Hertfordshire border villages." },
       { q: "Can you help with outdoor and garage electrics?", a: "Yes. Garden lighting, external sockets and garage supplies are a regular part of domestic work around Pitstone." },
       { q: "Do you offer consumer unit upgrades?", a: "Yes. We replace outdated fuse boards where safer protection and clearer circuits are needed." },
       { q: "Can I book an EICR in Pitstone?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
@@ -1197,11 +1197,11 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     ],
     areasCovered: {
       primary: ["Marsworth"],
-      villages: ["Pitstone", "Ivinghoe", "Ivinghoe Aston", "Long Marston", "Wilstone"],
+      villages: ["Pitstone", "Ivinghoe", "Ivinghoe Aston", "Long Marston", "Wilstone", "Cheddington"],
       nearby: ["Tring", "Aylesbury", "Wendover", "Aston Clinton", "Berkhamsted"],
     },
     faq: [
-      { q: "Do you cover Marsworth and nearby villages?", a: "Yes. We cover Marsworth plus Pitstone, Ivinghoe and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Do you cover Marsworth and nearby villages?", a: "Yes. We cover Marsworth plus Pitstone, Ivinghoe, Long Marston, Wilstone, Cheddington and surrounding Buckinghamshire and Hertfordshire border villages." },
       { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
       { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
       { q: "Can I get an EICR in Marsworth?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
@@ -1454,11 +1454,11 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     ],
     areasCovered: {
       primary: ["Aldbury"],
-      villages: ["Wigginton", "Ringshall", "Hastoe", "St Leonards"],
+      villages: ["Wigginton", "Ringshall", "Hastoe", "St Leonards", "Little Gaddesden"],
       nearby: ["Tring", "Berkhamsted", "Pitstone", "Ivinghoe", "Wilstone"],
     },
     faq: [
-      { q: "Do you cover Aldbury and nearby villages?", a: "Yes. We cover Aldbury plus Wigginton, Ringshall, Hastoe and surrounding Hertfordshire villages near Tring and Ashridge." },
+      { q: "Do you cover Aldbury and nearby villages?", a: "Yes. We cover Aldbury plus Wigginton, Ringshall, Little Gaddesden, Hastoe and surrounding Hertfordshire villages near Tring and Ashridge." },
       { q: "Can you work carefully in period or conservation-area homes?", a: "Yes. We plan domestic work to keep disruption low and finishes tidy in older Aldbury properties." },
       { q: "Do you offer consumer unit upgrades?", a: "Yes. We replace outdated fuse boards where safer protection and clearer circuits are needed." },
       { q: "Can I book an EICR in Aldbury?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
@@ -1591,6 +1591,195 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
     ],
   },
+  "long-marston": {
+    slug: "long-marston",
+    name: "Long Marston",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.74, 51.81, -0.67, 51.85],
+      marker: { lat: 51.833, lon: -0.698 },
+    },
+    heroIntro:
+      "Need an electrician in Long Marston? RIGS Electrical covers Long Marston and the surrounding Hertfordshire villages between Tring, Wilstone and Marsworth with NICEIC domestic electrical work — from urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements. Based nearby in Tring, we already work this canal-side corridor every week.",
+    servicesIntro:
+      "Long Marston homes often combine older village wiring with later alterations, outbuildings and damp-prone outdoor circuits. Practical domestic support means diagnosing faults properly and planning upgrades without unnecessary disruption.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "For power loss, boards that will not reset or accessories that feel unsafe in Long Marston, we stabilise the installation first and then find the cause.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Intermittent trips and dead circuits need careful testing — especially where garden, garage and indoor circuits share older protection.",
+      },
+      {
+        title: "Fuse Board Upgrades",
+        href: "/services/fuse-board-upgrades",
+        body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "A clear inspection report helps before buying, selling or renovating a Long Marston property with mixed-age electrics.",
+      },
+    ],
+    commonProblems: [
+      { title: "Damp outdoor circuits", desc: "Garden lighting, sockets and outbuilding feeds affected by moisture on quieter village plots." },
+      { title: "Village wiring age", desc: "Older layouts that struggle with modern household demand." },
+      { title: "Nuisance tripping", desc: "Shared RCDs that trip when multiple circuits load up together." },
+      { title: "Outdated fuse boards", desc: "Boards that need safer protection and clearer circuit labelling." },
+      { title: "Outbuilding supplies", desc: "Garages, workshops and garden rooms that need safer, properly rated feeds." },
+      { title: "Pre-renovation advice", desc: "Homeowners wanting priorities before decorative or extension work starts." },
+    ],
+    whyChooseIntro:
+      "Long Marston domestic electrical work is about practical village coverage: tidy finishes, weather-aware outdoor circuits and a local team that already covers the Tring–Wilstone–Marsworth corridor.",
+    whyChoosePoints: [
+      { title: "Close canal-side coverage", desc: "Regular work across Long Marston, Wilstone, Marsworth and nearby Tring villages." },
+      { title: "Domestic-only focus", desc: "Homeowner repairs, inspections, boards and upgrades." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Clear communication", desc: "Same-day quoting where possible and plain-English options for homeowners." },
+    ],
+    areasCovered: {
+      primary: ["Long Marston"],
+      villages: ["Wilstone", "Marsworth", "Puttenham", "Astrope"],
+      nearby: ["Tring", "Cheddington", "Pitstone", "Aldbury", "Aylesbury"],
+    },
+    faq: [
+      { q: "Do you cover Long Marston and nearby villages?", a: "Yes. We cover Long Marston plus Wilstone, Marsworth and surrounding Hertfordshire and Buckinghamshire border villages near Tring." },
+      { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
+      { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
+      { q: "Can I get an EICR in Long Marston?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
+    ],
+  },
+  cheddington: {
+    slug: "cheddington",
+    name: "Cheddington",
+    region: "Buckinghamshire",
+    map: {
+      bbox: [-0.7, 51.83, -0.63, 51.87],
+      marker: { lat: 51.846, lon: -0.662 },
+    },
+    heroIntro:
+      "Need an electrician in Cheddington? RIGS Electrical covers Cheddington and the surrounding Buckinghamshire villages between Pitstone, Slapton and Long Marston with NICEIC domestic electrical work — from urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements. Based nearby in Tring, we are used to station-village housing, later estates and outdoor supplies across this corridor.",
+    servicesIntro:
+      "Cheddington properties often sit between older village layouts and later family homes near the station. That means mixed-age wiring, garage or garden feeds and boards that were never designed for today’s kitchen and shower loads.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If power drops out, a board will not reset or an accessory feels unsafe in a Cheddington home, we make the installation safe first and then diagnose the fault properly.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Intermittent trips and dead circuits need methodical testing — especially where outdoor feeds and indoor alterations share the same consumer unit.",
+      },
+      {
+        title: "Fuse Board Upgrades",
+        href: "/services/fuse-board-upgrades",
+        body: "A modern consumer unit helps Cheddington homes cope safely with showers, kitchens and outdoor supplies that older boards struggle with.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "Useful before buying, selling or renovating locally — giving a clear report rather than guesswork about what needs attention.",
+      },
+    ],
+    commonProblems: [
+      { title: "Repeated RCD trips", desc: "Shared protection that trips when showers, kitchens or outdoor circuits load up." },
+      { title: "Garage and garden faults", desc: "Damp or ageing outdoor accessories affecting village and estate properties." },
+      { title: "Older fuse boards", desc: "Boards that lack modern protection or clear circuit isolation." },
+      { title: "Extension-related wiring", desc: "Later additions that need careful integration with the existing installation." },
+      { title: "Worn sockets and switches", desc: "Accessories that have loosened, run warm or failed after years of daily use." },
+      { title: "Pre-purchase checks", desc: "Buyers wanting a clear electrical picture before renovation budgets are set." },
+    ],
+    whyChooseIntro:
+      "Cheddington domestic electrical work needs a close local team: tidy finishes in lived-in homes, weather-aware outdoor circuits and clear advice about what is urgent versus what can wait.",
+    whyChoosePoints: [
+      { title: "Minutes from Tring", desc: "Regular coverage across Cheddington, Pitstone, Slapton, Long Marston and the Herts–Bucks border villages." },
+      { title: "Domestic-only focus", desc: "Repairs, inspections, boards and upgrades for homeowners." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Clear next steps", desc: "Plain-English quoting and sensible prioritisation for urgent versus planned work." },
+    ],
+    areasCovered: {
+      primary: ["Cheddington"],
+      villages: ["Pitstone", "Slapton", "Long Marston", "Mentmore"],
+      nearby: ["Tring", "Ivinghoe", "Marsworth", "Leighton Buzzard", "Aylesbury"],
+    },
+    faq: [
+      { q: "Do you cover Cheddington and nearby villages?", a: "Yes. We cover Cheddington plus Pitstone, Slapton, Long Marston and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Can you help with outdoor and garage electrics?", a: "Yes. Garden lighting, external sockets and garage supplies are a regular part of domestic work around Cheddington." },
+      { q: "Do you offer consumer unit upgrades?", a: "Yes. We replace outdated fuse boards where safer protection and clearer circuits are needed." },
+      { q: "Can I book an EICR in Cheddington?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
+    ],
+  },
+  "little-gaddesden": {
+    slug: "little-gaddesden",
+    name: "Little Gaddesden",
+    region: "Hertfordshire",
+    map: {
+      bbox: [-0.59, 51.79, -0.52, 51.83],
+      marker: { lat: 51.809, lon: -0.555 },
+    },
+    heroIntro:
+      "Need an electrician in Little Gaddesden? RIGS Electrical covers Little Gaddesden and the surrounding Ashridge-edge Hertfordshire villages with NICEIC domestic electrical work — from urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements. Based nearby in Tring, we are used to rural-edge properties, older layouts and outdoor electrics that need careful attention beside Ashridge.",
+    servicesIntro:
+      "Little Gaddesden homes often include older village wiring, later extensions and garden or outbuilding supplies on Ashridge-edge plots. Practical domestic support means diagnosing faults properly and keeping disruption low in lived-in properties.",
+    serviceBlocks: [
+      {
+        title: "Emergency Electrician",
+        href: "/services/emergency-electrician",
+        body: "If electrics trip repeatedly, power drops out or something feels unsafe in a Little Gaddesden home, we make the situation safe first and then diagnose the fault.",
+      },
+      {
+        title: "Electrical Fault Finding",
+        href: "/services/electrical-fault-finding",
+        body: "Intermittent issues and mixed-age circuits need careful testing — especially where gardens, garages and extensions have been added over time.",
+      },
+      {
+        title: "Fuse Board Upgrades",
+        href: "/services/fuse-board-upgrades",
+        body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
+      },
+      {
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
+        body: "Useful before buying, selling or renovating locally — giving a clear report on mixed-age village electrics.",
+      },
+    ],
+    commonProblems: [
+      { title: "Ashridge-edge outdoor faults", desc: "Garden, garage and outbuilding supplies affected by damp or ageing accessories." },
+      { title: "Older village wiring", desc: "Layouts that struggle with modern household demand." },
+      { title: "Repeated tripping", desc: "Shared protection that trips when showers, kitchens or outdoor circuits load up." },
+      { title: "Outdated fuse boards", desc: "Boards that need safer protection and clearer circuit labelling." },
+      { title: "Extension-related changes", desc: "Later additions that need careful integration with the existing installation." },
+      { title: "Pre-purchase checks", desc: "Buyers wanting a clear electrical picture before committing to renovation budgets." },
+    ],
+    whyChooseIntro:
+      "Little Gaddesden domestic electrical work is about practical Ashridge-edge coverage: tidy finishes, clear advice and a local team that already works the Tring–Ringshall–Aldbury corridor every week.",
+    whyChoosePoints: [
+      { title: "Close Ashridge coverage", desc: "Based in Tring with regular work across Little Gaddesden, Ringshall, Aldbury and nearby border villages." },
+      { title: "Domestic-only focus", desc: "Homeowner repairs, inspections, boards and upgrades." },
+      { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
+      { title: "Clear next steps", desc: "Plain-English quoting and sensible prioritisation for urgent versus planned work." },
+    ],
+    areasCovered: {
+      primary: ["Little Gaddesden"],
+      villages: ["Ringshall", "Aldbury", "Great Gaddesden", "Hudnall"],
+      nearby: ["Tring", "Berkhamsted", "Pitstone", "Ivinghoe", "Hemel Hempstead"],
+    },
+    faq: [
+      { q: "Do you cover Little Gaddesden and nearby villages?", a: "Yes. We cover Little Gaddesden plus Ringshall, Aldbury and surrounding Ashridge-edge Hertfordshire villages near Tring." },
+      { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
+      { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
+      { q: "Can I get an EICR in Little Gaddesden?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
+      { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
+    ],
+  },
   ringshall: {
     slug: "ringshall",
     name: "Ringshall",
@@ -1647,7 +1836,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       nearby: ["Tring", "Berkhamsted", "Wendover", "Aylesbury", "Marsworth"],
     },
     faq: [
-      { q: "Do you cover Ringshall near Ashridge?", a: "Yes. We cover Ringshall plus Ivinghoe, Ivinghoe Aston, Pitstone, Aldbury and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Do you cover Ringshall near Ashridge?", a: "Yes. We cover Ringshall plus Ivinghoe, Ivinghoe Aston, Pitstone, Aldbury, Little Gaddesden and surrounding Buckinghamshire and Hertfordshire border villages." },
       { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
       { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
       { q: "Can I get an EICR in Ringshall?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
@@ -1958,11 +2147,11 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     ],
     areasCovered: {
       primary: ["Slapton"],
-      villages: ["Leighton Buzzard", "Linslade", "Heath and Reach", "Hockliffe"],
+      villages: ["Leighton Buzzard", "Linslade", "Heath and Reach", "Hockliffe", "Cheddington"],
       nearby: ["Dunstable", "Luton", "Ivinghoe", "Tring", "Aylesbury", "Bedford"],
     },
     faq: [
-      { q: "Do you cover Slapton on the Bedfordshire border?", a: "Yes. We cover Slapton plus Leighton Buzzard and surrounding Buckinghamshire and Bedfordshire border villages." },
+      { q: "Do you cover Slapton on the Bedfordshire border?", a: "Yes. We cover Slapton plus Cheddington, Leighton Buzzard and surrounding Buckinghamshire and Bedfordshire border villages." },
       { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
       { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
       { q: "Can I get an EICR in Slapton?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
