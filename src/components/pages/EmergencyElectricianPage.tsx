@@ -88,6 +88,9 @@ const emergencyTownLinks = {
   hertfordshire: [
     { name: "Hertfordshire hub", href: "/electrician/hertfordshire" },
     { name: "Tring", href: "/electrician/tring/emergency-electrician" },
+    { name: "Aldbury", href: "/electrician/aldbury" },
+    { name: "Wilstone", href: "/electrician/wilstone" },
+    { name: "Wigginton", href: "/electrician/wigginton" },
     { name: "St Leonards", href: "/electrician/st-leonards" },
     { name: "Berkhamsted", href: "/electrician/berkhamsted/emergency-electrician" },
     { name: "Hemel Hempstead", href: "/electrician/hemel-hempstead/emergency-electrician" },
