@@ -34,6 +34,12 @@ export default function LocationPageClient({ location }: { location: LocationPag
   const path = `/electrician/${location.slug}`;
   const serviceParam = encodeURIComponent(`Electrician ${location.name}`);
   const countyPage = countyPageForRegion(location.region);
+  const relatedArticles = (() => {
+    const preferred = (location.relatedBlogHrefs ?? [])
+      .map((href) => BLOG_POSTS.find((p) => p.href === href))
+      .filter((p): p is (typeof BLOG_POSTS)[number] => Boolean(p));
+    return preferred.length > 0 ? preferred.slice(0, 3) : BLOG_POSTS.slice(0, 3);
+  })();
   const relatedServices = [
     {
       title: "Emergency Electrician",
@@ -342,7 +348,7 @@ export default function LocationPageClient({ location }: { location: LocationPag
               Related Articles
             </motion.h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {BLOG_POSTS.slice(0, 3).map((p, i) => (
+              {relatedArticles.map((p, i) => (
                 <motion.div key={p.href} variants={fadeUp} custom={i + 1}>
                   <Link href={p.href} className="block h-full">
                     <Card className="h-full border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">

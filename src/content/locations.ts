@@ -20,6 +20,8 @@ export type LocationPageConfig = {
     villages: string[];
     nearby: string[];
   };
+  /** Optional related blog hrefs (must match BLOG_POSTS.href). Falls back to first 3 posts. */
+  relatedBlogHrefs?: string[];
   faq: { q: string; a: string }[];
 };
 
@@ -897,48 +899,52 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     slug: "berkhamsted",
     name: "Berkhamsted",
     region: "Hertfordshire",
+    // Title left as default: Electrician Berkhamsted | Domestic NICEIC | RIGS (already strong for head term).
+    metaDescription:
+      "Electrician in Berkhamsted (HP4) for domestic faults, consumer unit upgrades, EICRs and rewires. NICEIC registered — covering Northchurch, Shootersway and nearby Chiltern-edge streets.",
     map: {
       bbox: [-0.62, 51.74, -0.5, 51.78],
       marker: { lat: 51.7604, lon: -0.5604 },
     },
     heroIntro:
-      "Looking for an electrician in Berkhamsted? RIGS Electrical helps homeowners across Berkhamsted, Northchurch and nearby Chiltern-edge streets with domestic fault finding, urgent repairs, consumer unit upgrades, EICRs and planned home electrical work. Based nearby in Tring, we understand the mix of period cottages, Victorian terraces and later family homes that shape electrical work here.",
+      "Looking for an electrician in Berkhamsted? RIGS Electrical is a Tring-based NICEIC registered domestic electrician covering Berkhamsted (HP4), Northchurch and nearby Chiltern-edge streets. We help homeowners with fault finding, urgent repairs, consumer unit upgrades, EICRs and planned home electrical work — whether you are in a period cottage near the High Street, a Victorian terrace, or a later family home toward Shootersway and Ashlyns.",
     servicesIntro:
-      "Berkhamsted properties often combine older wiring layouts with later kitchens, loft conversions and garden rooms — so careful testing and clear upgrade planning matter more than quick temporary fixes.",
+      "Berkhamsted properties often combine older wiring layouts with later kitchens, loft conversions and garden rooms. Mixed-age circuits, outdoor feeds and boards that were never designed for today’s shower and home-office loads are common — so careful testing and clear upgrade planning matter more than quick temporary fixes.",
     serviceBlocks: [
       {
         title: "Emergency Electrician",
         href: "/services/emergency-electrician",
-        body: "Urgent domestic faults in Berkhamsted — power loss, boards that will not reset, hot sockets or circuits that trip repeatedly — are made safe first, then diagnosed properly.",
+        body: "Urgent domestic faults in Berkhamsted — power loss, boards that will not reset, hot sockets or circuits that trip repeatedly — are made safe first, then diagnosed properly. See our Berkhamsted emergency electrician page for how urgent visits usually work.",
       },
       {
         title: "Electrical Fault Finding",
         href: "/services/electrical-fault-finding",
-        body: "Intermittent trips and dead circuits are common where older layouts meet modern appliance loads. We test methodically rather than guessing.",
+        body: "Intermittent trips and dead circuits are common where older Berkhamsted layouts meet modern appliance loads. We test methodically rather than guessing, then explain what is urgent versus what can be planned.",
       },
       {
         title: "Fuse Board Upgrades",
         href: "/services/fuse-board-upgrades",
-        body: "Period and family homes in Berkhamsted often benefit from safer, clearer consumer unit protection before more kitchen or extension work is added.",
+        body: "Period and family homes in Berkhamsted often benefit from safer, clearer consumer unit protection before more kitchen, loft or extension work is added.",
       },
       {
         title: "EICR Certificates",
         href: "/services/eicr-certificates",
-        body: "Useful before buying, selling or renovating in Berkhamsted — especially where years of alterations need a clear electrical picture.",
+        body: "Useful before buying, selling or renovating in Berkhamsted and Northchurch — especially where years of alterations need a clear electrical picture in plain English.",
       },
     ],
     commonProblems: [
-      { title: "Period-property wiring issues", desc: "Older layouts that struggle with modern showers, kitchens and home-office demand." },
+      { title: "Period-property wiring issues", desc: "Older HP4 layouts that struggle with modern showers, kitchens and home-office demand." },
       { title: "Nuisance tripping", desc: "RCDs that trip with outdoor lighting, damp feeds or mixed-age circuit alterations." },
       { title: "Dated consumer units", desc: "Boards that lack modern protection or space for sensible circuit labelling." },
       { title: "Loft and extension electrics", desc: "Later additions that need clearer planning and safer isolation." },
       { title: "Garden and outbuilding supplies", desc: "Weather-exposed circuits that fail or feel unsafe after wet weather." },
-      { title: "Pre-renovation inspections", desc: "Homeowners wanting priorities before decorative or kitchen work begins." },
+      { title: "Pre-renovation and pre-purchase checks", desc: "Homeowners wanting priorities before decorative work, a kitchen project, or exchanging contracts." },
     ],
     whyChooseIntro:
-      "Berkhamsted domestic electrical work rewards careful diagnosis and tidy finishing. We focus on lived-in family homes, explain what is urgent versus what can wait, and keep disruption under control.",
+      "Berkhamsted domestic electrical work rewards careful diagnosis and tidy finishing. We focus on lived-in family homes across the town and Northchurch, explain what is urgent versus what can wait, and keep disruption under control.",
     whyChoosePoints: [
-      { title: "Local Chiltern coverage", desc: "Regular work across Berkhamsted, Tring, Hemel Hempstead and nearby Hertfordshire towns." },
+      { title: "Local Chiltern coverage", desc: "Regular domestic work across Berkhamsted, Northchurch, Tring, Hemel Hempstead and nearby Hertfordshire towns." },
+      { title: "Period and mixed-age homes", desc: "Used to Victorian terraces, cottages and later estates where wiring has been altered over decades." },
       { title: "Domestic-only focus", desc: "Home electrics, upgrades, repairs and testing — not generic commercial contracting." },
       { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
       { title: "Clear homeowner advice", desc: "Plain-English options so you know what needs doing now and what can be planned later." },
@@ -948,9 +954,15 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       villages: ["Northchurch", "Shootersway", "Gossoms End", "Ashlyns"],
       nearby: ["Tring", "Hemel Hempstead", "Kings Langley", "Chesham", "Wendover", "St Leonards"],
     },
+    relatedBlogHrefs: [
+      "/blog/common-electrical-problems-in-older-tring-and-hertfordshire-homes",
+      "/blog/do-i-need-an-emergency-electrician-or-can-it-wait",
+      "/blog/how-to-tell-if-your-fuse-board-needs-replacing",
+    ],
     faq: [
-      { q: "Do you cover Berkhamsted and Northchurch?", a: "Yes. We cover Berkhamsted, Northchurch and nearby Chiltern-edge areas, plus surrounding Hertfordshire towns." },
-      { q: "Can you help with emergency electrician call-outs in Berkhamsted?", a: "Yes. For urgent domestic faults we make the installation safe first and then find the underlying cause." },
+      { q: "Do you cover Berkhamsted and Northchurch?", a: "Yes. We cover Berkhamsted (HP4), Northchurch and nearby Chiltern-edge streets, plus surrounding Hertfordshire towns including Tring and Hemel Hempstead." },
+      { q: "Can you help with emergency electrician call-outs in Berkhamsted?", a: "Yes. For urgent domestic faults we make the installation safe first and then find the underlying cause. More detail is on our emergency electrician Berkhamsted page, or get in touch via the contact form." },
+      { q: "Do you work as a domestic electrician in Berkhamsted?", a: "Yes. Our day-to-day work is household electrics — faults, consumer units, EICRs, rewires and renovation-related upgrades — rather than large commercial contracting." },
       { q: "Do you work on older period properties?", a: "Yes. Period and mixed-age homes are a regular part of our Berkhamsted work, including careful upgrades during renovations." },
       { q: "Can you upgrade an old fuse board?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },

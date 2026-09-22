@@ -210,6 +210,7 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Unsafe socket warning signs", href: "/blog/signs-a-socket-is-unsafe" },
       { title: "Emergency electrician Tring", href: "/electrician/tring/emergency-electrician" },
+      { title: "Emergency electrician Berkhamsted", href: "/electrician/berkhamsted/emergency-electrician" },
       { title: "Electrical fault finding", href: "/services/electrical-fault-finding" },
       { title: "Why electrics keep tripping", href: "/blog/why-do-my-electrics-keep-tripping" },
     ],
@@ -227,6 +228,7 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Full vs partial rewire", href: "/blog/do-i-need-a-full-rewire-or-partial-rewire" },
       { title: "Rewire cost guide", href: "/blog/how-much-does-it-cost-to-rewire-a-house-in-tring" },
+      { title: "Electrician Berkhamsted", href: "/electrician/berkhamsted" },
       { title: "House rewiring", href: "/services/house-rewiring" },
       { title: "EICR certificates", href: "/services/eicr-certificates" },
     ],
