@@ -149,15 +149,16 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "Garden Electrics: Outdoor Sockets, Lighting and Garden Room Power",
-    metaTitle: "Garden Electrics: Outdoor Sockets & Garden Rooms",
+    metaTitle: "Garden Electrics: Outdoor Power, Lighting & Garden Rooms",
     description:
-      "Garden electrics done safely: RCD-protected outdoor sockets, garden lighting, SWA feeds to garden rooms, and when outdoor work needs Part P certification.",
+      "Garden electrics guide: outdoor sockets, garden room and garden office power, SWA feeds, and lighting. Enquire for Tring / Herts & Bucks.",
     href: "/blog/garden-electrics-outdoor-sockets-lighting-garden-rooms",
-    dateLabel: "August 2026",
+    dateLabel: "September 2026",
     sourceSlug: "garden-electrics-outdoor-sockets-lighting-garden-rooms",
     relatedServiceHref: "/services/outdoor-lighting",
     ctaLabel: "Ask about garden electrics",
     internalLinks: [
+      { title: "Enquire about garden electrics", href: "/contact" },
       { title: "Outdoor lighting installation", href: "/services/outdoor-lighting" },
       { title: "Security lighting", href: "/services/security-lighting" },
       { title: "Part P for outdoor work", href: "/blog/what-electrical-work-needs-part-p-certification" },
