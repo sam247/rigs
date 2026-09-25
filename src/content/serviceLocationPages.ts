@@ -153,9 +153,9 @@ const serviceLocationPages = [
     locationSlug: "hemel-hempstead",
     serviceSlug: "electrical-fault-finding",
     title: "Electrical Fault Finding Hemel Hempstead",
-    metaTitle: "Electrical Fault Finding Hemel Hempstead | RIGS",
+    metaTitle: "Circuit Tripping Hemel Hempstead | Fault Finding | RIGS",
     metaDescription:
-      "Electrical fault finding in Hemel Hempstead for tripping circuits, dead sockets, intermittent faults and mixed-age domestic wiring.",
+      "Circuit or electrics tripping in Hemel Hempstead? RIGS finds the fault — RCD trips, dead sockets, intermittent power — then explains the repair. Enquire for domestic fault finding.",
     intro:
       "RIGS Electrical provides domestic electrical fault finding in Hemel Hempstead for homeowners dealing with repeated tripping, intermittent faults, dead sockets and circuits that fail after extensions or kitchen work.",
     whyItMatters: [
@@ -231,3 +231,4 @@ export function getServiceLocationPath(locationSlug: string, serviceHref: string
   const serviceSlug = serviceHref.replace(/^\/services\//, "");
   return getServiceLocationPage(locationSlug, serviceSlug) ? `/electrician/${locationSlug}/${serviceSlug}` : serviceHref;
 }
+
