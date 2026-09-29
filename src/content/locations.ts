@@ -1098,49 +1098,52 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     slug: "pitstone",
     name: "Pitstone",
     region: "Buckinghamshire",
+    // Title left as default: Electrician Pitstone | Domestic NICEIC | RIGS (already matches head query at ~pos 3).
+    metaDescription:
+      "Electrician in Pitstone (LU7) for domestic faults, consumer unit upgrades, EICRs and rewires. NICEIC registered — covering Ivinghoe, Marsworth and nearby Bucks border villages. Enquire for a clear quote.",
     map: {
       bbox: [-0.67, 51.81, -0.6, 51.84],
       marker: { lat: 51.8245, lon: -0.634 },
     },
     heroIntro:
-      "Need an electrician in Pitstone? RIGS Electrical covers Pitstone and the surrounding Buckinghamshire villages with NICEIC domestic electrical work — from urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements. Based just down the road in Tring, we are used to the mix of village housing, later estates and outdoor supplies that show up across Pitstone and neighbouring Ivinghoe.",
+      "Looking for an electrician in Pitstone? RIGS Electrical is a Tring-based NICEIC registered domestic electrician covering Pitstone (LU7), Ivinghoe and Marsworth on the Herts–Bucks border. We help homeowners with fault finding, urgent repairs, consumer unit upgrades, EICRs and planned home electrical work — whether you are in the older village streets, a later family home on the estates, or sorting garage and garden supplies that share the same board.",
     servicesIntro:
-      "Pitstone properties often sit between older village layouts and later family homes. That means mixed-age wiring, garage or garden feeds and boards that were never designed for today’s kitchen and shower loads.",
+      "Pitstone properties often mix older village wiring with later kitchens, loft work and outdoor feeds toward Ivinghoe and Marsworth. Mixed-age circuits and boards that were never designed for today’s shower and home-office loads are common — so careful testing and clear upgrade planning matter more than quick temporary fixes.",
     serviceBlocks: [
       {
         title: "Emergency Electrician",
         href: "/services/emergency-electrician",
-        body: "If power drops out, a board will not reset or an accessory feels unsafe in a Pitstone home, we make the installation safe first and then diagnose the fault properly.",
+        body: "Urgent domestic faults in Pitstone — power loss, boards that will not reset, hot sockets or circuits that trip repeatedly — are made safe first, then diagnosed properly. Get in touch via the contact form when you need a local emergency electrician response.",
       },
       {
         title: "Electrical Fault Finding",
         href: "/services/electrical-fault-finding",
-        body: "Intermittent trips and dead circuits need methodical testing — especially where outdoor feeds and indoor alterations share the same consumer unit.",
+        body: "Intermittent trips and dead circuits are common where Pitstone outdoor feeds and indoor alterations share the same consumer unit. We test methodically rather than guessing, then explain what is urgent versus what can be planned.",
       },
       {
         title: "Fuse Board Upgrades",
         href: "/services/fuse-board-upgrades",
-        body: "A modern consumer unit helps Pitstone homes cope safely with showers, kitchens and outdoor supplies that older boards struggle with.",
+        body: "Village and estate homes in Pitstone LU7 often benefit from safer, clearer consumer unit protection before more kitchen, loft or outdoor work is added.",
       },
       {
         title: "EICR Certificates",
         href: "/services/eicr-certificates",
-        body: "Useful before buying, selling or renovating locally — giving a clear report rather than guesswork about what needs attention.",
+        body: "Useful before buying, selling or renovating in Pitstone and Ivinghoe — especially where years of alterations need a clear electrical picture in plain English.",
       },
     ],
     commonProblems: [
-      { title: "Repeated RCD trips", desc: "Shared protection that trips when showers, kitchens or outdoor circuits load up." },
-      { title: "Garage and garden faults", desc: "Damp or ageing outdoor accessories affecting village and estate properties." },
-      { title: "Older fuse boards", desc: "Boards that lack modern protection or clear circuit isolation." },
-      { title: "Extension-related wiring", desc: "Later additions that need careful integration with the existing installation." },
+      { title: "Repeated RCD trips", desc: "Shared protection that trips when showers, kitchens or outdoor circuits load up in LU7 homes." },
+      { title: "Garage and garden faults", desc: "Damp or ageing outdoor accessories on village and estate properties toward Ivinghoe and Marsworth." },
+      { title: "Older fuse boards", desc: "Boards that lack modern protection or clear circuit isolation for today’s household demand." },
+      { title: "Extension-related wiring", desc: "Later additions that need careful integration with the existing Pitstone installation." },
       { title: "Worn sockets and switches", desc: "Accessories that have loosened, run warm or failed after years of daily use." },
-      { title: "Pre-purchase checks", desc: "Buyers wanting a clear electrical picture before renovation budgets are set." },
+      { title: "Pre-purchase and pre-renovation checks", desc: "Buyers and homeowners wanting priorities before decorative work or exchanging contracts." },
     ],
     whyChooseIntro:
-      "Pitstone domestic electrical work needs a close local team: tidy finishes in lived-in homes, weather-aware outdoor circuits and clear advice about what is urgent versus what can wait.",
+      "Pitstone domestic electrical work rewards a close local team: tidy finishes in lived-in homes, weather-aware outdoor circuits and clear advice about what is urgent versus what can wait across the Ivinghoe–Marsworth corridor.",
     whyChoosePoints: [
-      { title: "Minutes from Tring", desc: "Regular coverage across Pitstone, Ivinghoe, Marsworth and the Herts–Bucks border villages." },
-      { title: "Domestic-only focus", desc: "Repairs, inspections, boards and upgrades for homeowners." },
+      { title: "Minutes from Tring", desc: "Regular domestic work across Pitstone, Ivinghoe, Marsworth, Cheddington and the Herts–Bucks border villages." },
+      { title: "Village and estate homes", desc: "Used to older village layouts, later family estates and mixed-age outdoor supplies." },
       { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
       { title: "Clear next steps", desc: "Plain-English quoting and sensible prioritisation for urgent versus planned work." },
     ],
@@ -1149,11 +1152,17 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       villages: ["Ivinghoe", "Marsworth", "Ivinghoe Aston", "Ringshall", "Cheddington"],
       nearby: ["Tring", "Aylesbury", "Wendover", "Aston Clinton", "Berkhamsted"],
     },
+    relatedBlogHrefs: [
+      "/blog/common-electrical-problems-in-older-tring-and-hertfordshire-homes",
+      "/blog/do-i-need-an-emergency-electrician-or-can-it-wait",
+      "/blog/how-to-tell-if-your-fuse-board-needs-replacing",
+    ],
     faq: [
-      { q: "Do you cover Pitstone and nearby villages?", a: "Yes. We cover Pitstone plus Ivinghoe, Marsworth, Cheddington and surrounding Buckinghamshire and Hertfordshire border villages." },
-      { q: "Can you help with outdoor and garage electrics?", a: "Yes. Garden lighting, external sockets and garage supplies are a regular part of domestic work around Pitstone." },
+      { q: "Do you cover Pitstone and nearby villages?", a: "Yes. We cover Pitstone (LU7) plus Ivinghoe, Marsworth, Cheddington and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Do you work as a domestic electrician in Pitstone?", a: "Yes. Our day-to-day work is household electrics — faults, consumer units, EICRs, rewires and renovation-related upgrades — rather than large commercial contracting." },
+      { q: "Can you help with outdoor and garage electrics?", a: "Yes. Garden lighting, external sockets and garage supplies are a regular part of domestic work around Pitstone and Ivinghoe." },
       { q: "Do you offer consumer unit upgrades?", a: "Yes. We replace outdated fuse boards where safer protection and clearer circuits are needed." },
-      { q: "Can I book an EICR in Pitstone?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
+      { q: "Can I book an EICR in Pitstone?", a: "Yes. EICRs are useful before a move, rental change or renovation — enquire via the contact form for availability." },
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
     ],
   },
