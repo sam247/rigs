@@ -1805,34 +1805,37 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     slug: "ringshall",
     name: "Ringshall",
     region: "Buckinghamshire",
+    // Title left as default: Electrician Ringshall | Domestic NICEIC | RIGS (already matches head query at ~pos 2).
+    metaDescription:
+      "Electrician in Ringshall near Ashridge for domestic faults, consumer units, EICRs and rewires. NICEIC — Little Gaddesden, Aldbury. Enquire for a clear quote.",
     map: {
       bbox: [-0.61, 51.79, -0.54, 51.83],
       marker: { lat: 51.81, lon: -0.575 },
     },
     heroIntro:
-      "Need an electrician in Ringshall? RIGS Electrical covers Ringshall near Ashridge and the surrounding Buckinghamshire border villages with NICEIC domestic electrical work — from urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements. Based close by in Tring, we are used to rural-edge properties, older layouts and outdoor electrics that need careful attention.",
+      "Looking for an electrician in Ringshall? RIGS Electrical is a Tring-based NICEIC registered domestic electrician covering Ringshall on the Ashridge edge, plus Little Gaddesden, Aldbury and Ivinghoe Aston. We help homeowners with fault finding, urgent repairs, consumer unit upgrades, EICRs and planned home electrical work — whether you are in an older village house, a later family home, or sorting garage and garden supplies that share the same board. Enquire via the contact form for a clear quote.",
     servicesIntro:
-      "Ringshall homes often include older village wiring, later extensions and garden or outbuilding supplies beside the Ashridge edge. Practical domestic support means diagnosing faults properly and planning upgrades without unnecessary disruption.",
+      "Ringshall properties often mix older Ashridge-edge village wiring with later kitchens, loft work and outdoor feeds toward Little Gaddesden, Aldbury and Ivinghoe Aston. Mixed-age circuits and boards that were never designed for today’s shower and home-office loads are common — so careful testing and clear upgrade planning matter more than quick temporary fixes.",
     serviceBlocks: [
       {
         title: "Emergency Electrician",
         href: "/services/emergency-electrician",
-        body: "If power drops out, a board will not reset or an accessory feels unsafe in a Ringshall home, we make the installation safe first and then diagnose the fault properly.",
+        body: "Urgent domestic faults in Ringshall — power loss, boards that will not reset, hot sockets or circuits that trip repeatedly — are made safe first, then diagnosed properly. Get in touch via the contact form when you need a local emergency electrician response across the Ashridge edge, Little Gaddesden, Aldbury and Ivinghoe Aston.",
       },
       {
         title: "Electrical Fault Finding",
         href: "/services/electrical-fault-finding",
-        body: "Intermittent trips and dead circuits need methodical testing — especially where outdoor feeds and older indoor wiring share the same installation.",
+        body: "Intermittent trips and dead circuits are common where Ringshall outdoor feeds and indoor alterations share the same consumer unit. We test methodically rather than guessing, then explain what is urgent versus what can be planned for homes toward Little Gaddesden and Aldbury.",
       },
       {
         title: "Fuse Board Upgrades",
         href: "/services/fuse-board-upgrades",
-        body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
+        body: "Ashridge-edge village homes in Ringshall often benefit from safer, clearer consumer unit protection before more kitchen, loft or outdoor work toward Ivinghoe Aston is added.",
       },
       {
         title: "EICR Certificates",
         href: "/services/eicr-certificates",
-        body: "A clear inspection report helps before buying, selling or renovating a Ringshall property with mixed-age electrics.",
+        body: "Useful before buying, selling or renovating in Ringshall, Little Gaddesden and Aldbury — especially where years of alterations need a clear electrical picture in plain English. Enquire via the contact form for availability.",
       },
     ],
     commonProblems: [
@@ -1844,9 +1847,9 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       { title: "Pre-purchase checks", desc: "Buyers wanting a clear electrical picture before committing to renovation budgets." },
     ],
     whyChooseIntro:
-      "Ringshall domestic electrical work is about practical border-village coverage: tidy finishes, clear advice and a local team that already works Tring, Ivinghoe and the Ashridge edge every week.",
+      "Ringshall domestic electrical work rewards a close local team: tidy finishes in lived-in homes, weather-aware outdoor circuits and clear advice about what is urgent versus what can wait across the Ashridge edge toward Little Gaddesden, Aldbury and Ivinghoe Aston. Enquire via the contact form for a clear quote.",
     whyChoosePoints: [
-      { title: "Close Ashridge coverage", desc: "Regular work across Ringshall, Ivinghoe, Ivinghoe Aston, Pitstone and Tring." },
+      { title: "Close Ashridge coverage", desc: "Regular domestic work across Ringshall, Little Gaddesden, Aldbury, Ivinghoe Aston and nearby Ashridge-edge villages." },
       { title: "Domestic-only focus", desc: "Homeowner repairs, inspections, boards and upgrades." },
       { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
       { title: "Clear next steps", desc: "Plain-English quoting and sensible prioritisation for urgent versus planned work." },
@@ -1856,11 +1859,17 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       villages: ["Ivinghoe", "Ivinghoe Aston", "Pitstone", "Aldbury", "Little Gaddesden"],
       nearby: ["Tring", "Berkhamsted", "Wendover", "Aylesbury", "Marsworth"],
     },
+    relatedBlogHrefs: [
+      "/blog/common-electrical-problems-in-older-tring-and-hertfordshire-homes",
+      "/blog/do-i-need-an-emergency-electrician-or-can-it-wait",
+      "/blog/how-to-tell-if-your-fuse-board-needs-replacing",
+    ],
     faq: [
       { q: "Do you cover Ringshall near Ashridge?", a: "Yes. We cover Ringshall plus Ivinghoe, Ivinghoe Aston, Pitstone, Aldbury, Little Gaddesden and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Do you work as a domestic electrician in Ringshall?", a: "Yes. Our day-to-day work is household electrics — faults, consumer units, EICRs, rewires and renovation-related upgrades — rather than large commercial contracting." },
       { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
       { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
-      { q: "Can I get an EICR in Ringshall?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
+      { q: "Can I get an EICR in Ringshall?", a: "Yes. EICRs are useful before a move, rental change or renovation — enquire via the contact form for availability." },
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
     ],
   },
