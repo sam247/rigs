@@ -1035,38 +1035,42 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     slug: "ivinghoe",
     name: "Ivinghoe",
     region: "Buckinghamshire",
+    // Title left as default: Electrician Ivinghoe | Domestic NICEIC | RIGS (exact match for electrician ivinghoe, ~pos 2).
+    // This page owns "electrician ivinghoe"; /electrician/ivinghoe-aston covers the separate hamlet of Ivinghoe Aston.
+    metaDescription:
+      "Electrician in Ivinghoe (LU7) for domestic faults, consumer unit upgrades, EICRs and rewires. NICEIC registered, based in Tring. Enquire for a clear quote.",
     map: {
       bbox: [-0.68, 51.82, -0.58, 51.86],
       marker: { lat: 51.8369, lon: -0.6297 },
     },
     heroIntro:
-      "Need an electrician in Ivinghoe? RIGS Electrical covers Ivinghoe and nearby Buckinghamshire villages with NICEIC domestic electrical work — from urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements. Based close by in Tring, we are used to village properties, older layouts and outdoor electrics that need careful, weather-aware attention.",
+      "Looking for an electrician in Ivinghoe? RIGS Electrical is a Tring-based NICEIC registered domestic electrician covering Ivinghoe village (LU7) below the Beacon, plus Pitstone, Ivinghoe Aston and Marsworth on the Herts–Bucks border. We help homeowners with fault finding, urgent repairs, consumer unit upgrades, EICRs and planned home electrical work — whether you are in an older cottage near the village centre, a later family home, or sorting garage and garden supplies that share the same board. Enquire via the contact form for a clear quote.",
     servicesIntro:
-      "Ivinghoe homes often include older village wiring, later extensions and garden or outbuilding supplies. Practical domestic support means diagnosing faults properly and planning upgrades without unnecessary disruption.",
+      "Ivinghoe homes often mix older village wiring with later kitchens, extensions, loft work and outdoor feeds to garages, gardens and outbuildings. Boards that were never designed for today’s shower, kitchen and home-office loads are common — so careful testing and clear upgrade planning matter more than quick temporary fixes.",
     serviceBlocks: [
       {
         title: "Emergency Electrician",
         href: "/services/emergency-electrician",
-        body: "For power loss, boards that will not reset or accessories that feel unsafe in Ivinghoe, we make the installation safe first and then find the cause.",
+        body: "For power loss, boards that will not reset, hot sockets or accessories that feel unsafe in an Ivinghoe home, we make the installation safe first and then find the cause. Get in touch via the contact form when you need a local domestic electrician across Ivinghoe, Pitstone and Ivinghoe Aston.",
       },
       {
         title: "Electrical Fault Finding",
         href: "/services/electrical-fault-finding",
-        body: "Intermittent trips and dead circuits need methodical testing — especially where outdoor feeds and older indoor wiring share the same installation.",
+        body: "Intermittent trips and dead circuits need methodical testing — especially where outdoor feeds and older indoor wiring share the same installation. We test rather than guess, then explain what is urgent versus what can be planned.",
       },
       {
         title: "Fuse Board Upgrades",
         href: "/services/fuse-board-upgrades",
-        body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
+        body: "Ivinghoe village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original fuse board.",
       },
       {
         title: "EICR Certificates",
         href: "/services/eicr-certificates",
-        body: "A clear inspection report helps before buying, selling or renovating an Ivinghoe property with mixed-age electrics.",
+        body: "A clear inspection report helps before buying, selling, letting or renovating an Ivinghoe property with mixed-age electrics.",
       },
     ],
     commonProblems: [
-      { title: "Village wiring age", desc: "Older layouts that struggle with modern household demand." },
+      { title: "Older village wiring", desc: "Cottage and older village layouts that struggle with modern household demand." },
       { title: "Outdoor circuit faults", desc: "Garden, garage and outbuilding supplies affected by damp or ageing accessories." },
       { title: "Repeated tripping", desc: "Shared protection that trips when showers, kitchens or outdoor circuits load up." },
       { title: "Outdated fuse boards", desc: "Boards that need safer protection and clearer circuit labelling." },
@@ -1074,9 +1078,9 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       { title: "Pre-purchase checks", desc: "Buyers wanting a clear electrical picture before committing to renovation budgets." },
     ],
     whyChooseIntro:
-      "Ivinghoe domestic electrical work is about practical village coverage: tidy finishes, clear advice and a local team that already works the Tring–Aylesbury Vale corridor every week.",
+      "Ivinghoe domestic electrical work rewards a close local team: tidy finishes in lived-in homes, weather-aware outdoor circuits and clear advice about what is urgent versus what can wait across the Ivinghoe–Pitstone–Tring corridor.",
     whyChoosePoints: [
-      { title: "Close local coverage", desc: "Based in Tring with regular work across Ivinghoe, Pitstone, Marsworth and nearby Bucks villages." },
+      { title: "Minutes from Tring", desc: "Based in Tring with regular domestic work across Ivinghoe, Pitstone, Ivinghoe Aston, Marsworth and nearby Bucks villages." },
       { title: "Domestic-only focus", desc: "Homeowner repairs, inspections, boards and upgrades." },
       { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
       { title: "Clear next steps", desc: "Plain-English quoting and sensible prioritisation for urgent versus planned work." },
@@ -1086,11 +1090,17 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       villages: ["Pitstone", "Marsworth", "Ivinghoe Aston", "Ringshall", "Cheddington"],
       nearby: ["Tring", "Aylesbury", "Wendover", "Leighton Buzzard", "Berkhamsted", "Aston Clinton"],
     },
+    relatedBlogHrefs: [
+      "/blog/common-electrical-problems-in-older-tring-and-hertfordshire-homes",
+      "/blog/do-i-need-an-emergency-electrician-or-can-it-wait",
+      "/blog/how-to-tell-if-your-fuse-board-needs-replacing",
+    ],
     faq: [
-      { q: "Do you cover Ivinghoe and nearby villages?", a: "Yes. We cover Ivinghoe plus Pitstone, Marsworth, Cheddington and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Do you cover Ivinghoe and nearby villages?", a: "Yes. We cover Ivinghoe (LU7) plus Pitstone, Ivinghoe Aston, Marsworth, Cheddington and surrounding Buckinghamshire and Hertfordshire border villages." },
+      { q: "Do you work as a domestic electrician in Ivinghoe?", a: "Yes. Our day-to-day work is household electrics — faults, consumer units, EICRs, rewires and renovation-related upgrades — rather than large commercial contracting." },
       { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
       { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
-      { q: "Can I get an EICR in Ivinghoe?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
+      { q: "Can I get an EICR in Ivinghoe?", a: "Yes. EICRs are useful before a move, rental change or renovation — enquire via the contact form for availability." },
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
     ],
   },
