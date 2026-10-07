@@ -196,6 +196,24 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Electric shower installation in Tring", href: "/electrician/tring/electric-shower-installation" },
       { title: "Consumer unit replacement", href: "/services/consumer-unit-replacement" },
       { title: "Electrical inspections", href: "/services/electrical-inspections" },
+      { title: "Replacing an electric shower", href: "/blog/replacing-an-electric-shower" },
+    ],
+  },
+  {
+    title: "Replacing an Electric Shower: What's Involved and How Long It Takes",
+    metaTitle: "Replacing an Electric Shower: What's Involved",
+    description:
+      "Replacing an electric shower? What a like-for-like swap involves, how long it takes, cable and RCD checks for higher-kW units, and Part P. Herts & Bucks.",
+    href: "/blog/replacing-an-electric-shower",
+    dateLabel: "October 2026",
+    sourceSlug: "replacing-an-electric-shower",
+    relatedServiceHref: "/services/electric-shower-installation",
+    ctaLabel: "Ask about replacing your shower",
+    internalLinks: [
+      { title: "Electric shower installation", href: "/services/electric-shower-installation" },
+      { title: "Electric shower installation in Tring", href: "/electrician/tring/electric-shower-installation" },
+      { title: "Electric vs mixer showers", href: "/why-an-electric-shower-might-be-right-for-your-home" },
+      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
     ],
   },
   {
