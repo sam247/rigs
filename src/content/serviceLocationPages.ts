@@ -10,9 +10,11 @@ export type ServiceLocationPageConfig = {
   whyItMatters: string[];
   commonReasons: string[];
   relatedArticleHrefs: string[];
+  whatToExpect?: { heading: string; paragraphs: string[] };
+  faqs?: { question: string; answer: string }[];
 };
 
-const serviceLocationPages = [
+const serviceLocationPages: ServiceLocationPageConfig[] = [
   {
     locationSlug: "tring",
     serviceSlug: "emergency-electrician",
@@ -67,19 +69,59 @@ const serviceLocationPages = [
   {
     locationSlug: "tring",
     serviceSlug: "eicr-certificates",
-    title: "EICR Certificates Tring",
-    metaTitle: "EICR Certificate Tring | Domestic Electrical Safety Check",
+    title: "EICR Testing & Certificates Tring",
+    metaTitle: "EICR Testing Tring | Electrical Safety Certificate | RIGS",
     metaDescription:
-      "Book an EICR certificate in Tring for homeowners, buyers, landlords and older homes. Clear NICEIC electrical safety reporting and next steps.",
+      "EICR testing in Tring (HP23) for homeowners, buyers and landlords. NICEIC electrician, clear C1/C2/C3 findings and an electrical safety certificate. Enquire today.",
     intro:
-      "An EICR gives you a clear view of the condition of your home electrics. RIGS Electrical provides EICR certificates in Tring for homeowners, buyers, landlords and anyone planning work on an older or altered property.",
+      "An EICR (Electrical Installation Condition Report) is a full inspection and test of your home's fixed wiring. RIGS Electrical carries out EICR testing in Tring and nearby villages for homeowners, buyers, landlords and anyone planning work on an older or altered property, then explains the results in plain English.",
     whyItMatters: [
-      "A report helps separate urgent safety issues from sensible future improvements.",
-      "It is useful before buying, selling, renovating or letting a domestic property.",
-      "Where remedial work is needed, we explain the findings in plain English and help prioritise next steps.",
+      "EICR testing separates urgent safety issues from sensible future improvements, so you know what genuinely needs doing.",
+      "It is useful before buying, selling, renovating or letting a domestic property, and private landlords in England need a satisfactory report at least every five years.",
+      "Where remedial work is needed, we explain the findings clearly and help prioritise next steps rather than pushing a full rewire.",
     ],
-    commonReasons: ["Buying or selling a property", "Preparing a rental home", "Older wiring or unknown electrical history", "Repeated tripping or faults", "Planning renovations or consumer unit work"],
-    relatedArticleHrefs: ["/blog/consumer-unit-vs-fuse-box", "/blog/why-do-my-electrics-keep-tripping"],
+    commonReasons: [
+      "Buying or selling a house in Tring",
+      "Preparing a rental home or renewing a landlord EICR",
+      "Older wiring or unknown electrical history",
+      "Repeated tripping or faults that need testing",
+      "Planning renovations, an extension or consumer unit work",
+    ],
+    relatedArticleHrefs: [
+      "/blog/eicr-for-homeowners-when-should-you-get-your-electrics-checked",
+      "/blog/electrical-checks-when-buying-a-house-in-tring",
+      "/blog/common-electrical-problems-in-older-tring-and-hertfordshire-homes",
+    ],
+    whatToExpect: {
+      heading: "What happens during EICR testing in Tring",
+      paragraphs: [
+        "We start with a visual inspection of the consumer unit, accessories and visible wiring, then test each circuit. Testing includes continuity, insulation resistance, polarity, earth fault loop impedance and RCD operation, so some circuits are switched off for short periods during the visit.",
+        "Every observation is coded on the report: C1 means danger present, C2 means potentially dangerous, C3 means improvement recommended, and FI means further investigation is needed. A report with any C1, C2 or FI observation is unsatisfactory until the remedial work is done.",
+        "Many Tring homes have been extended or altered over the years, so we pay attention to older circuits, later additions, outbuildings and garden supplies. You receive the written report and a straightforward explanation of what needs fixing now and what can wait.",
+      ],
+    },
+    faqs: [
+      {
+        question: "How often should a home in Tring have an EICR?",
+        answer:
+          "For owner-occupied homes, a periodic inspection is generally recommended every 10 years or when a property changes hands. Rental properties in England need a satisfactory EICR at least every five years, or sooner if the previous report says so.",
+      },
+      {
+        question: "Is an EICR the same as an electrical safety certificate?",
+        answer:
+          "People often call it an electrical safety certificate, but an EICR is a condition report on the existing installation. New work such as a consumer unit replacement is covered by an Electrical Installation Certificate instead.",
+      },
+      {
+        question: "Will the power be off during EICR testing?",
+        answer:
+          "Circuits need to be isolated while they are tested, so parts of the house will be without power for short periods. We work circuit by circuit and agree timings with you so it causes as little disruption as possible.",
+      },
+      {
+        question: "Do you cover villages around Tring for EICR testing?",
+        answer:
+          "Yes. As well as Tring itself we carry out EICR testing in nearby villages such as Aldbury, Wigginton, Long Marston, Wilstone and Pitstone, along with Berkhamsted and the surrounding area.",
+      },
+    ],
   },
   {
     locationSlug: "tring",
@@ -217,7 +259,7 @@ const serviceLocationPages = [
     commonReasons: ["RCD or RCBO tripping", "Loss of power to sockets or lighting", "Hot, cracked or buzzing accessories", "Faults after renovation work", "Unsafe outdoor lighting or sockets"],
     relatedArticleHrefs: ["/blog/why-do-my-electrics-keep-tripping", "/blog/do-i-need-an-emergency-electrician-or-can-it-wait"],
   },
-] satisfies ServiceLocationPageConfig[];
+];
 
 export const SERVICE_LOCATION_PAGES = serviceLocationPages.filter((page) => LOCATION_PAGES[page.locationSlug]);
 

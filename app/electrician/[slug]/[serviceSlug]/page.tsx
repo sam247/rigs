@@ -111,10 +111,23 @@ export default async function Page({ params }: PageProps) {
     ],
   };
 
+  const faqSchema = page.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: page.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
+
   return (
     <Layout>
       <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
 
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container">
@@ -176,6 +189,45 @@ export default async function Page({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {page.whatToExpect && (
+        <section className="pb-20 md:pb-28">
+          <div className="container">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-heading font-800 mb-6">{page.whatToExpect.heading}</h2>
+              <div className="space-y-4">
+                {page.whatToExpect.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="text-muted-foreground leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {page.faqs && page.faqs.length > 0 && (
+        <section className="pb-20 md:pb-28">
+          <div className="container">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-heading font-800 mb-6">
+                {serviceTitle} in {location.name}: common questions
+              </h2>
+              <div className="grid gap-4">
+                {page.faqs.map((faq) => (
+                  <Card key={faq.question} className="border-2 border-border">
+                    <CardContent className="p-6">
+                      <h3 className="font-heading font-800 mb-2">{faq.question}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container">
