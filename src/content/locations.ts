@@ -1563,49 +1563,53 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     slug: "wigginton",
     name: "Wigginton",
     region: "Hertfordshire",
+    // Title leads with emergency intent: GSC 90d emergency electrician wigginton 31 impr / pos ~17.6 vs electrician wigginton 2 impr.
+    metaTitle: "Emergency Electrician Wigginton | Domestic NICEIC | RIGS",
+    metaDescription:
+      "Emergency and domestic electrician in Wigginton (HP23). Power loss, tripping boards and hot sockets made safe, then fixed. NICEIC registered, based in Tring.",
     map: {
       bbox: [-0.68, 51.76, -0.61, 51.8],
       marker: { lat: 51.7828, lon: -0.6378 },
     },
     heroIntro:
-      "Need an electrician in Wigginton? RIGS Electrical covers Wigginton and the surrounding Chiltern-edge Hertfordshire villages with NICEIC domestic electrical work — from urgent faults and tripping circuits to consumer unit upgrades, EICRs and planned home improvements. Based nearby in Tring, we regularly work Wigginton, St Leonards and the quieter lanes south of Tring.",
+      "Need an emergency or domestic electrician in Wigginton? RIGS Electrical is a Tring-based NICEIC registered electrician covering Wigginton (HP23), St Leonards and the Chiltern-edge lanes south of Tring. If you have lost power, a board that will not reset or a socket that smells hot, we make it safe first and then find the fault properly. We also handle planned work — consumer unit upgrades, EICRs and electrics for extensions and outbuildings.",
     servicesIntro:
-      "Wigginton homes often include older village wiring, later extensions and weather-exposed outdoor supplies on Chiltern-edge plots. Practical domestic support means diagnosing faults properly and planning upgrades without unnecessary disruption.",
+      "Wigginton homes often include older village wiring, later extensions and weather-exposed outdoor supplies on Chiltern-edge plots. That mix is behind many urgent call-outs here — a damp garden or garage feed tripping the whole board, or an older circuit struggling with a new shower or kitchen. Practical support means making things safe, diagnosing the real cause and planning any upgrade without unnecessary disruption.",
     serviceBlocks: [
       {
         title: "Emergency Electrician",
         href: "/services/emergency-electrician",
-        body: "If electrics trip repeatedly, power drops out or something feels unsafe in a Wigginton home, we make the situation safe first and then diagnose the fault.",
+        body: "Lost power, a consumer unit that trips straight back off, a burning smell, or a scorched or hot socket in a Wigginton home should be dealt with promptly. If it is safe, switch off at the consumer unit, then call us. We make the installation safe first, then trace and repair the fault, and explain anything that needs follow-up work.",
       },
       {
         title: "Electrical Fault Finding",
         href: "/services/electrical-fault-finding",
-        body: "Intermittent issues and mixed-age circuits need careful testing — especially where gardens, garages and extensions have been added over time.",
+        body: "Intermittent trips and dead circuits need careful testing — especially where gardens, garages and extensions have been added over time. We isolate the cause rather than guessing, so the fix lasts.",
       },
       {
         title: "Fuse Board Upgrades",
         href: "/services/fuse-board-upgrades",
-        body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
+        body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board — and repeated nuisance tripping is often the first sign.",
       },
       {
         title: "EICR Certificates",
         href: "/services/eicr-certificates",
-        body: "Useful before buying, selling or renovating locally — giving a clear report on mixed-age village electrics.",
+        body: "Useful before buying, selling or renovating locally — giving a clear report on mixed-age village electrics and what is urgent versus what can be planned.",
       },
     ],
     commonProblems: [
+      { title: "Power loss and boards that will not reset", desc: "RCDs or breakers that trip straight back off, often caused by a single faulty circuit or appliance." },
       { title: "Chiltern-edge outdoor faults", desc: "Garden, garage and outbuilding supplies affected by damp or ageing accessories." },
+      { title: "Hot or scorched sockets", desc: "Loose connections or overloaded accessories that need switching off and checking straight away." },
       { title: "Older village wiring", desc: "Layouts that struggle with modern household demand." },
-      { title: "Repeated tripping", desc: "Shared protection that trips when showers, kitchens or outdoor circuits load up." },
       { title: "Outdated fuse boards", desc: "Boards that need safer protection and clearer circuit labelling." },
-      { title: "Extension-related changes", desc: "Later additions that need careful integration with the existing installation." },
       { title: "Pre-purchase checks", desc: "Buyers wanting a clear electrical picture before committing to renovation budgets." },
     ],
     whyChooseIntro:
-      "Wigginton domestic electrical work is about practical Chiltern village coverage: tidy finishes, clear advice and a local team that already works the Tring–St Leonards corridor every week.",
+      "Wigginton electrical work is about practical Chiltern village coverage: a local team that already works the Tring–St Leonards corridor, makes urgent faults safe properly, and gives clear advice about what needs doing now versus later.",
     whyChoosePoints: [
       { title: "Close local coverage", desc: "Based in Tring with regular work across Wigginton, St Leonards, Aldbury and nearby Chiltern-edge villages." },
-      { title: "Domestic-only focus", desc: "Homeowner repairs, inspections, boards and upgrades." },
+      { title: "Safe first, then fixed", desc: "Urgent faults are made safe before diagnosis, with a plain-English explanation of what went wrong." },
       { title: "NICEIC registered", desc: "Work completed safely and to current standards, with certification where required." },
       { title: "Clear next steps", desc: "Plain-English quoting and sensible prioritisation for urgent versus planned work." },
     ],
@@ -1614,11 +1618,18 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       villages: ["St Leonards", "Aldbury", "Hastoe", "Buckland Common"],
       nearby: ["Tring", "Berkhamsted", "Wendover", "Wilstone", "Pitstone"],
     },
+    relatedBlogHrefs: [
+      "/blog/do-i-need-an-emergency-electrician-or-can-it-wait",
+      "/blog/why-do-my-electrics-keep-tripping",
+      "/blog/common-electrical-problems-in-older-tring-and-hertfordshire-homes",
+    ],
     faq: [
-      { q: "Do you cover Wigginton and nearby villages?", a: "Yes. We cover Wigginton plus St Leonards, Aldbury, Hastoe and surrounding Chiltern-edge villages near Tring." },
-      { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work." },
+      { q: "Do you help with emergency electrical problems in Wigginton?", a: "Yes. If you have lost power, a consumer unit that will not reset, a burning smell or a hot or scorched socket, call us. We make the installation safe first, then find and fix the fault. If it is safe to do so, switch off at the consumer unit while you wait." },
+      { q: "Is a power cut an electrical emergency?", a: "Not always. If your neighbours have lost power too, it is likely a network fault — call 105 to report a power cut. If only your home is affected, or your board keeps tripping, it is a fault inside the property and we can help." },
+      { q: "Do you cover Wigginton and nearby villages?", a: "Yes. We cover Wigginton (HP23) plus St Leonards, Aldbury, Hastoe, Buckland Common and surrounding Chiltern-edge villages near Tring." },
+      { q: "Can you help with outdoor electrics on village properties?", a: "Yes. Garden lighting, garage supplies and outbuilding feeds are a regular part of local domestic work — including tracing faults on outdoor circuits that trip the whole board." },
       { q: "Do you upgrade old fuse boards?", a: "Yes. Consumer unit upgrades are common where older boards no longer suit modern household demand." },
-      { q: "Can I get an EICR in Wigginton?", a: "Yes. EICRs are useful before a move, rental change or renovation." },
+      { q: "Can I get an EICR in Wigginton?", a: "Yes. EICRs are useful before a move, rental change or renovation — enquire via the contact form for availability." },
       { q: "Are you NICEIC registered?", a: "Yes. RIGS Electrical is NICEIC registered and provides certification where required." },
     ],
   },
