@@ -138,7 +138,7 @@ const serviceLocationPages: ServiceLocationPageConfig[] = [
       "A properly tested installation helps avoid nuisance tripping, overheating and unsafe accessories.",
     ],
     commonReasons: ["Replacing an old electric shower", "Planning bathroom improvements", "Checking cable size and protection", "Repeated tripping when the shower runs", "Advice before choosing a new shower unit"],
-    relatedArticleHrefs: ["/blog/replacing-an-electric-shower", "/why-an-electric-shower-might-be-right-for-your-home"],
+    relatedArticleHrefs: ["/blog/replacing-an-electric-shower", "/blog/electric-shower-cable-size", "/why-an-electric-shower-might-be-right-for-your-home"],
   },
   {
     locationSlug: "hemel-hempstead",

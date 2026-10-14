@@ -217,6 +217,23 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
+    title: "What Size Cable Does an Electric Shower Need?",
+    metaTitle: "Electric Shower Cable Size: 7.5kW–10.8kW Guide",
+    description:
+      "What size cable does an electric shower need? Typical 6mm², 10mm² and 16mm² sizes for 7.5kW–10.8kW showers, breaker ratings and when to upgrade the circuit.",
+    href: "/blog/electric-shower-cable-size",
+    dateLabel: "October 2026",
+    sourceSlug: "electric-shower-cable-size",
+    relatedServiceHref: "/services/electric-shower-installation",
+    ctaLabel: "Get your shower circuit checked",
+    internalLinks: [
+      { title: "Electric shower installation", href: "/services/electric-shower-installation" },
+      { title: "Replacing an electric shower", href: "/blog/replacing-an-electric-shower" },
+      { title: "Consumer unit replacement", href: "/services/consumer-unit-replacement" },
+      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+    ],
+  },
+  {
     title: "Do I Need an Emergency Electrician or Can It Wait?",
     metaTitle: "Emergency Electrician or Standard Visit?",
     description:

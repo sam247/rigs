@@ -52,10 +52,7 @@ If there is no existing shower and no dedicated circuit in place, the work inclu
 An electric shower is one of the highest-load appliances in a typical home, so it must be installed correctly to avoid fire risk and electric shock. The following requirements are specified in BS 7671 (the Wiring Regulations) and Part P of the Building Regulations.
 
 **Dedicated radial circuit**  
-Every electric shower must be on its own circuit from the consumer unit. It cannot share a circuit with sockets, lighting or other appliances. Cable sizing depends on the shower’s wattage and the length of the run:
-- 8.5 kW – minimum 6 mm² cable, 40 A breaker
-- 9.5 kW – 10 mm² cable recommended, 45 A MCB or 40 A RCBO
-- 10.8 kW – 10 mm² cable, 45–50 A breaker
+Every electric shower must be on its own circuit from the consumer unit. It cannot share a circuit with sockets, lighting or other appliances. Cable sizing depends on the shower’s wattage, the length of the run and how the cable is installed: showers above about 8 kW typically need 10 mm² cable, and the most powerful units can need 16 mm². Our guide to [electric shower cable size](/blog/electric-shower-cable-size) explains typical sizes for 7.5 kW to 10.8 kW showers and what an electrician checks.
 
 **RCD protection**  
 BS 7671 Regulation 701.411.3.3 requires that all low-voltage circuits serving a room containing a bath or shower, and any circuits passing through Zones 1 and 2, have additional protection by a 30 mA RCD. This is typically provided by an RCBO at the consumer unit or an RCD covering the shower circuit. If your existing consumer unit doesn’t have RCD protection, the installation may require a replacement consumer unit or a separate RCD enclosure.
