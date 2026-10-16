@@ -246,18 +246,58 @@ const serviceLocationPages: ServiceLocationPageConfig[] = [
     locationSlug: "berkhamsted",
     serviceSlug: "emergency-electrician",
     title: "Emergency Electrician Berkhamsted",
-    metaTitle: "Emergency Electrician Berkhamsted | Urgent Domestic Faults",
+    metaTitle: "Emergency Electrician Berkhamsted | Domestic NICEIC | RIGS",
     metaDescription:
-      "Emergency electrician in Berkhamsted for domestic faults, tripping electrics, power loss, hot sockets and urgent electrical safety issues.",
+      "Emergency electrician Berkhamsted (HP4) for power loss, tripping boards, hot sockets and unsafe domestic faults. NICEIC. Call 07989 205468 or enquire.",
     intro:
-      "If you need an emergency electrician in Berkhamsted, RIGS Electrical can help with urgent domestic faults, repeated tripping, loss of power and accessories that feel unsafe. We test methodically and explain the safest next step clearly.",
+      "If you need an emergency electrician in Berkhamsted, RIGS Electrical is a Tring-based NICEIC registered electrician covering HP4 homes, Northchurch and the surrounding Chiltern towns. Lost power, a consumer unit that will not reset, a burning smell or a hot socket should be made safe first — then we find the fault properly and explain what needs doing next.",
     whyItMatters: [
-      "Period properties and later alterations can hide faults until a circuit starts tripping.",
-      "Urgent electrical symptoms should be made safe before wider repair work is planned.",
-      "Clear diagnosis helps avoid replacing parts unnecessarily.",
+      "Berkhamsted's mix of period properties, later extensions and weather-exposed outdoor supplies often hides faults until a circuit starts tripping or a board will not stay on.",
+      "Urgent symptoms should be made safe before the same circuit is put back into use or parts are replaced on guesswork.",
+      "Clear domestic diagnosis separates a quick local repair from work that can wait for a planned upgrade.",
     ],
-    commonReasons: ["RCD or RCBO tripping", "Loss of power to sockets or lighting", "Hot, cracked or buzzing accessories", "Faults after renovation work", "Unsafe outdoor lighting or sockets"],
-    relatedArticleHrefs: ["/blog/why-do-my-electrics-keep-tripping", "/blog/do-i-need-an-emergency-electrician-or-can-it-wait"],
+    commonReasons: [
+      "RCD or RCBO that trips straight back off",
+      "Loss of power to sockets, lighting or part of the home",
+      "Hot, cracked, buzzing or scorched accessories",
+      "Faults after renovation, kitchen or bathroom work",
+      "Damp outdoor, garage or garden circuits affecting the board",
+    ],
+    relatedArticleHrefs: [
+      "/blog/do-i-need-an-emergency-electrician-or-can-it-wait",
+      "/blog/why-do-my-electrics-keep-tripping",
+      "/blog/what-happens-during-an-electrical-fault-finding-visit",
+    ],
+    whatToExpect: {
+      heading: "What happens on an emergency call-out in Berkhamsted",
+      paragraphs: [
+        "If it is safe, switch off at the consumer unit before we arrive. We start by making the installation safe, then test the affected circuits to isolate whether the cause is an appliance, a damaged accessory, moisture, or a wiring fault that needs a longer repair.",
+        "Many Berkhamsted call-outs involve mixed-age wiring: older radial circuits, later kitchen additions, and outdoor or garage feeds that trip the whole board in wet weather. We explain the findings in plain English and agree what must be fixed now versus what can be planned.",
+        "Where a temporary safe isolation is needed, we leave you with a clear next step and a quote for any follow-up work. For planned work after the emergency — consumer unit upgrades, EICRs or fault finding — use the Berkhamsted area page or enquire online.",
+      ],
+    },
+    faqs: [
+      {
+        question: "Is my Berkhamsted power cut a property fault or a network outage?",
+        answer:
+          "If neighbours are also without power, check with your network operator (often via the 105 power-cut service) before calling an electrician. If only your home or part of it is affected, or the board will not reset, that usually points to a property fault we can diagnose.",
+      },
+      {
+        question: "What should I do before an emergency electrician arrives?",
+        answer:
+          "If it is safe, switch off at the consumer unit and unplug anything that was in use when the fault started. Do not keep resetting a board that trips immediately, and keep clear of accessories that smell of burning or feel hot.",
+      },
+      {
+        question: "Do you cover Northchurch and villages near Berkhamsted?",
+        answer:
+          "Yes. As well as Berkhamsted itself we regularly work in Northchurch, Bourne End, Potten End and the Tring corridor. If you are unsure whether we cover your road, call or enquire and we will confirm.",
+      },
+      {
+        question: "When is it an emergency and when can it wait?",
+        answer:
+          "Treat burning smells, scorched or hot sockets, a board that will not stay on, and total or partial power loss as urgent. Flickering lights or a single dead socket that is cool and dry can often wait for a booked fault-finding visit — see our emergency-or-wait guide for more detail.",
+      },
+    ],
   },
 ];
 
