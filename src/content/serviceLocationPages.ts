@@ -144,18 +144,58 @@ const serviceLocationPages: ServiceLocationPageConfig[] = [
     locationSlug: "hemel-hempstead",
     serviceSlug: "emergency-electrician",
     title: "Emergency Electrician Hemel Hempstead",
-    metaTitle: "Emergency Electrician Hemel Hempstead | Urgent Faults",
+    metaTitle: "Emergency Electrician Hemel Hempstead | NICEIC | RIGS",
     metaDescription:
-      "Need an emergency electrician in Hemel Hempstead? RIGS helps with urgent domestic faults, power loss, tripping circuits, hot sockets and unsafe electrics.",
+      "Emergency electrician Hemel Hempstead (HP1–HP3) for power loss, boards that won't reset, hot sockets and unsafe faults. NICEIC. Call 07989 205468 or enquire.",
     intro:
-      "RIGS Electrical helps homeowners in Hemel Hempstead with urgent domestic electrical faults, from repeated tripping and partial power loss to hot sockets and unsafe accessories. We make the situation safe first, then test properly to find the cause.",
+      "If you need an emergency electrician in Hemel Hempstead, RIGS Electrical is a Tring-based NICEIC registered domestic electrician covering HP1, HP2 and HP3 — including Boxmoor, Apsley, Adeyfield, Bennetts End, Grovehill, Leverstock Green and Nash Mills. Lost power, a consumer unit that will not reset, a burning smell or a hot socket should be made safe first — then we find the fault properly and explain what needs doing next.",
     whyItMatters: [
-      "Hemel Hempstead homes often include older circuits, extensions and later alterations that can complicate faults.",
-      "Urgent symptoms should be checked carefully before the same circuit is put back into use.",
-      "A domestic-first approach keeps the focus on safe, tidy work in lived-in homes.",
+      "Many Hemel Hempstead homes mix original New Town wiring with kitchen refits, loft conversions, extensions and garage feeds, so an urgent fault is often hiding in a later alteration rather than where the symptom shows.",
+      "Urgent symptoms should be made safe before the same circuit is put back into use or parts are replaced on guesswork.",
+      "Clear domestic diagnosis separates a quick local repair from work that can wait for a planned fault-finding visit or fuse board upgrade.",
     ],
-    commonReasons: ["Repeated tripping", "Loss of power in part of the home", "Hot or buzzing accessories", "Lighting or socket faults", "Outdoor or garage circuits affected by damp"],
-    relatedArticleHrefs: ["/blog/why-do-my-electrics-keep-tripping", "/blog/flickering-lights-common-causes"],
+    commonReasons: [
+      "RCD or RCBO that trips straight back off",
+      "Loss of power to sockets, lighting or part of the home",
+      "Hot, cracked, buzzing or scorched accessories",
+      "Faults after kitchen, extension or loft work",
+      "Damp outdoor, garage or garden circuits tripping the board",
+    ],
+    relatedArticleHrefs: [
+      "/blog/do-i-need-an-emergency-electrician-or-can-it-wait",
+      "/blog/why-do-my-electrics-keep-tripping",
+      "/blog/what-happens-during-an-electrical-fault-finding-visit",
+    ],
+    whatToExpect: {
+      heading: "What happens on an emergency call-out in Hemel Hempstead",
+      paragraphs: [
+        "If it is safe, switch off at the consumer unit before we arrive. We start by making the installation safe, then test the affected circuits to isolate whether the cause is an appliance, a damaged accessory, moisture, or a wiring fault that needs a longer repair.",
+        "Many Hemel call-outs trace back to later additions: kitchen circuits added to an older board, extension or loft wiring, and outdoor or garage supplies that trip the whole board in wet weather. We explain the findings in plain English and agree what must be fixed now versus what can be planned.",
+        "Where a temporary safe isolation is needed, we leave you with a clear next step and a quote for any follow-up work. If your electrics trip now and then but reset and stay on, that is usually better handled as a booked electrical fault-finding visit in Hemel Hempstead rather than an emergency call-out.",
+      ],
+    },
+    faqs: [
+      {
+        question: "Is my Hemel Hempstead power cut a property fault or a network outage?",
+        answer:
+          "If neighbours are also without power, check with your network operator (often via the 105 power-cut service) before calling an electrician. If only your home or part of it is affected, or the board will not reset, that usually points to a property fault we can diagnose.",
+      },
+      {
+        question: "What should I do before an emergency electrician arrives?",
+        answer:
+          "If it is safe, switch off at the consumer unit and unplug anything that was in use when the fault started. Do not keep resetting a board that trips immediately, and keep clear of accessories that smell of burning or feel hot.",
+      },
+      {
+        question: "My electrics keep tripping in Hemel Hempstead — is that an emergency?",
+        answer:
+          "If the board trips straight back off, you have lost power to part of the home, or there is a burning smell, treat it as urgent. If it trips occasionally but resets and holds, unplug appliances on that circuit and book a fault-finding visit so the cause can be traced properly.",
+      },
+      {
+        question: "Which parts of Hemel Hempstead do you cover?",
+        answer:
+          "We cover HP1, HP2 and HP3, including Boxmoor, Apsley, Adeyfield, Bennetts End, Grovehill, Leverstock Green and Nash Mills, plus nearby Berkhamsted and Kings Langley. If you are unsure whether we cover your road, call or enquire and we will confirm.",
+      },
+    ],
   },
   {
     locationSlug: "st-albans",
