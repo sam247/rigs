@@ -59,9 +59,9 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     slug: "outdoor-lighting",
     title: "Outdoor Lighting Installation Hertfordshire",
     eyebrow: "Local Domestic Electrician",
-    metaTitle: "Outdoor Lighting Hertfordshire | Garden & Driveway Lights",
+    metaTitle: "Garden & Exterior Lighting Installers Hertfordshire | RIGS",
     metaDescription:
-      "Outdoor lighting installation in Tring and Hertfordshire for gardens, driveways, side access and entrances. Weather-aware domestic lighting installs.",
+      "Garden and exterior lighting installers for Tring and Herts homes: path, walkway, driveway and patio lights on safe, tested outdoor circuits. Get a quote.",
     heroIntro:
       "Need outdoor lighting installation in Hertfordshire? RIGS Electrical installs practical, tidy exterior lighting for homeowners who want safer entrances, better-lit gardens and more usable outdoor space. As a local domestic electrician, we plan fittings, switching and circuit protection around real day-to-day use, not just how the lights look on day one.",
     contactService: "Outdoor Lighting Installation Hertfordshire",
