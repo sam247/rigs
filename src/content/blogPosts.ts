@@ -132,9 +132,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "Can You Add More Sockets Without Rewiring the House?",
-    metaTitle: "Adding Sockets Without a Full Rewire",
+    metaTitle: "Can You Add Sockets Without Rewiring?",
     description:
-      "When extra sockets can go on existing circuits, when a new circuit or rewire is needed, and what Part P certification applies.",
+      "Often, yes. When a new socket can run from an existing socket or ring main, when you need a new circuit or rewire, and what certification applies.",
     href: "/blog/can-you-add-sockets-without-rewiring",
     dateLabel: "August 2026",
     sourceSlug: "can-you-add-sockets-without-rewiring",
