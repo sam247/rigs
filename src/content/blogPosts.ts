@@ -271,9 +271,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "How to Tell If Your Fuse Board Needs Replacing",
-    metaTitle: "Signs Your Fuse Board Needs Replacing",
+    metaTitle: "Does My Fuse Board Need Replacing? 6 Signs",
     description:
-      "Rewirable fuses, no RCD, plastic boards and other warning signs your fuse board needs replacing — plus what an EICR codes and what a modern unit includes.",
+      "No RCD, rewirable fuses or a plastic board? Six signs your fuse board needs replacing, the C2/C3 code an EICR is likely to give it, and when to upgrade.",
     href: "/blog/how-to-tell-if-your-fuse-board-needs-replacing",
     dateLabel: "July 2026",
     sourceSlug: "how-to-tell-if-your-fuse-board-needs-replacing",
