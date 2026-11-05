@@ -109,7 +109,7 @@ Missing paperwork causes problems later:
 - Insurers may question claims after fire or shock
 - Uncertificated work often costs more to put right than doing it properly first time
 
-Keep a folder with EICRs, EICs and Minor Works Certificates, Part P compliance certificates, and a photo of the circuit chart after major jobs. Landlords also need periodic EICRs for rentals — that is separate from installation certificates for new work. See [EICR for homeowners](/blog/eicr-for-homeowners-when-should-you-get-your-electrics-checked) and [electrical inspections](/services/electrical-inspections).
+Keep a folder with EICRs, EICs and Minor Works Certificates, Part P compliance certificates, and a photo of the circuit chart after major jobs. Landlords also need periodic EICRs for rentals — that is separate from installation certificates for new work. See [EICR for homeowners](/blog/eicr-for-homeowners-when-should-you-get-your-electrics-checked) and [EICR certificates](/services/eicr-certificates).
 
 If you are planning notifiable work around Tring or nearby Herts and Bucks, [contact RIGS](/contact) for a registered electrician to assess the job and issue the correct paperwork.
 

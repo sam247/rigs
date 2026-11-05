@@ -76,7 +76,7 @@ export const BUCKINGHAMSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
     },
     {
       title: "Consumer unit upgrades for growing household demand",
-      href: "/services/fuse-board-upgrades",
+      href: "/services/consumer-unit-replacement",
       body: "Many homes across Buckinghamshire benefit from safer, clearer circuit protection where older boards are being asked to support modern kitchens, showers, office use and garden supplies.",
     },
     {

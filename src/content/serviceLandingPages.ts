@@ -170,7 +170,7 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     ],
     relatedLinks: [
       { title: "Consumer Unit Replacement", desc: "Often part of wider rewire or major upgrade work.", href: "/services/consumer-unit-replacement", icon: "ShieldCheck" },
-      { title: "Electrical Inspections", desc: "Useful if you want independent clarity before deciding whether a rewire is needed.", href: "/services/electrical-inspections", icon: "ClipboardCheck" },
+      { title: "EICR Certificates", desc: "Useful if you want independent clarity before deciding whether a rewire is needed.", href: "/services/eicr-certificates", icon: "ClipboardCheck" },
       { title: "Kitchen Electrical Installation", desc: "Popular alongside rewires during larger renovation projects.", href: "/services/kitchen-electrics", icon: "Bath" },
       { title: "House rewire cost guide", desc: "Published UK benchmark ranges and quotation factors for budgeting.", href: "/blog/how-much-does-it-cost-to-rewire-a-house-in-tring", icon: "Search" },
     ],
@@ -344,78 +344,6 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     ctaBody:
       "Tell us which parts of the property feel too dark or inconvenient after dark and we will recommend a practical lighting layout with a clear quote.",
   },
-  "electrical-inspections": {
-    slug: "electrical-inspections",
-    title: "Electrical Inspections Hertfordshire",
-    eyebrow: "Local Domestic Electrician",
-    metaTitle: "Electrical Inspections Hertfordshire | Home Safety Checks",
-    metaDescription:
-      "Electrical inspections in Tring and Hertfordshire for homeowners buying, renovating or checking older electrics. Clear safety advice and next steps.",
-    heroIntro:
-      "Need an electrical inspection in Hertfordshire? RIGS Electrical helps homeowners understand the condition of their electrics before renovations, after recurring faults, or when they want a clearer picture of what is safe and what needs attention. As a local domestic electrician, we focus on practical domestic advice rather than overloading you with jargon.",
-    contactService: "Electrical Inspections Hertfordshire",
-    contactLabel: "Book An Inspection",
-    serviceType: "Electrical inspection (domestic)",
-    serviceDescription:
-      "Domestic electrical inspections across Hertfordshire for homeowners planning renovations, troubleshooting concerns or checking the condition of a home's electrics.",
-    overviewTitle: "Useful When You Need Clarity Before Spending Money",
-    overviewParagraphs: [
-      "Homeowners often ask for an inspection before a purchase, before a kitchen or extension project, or after repeated problems such as tripping circuits and suspicious-looking older electrics. The value is not just in finding issues, but in understanding which ones matter now and which can be planned sensibly.",
-      "Some situations call for a formal EICR, while others need a broader inspection visit and practical domestic advice first. We can point you towards the right route depending on what you are trying to achieve.",
-    ],
-    includedTitle: "What An Inspection Can Help With",
-    includedItems: [
-      { title: "Older electrics review", desc: "Useful where fuse boards, wiring age or past alterations are causing uncertainty.", icon: "ShieldCheck" },
-      { title: "Renovation planning", desc: "Check what should be upgraded before kitchens, bathrooms or decorating work begins.", icon: "Bath" },
-      { title: "Purchase reassurance", desc: "Understand likely electrical priorities before you commit to bigger spending.", icon: "Search" },
-      { title: "Clear next steps", desc: "We explain whether you need repair work, an EICR, rewiring or smaller upgrades.", icon: "ClipboardCheck" },
-    ],
-    commonJobsTitle: "When Homeowners Book Electrical Inspections",
-    commonJobs: [
-      { title: "Before buying or moving in", desc: "Helpful when the electrics look dated or the property's history is unclear.", icon: "Home" },
-      { title: "Before renovation work", desc: "Check whether kitchens, showers, lighting plans or extensions need wider upgrades.", icon: "Bath" },
-      { title: "After repeated faults", desc: "Useful where tripping, failed sockets or heat damage suggest more than one isolated issue.", icon: "Search" },
-      { title: "For long-term planning", desc: "Get a realistic order of work instead of guessing what to tackle first.", icon: "ClipboardCheck" },
-    ],
-    whyChooseTitle: "Why Inspections Matter",
-    whyChooseItems: [
-      { title: "Better decisions", desc: "Know what genuinely needs doing before you spend money on the wrong fix.", icon: "Search" },
-      { title: "Domestic-first advice", desc: "Plain-English guidance from a local domestic electrician used to homeowner concerns.", icon: "Home" },
-      { title: "Safer upgrades", desc: "Avoid layering new kitchen, shower or lighting work onto an uncertain setup.", icon: "ShieldCheck" },
-      { title: "Clear prioritisation", desc: "Separate urgent items from jobs that can be planned sensibly.", icon: "ClipboardCheck" },
-    ],
-    relatedLinks: [
-      { title: "EICR Certificates", desc: "Book a formal condition report if documented inspection results are what you need.", href: "/services/eicr-certificates", icon: "ClipboardCheck" },
-      { title: "House Rewiring", desc: "Relevant where inspection findings show wider age or condition issues.", href: "/services/house-rewiring", icon: "Home" },
-      { title: "Consumer Unit Replacement", desc: "A common next step where the board lacks modern protection.", href: "/services/consumer-unit-replacement", icon: "ShieldCheck" },
-      { title: "Electrical Fault Finding", desc: "Best route where the main issue is repeated tripping or intermittent faults.", href: "/services/electrical-fault-finding", icon: "Search" },
-    ],
-    faqs: [
-      {
-        q: "What is the difference between an electrical inspection and an EICR?",
-        a: "An EICR is a formal Electrical Installation Condition Report. A broader inspection can be useful when you first need practical advice and a clear picture of what should happen next. We can advise which is the better fit.",
-      },
-      {
-        q: "Should I book an inspection before renovating?",
-        a: "Yes, especially if the property has older electrics, an outdated fuse board or a history of alterations. It can save time and money later by showing what needs upgrading first.",
-      },
-      {
-        q: "Can inspections help if my electrics keep tripping?",
-        a: "They can, but repeated or intermittent tripping is often best handled with dedicated fault finding. We will point you to the right service based on what is happening.",
-      },
-      {
-        q: "Do you inspect domestic properties only?",
-        a: "Yes. RIGS focuses on homeowners and domestic electrical work across Hertfordshire and nearby areas.",
-      },
-      {
-        q: "Will I get clear recommendations afterwards?",
-        a: "Yes. The whole point is to help you understand what is urgent, what can be planned, and which service is the best next step.",
-      },
-    ],
-    ctaTitle: "Need Clarity On Your Home's Electrics?",
-    ctaBody:
-      "If you are unsure whether you need an EICR, repair work, a consumer unit change or something more extensive, book an inspection and we will help you prioritise the right next step.",
-  },
   "consumer-unit-replacement": {
     slug: "consumer-unit-replacement",
     title: "Consumer Unit Replacement Hertfordshire",
@@ -457,10 +385,10 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
       { title: "Domestic-first explanation", desc: "We explain what the replacement solves and what other issues may still need planning.", icon: "ClipboardCheck" },
     ],
     relatedLinks: [
-      { title: "Fuse Board Upgrades", desc: "Our existing page explaining fuse board / consumer unit upgrade work for homeowners.", href: "/services/fuse-board-upgrades", icon: "ShieldCheck" },
+      { title: "EICR Certificates", desc: "Electrical safety inspections that often highlight board and protection improvements.", href: "/services/eicr-certificates", icon: "ClipboardCheck" },
       { title: "House Rewiring", desc: "Relevant where the wider wiring condition also needs upgrading.", href: "/services/house-rewiring", icon: "Home" },
-      { title: "Electrical Inspections", desc: "Useful if you want a clearer picture before deciding on replacement.", href: "/services/electrical-inspections", icon: "ClipboardCheck" },
       { title: "Electrical Fault Finding", desc: "Best route when repeated tripping suggests a separate underlying fault as well.", href: "/services/electrical-fault-finding", icon: "Search" },
+      { title: "Consumer Unit vs Fuse Box", desc: "A homeowner-friendly guide explaining the differences and what to look for.", href: "/blog/consumer-unit-vs-fuse-box", icon: "Search" },
     ],
     faqs: [
       {
@@ -482,6 +410,10 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
       {
         q: "Do you provide certification?",
         a: "Yes. Consumer unit replacement includes appropriate testing and certification once the work is complete.",
+      },
+      {
+        q: "How do I know if I have RCD protection?",
+        a: "Most modern consumer units have RCD/RCBO protection and test buttons. If you are unsure, send a photo or book an inspection and we will confirm what protection you currently have.",
       },
     ],
     ctaTitle: "Need A Consumer Unit Replaced?",
@@ -604,7 +536,7 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
       { title: "House Rewiring", desc: "Relevant where the wider property wiring also needs bringing up to scratch.", href: "/services/house-rewiring", icon: "Home" },
       { title: "Consumer Unit Replacement", desc: "A common upgrade when a new kitchen pushes the electrical demand higher.", href: "/services/consumer-unit-replacement", icon: "ShieldCheck" },
       { title: "Smart Home Installation", desc: "Useful for modern kitchen lighting and control upgrades.", href: "/services/smart-home-installation", icon: "Cpu" },
-      { title: "Electrical Inspections", desc: "Get clarity first if the current kitchen electrics are dated or uncertain.", href: "/services/electrical-inspections", icon: "ClipboardCheck" },
+      { title: "EICR Certificates", desc: "Get clarity first if the current kitchen electrics are dated or uncertain.", href: "/services/eicr-certificates", icon: "ClipboardCheck" },
     ],
     faqs: [
       {
@@ -674,7 +606,7 @@ export const SERVICE_LANDING_PAGES: Record<string, ServiceLandingPageConfig> = {
     ],
     relatedLinks: [
       { title: "EICR Certificates", desc: "Our wider domestic EICR page for homeowners and landlords alike.", href: "/services/eicr-certificates", icon: "ClipboardCheck" },
-      { title: "Electrical Inspections", desc: "Useful if you need clarity on older electrics before formal certification.", href: "/services/electrical-inspections", icon: "Search" },
+      { title: "House Rewiring", desc: "Relevant where inspection findings show wider age or condition issues.", href: "/services/house-rewiring", icon: "Home" },
       { title: "Consumer Unit Replacement", desc: "A common remedial or improvement route in older rental properties.", href: "/services/consumer-unit-replacement", icon: "ShieldCheck" },
       { title: "Electrical Fault Finding", desc: "Helpful where a rental property has repeated tripping or unresolved faults.", href: "/services/electrical-fault-finding", icon: "Search" },
     ],

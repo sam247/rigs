@@ -25,7 +25,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "House rewiring service", href: "/services/house-rewiring" },
       { title: "Full vs partial rewire", href: "/blog/do-i-need-a-full-rewire-or-partial-rewire" },
       { title: "Electrical checks when buying", href: "/blog/electrical-checks-when-buying-a-house-in-tring" },
-      { title: "Consumer unit replacement cost", href: "/blog/how-much-does-a-consumer-unit-replacement-cost" },
+      { title: "Consumer unit replacement cost", href: "/blog/how-much-does-a-consumer-unit-replacement-cost" }
     ],
   },
   {
@@ -42,7 +42,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "House rewiring", href: "/services/house-rewiring" },
       { title: "Rewire cost guide", href: "/blog/how-much-does-it-cost-to-rewire-a-house-in-tring" },
       { title: "Older home electrical problems", href: "/blog/common-electrical-problems-in-older-tring-and-hertfordshire-homes" },
-      { title: "EICR for homeowners", href: "/blog/eicr-for-homeowners-when-should-you-get-your-electrics-checked" },
+      { title: "EICR for homeowners", href: "/blog/eicr-for-homeowners-when-should-you-get-your-electrics-checked" }
     ],
   },
   {
@@ -53,13 +53,12 @@ export const BLOG_POSTS: BlogPost[] = [
     href: "/blog/electrical-checks-when-buying-a-house-in-tring",
     dateLabel: "August 2026",
     sourceSlug: "electrical-checks-when-buying-a-house-in-tring",
-    relatedServiceHref: "/services/electrical-inspections",
+    relatedServiceHref: "/services/eicr-certificates",
     ctaLabel: "Book a pre-purchase inspection",
     internalLinks: [
-      { title: "Electrical inspections", href: "/services/electrical-inspections" },
       { title: "EICR certificates", href: "/services/eicr-certificates" },
       { title: "EICR for homeowners", href: "/blog/eicr-for-homeowners-when-should-you-get-your-electrics-checked" },
-      { title: "Rewire cost planning", href: "/blog/how-much-does-it-cost-to-rewire-a-house-in-tring" },
+      { title: "Rewire cost planning", href: "/blog/how-much-does-it-cost-to-rewire-a-house-in-tring" }
     ],
   },
   {
@@ -76,7 +75,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Consumer unit replacement", href: "/services/consumer-unit-replacement" },
       { title: "Fuse board warning signs", href: "/blog/how-to-tell-if-your-fuse-board-needs-replacing" },
       { title: "Consumer unit vs fuse box", href: "/blog/consumer-unit-vs-fuse-box" },
-      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -93,7 +92,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Electrical fault finding", href: "/services/electrical-fault-finding" },
       { title: "Emergency electrician", href: "/services/emergency-electrician" },
       { title: "Why electrics keep tripping", href: "/blog/why-do-my-electrics-keep-tripping" },
-      { title: "Adding sockets safely", href: "/blog/can-you-add-sockets-without-rewiring" },
+      { title: "Adding sockets safely", href: "/blog/can-you-add-sockets-without-rewiring" }
     ],
   },
   {
@@ -110,7 +109,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "House rewiring", href: "/services/house-rewiring" },
       { title: "Kitchen electrics renovation", href: "/blog/planning-kitchen-electrics-during-a-renovation" },
       { title: "Socket planning guide", href: "/blog/how-many-sockets-when-renovating-a-house" },
-      { title: "Part P requirements", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "Part P requirements", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -127,7 +126,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Kitchen electrics", href: "/services/kitchen-electrics" },
       { title: "Adding sockets without rewiring", href: "/blog/can-you-add-sockets-without-rewiring" },
       { title: "Extension electrics planning", href: "/blog/electrics-for-a-house-extension-planning-guide" },
-      { title: "House rewiring", href: "/services/house-rewiring" },
+      { title: "House rewiring", href: "/services/house-rewiring" }
     ],
   },
   {
@@ -144,7 +143,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Socket planning for renovations", href: "/blog/how-many-sockets-when-renovating-a-house" },
       { title: "Full vs partial rewire", href: "/blog/do-i-need-a-full-rewire-or-partial-rewire" },
       { title: "Unsafe socket signs", href: "/blog/signs-a-socket-is-unsafe" },
-      { title: "Part P guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "Part P guide", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -162,7 +161,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Outdoor lighting installation", href: "/services/outdoor-lighting" },
       { title: "Security lighting", href: "/services/security-lighting" },
       { title: "Part P for outdoor work", href: "/blog/what-electrical-work-needs-part-p-certification" },
-      { title: "Extension electrics planning", href: "/blog/electrics-for-a-house-extension-planning-guide" },
+      { title: "Extension electrics planning", href: "/blog/electrics-for-a-house-extension-planning-guide" }
     ],
   },
   {
@@ -178,8 +177,7 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Enquire about notifiable work", href: "/contact" },
       { title: "Consumer unit replacement", href: "/services/consumer-unit-replacement" },
-      { title: "Electrical inspections", href: "/services/electrical-inspections" },
-      { title: "EICR certificates", href: "/services/eicr-certificates" },
+      { title: "EICR certificates", href: "/services/eicr-certificates" }
     ],
   },
   {
@@ -195,8 +193,8 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Electric shower installation in Tring", href: "/electrician/tring/electric-shower-installation" },
       { title: "Consumer unit replacement", href: "/services/consumer-unit-replacement" },
-      { title: "Electrical inspections", href: "/services/electrical-inspections" },
-      { title: "Replacing an electric shower", href: "/blog/replacing-an-electric-shower" },
+      { title: "EICR certificates", href: "/services/eicr-certificates" },
+      { title: "Replacing an electric shower", href: "/blog/replacing-an-electric-shower" }
     ],
   },
   {
@@ -213,7 +211,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Electric shower installation", href: "/services/electric-shower-installation" },
       { title: "Electric shower installation in Tring", href: "/electrician/tring/electric-shower-installation" },
       { title: "Electric vs mixer showers", href: "/why-an-electric-shower-might-be-right-for-your-home" },
-      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -230,7 +228,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Electric shower installation", href: "/services/electric-shower-installation" },
       { title: "Replacing an electric shower", href: "/blog/replacing-an-electric-shower" },
       { title: "Consumer unit replacement", href: "/services/consumer-unit-replacement" },
-      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -248,7 +246,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Emergency electrician Tring", href: "/electrician/tring/emergency-electrician" },
       { title: "Emergency electrician Berkhamsted", href: "/electrician/berkhamsted/emergency-electrician" },
       { title: "Electrical fault finding", href: "/services/electrical-fault-finding" },
-      { title: "Why electrics keep tripping", href: "/blog/why-do-my-electrics-keep-tripping" },
+      { title: "Why electrics keep tripping", href: "/blog/why-do-my-electrics-keep-tripping" }
     ],
   },
   {
@@ -266,7 +264,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Rewire cost guide", href: "/blog/how-much-does-it-cost-to-rewire-a-house-in-tring" },
       { title: "Electrician Berkhamsted", href: "/electrician/berkhamsted" },
       { title: "House rewiring", href: "/services/house-rewiring" },
-      { title: "EICR certificates", href: "/services/eicr-certificates" },
+      { title: "EICR certificates", href: "/services/eicr-certificates" }
     ],
   },
   {
@@ -277,13 +275,13 @@ export const BLOG_POSTS: BlogPost[] = [
     href: "/blog/how-to-tell-if-your-fuse-board-needs-replacing",
     dateLabel: "July 2026",
     sourceSlug: "how-to-tell-if-your-fuse-board-needs-replacing",
-    relatedServiceHref: "/services/fuse-board-upgrades",
+    relatedServiceHref: "/services/consumer-unit-replacement",
     ctaLabel: "Ask about fuse board upgrades",
     internalLinks: [
       { title: "Fuse board upgrades in Tring", href: "/electrician/tring/fuse-board-upgrades" },
       { title: "Consumer unit replacement cost", href: "/blog/how-much-does-a-consumer-unit-replacement-cost" },
       { title: "Consumer unit vs fuse box", href: "/blog/consumer-unit-vs-fuse-box" },
-      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -300,7 +298,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Unsafe socket warning signs", href: "/blog/signs-a-socket-is-unsafe" },
       { title: "Electrical fault finding in Tring", href: "/electrician/tring/electrical-fault-finding" },
       { title: "Why electrics keep tripping", href: "/blog/why-do-my-electrics-keep-tripping" },
-      { title: "Flickering lights guide", href: "/blog/flickering-lights-common-causes" },
+      { title: "Flickering lights guide", href: "/blog/flickering-lights-common-causes" }
     ],
   },
   {
@@ -316,7 +314,7 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Emergency electrician Tring", href: "/electrician/tring/emergency-electrician" },
       { title: "Fuse board upgrades Tring", href: "/electrician/tring/fuse-board-upgrades" },
-      { title: "EICR certificates Tring", href: "/electrician/tring/eicr-certificates" },
+      { title: "EICR certificates Tring", href: "/electrician/tring/eicr-certificates" }
     ],
   },
   {
@@ -332,8 +330,8 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Electrical checks when buying", href: "/blog/electrical-checks-when-buying-a-house-in-tring" },
       { title: "EICR certificates in Tring", href: "/electrician/tring/eicr-certificates" },
-      { title: "Electrical inspections", href: "/services/electrical-inspections" },
-      { title: "Part P guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "EICR certificates", href: "/services/eicr-certificates" },
+      { title: "Part P guide", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -349,7 +347,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { title: "Socket planning for renovations", href: "/blog/how-many-sockets-when-renovating-a-house" },
       { title: "Extension electrics planning", href: "/blog/electrics-for-a-house-extension-planning-guide" },
       { title: "Kitchen electrical installation", href: "/services/kitchen-electrics" },
-      { title: "Part P guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "Part P guide", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -363,7 +361,7 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Consumer unit replacement cost", href: "/blog/how-much-does-a-consumer-unit-replacement-cost" },
       { title: "Fuse board warning signs", href: "/blog/how-to-tell-if-your-fuse-board-needs-replacing" },
-      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" },
+      { title: "Part P certification guide", href: "/blog/what-electrical-work-needs-part-p-certification" }
     ],
   },
   {
@@ -377,7 +375,7 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Unsafe socket warning signs", href: "/blog/signs-a-socket-is-unsafe" },
       { title: "Consumer unit vs fuse box", href: "/blog/consumer-unit-vs-fuse-box" },
-      { title: "Electrical fault finding", href: "/services/electrical-fault-finding" },
+      { title: "Electrical fault finding", href: "/services/electrical-fault-finding" }
     ],
   },
   {
@@ -389,7 +387,7 @@ export const BLOG_POSTS: BlogPost[] = [
     internalLinks: [
       { title: "Why electrics keep tripping", href: "/blog/why-do-my-electrics-keep-tripping" },
       { title: "Unsafe socket signs", href: "/blog/signs-a-socket-is-unsafe" },
-      { title: "Fault finding visit guide", href: "/blog/what-happens-during-an-electrical-fault-finding-visit" },
+      { title: "Fault finding visit guide", href: "/blog/what-happens-during-an-electrical-fault-finding-visit" }
     ],
   },
 ];

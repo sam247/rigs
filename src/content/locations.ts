@@ -145,7 +145,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Older fuse boards often lack modern protection and can make faults harder to isolate. A consumer unit upgrade improves safety, reduces nuisance trips and helps prepare your home for modern appliance loads.",
       },
       {
@@ -209,7 +209,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "A modern consumer unit improves protection and makes it easier to isolate issues. It’s also a common upgrade when renovating or adding high-load appliances.",
       },
       {
@@ -349,8 +349,8 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
         body: "If the board is dated, awkward to isolate, or no longer suited to modern kitchen and shower demand, we can advise on a safer replacement.",
       },
       {
-        title: "Electrical Inspections",
-        href: "/services/electrical-inspections",
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
         body: "Ideal before refurbishments, house purchases or larger upgrade work when you want to understand what is safe and what needs planning.",
       },
     ],
@@ -533,8 +533,8 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
         body: "If you have partial power loss, hot accessories or repeated trips, we can make the property safe first and then diagnose the actual issue.",
       },
       {
-        title: "Electrical Inspections",
-        href: "/services/electrical-inspections",
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
         body: "A useful route before upgrades, after repeated faults or when you want a clearer picture of a property's overall electrical condition.",
       },
       {
@@ -732,8 +732,8 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
         body: "A modern board can provide a better base for later electrical work, clearer protection and easier fault isolation.",
       },
       {
-        title: "Electrical Inspections",
-        href: "/services/electrical-inspections",
+        title: "EICR Certificates",
+        href: "/services/eicr-certificates",
         body: "Ideal when you want clarity before a renovation, after recurring electrical problems or ahead of buying a property.",
       },
     ],
@@ -857,7 +857,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Many Aylesbury properties still benefit from a modern consumer unit when older boards struggle with showers, kitchen loads and home working circuits across HP19–HP21.",
       },
       {
@@ -923,7 +923,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Period and family homes in Berkhamsted often benefit from safer, clearer consumer unit protection before more kitchen, loft or extension work is added.",
       },
       {
@@ -993,7 +993,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "A modern consumer unit helps Wendover homes cope safely with showers, kitchens and outdoor supplies that older boards were never designed for.",
       },
       {
@@ -1060,7 +1060,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Ivinghoe village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original fuse board.",
       },
       {
@@ -1132,7 +1132,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village and estate homes in Pitstone LU7 often benefit from safer, clearer consumer unit protection before more kitchen, loft or outdoor work is added.",
       },
       {
@@ -1201,7 +1201,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {
@@ -1264,7 +1264,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {
@@ -1327,7 +1327,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "A modern consumer unit helps Aston Clinton homes cope safely with showers, kitchens and outdoor supplies that older boards were never designed for.",
       },
       {
@@ -1394,7 +1394,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village homes around Buckland Common and Cholesbury often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {
@@ -1458,7 +1458,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Period and village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {
@@ -1521,7 +1521,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {
@@ -1588,7 +1588,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board — and repeated nuisance tripping is often the first sign.",
       },
       {
@@ -1658,7 +1658,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {
@@ -1721,7 +1721,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "A modern consumer unit helps Cheddington homes cope safely with showers, kitchens and outdoor supplies that older boards struggle with.",
       },
       {
@@ -1784,7 +1784,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {
@@ -1850,7 +1850,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Ashridge-edge village homes in Ringshall often benefit from safer, clearer consumer unit protection before more kitchen, loft or outdoor work toward Ivinghoe Aston is added.",
       },
       {
@@ -1919,7 +1919,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "A modern consumer unit helps Luton homes cope safely with showers, kitchens and outdoor supplies that older boards struggle with.",
       },
       {
@@ -1982,7 +1982,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Town homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {
@@ -2045,7 +2045,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "A modern consumer unit helps Leighton Buzzard homes cope safely with showers, kitchens and outdoor supplies that older boards were never designed for.",
       },
       {
@@ -2108,7 +2108,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "A modern consumer unit helps Bedford homes cope safely with showers, kitchens and outdoor supplies that older boards were never designed for.",
       },
       {
@@ -2171,7 +2171,7 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
       },
       {
         title: "Fuse Board Upgrades",
-        href: "/services/fuse-board-upgrades",
+        href: "/services/consumer-unit-replacement",
         body: "Village homes often benefit from modern consumer unit protection when showers, kitchens or outbuildings have outgrown the original board.",
       },
       {

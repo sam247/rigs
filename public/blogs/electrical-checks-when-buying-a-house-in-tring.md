@@ -106,7 +106,7 @@ If you proceed without a pre-exchange EICR, booking one soon after completion is
 
 If you are renovating, align [socket planning](/blog/how-many-sockets-when-renovating-a-house) and [extension electrics](/blog/electrics-for-a-house-extension-planning-guide) with your electrician before builders close up walls.
 
-RIGS Electrical provides [electrical inspections](/services/electrical-inspections) and [EICR certificates](/services/eicr-certificates) for homeowners in Tring and surrounding areas. We are NICEIC registered and can carry out remedial work identified on the report.
+RIGS Electrical provides [EICR certificates](/services/eicr-certificates) for homeowners in Tring and surrounding areas. We are NICEIC registered and can carry out remedial work identified on the report.
 
 ## Frequently Asked Questions
 

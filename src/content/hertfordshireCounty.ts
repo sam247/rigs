@@ -63,7 +63,7 @@ export const HERTFORDSHIRE_SERVICE_HIGHLIGHTS = [
   },
   {
     title: "Consumer unit upgrades for modern demand",
-    href: "/services/fuse-board-upgrades",
+    href: "/services/consumer-unit-replacement",
     body: "Home offices, kitchen refits, EV charging plans and garden power all put more demand on older fuse boards. A modern consumer unit helps improve safety and makes future work easier to manage.",
   },
   {

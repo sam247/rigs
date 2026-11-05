@@ -205,7 +205,7 @@ const ConsumerUnitVsFuseBoxPage = () => {
 
               <h2>Benefits of a Consumer Unit Upgrade</h2>
               <p>
-                Investing in a <Link href="/services/fuse-board-upgrades">consumer unit upgrade</Link> offers both immediate and long-term benefits:
+                Investing in a <Link href="/services/consumer-unit-replacement">consumer unit upgrade</Link> offers both immediate and long-term benefits:
               </p>
               <ul>
                 <li>Improved protection against electrical fires and shocks</li>

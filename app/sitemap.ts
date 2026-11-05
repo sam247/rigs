@@ -26,7 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/electrician/buckinghamshire",
     "/services/emergency-electrician",
     "/services/electrical-fault-finding",
-    "/services/fuse-board-upgrades",
     "/services/eicr-certificates",
   ];
 

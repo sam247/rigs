@@ -50,7 +50,11 @@ export default function LocationPageClient({ location }: { location: LocationPag
     {
       title: "Fuse Board Upgrades",
       desc: "Modern protection and fewer nuisance trips with an updated consumer unit.",
-      href: getServiceLocationPath(location.slug, "/services/fuse-board-upgrades"),
+      // Keep Tring/Hemel town fuse-board pages; other towns go to kept CU hub
+      href: (() => {
+        const local = getServiceLocationPath(location.slug, "/services/fuse-board-upgrades");
+        return local.startsWith("/electrician/") ? local : "/services/consumer-unit-replacement";
+      })(),
       icon: ShieldCheck,
     },
     {

@@ -39,6 +39,10 @@ const faqs = [
     q: "Which areas do you cover for EICR testing?",
     a: "We cover Hertfordshire and nearby areas including Tring, St Albans, Watford and surrounding towns and villages.",
   },
+  {
+    q: "What is the difference between an electrical inspection and an EICR?",
+    a: "An EICR is a formal Electrical Installation Condition Report. A broader inspection visit can be useful when you first need practical advice and a clear picture of what should happen next. We can advise which is the better fit for your situation.",
+  },
 ];
 
 const relatedLinks = [
@@ -49,9 +53,9 @@ const relatedLinks = [
     icon: Search,
   },
   {
-    title: "Fuse Board Upgrades",
-    desc: "Upgrade outdated consumer units for modern protection and compliant installation.",
-    href: "/services/fuse-board-upgrades",
+    title: "Consumer Unit Replacement",
+    desc: "Replace outdated fuse boards / consumer units for modern protection and compliant installation.",
+    href: "/services/consumer-unit-replacement",
     icon: ShieldCheck,
   },
   {
@@ -201,7 +205,7 @@ export default function EicrCertificatesPage() {
               </motion.div>
               <motion.p variants={fadeUp} custom={2} className="text-sm text-muted-foreground mt-6 leading-relaxed">
                 A fuse board/consumer unit change is one of the most common follow-on upgrades, which you can read about on our{" "}
-                <Link href="/services/fuse-board-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+                <Link href="/services/consumer-unit-replacement" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                   fuse board upgrades
                 </Link>{" "}
                 page.

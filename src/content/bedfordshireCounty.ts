@@ -71,7 +71,7 @@ export const BEDFORDSHIRE_COUNTY_PAGE: CountyCoveragePageConfig = {
     },
     {
       title: "Consumer unit upgrades for safer modern use",
-      href: "/services/fuse-board-upgrades",
+      href: "/services/consumer-unit-replacement",
       body: "Bedfordshire homes often need clearer circuit protection where kitchen work, shower demand, home office use or later extensions have outgrown an older fuse board.",
     },
     {

@@ -220,7 +220,7 @@ const WhyDoMyElectricsKeepTrippingPage = () => {
               </p>
               <p>
                 For some homes, a{" "}
-                <Link href="/services/fuse-board-upgrades">
+                <Link href="/services/consumer-unit-replacement">
                   fuse board upgrade
                 </Link>{" "}
                 can reduce the “whole house went off” scenario by improving protection and separating circuits more effectively.

@@ -53,9 +53,9 @@ const relatedServices = [
     icon: ZapOff,
   },
   {
-    title: "Fuse Board Upgrades",
+    title: "Consumer Unit Replacement",
     desc: "Upgrade older fuse boards and improve protection against faults and electric shock.",
-    href: "/services/fuse-board-upgrades",
+    href: "/services/consumer-unit-replacement",
     icon: ShieldCheck,
   },
   {
@@ -69,12 +69,6 @@ const relatedServices = [
     desc: "A thorough safety check with a clear report and practical next steps.",
     href: "/services/eicr-certificates",
     icon: Search,
-  },
-  {
-    title: "Consumer Unit Replacement",
-    desc: "Modern RCBO/RCD protection and compliant installation for safer circuits.",
-    href: "/services/consumer-unit-replacement",
-    icon: ShieldCheck,
   },
 ];
 
@@ -325,7 +319,7 @@ const ElectricalFaultFindingPage = () => {
             </div>
             <motion.p variants={fadeUp} custom={1} className="text-sm text-muted-foreground mt-8 leading-relaxed max-w-3xl mx-auto text-center">
               If testing shows your installation would benefit from preventative improvements, we’ll point you to options like{" "}
-              <Link href="/services/fuse-board-upgrades" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
+              <Link href="/services/consumer-unit-replacement" className="text-primary font-heading font-600 hover:text-primary/80 transition-colors">
                 fuse board upgrades
               </Link>{" "}
               or{" "}

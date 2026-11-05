@@ -19,13 +19,11 @@ const coreRoutes: Array<[string, RegExp]> = [
 const serviceRoutes: Array<[string, RegExp]> = [
   ["/services/emergency-electrician", /Emergency Electrician Hertfordshire/i],
   ["/services/electrical-fault-finding", /Electrical Fault Finding Hertfordshire/i],
-  ["/services/fuse-board-upgrades", /Fuse Board Upgrades Hertfordshire/i],
   ["/services/eicr-certificates", /EICR Certificates Hertfordshire/i],
   ["/services/outdoor-lighting", /Outdoor Lighting Installation Hertfordshire/i],
   ["/services/house-rewiring", /House Rewiring Hertfordshire/i],
   ["/services/smart-home-installation", /Smart Home Installation Hertfordshire/i],
   ["/services/security-lighting", /Security Lighting Installation Hertfordshire/i],
-  ["/services/electrical-inspections", /Electrical Inspections Hertfordshire/i],
   ["/services/consumer-unit-replacement", /Consumer Unit Replacement Hertfordshire/i],
   ["/services/electric-shower-installation", /Electric Shower Installation Hertfordshire/i],
   ["/services/kitchen-electrics", /Kitchen Electrical Installation Hertfordshire/i],
@@ -123,6 +121,8 @@ test.describe("smoke", () => {
   test("legacy service routes redirect to /services", async ({ page }) => {
     await assertRedirect("/domestic", "/services", page);
     await assertRedirect("/services/consumer-unit-upgrades", "/services/consumer-unit-replacement", page);
+    await assertRedirect("/services/fuse-board-upgrades", "/services/consumer-unit-replacement", page);
+    await assertRedirect("/services/electrical-inspections", "/services/eicr-certificates", page);
   });
 
   test("static assets resolve", async ({ request }) => {

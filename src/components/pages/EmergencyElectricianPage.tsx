@@ -58,9 +58,9 @@ const relatedServices = [
     icon: ShieldCheck,
   },
   {
-    title: "Fuse Board Upgrades",
+    title: "Consumer Unit Replacement",
     desc: "Upgrade outdated fuse boards for safer protection and fewer nuisance trips.",
-    href: "/services/fuse-board-upgrades",
+    href: "/services/consumer-unit-replacement",
     icon: ZapOff,
   },
   {
@@ -74,12 +74,6 @@ const relatedServices = [
     desc: "Home electrical safety checks with clear findings and practical next steps.",
     href: "/services/eicr-certificates",
     icon: Search,
-  },
-  {
-    title: "Consumer Unit Replacement",
-    desc: "Modern RCBO/RCD protection and compliant installation for peace of mind.",
-    href: "/services/consumer-unit-replacement",
-    icon: ShieldCheck,
   },
 ];
 

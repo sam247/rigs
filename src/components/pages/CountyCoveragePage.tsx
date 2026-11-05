@@ -30,9 +30,9 @@ const relatedServices = [
     icon: Search,
   },
   {
-    title: "Fuse Board Upgrades",
+    title: "Consumer Unit Replacement",
     desc: "Modern consumer units that improve safety and make future work easier to manage.",
-    href: "/services/fuse-board-upgrades",
+    href: "/services/consumer-unit-replacement",
     icon: ShieldCheck,
   },
   {
