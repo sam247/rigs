@@ -97,9 +97,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "Electrics for a House Extension: What to Plan Before Building Starts",
-    metaTitle: "Extension Electrical Planning Guide",
+    metaTitle: "House Extension Electrics: Circuits, Sockets & Part P",
     description:
-      "Plan extension electrics before first fix: circuits, consumer unit capacity, socket positions, and Part P certification with your builder and electrician.",
+      "Planning an extension? The circuits, socket and lighting points, consumer unit capacity and Part P sign-off to agree with your electrician before first fix.",
     href: "/blog/electrics-for-a-house-extension-planning-guide",
     dateLabel: "August 2026",
     sourceSlug: "electrics-for-a-house-extension-planning-guide",
