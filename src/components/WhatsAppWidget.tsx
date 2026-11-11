@@ -41,6 +41,7 @@ const WhatsAppWidget = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
+              data-link-location="whatsapp_widget"
               className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90 text-primary-foreground font-heading font-700 text-sm py-2.5 rounded-lg transition-colors"
             >
               <WhatsAppIcon className="h-4 w-4" />
