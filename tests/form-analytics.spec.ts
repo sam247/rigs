@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { test, expect, type Locator, type Page } from "@playwright/test";
 
 const formEndpoint =
   "https://admin.betterranking.co.uk/sender/api/f/bs_0g7oojs9n3vwco145o1g8n8t";
@@ -65,15 +65,11 @@ test.describe("form analytics", () => {
               form_location: "homepage_hero",
             }),
           }),
-          expect.objectContaining({
-            name: "generate_lead",
-            params: expect.objectContaining({
-              form_name: "hero_quick_quote",
-              form_location: "homepage_hero",
-            }),
-          }),
         ]),
       );
+
+    const eventNames = (await getTrackedEvents(page)).map((event) => event.name);
+    expect(eventNames).not.toContain("generate_lead");
   });
 
   test("contact page tracks submit and success", async ({ page }) => {
@@ -107,11 +103,81 @@ test.describe("form analytics", () => {
               form_location: "/contact",
             }),
           }),
+        ]),
+      );
+
+    const eventNames = (await getTrackedEvents(page)).map((event) => event.name);
+    expect(eventNames).not.toContain("generate_lead");
+  });
+});
+
+
+async function clickWithoutNavigating(locator: Locator) {
+  await locator.evaluate((el) => {
+    el.addEventListener("click", (event) => event.preventDefault(), { capture: true });
+  });
+  await locator.click();
+}
+
+test.describe("conversion click analytics", () => {
+  test("whatsapp widget start chat tracks whatsapp_click", async ({ page }) => {
+    await page.goto("/");
+
+    await page.getByRole("button", { name: /Open WhatsApp chat/i }).click();
+    const startChat = page.getByRole("link", { name: /Start chat/i });
+    await clickWithoutNavigating(startChat);
+
+    await expect
+      .poll(async () => getTrackedEvents(page))
+      .toEqual(
+        expect.arrayContaining([
           expect.objectContaining({
-            name: "generate_lead",
+            name: "whatsapp_click",
             params: expect.objectContaining({
-              form_name: "contact_page",
-              form_location: "/contact",
+              link_location: "whatsapp_widget",
+              page_path: "/",
+            }),
+          }),
+        ]),
+      );
+  });
+
+  test("header call now tracks phone_click", async ({ page }) => {
+    await page.goto("/");
+
+    const callNow = page.locator("header").getByRole("link", { name: /Call Now/i }).first();
+    await clickWithoutNavigating(callNow);
+
+    await expect
+      .poll(async () => getTrackedEvents(page))
+      .toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            name: "phone_click",
+            params: expect.objectContaining({
+              link_location: "header",
+              page_path: "/",
+            }),
+          }),
+        ]),
+      );
+  });
+
+  test("footer email tracks email_click", async ({ page }) => {
+    await page.goto("/");
+
+    const email = page.locator("footer").getByRole("link", { name: /rigselectrical@icloud.com/i });
+    await clickWithoutNavigating(email);
+
+    await expect
+      .poll(async () => getTrackedEvents(page))
+      .toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            name: "email_click",
+            params: expect.objectContaining({
+              link_location: "footer",
+              page_path: "/",
             }),
           }),
         ]),
