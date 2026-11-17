@@ -1763,6 +1763,9 @@ export const LOCATION_PAGES: Record<string, LocationPageConfig> = {
     slug: "little-gaddesden",
     name: "Little Gaddesden",
     region: "Hertfordshire",
+    // Title left as default: Electrician Little Gaddesden | Domestic NICEIC | RIGS (matches head query, GSC 56d pos ~5.6).
+    metaDescription:
+      "Electrician in Little Gaddesden near Ashridge for domestic faults, fuse boards, EICRs and outdoor supplies. NICEIC, based in Tring. Enquire for a quote.",
     map: {
       bbox: [-0.59, 51.79, -0.52, 51.83],
       marker: { lat: 51.809, lon: -0.555 },
