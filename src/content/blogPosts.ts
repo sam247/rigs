@@ -233,9 +233,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "Do I Need an Emergency Electrician or Can It Wait?",
-    metaTitle: "Emergency Electrician or Standard Visit?",
+    metaTitle: "Do I Need an Emergency Electrician or Can It Wait?",
     description:
-      "Burning smell, tripping circuits or power loss? Learn when to call an emergency electrician in Tring and when a standard visit is enough.",
+      "Do I need an emergency electrician, or can it wait? Burning smells, trips and power loss — when to call now in Tring and when a standard visit is enough.",
     href: "/blog/do-i-need-an-emergency-electrician-or-can-it-wait",
     dateLabel: "July 2026",
     sourceSlug: "do-i-need-an-emergency-electrician-or-can-it-wait",
